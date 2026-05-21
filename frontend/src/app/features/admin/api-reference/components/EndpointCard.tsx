@@ -12,6 +12,7 @@ import {
   PHP_BASE_URL,
 } from '../../../../services/api';
 import { endpointKey, METHOD_STYLES } from '../lib/api-reference';
+import { ENDPOINT_CODE_MAP } from '../lib/endpoint-code-map';
 import { CopyButton } from './CopyButton';
 import { MethodBadge } from './MethodBadge';
 import { VerificationBadge } from './VerificationBadge';
@@ -19,6 +20,7 @@ import { TryItPanel } from './TryItPanel';
 
 export function EndpointCard({ endpoint, check }: { endpoint: EndpointDoc; check?: ApiDocsVerifyCheck }) {
   const [open, setOpen] = useState(false);
+  const codeDependencies = ENDPOINT_CODE_MAP[endpoint.id];
 
   return (
     <div className={`border border-gray-200 rounded-xl overflow-hidden bg-white ${METHOD_STYLES[endpoint.method].panel}`}>
@@ -84,6 +86,45 @@ export function EndpointCard({ endpoint, check }: { endpoint: EndpointDoc; check
               </div>
             ) : (
               <div className="text-xs text-gray-500">Run endpoint verification to populate backend match details.</div>
+            )}
+          </div>
+
+          <div className="px-5 py-4">
+            <h4 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Code Dependencies</h4>
+            {codeDependencies ? (
+              <div className="grid gap-3 md:grid-cols-2">
+                <div className="border border-gray-200 rounded-lg p-3 bg-emerald-50/40">
+                  <div className="text-xs font-semibold text-emerald-900">Backend (.php)</div>
+                  <div className="mt-2 space-y-2">
+                    {codeDependencies.backend.map(reference => (
+                      <div key={`${reference.file}:${reference.line}`} className="text-xs text-emerald-900">
+                        <code className="block bg-white border border-emerald-200 rounded px-2 py-1 font-mono break-all">
+                          {reference.file}:{reference.line}
+                        </code>
+                        <div className="mt-1 text-emerald-800/90">{reference.detail}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border border-gray-200 rounded-lg p-3 bg-sky-50/50">
+                  <div className="text-xs font-semibold text-sky-900">Frontend (.ts/.tsx)</div>
+                  <div className="mt-2 space-y-2">
+                    {codeDependencies.frontend.map(reference => (
+                      <div key={`${reference.file}:${reference.line}`} className="text-xs text-sky-900">
+                        <code className="block bg-white border border-sky-200 rounded px-2 py-1 font-mono break-all">
+                          {reference.file}:{reference.line}
+                        </code>
+                        <div className="mt-1 text-sky-800/90">{reference.detail}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="text-xs text-gray-500">
+                No dependency map entry is currently documented for this endpoint.
+              </div>
             )}
           </div>
 

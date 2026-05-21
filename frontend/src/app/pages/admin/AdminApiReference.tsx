@@ -15,6 +15,7 @@ import {
 } from '../../services/api';
 import { toast } from 'sonner';
 import { endpointKey, GROUP_ORDER } from '../../features/admin/api-reference/lib/api-reference';
+import { ENDPOINT_CODE_MAP } from '../../features/admin/api-reference/lib/endpoint-code-map';
 import { CopyButton } from '../../features/admin/api-reference/components/CopyButton';
 import { GroupSection } from '../../features/admin/api-reference/components/EndpointCard';
 import { PhpBackendPanel } from '../../features/admin/api-reference/components/PhpBackendPanel';
@@ -127,18 +128,79 @@ export function AdminApiReference() {
     });
     const templateHeader = new URL(templateHeaderUrl, window.location.href).href;
     const templateFooter = new URL(templateFooterUrl, window.location.href).href;
-    const rows = API_ENDPOINTS.map(endpoint => {
-      const check = verifyIndex.get(endpointKey(endpoint.method, endpoint.path));
-      const statusLabel = check ? (check.exists ? 'Verified' : 'Missing') : 'Not Verified';
-      const statusTone = check ? (check.exists ? '#15803d' : '#b91c1c') : '#334155';
+    const groupedEndpoints = [
+      ...GROUP_ORDER,
+      ...Array.from(new Set(API_ENDPOINTS.map(endpoint => endpoint.group))).filter(group => !GROUP_ORDER.includes(group)),
+    ]
+      .map(groupName => ({
+        groupName,
+        endpoints: API_ENDPOINTS.filter(endpoint => endpoint.group === groupName),
+      }))
+      .filter(group => group.endpoints.length > 0);
+
+    const groupSections = groupedEndpoints.map((group, index) => {
+      const groupRows = group.endpoints.map(endpoint => {
+        const check = verifyIndex.get(endpointKey(endpoint.method, endpoint.path));
+        const statusLabel = check ? (check.exists ? 'Verified' : 'Missing') : 'Not Verified';
+        const statusTone = check ? (check.exists ? '#15803d' : '#b91c1c') : '#334155';
+        const dependencies = ENDPOINT_CODE_MAP[endpoint.id];
+        const backendRows = (dependencies?.backend ?? []).map(reference => `
+          <li>
+            <code>${escapeHtml(reference.file)}:${reference.line}</code>
+            <span>${escapeHtml(reference.detail)}</span>
+          </li>
+        `).join('');
+        const frontendRows = (dependencies?.frontend ?? []).map(reference => `
+          <li>
+            <code>${escapeHtml(reference.file)}:${reference.line}</code>
+            <span>${escapeHtml(reference.detail)}</span>
+          </li>
+        `).join('');
+
+        return `
+          <tr class="endpoint-row">
+            <td>${escapeHtml(endpoint.method)}</td>
+            <td><code>${escapeHtml(endpoint.path)}</code></td>
+            <td>${escapeHtml(endpoint.description)}</td>
+            <td style="color:${statusTone};font-weight:600;">${statusLabel}</td>
+          </tr>
+          <tr class="dependency-row">
+            <td colspan="4">
+              <div class="dependency-grid">
+                <div class="dependency-panel">
+                  <strong>Backend (.php)</strong>
+                  <ul>
+                    ${backendRows || '<li>Not documented.</li>'}
+                  </ul>
+                </div>
+                <div class="dependency-panel">
+                  <strong>Frontend (.ts/.tsx)</strong>
+                  <ul>
+                    ${frontendRows || '<li>Not documented.</li>'}
+                  </ul>
+                </div>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      const pageClass = index === 0 ? 'group-section first-group-section' : 'group-section';
       return `
-        <tr>
-          <td>${escapeHtml(endpoint.group)}</td>
-          <td>${escapeHtml(endpoint.method)}</td>
-          <td><code>${escapeHtml(endpoint.path)}</code></td>
-          <td>${escapeHtml(endpoint.description)}</td>
-          <td style="color:${statusTone};font-weight:600;">${statusLabel}</td>
-        </tr>
+        <section class="${pageClass}">
+          <h2 class="group-title">${escapeHtml(group.groupName)}</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Path</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>${groupRows}</tbody>
+          </table>
+        </section>
       `;
     }).join('');
 
@@ -153,6 +215,14 @@ export function AdminApiReference() {
           <meta charset="utf-8" />
           <title>API Documentation Export</title>
           <style>
+            :root {
+              --print-page-side-margin: 0.58in;
+              --print-header-height: 1.32in;
+              --print-footer-height: 1.08in;
+              --print-top-gap: 0.08in;
+              --print-bottom-gap: 0.16in;
+              --print-first-page-top-offset: calc(var(--print-header-height) + var(--print-top-gap));
+            }
             @page { size: Letter portrait; margin: 0; }
             * { box-sizing: border-box; }
             body { margin: 0; font-family: Arial, sans-serif; color: #0f172a; font-size: 11px; line-height: 1.35; }
@@ -164,8 +234,14 @@ export function AdminApiReference() {
               width: 100%;
               z-index: 1;
             }
-            .template-header { top: 0; height: 1.32in; }
-            .template-footer { bottom: 0; height: 1.08in; }
+            .template-header {
+              top: 0;
+              height: var(--print-header-height);
+            }
+            .template-footer {
+              bottom: 0;
+              height: var(--print-footer-height);
+            }
             .template-header img,
             .template-footer img {
               display: block;
@@ -176,26 +252,89 @@ export function AdminApiReference() {
             .content {
               position: relative;
               z-index: 2;
-              padding: 1.62in 0.58in 1.24in;
+              padding: 0 var(--print-page-side-margin);
+            }
+            .intro {
+              padding-top: var(--print-first-page-top-offset);
+              margin-bottom: 6px;
             }
             h1 { margin: 0 0 6px; font-size: 18px; }
-            .meta { margin-bottom: 14px; color: #334155; }
+            .meta { margin-bottom: 0; color: #334155; }
+            .group-sections {
+              margin-top: 6px;
+            }
+            .group-section {
+              padding-top: calc(var(--print-header-height) + var(--print-top-gap));
+              padding-bottom: calc(var(--print-footer-height) + var(--print-bottom-gap));
+              break-before: page;
+              page-break-before: always;
+            }
+            .first-group-section {
+              padding-top: 0;
+              break-before: auto;
+              page-break-before: auto;
+            }
+            .group-section:last-of-type {
+              padding-bottom: 6px;
+            }
+            .group-title {
+              margin: 0 0 8px;
+              font-size: 15px;
+              font-weight: 700;
+              color: #0f172a;
+            }
             table { width: 100%; border-collapse: collapse; }
             th, td { border: 1px solid #cbd5e1; padding: 5px 7px; text-align: left; vertical-align: top; }
             th { background: #f1f5f9; font-size: 11px; text-transform: uppercase; letter-spacing: 0.02em; }
             code { font-family: Consolas, monospace; font-size: 11px; }
+            .endpoint-row td {
+              background: #ffffff;
+            }
+            .dependency-row td {
+              background: #f8fafc;
+              padding: 8px 7px;
+            }
+            .dependency-grid {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 10px;
+            }
+            .dependency-panel {
+              border: 1px solid #cbd5e1;
+              background: #ffffff;
+              border-radius: 6px;
+              padding: 6px 8px;
+            }
+            .dependency-panel strong {
+              display: inline-block;
+              margin-bottom: 4px;
+              font-size: 10px;
+            }
+            .dependency-panel ul {
+              margin: 0;
+              padding-left: 14px;
+            }
+            .dependency-panel li {
+              margin: 0 0 3px;
+              color: #334155;
+            }
+            .dependency-panel li span {
+              display: block;
+              margin-top: 1px;
+            }
             .signoff {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 28px;
-              margin-top: 28px;
+              margin-top: 15px;
+              margin-bottom: calc(var(--print-footer-height) + var(--print-bottom-gap));
               break-inside: avoid;
               page-break-inside: avoid;
             }
             .signature-line {
               border-top: 1px solid #0f172a;
               padding-top: 6px;
-              margin-top: 38px;
+              margin-top: 14px;
               font-weight: 700;
             }
             .signature-meta,
@@ -219,25 +358,16 @@ export function AdminApiReference() {
             <img src="${escapeHtml(templateFooter)}" alt="" />
           </div>
           <div class="content">
-            <h1>Group 8 API Documentation</h1>
-            <div class="meta">
-              Generated: ${escapeHtml(generatedAt)}<br />
-              Base URL: ${escapeHtml(PHP_BASE_URL)}<br />
-              GitHub Repository: ${escapeHtml(requiredGithubUrl)}<br />
-              Verification: ${escapeHtml(summary)}
+            <div class="intro">
+              <h1>Group 8 API Documentation</h1>
+              <div class="meta">
+                Generated: ${escapeHtml(generatedAt)}<br />
+                Base URL: ${escapeHtml(PHP_BASE_URL)}<br />
+                GitHub Repository: ${escapeHtml(requiredGithubUrl)}<br />
+                Verification: ${escapeHtml(summary)}
+              </div>
             </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Group</th>
-                  <th>Method</th>
-                  <th>Path</th>
-                  <th>Description</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>${rows}</tbody>
-            </table>
+            <div class="group-sections">${groupSections}</div>
             <div class="signoff">
               <div>
                 <div class="signature-line">Adriaan Dimate</div>
