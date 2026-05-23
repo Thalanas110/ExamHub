@@ -182,6 +182,54 @@ Seed credentials are loaded only from environment variables:
 
 If the database is empty and these credentials are missing, bootstrap requests will fail until they are configured.
 
+## Presentation Fake User Dataset (CSV)
+
+For demo or school presentation datasets, use the additive CSV workflow:
+
+```bash
+cd backend
+composer generate-fake-users-csv
+composer import-fake-users-csv
+```
+
+This creates and imports:
+
+- 1 admin
+- 700 professors (stored with role `teacher`)
+- 5000 students
+
+Files and behavior:
+
+- CSV file: `backend/database/seeds/fake_users_5701.csv`
+- Generator script: `backend/scripts/generate_fake_users_csv.php`
+- Import script: `backend/scripts/import_fake_users_csv.php`
+- Import uses `INSERT IGNORE` so existing seed users are not modified.
+
+## Presentation Fake Exam + Violation Dataset (CSV)
+
+To generate exams paired with the presentation users, plus anti-cheat violation reports:
+
+```bash
+cd backend
+composer generate-fake-exam-csv
+composer import-fake-exam-csv
+```
+
+Generated CSV files (in `backend/database/seeds/`):
+
+- `fake_classes.csv`
+- `fake_class_students.csv`
+- `fake_exams.csv`
+- `fake_exam_violations.csv`
+- `fake_violation_cases.csv`
+
+Behavior:
+
+- Classes and exams are linked to the synthetic professor/teacher IDs from `fake_users_5701.csv`.
+- Enrollments are linked to the synthetic student IDs from `fake_users_5701.csv`.
+- Violation events and violation cases are linked to those generated exams and students.
+- Main DB imports use `INSERT IGNORE`; log DB imports are duplicate-safe; existing seed data is preserved.
+
 ## Main Endpoints
 
 - Auth: `/auth/register`, `/auth/login`, `/auth/logout`

@@ -68,7 +68,7 @@ export function ReviewModal({
     <Modal
       isOpen
       onClose={onClose}
-      title={`Review Case — ${studentName}`}
+      title={`Review Case - ${studentName}`}
       size="xl"
       footer={
         <>
@@ -86,7 +86,7 @@ export function ReviewModal({
             className="flex items-center gap-2 px-5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold transition-colors disabled:opacity-60"
           >
             <Save className="w-4 h-4" />
-            {saving ? 'Saving…' : 'Save Decision'}
+            {saving ? 'Saving...' : 'Save Decision'}
           </button>
         </>
       }
@@ -120,7 +120,7 @@ export function ReviewModal({
                       <td className="px-3 py-2 font-medium text-gray-700">
                         {violationTypeLabel(violation.violation_type)}
                       </td>
-                      <td className="px-3 py-2 text-gray-500">{violation.details ?? '—'}</td>
+                      <td className="px-3 py-2 text-gray-500">{violation.details ?? '-'}</td>
                       <td className="px-3 py-2 text-gray-500 whitespace-nowrap">{violation.occurred_at}</td>
                     </tr>
                   ))}
@@ -168,12 +168,12 @@ export function ReviewModal({
         </div>
 
         <div>
-          <label className="block text-xs font-semibold text-gray-600 mb-1.5">Teacher Notes</label>
+          <label className="block text-xs font-semibold text-gray-600 mb-1.5">Reviewer Notes</label>
           <textarea
             value={notes}
             onChange={event => setNotes(event.target.value)}
             rows={3}
-            placeholder="Optional notes about this case decision…"
+            placeholder="Optional notes about this case decision..."
             className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-amber-400 placeholder:text-gray-400"
           />
         </div>
@@ -189,3 +189,4 @@ export function ReviewModal({
     </Modal>
   );
 }
+

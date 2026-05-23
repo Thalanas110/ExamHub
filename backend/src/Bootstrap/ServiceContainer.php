@@ -140,7 +140,6 @@ final class ServiceContainer
             gateway: $gateway,
             crypto: $crypto,
             passwordHasher: $passwordHasher,
-            normalizer: $normalizer,
         );
 
         $docsVerificationService = new ApiDocsVerificationService();

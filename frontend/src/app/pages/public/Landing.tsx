@@ -43,17 +43,17 @@ export function Landing() {
   }, [currentUser, navigate]);
 
   return (
-    <div className="min-h-screen bg-[#f2eadc] p-3 sm:p-5 flex items-stretch">
+    <div className="min-h-screen bg-[#f2eadc] p-3 sm:p-5 flex items-stretch overflow-x-hidden">
       {/* Ambient blobs */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-orange-300/25 blur-3xl" />
         <div className="absolute top-1/2 -right-32 w-80 h-80 rounded-full bg-teal-300/15 blur-3xl" />
       </div>
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-[1.08fr_0.92fr] gap-3 sm:gap-4 auto-rows-fr">
+      <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-[1.08fr_0.92fr] gap-3 sm:gap-4 auto-rows-fr min-w-0">
 
         {/* ── Left: Hero + Features ──────────────────────────────────── */}
-        <div className="bg-white/85 backdrop-blur-xl rounded-[2rem] border border-[#22312b]/10 shadow-[0_30px_80px_-30px_rgba(34,49,43,0.20)] p-7 sm:p-9 lg:p-10 flex flex-col min-h-[calc(100vh-2.5rem)]">
+        <div className="bg-white/85 backdrop-blur-xl rounded-[2rem] border border-[#22312b]/10 shadow-[0_30px_80px_-30px_rgba(34,49,43,0.20)] p-5 sm:p-9 lg:p-10 flex flex-col min-h-[calc(100vh-2.5rem)] min-w-0">
 
           {/* Logo */}
           <div className="flex items-center gap-2.5 mb-9">
@@ -74,7 +74,7 @@ export function Landing() {
 
           {/* Headline */}
           <h1
-            className="text-[2.6rem] sm:text-5xl font-bold leading-[1.04] tracking-tight text-[#22312b] mb-4"
+            className="text-[2.15rem] sm:text-5xl font-bold leading-[1.04] tracking-tight text-[#22312b] mb-4"
             style={{ fontFamily: 'var(--font-display)' }}
           >
             Exams that are hard
@@ -105,7 +105,7 @@ export function Landing() {
           </div>
 
           {/* Feature grid */}
-          <div className="grid grid-cols-2 gap-2.5 mt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-8">
             {features.map(({ icon: Icon, title, text, color, bg, border }) => (
               <div key={title} className={`rounded-2xl border ${border} ${bg} p-4`}>
                 <div className={`w-8 h-8 rounded-xl bg-white border ${border} flex items-center justify-center mb-3 shadow-sm`}>
@@ -119,7 +119,7 @@ export function Landing() {
         </div>
 
         {/* ── Right: Lifecycle + Roles ───────────────────────────────── */}
-        <div className="bg-[#22312b] rounded-[2rem] shadow-[0_30px_80px_-30px_rgba(34,49,43,0.45)] p-7 sm:p-9 lg:p-10 flex flex-col min-h-[calc(100vh-2.5rem)]">
+        <div className="bg-[#22312b] rounded-[2rem] shadow-[0_30px_80px_-30px_rgba(34,49,43,0.45)] p-5 sm:p-9 lg:p-10 flex flex-col min-h-[calc(100vh-2.5rem)] min-w-0">
 
           <div className="mb-7">
             <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#c69a4d] mb-2">How it works</div>

@@ -24,7 +24,7 @@ $crypto = new AesGcmCrypto($config->encryptionKey);
 $normalizer = new ValueNormalizer();
 $mapper = new ExamMapper($crypto, $normalizer);
 $passwordHasher = new App\Security\PasswordHasher();
-$seedService = new SeedService($config, $gateway, $crypto, $passwordHasher, $normalizer);
+$seedService = new SeedService($config, $gateway, $crypto, $passwordHasher);
 $seedService->bootstrap();
 $accommodationService = new StudentExamAccommodationService($gateway, $crypto, $mapper, $normalizer);
 $service = new ResultService($gateway, $crypto, $mapper, $normalizer, $accommodationService);

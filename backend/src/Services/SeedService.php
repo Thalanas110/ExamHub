@@ -8,7 +8,6 @@ use App\Config\AppConfig;
 use App\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;
 use App\Security\PasswordHasher;
-use App\Services\Support\ValueNormalizer;
 use App\Support\ApiException;
 
 final class SeedService
@@ -22,7 +21,6 @@ final class SeedService
         private RoutineGateway $gateway,
         private AesGcmCrypto $crypto,
         private PasswordHasher $passwordHasher,
-        private ValueNormalizer $normalizer,
     ) {
     }
 
@@ -41,7 +39,6 @@ final class SeedService
         }
 
         $this->seedCoreAccounts();
-        $this->seedDemoData();
     }
 
     public function reseedData(): void
@@ -88,50 +85,6 @@ final class SeedService
             $studentDepartmentIv,
             $studentDepartmentTag,
             null,
-            date('Y-m-d'),
-        ]);
-    }
-
-    private function seedDemoData(): void
-    {
-        $questions = [
-            [
-                'id' => 'q-demo-1',
-                'text' => 'What is 2 + 2?',
-                'type' => 'mcq',
-                'options' => ['3', '4', '5'],
-                'correctAnswer' => '4',
-                'marks' => 10,
-            ],
-            [
-                'id' => 'q-demo-2',
-                'text' => 'Explain the role of unit testing in software development.',
-                'type' => 'essay',
-                'marks' => 10,
-            ],
-        ];
-
-        $this->gateway->call('sp_seed_demo_data', [
-            '44444444-4444-4444-8444-444444444444',
-            'Seed Class',
-            'Software Engineering',
-            self::TEACHER_ID,
-            'SEED01',
-            'Bootstrap class used for initial demo data.',
-            date('Y-m-d'),
-            self::STUDENT_ID,
-            '55555555-5555-4555-8555-555555555555',
-            'Seed Midterm Exam',
-            'Baseline seeded exam for the frontend.',
-            '44444444-4444-4444-8444-444444444444',
-            self::TEACHER_ID,
-            60,
-            20,
-            10,
-            $this->normalizer->normalizeDate('now', true),
-            $this->normalizer->normalizeDate('+1 hour', true),
-            'published',
-            json_encode($questions, JSON_UNESCAPED_UNICODE),
             date('Y-m-d'),
         ]);
     }

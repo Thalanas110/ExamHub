@@ -38,10 +38,32 @@ export function AdminDashboard() {
     { name: 'Completed', count: exams.filter(e => e.status === 'completed').length },
   ];
 
-  const classData = classes.map(c => ({
-    name: c.name.length > 16 ? c.name.substring(0, 16) + '…' : c.name,
-    students: c.studentIds.length,
-  }));
+  const classSizes = classes.map(c => c.studentIds.length);
+
+  const classSizeDistribution = [
+    {
+      range: '0',
+      count: classSizes.filter(size => size === 0).length,
+    },
+    {
+      range: '1-10',
+      count: classSizes.filter(size => size >= 1 && size <= 10).length,
+    },
+    {
+      range: '11-20',
+      count: classSizes.filter(size => size >= 11 && size <= 20).length,
+    },
+    {
+      range: '21-30',
+      count: classSizes.filter(size => size >= 21 && size <= 30).length,
+    },
+    {
+      range: '31+',
+      count: classSizes.filter(size => size >= 31).length,
+    },
+  ];
+  const emptyClasses = classSizeDistribution[0].count;
+  const populatedClasses = classes.length - emptyClasses;
 
   const recentSubs = submissions.slice().reverse();
 
@@ -55,7 +77,7 @@ export function AdminDashboard() {
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard title="Total Users" value={users.length} icon={Users}
-          subtitle={`${students.length} students · ${teachers.length} teachers`} />
+          subtitle={`${students.length} students | ${teachers.length} teachers`} />
         <StatCard title="Total Exams" value={exams.length} icon={FileText}
           subtitle={`${exams.filter(e => e.status === 'published').length} published`} />
         <StatCard title="Submissions" value={submissions.length} icon={Clipboard}
@@ -93,18 +115,36 @@ export function AdminDashboard() {
           </ResponsiveContainer>
         </div>
 
-        {/* Class Sizes */}
+        {/* Class Enrollment Distribution */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
-          <h2 className="text-sm font-semibold text-gray-900 mb-4">Students per Class</h2>
+          <h2 className="text-sm font-semibold text-gray-900 mb-4">Class Enrollment Distribution</h2>
           <ResponsiveContainer width="100%" height={180}>
-            <BarChart data={classData} layout="vertical" margin={{ top: 0, right: 8, left: 8, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#F3F4F6" horizontal={false} />
-              <XAxis type="number" allowDecimals={false} tick={{ fontSize: 10, fill: '#9CA3AF' }} axisLine={false} tickLine={false} />
-              <YAxis dataKey="name" type="category" tick={{ fontSize: 10, fill: '#9CA3AF' }} width={80} axisLine={false} tickLine={false} />
-              <Tooltip contentStyle={{ fontSize: 12, border: '1px solid #E5E7EB', borderRadius: 8 }} />
-              <Bar dataKey="students" fill="#111827" radius={[0, 3, 3, 0]} />
+            <BarChart data={classSizeDistribution} margin={{ top: 0, right: 8, left: -20, bottom: 0 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#F3F4F6" vertical={false} />
+              <XAxis dataKey="range" tick={{ fontSize: 11, fill: '#9CA3AF' }} axisLine={false} tickLine={false} />
+              <YAxis allowDecimals={false} tick={{ fontSize: 11, fill: '#9CA3AF' }} axisLine={false} tickLine={false} />
+              <Tooltip
+                formatter={(value) => [value, 'Classes']}
+                labelFormatter={(label) => `${label} students`}
+                contentStyle={{ fontSize: 12, border: '1px solid #E5E7EB', borderRadius: 8 }}
+              />
+              <Bar dataKey="count" fill="#111827" radius={[3, 3, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
+          <div className="mt-3 grid grid-cols-3 gap-2">
+            <div className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-2 text-center">
+              <div className="text-sm font-semibold text-gray-900">{classes.length}</div>
+              <div className="text-[11px] text-gray-500">Total classes</div>
+            </div>
+            <div className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-2 text-center">
+              <div className="text-sm font-semibold text-gray-900">{populatedClasses}</div>
+              <div className="text-[11px] text-gray-500">With students</div>
+            </div>
+            <div className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-2 text-center">
+              <div className="text-sm font-semibold text-gray-900">{emptyClasses}</div>
+              <div className="text-[11px] text-gray-500">Empty classes</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -161,10 +201,10 @@ export function AdminDashboard() {
             return (
               <tr key={sub.id} className="hover:bg-gray-50">
                 <td className="px-5 py-3.5 font-medium text-gray-900 text-sm">{student?.name || 'Unknown'}</td>
-                <td className="px-5 py-3.5 text-gray-500 text-sm">{exam?.title || '—'}</td>
+                <td className="px-5 py-3.5 text-gray-500 text-sm">{exam?.title || '-'}</td>
                 <td className="px-5 py-3.5"><Badge variant={getStatusBadge(sub.status)}>{sub.status}</Badge></td>
                 <td className="px-5 py-3.5 text-right text-gray-600 text-sm">
-                  {sub.status === 'graded' ? `${sub.percentage}% · ${sub.grade}` : '—'}
+                  {sub.status === 'graded' ? `${sub.percentage}% - ${sub.grade}` : '-'}
                 </td>
               </tr>
             );

@@ -17,6 +17,18 @@
         "exam-validation-test": "php tests/ExamValidationTest.php",
         "encryption-storage-test": "php tests/EncryptionStorageCompatibilityTest.php",
         "transport-encryption-test": "php tests/TransportPayloadEnvelopeTest.php",
+        "generate-fake-users-csv": "php scripts/generate_fake_users_csv.php",
+        "import-fake-users-csv": "php scripts/import_fake_users_csv.php",
+        "seed-fake-users": [
+            "@generate-fake-users-csv",
+            "@import-fake-users-csv"
+        ],
+        "generate-fake-exam-csv": "php scripts/generate_fake_exam_data_csv.php",
+        "import-fake-exam-csv": "php scripts/import_fake_exam_data_csv.php",
+        "seed-fake-exams": [
+            "@generate-fake-exam-csv",
+            "@import-fake-exam-csv"
+        ],
         "purge-log-retention": "php scripts/purge_log_retention.php",
         "repair-encrypted-storage": "php scripts/repair_encrypted_storage.php"
     },

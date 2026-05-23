@@ -31,6 +31,7 @@ const AdminResults = lazy(() => import('./pages/admin/AdminResults').then(m => (
 const AdminReports = lazy(() => import('./pages/admin/AdminReports').then(m => ({ default: m.AdminReports })));
 const AdminUsers = lazy(() => import('./pages/admin/AdminUsers').then(m => ({ default: m.AdminUsers })));
 const AdminClasses = lazy(() => import('./pages/admin/AdminClasses').then(m => ({ default: m.AdminClasses })));
+const AdminViolations = lazy(() => import('./pages/admin/AdminViolations').then(m => ({ default: m.AdminViolations })));
 const AdminProfile = lazy(() => import('./pages/admin/AdminProfile').then(m => ({ default: m.AdminProfile })));
 const AdminApiReference = lazy(() => import('./pages/admin/AdminApiReference').then(m => ({ default: m.AdminApiReference })));
 const AdminTools = lazy(() => import('./pages/admin/AdminTools').then(m => ({ default: m.AdminTools })));
@@ -82,6 +83,7 @@ export function createAppRouter() {
         { path: 'exams', Component: AdminExams },
         { path: 'classes', Component: AdminClasses },
         { path: 'results', Component: AdminResults },
+        { path: 'violations', Component: AdminViolations },
         { path: 'reports', Component: AdminReports },
         { path: 'tools', Component: AdminTools },
         { path: 'api', Component: AdminApiReference },
