@@ -12,6 +12,7 @@ use App\Http\Request;
 use App\Http\Response;
 use App\Routing\Router;
 use App\Routing\Routes\ApiRouteRegistry;
+use App\Security\AesGcmCrypto;
 use App\Support\ApiException;
 use App\Support\Helpers;
 
@@ -19,6 +20,7 @@ require_once __DIR__ . '/../backend/bootstrap/autoload.php';
 
 $env = new Env(__DIR__ . '/../backend/.env');
 $config = AppConfig::fromEnv($env);
+$transportCrypto = new AesGcmCrypto($config->encryptionKey);
 
 $corsAllowed = CorsPolicy::apply($config);
 
@@ -28,7 +30,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') {
 }
 
 if (!$corsAllowed) {
-    Response::json(['error' => 'Origin not allowed by CORS policy.'], 403);
+    Response::json(['error' => 'Origin not allowed by CORS policy.'], 403, $transportCrypto);
     exit;
 }
 
@@ -45,7 +47,7 @@ try {
 
     $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
     $basePath = rtrim(str_replace('/index.php', '', $scriptName), '/');
-    $request = Request::fromGlobals($basePath === '' ? '/api' : $basePath);
+    $request = Request::fromGlobals($basePath === '' ? '/api' : $basePath, $transportCrypto);
     $requestId = Helpers::uuidV4();
     header('X-Request-Id: ' . $requestId);
     $startedAt = microtime(true);
@@ -110,9 +112,9 @@ try {
         actorRole: is_array($authUser) && isset($authUser['role']) ? (string) $authUser['role'] : null,
     );
 
-    Response::json($result['data'], $result['status']);
+    Response::json($result['data'], $result['status'], $transportCrypto);
 } catch (ApiException $apiException) {
-    Response::json(['error' => $apiException->getMessage()], $apiException->status);
+    Response::json(['error' => $apiException->getMessage()], $apiException->status, $transportCrypto);
 } catch (Throwable $throwable) {
-    Response::json(['error' => 'Backend bootstrap failed.'], 500);
+    Response::json(['error' => 'Backend bootstrap failed.'], 500, $transportCrypto);
 }

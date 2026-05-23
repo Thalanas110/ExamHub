@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import { Send, ChevronDown, ChevronUp } from 'lucide-react';
 import { PHP_BASE_URL, type EndpointDoc } from '../../../../services/api';
+import {
+  decryptTransportPayload,
+  encryptTransportPayload,
+  PAYLOAD_ENCRYPTION_ALGORITHM,
+  PAYLOAD_ENCRYPTION_HEADER,
+} from '../../../../services/http/transport-crypto';
 
 function buildDefaultBody(requestBody: EndpointDoc['requestBody']): string {
   if (!requestBody) return '';
@@ -58,16 +64,32 @@ export function TryItPanel({ endpoint }: { endpoint: EndpointDoc }) {
 
     setLoading(true);
     try {
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+        [PAYLOAD_ENCRYPTION_HEADER]: PAYLOAD_ENCRYPTION_ALGORITHM,
+      };
       if (token.trim()) headers.Authorization = `Bearer ${token.trim()}`;
+      const encryptedBody = parsedBody !== undefined ? await encryptTransportPayload(parsedBody) : undefined;
 
       const res = await fetch(buildUrl(), {
         method: endpoint.method,
         headers,
-        body: parsedBody !== undefined ? JSON.stringify(parsedBody) : undefined,
+        body: encryptedBody !== undefined ? JSON.stringify(encryptedBody) : undefined,
       });
 
-      const json = await res.json().catch(() => null);
+      const encryptionHeader = res.headers.get(PAYLOAD_ENCRYPTION_HEADER);
+      if ((encryptionHeader ?? '').toLowerCase() !== PAYLOAD_ENCRYPTION_ALGORITHM) {
+        throw new Error(
+          `Expected encrypted response header ${PAYLOAD_ENCRYPTION_HEADER}: ${PAYLOAD_ENCRYPTION_ALGORITHM}.`,
+        );
+      }
+
+      const envelope = await res.json().catch(() => null);
+      if (envelope === null) {
+        throw new Error('Encrypted response body is missing.');
+      }
+
+      const json = await decryptTransportPayload(envelope);
       setResponse({ status: res.status, body: json });
     } catch (err) {
       setFetchError(err instanceof Error ? err.message : String(err));

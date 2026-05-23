@@ -116,8 +116,8 @@ The bootstrap script:
 Recommended deployment split:
 
 - Vercel serves the frontend SPA
-- Render runs the PHP backend from [render.yaml](/C:/xampp/htdocs/group8/render.yaml)
-- Render runs the backend log-retention cron job from [render.yaml](/C:/xampp/htdocs/group8/render.yaml)
+- Render runs the PHP backend from [render.yaml](../render.yaml)
+- Render runs the backend log-retention cron job from [render.yaml](../render.yaml)
 - Aiven provides MySQL
 
 ### Render Backend Notes
@@ -156,7 +156,7 @@ Set `VITE_PHP_BASE_URL` in Vercel to your Render backend URL, for example:
 VITE_PHP_BASE_URL=https://your-render-service.onrender.com/api
 ```
 
-The frontend includes [frontend/vercel.json](/C:/xampp/htdocs/group8/frontend/vercel.json) for:
+The frontend includes [frontend/vercel.json](../frontend/vercel.json) for:
 
 - Vite build command
 - `dist/client` output directory
@@ -233,6 +233,8 @@ Local example:
 
 ```env
 VITE_PHP_BASE_URL=http://localhost/group8/api
+# or, Laragon virtual-host mode:
+# VITE_PHP_BASE_URL=http://group8.test/api
 ```
 
 Hosted example:

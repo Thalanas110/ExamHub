@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http;
 
+use App\Security\AesGcmCrypto;
 use App\Support\ApiException;
 use JsonException;
 
@@ -21,7 +22,7 @@ final class Request
     ) {
     }
 
-    public static function fromGlobals(string $basePath = '/api'): self
+    public static function fromGlobals(string $basePath = '/api', ?AesGcmCrypto $transportCrypto = null): self
     {
         $method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
         $uri = (string) ($_SERVER['REQUEST_URI'] ?? '/');
@@ -31,45 +32,36 @@ final class Request
             $path = substr($path, strlen($basePath));
         }
 
+        // Some local Apache/Laragon setups route through index.php without
+        // rewrite support, e.g. /group8/api/index.php/auth/login.
+        if (str_starts_with($path, '/index.php')) {
+            $path = substr($path, strlen('/index.php'));
+        }
+
         if ($path === '') {
             $path = '/';
         }
 
+        $headers = self::readHeaders();
         $rawBody = self::readRawBody();
         $body = [];
+
         if (trim($rawBody) !== '') {
-            try {
-                $decoded = json_decode($rawBody, true, 512, JSON_THROW_ON_ERROR);
-            } catch (JsonException) {
-                throw new ApiException(400, 'Invalid JSON request body.');
+            if ($transportCrypto !== null) {
+                AesGcmPayloadEnvelope::requireHeaderValue($headers[AesGcmPayloadEnvelope::HEADER_NAME_LOWER] ?? null);
+                $envelope = self::decodeJsonBody(
+                    $rawBody,
+                    'Invalid JSON request body.',
+                    'JSON request body must decode to an object.',
+                );
+                $body = AesGcmPayloadEnvelope::decryptRequestBody($envelope, $transportCrypto);
+            } else {
+                $body = self::decodeJsonBody(
+                    $rawBody,
+                    'Invalid JSON request body.',
+                    'JSON request body must decode to an object.',
+                );
             }
-
-            if (!is_array($decoded)) {
-                throw new ApiException(400, 'JSON request body must decode to an object.');
-            }
-
-            $body = $decoded;
-        }
-
-        $headers = [];
-        $rawHeaders = function_exists('getallheaders') ? getallheaders() : [];
-        if (!is_array($rawHeaders)) {
-            $rawHeaders = [];
-        }
-
-        if ($rawHeaders === []) {
-            foreach ($_SERVER as $key => $value) {
-                if (!str_starts_with($key, 'HTTP_')) {
-                    continue;
-                }
-
-                $headerName = str_replace('_', '-', strtolower(substr($key, 5)));
-                $rawHeaders[$headerName] = (string) $value;
-            }
-        }
-
-        foreach ($rawHeaders as $key => $value) {
-            $headers[strtolower((string) $key)] = (string) $value;
         }
 
         return new self(
@@ -113,5 +105,52 @@ final class Request
         }
 
         return $rawBody;
+    }
+
+    /**
+     * @return array<string, string>
+     */
+    private static function readHeaders(): array
+    {
+        $headers = [];
+        $rawHeaders = function_exists('getallheaders') ? getallheaders() : [];
+        if (!is_array($rawHeaders)) {
+            $rawHeaders = [];
+        }
+
+        if ($rawHeaders === []) {
+            foreach ($_SERVER as $key => $value) {
+                if (!str_starts_with($key, 'HTTP_')) {
+                    continue;
+                }
+
+                $headerName = str_replace('_', '-', strtolower(substr($key, 5)));
+                $rawHeaders[$headerName] = (string) $value;
+            }
+        }
+
+        foreach ($rawHeaders as $key => $value) {
+            $headers[strtolower((string) $key)] = (string) $value;
+        }
+
+        return $headers;
+    }
+
+    /**
+     * @return array<string, mixed>
+     */
+    private static function decodeJsonBody(string $rawBody, string $invalidJsonMessage, string $mustBeObjectMessage): array
+    {
+        try {
+            $decoded = json_decode($rawBody, true, 512, JSON_THROW_ON_ERROR);
+        } catch (JsonException) {
+            throw new ApiException(400, $invalidJsonMessage);
+        }
+
+        if (!is_array($decoded)) {
+            throw new ApiException(400, $mustBeObjectMessage);
+        }
+
+        return $decoded;
     }
 }

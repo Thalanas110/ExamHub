@@ -4,6 +4,10 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
 
+const devPhpProxyTarget = process.env.VITE_DEV_PHP_PROXY_TARGET?.trim() || 'http://localhost'
+const devPhpProxyBasePath = (process.env.VITE_DEV_PHP_PROXY_BASE_PATH?.trim() || '/group8/api/index.php')
+  .replace(/\/+$/, '')
+
 export default defineConfig({
   plugins: [
     tanstackStart({
@@ -23,6 +27,16 @@ export default defineConfig({
     alias: {
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: devPhpProxyTarget,
+        changeOrigin: true,
+        secure: false,
+        rewrite: (requestPath) => `${devPhpProxyBasePath}${requestPath.replace(/^\/api/, '')}`,
+      },
     },
   },
 

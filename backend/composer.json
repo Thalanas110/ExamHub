@@ -16,6 +16,7 @@
         "smoke-test": "php tests/SecuritySmokeTest.php",
         "exam-validation-test": "php tests/ExamValidationTest.php",
         "encryption-storage-test": "php tests/EncryptionStorageCompatibilityTest.php",
+        "transport-encryption-test": "php tests/TransportPayloadEnvelopeTest.php",
         "purge-log-retention": "php scripts/purge_log_retention.php",
         "repair-encrypted-storage": "php scripts/repair_encrypted_storage.php"
     },

@@ -52,7 +52,7 @@ Manual Aiven SQL import order for the logs database:
 
 ## 2. Render Backend
 
-Create a Render web service from this repository using [render.yaml](/C:/xampp/htdocs/group8/render.yaml).
+Create a Render web service from this repository using [render.yaml](../../render.yaml).
 
 The Blueprint creates:
 
@@ -122,7 +122,7 @@ Import the same Git repository in Vercel and set the project root directory to:
 frontend
 ```
 
-The frontend project includes [frontend/vercel.json](/C:/xampp/htdocs/group8/frontend/vercel.json) with:
+The frontend project includes [frontend/vercel.json](../../frontend/vercel.json) with:
 
 - framework preset: Vite
 - install command: `npm ci`

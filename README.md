@@ -56,10 +56,10 @@ The recommended hosted split for this repo is:
 
 Deployment assets included in the repo:
 
-- [render.yaml](/C:/xampp/htdocs/group8/render.yaml)
-- [frontend/vercel.json](/C:/xampp/htdocs/group8/frontend/vercel.json)
-- [backend/scripts/bootstrap_database.php](/C:/xampp/htdocs/group8/backend/scripts/bootstrap_database.php)
-- [backend/scripts/purge_log_retention.php](/C:/xampp/htdocs/group8/backend/scripts/purge_log_retention.php)
+- [render.yaml](render.yaml)
+- [frontend/vercel.json](frontend/vercel.json)
+- [backend/scripts/bootstrap_database.php](backend/scripts/bootstrap_database.php)
+- [backend/scripts/purge_log_retention.php](backend/scripts/purge_log_retention.php)
 
 Use the backend bootstrap command after configuring Render with Aiven MySQL environment variables:
 
@@ -71,10 +71,10 @@ composer bootstrap-database
 That command applies the repo SQL in the correct order, retargets the hardcoded local database names to your deployed database names, and repairs legacy encrypted records.
 It now also auto-discovers and applies ordered `backend/database/app_*.sql` and `backend/database/logs_*.sql` files, so new DB work can ship as additive migrations without editing the base schema.
 
-Full hosted setup notes live in [docs/deployment/vercel-render-aiven.md](/C:/xampp/htdocs/group8/docs/deployment/vercel-render-aiven.md).
+Full hosted setup notes live in [docs/deployment/vercel-render-aiven.md](docs/deployment/vercel-render-aiven.md).
 
 ## Docs
 
-- Backend/security guide: [backend/README.md](/C:/xampp/htdocs/group8/backend/README.md)
-- API documentation: [docs/api/backend-api-documentation.md](/C:/xampp/htdocs/group8/docs/api/backend-api-documentation.md)
-- Deployment guide: [docs/deployment/vercel-render-aiven.md](/C:/xampp/htdocs/group8/docs/deployment/vercel-render-aiven.md)
+- Backend/security guide: [backend/README.md](backend/README.md)
+- API documentation: [docs/api/backend-api-documentation.md](docs/api/backend-api-documentation.md)
+- Deployment guide: [docs/deployment/vercel-render-aiven.md](docs/deployment/vercel-render-aiven.md)
