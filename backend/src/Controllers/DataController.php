@@ -11,31 +11,7 @@ use App\Support\ApiException;
 
 final class DataController
 {
-    /**
-     * @var array<int, string>
-     */
-    private const RESEED_CONFIRMATION_FACTORS = [
-        'RESET FACTOR 01',
-        'RESET FACTOR 02',
-        'RESET FACTOR 03',
-        'RESET FACTOR 04',
-        'RESET FACTOR 05',
-        'RESET FACTOR 06',
-        'RESET FACTOR 07',
-        'RESET FACTOR 08',
-        'RESET FACTOR 09',
-        'RESET FACTOR 10',
-        'RESET FACTOR 11',
-        'RESET FACTOR 12',
-        'RESET FACTOR 13',
-        'RESET FACTOR 14',
-        'RESET FACTOR 15',
-        'RESET FACTOR 16',
-        'RESET FACTOR 17',
-        'RESET FACTOR 18',
-        'RESET FACTOR 19',
-        'RESET FACTOR 20',
-    ];
+    private const RESEED_CONFIRMATION_PHRASE = 'RESET TO SEED DATA';
 
     // constructor property promotion.
     // i found this hilarious, but this is also a good refactor for some
@@ -61,7 +37,7 @@ final class DataController
      */
     public function reseedData(Request $request): array
     {
-        $this->assertReseedConfirmationFactors($request->body['confirmationFactors'] ?? null);
+        $this->assertReseedConfirmationPhrase($request->body['confirmationText'] ?? null);
         $this->seedService->reseedData();
 
         return [
@@ -73,17 +49,23 @@ final class DataController
         ];
     }
 
-    private function assertReseedConfirmationFactors(mixed $factors): void
+    private function assertReseedConfirmationPhrase(mixed $confirmationText): void
     {
-        if (!is_array($factors) || count($factors) !== count(self::RESEED_CONFIRMATION_FACTORS)) {
-            throw new ApiException(422, 'All 20 reseed confirmation factors are required.');
+        if (!is_string($confirmationText) || trim($confirmationText) === '') {
+            throw new ApiException(
+                422,
+                sprintf('Type "%s" to confirm reseeding.', self::RESEED_CONFIRMATION_PHRASE),
+            );
         }
 
-        foreach (self::RESEED_CONFIRMATION_FACTORS as $index => $expected) {
-            $actual = $factors[$index] ?? null;
-            if (!is_string($actual) || trim($actual) !== $expected) {
-                throw new ApiException(422, 'All 20 reseed confirmation factors must be completed exactly.');
-            }
+        if (trim($confirmationText) !== self::RESEED_CONFIRMATION_PHRASE) {
+            throw new ApiException(
+                422,
+                sprintf(
+                    'Confirmation text mismatch. Type "%s" exactly to continue.',
+                    self::RESEED_CONFIRMATION_PHRASE,
+                ),
+            );
         }
     }
 }

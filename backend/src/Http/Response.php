@@ -18,7 +18,7 @@ final class Response
 
         $output = $payload;
         if ($transportCrypto !== null) {
-            header(AesGcmPayloadEnvelope::HEADER_NAME . ': ' . AesGcmPayloadEnvelope::ALGORITHM);
+            header(AesGcmPayloadEnvelope::HEADER_NAME . ': ' . AesGcmPayloadEnvelope::TRANSPORT_MARKER);
             $output = AesGcmPayloadEnvelope::encryptJsonPayload($payload, $transportCrypto);
         }
 

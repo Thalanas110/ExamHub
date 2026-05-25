@@ -18,7 +18,7 @@ $payload = [
 ];
 
 $encrypted = AesGcmPayloadEnvelope::encryptJsonPayload($payload, $crypto);
-foreach (['ciphertext', 'iv', 'tag'] as $field) {
+foreach (['payload'] as $field) {
     if (!isset($encrypted[$field]) || !is_string($encrypted[$field]) || $encrypted[$field] === '') {
         $failures[] = sprintf('Encrypted transport payload missing required "%s" field.', $field);
     }
@@ -30,7 +30,14 @@ if ($decrypted !== $payload) {
 }
 
 $tampered = $encrypted;
-$tampered['tag'] = str_repeat('A', strlen((string) ($tampered['tag'] ?? '')));
+$packedPayload = base64_decode((string) ($tampered['payload'] ?? ''), true);
+if (!is_string($packedPayload) || $packedPayload === '') {
+    $failures[] = 'Encrypted transport payload should expose a base64 payload blob.';
+} else {
+    $packedPayload[0] = chr(ord($packedPayload[0]) ^ 0x01);
+    $tampered['payload'] = base64_encode($packedPayload);
+}
+
 try {
     AesGcmPayloadEnvelope::decryptRequestBody($tampered, $crypto);
     $failures[] = 'Tampered encrypted transport payload should fail decryption.';

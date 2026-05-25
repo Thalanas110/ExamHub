@@ -10,7 +10,7 @@ final class CorsPolicy
 {
     public static function apply(AppConfig $config): bool
     {
-        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Payload-Encryption');
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Payload-Encryption, X-Transport-Mode, X-Transport-Bypass-Key');
         header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
         header('Access-Control-Max-Age: 86400');
 

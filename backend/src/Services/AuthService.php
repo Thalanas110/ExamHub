@@ -42,7 +42,8 @@ final class AuthService
             return null;
         }
 
-        $rows = $this->gateway->call('sp_auth_get_user_by_session', [hash('sha256', $token)]);
+        $tokenHash = hash('sha256', $token);
+        $rows = $this->gateway->call('sp_auth_get_user_by_session', [$tokenHash]);
         $row = $rows[0] ?? null;
         if (!is_array($row)) {
             return null;
@@ -52,6 +53,8 @@ final class AuthService
         if (($jwtPayload['sub'] ?? null) !== $user['id']) {
             return null;
         }
+
+        $this->refreshSessionActivity($tokenHash, (string) $user['id']);
 
         return $user;
     }
@@ -255,7 +258,7 @@ final class AuthService
         }
 
         $issuedAt = gmdate('Y-m-d H:i:s');
-        $expiresAt = gmdate('Y-m-d H:i:s', time() + $this->config->tokenTtlSeconds);
+        $expiresAt = $this->sessionExpiryTimestamp();
 
         $this->gateway->call('sp_session_create', [
             Helpers::uuidV4(),
@@ -266,5 +269,21 @@ final class AuthService
         ]);
 
         return $token;
+    }
+
+    private function refreshSessionActivity(string $tokenHash, string $userId): void
+    {
+        $this->gateway->call('sp_session_create', [
+            Helpers::uuidV4(),
+            $userId,
+            $tokenHash,
+            gmdate('Y-m-d H:i:s'),
+            $this->sessionExpiryTimestamp(),
+        ]);
+    }
+
+    private function sessionExpiryTimestamp(): string
+    {
+        return gmdate('Y-m-d H:i:s', time() + $this->config->sessionIdleTtlSeconds);
     }
 }

@@ -26,6 +26,8 @@ function makeConfig(bool $allowAll, array $allowedOrigins): AppConfig
         logRetentionDays: 90,
         jwtSecret: 'unit-test-secret',
         encryptionKey: '0123456789abcdef0123456789abcdef',
+        transportAllowPlaintextRequests: false,
+        transportPlaintextBypassKey: null,
         tokenTtlSeconds: 28800,
         allowCorsAll: $allowAll,
         corsAllowedOrigins: $allowedOrigins,

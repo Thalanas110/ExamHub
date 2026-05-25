@@ -4,8 +4,8 @@ import { PHP_BASE_URL, type EndpointDoc } from '../../../../services/api';
 import {
   decryptTransportPayload,
   encryptTransportPayload,
-  PAYLOAD_ENCRYPTION_ALGORITHM,
   PAYLOAD_ENCRYPTION_HEADER,
+  PAYLOAD_ENCRYPTION_MARKER,
 } from '../../../../services/http/transport-crypto';
 
 function buildDefaultBody(requestBody: EndpointDoc['requestBody']): string {
@@ -66,7 +66,7 @@ export function TryItPanel({ endpoint }: { endpoint: EndpointDoc }) {
     try {
       const headers: Record<string, string> = {
         'Content-Type': 'application/json',
-        [PAYLOAD_ENCRYPTION_HEADER]: PAYLOAD_ENCRYPTION_ALGORITHM,
+        [PAYLOAD_ENCRYPTION_HEADER]: PAYLOAD_ENCRYPTION_MARKER,
       };
       if (token.trim()) headers.Authorization = `Bearer ${token.trim()}`;
       const encryptedBody = parsedBody !== undefined ? await encryptTransportPayload(parsedBody) : undefined;
@@ -78,9 +78,9 @@ export function TryItPanel({ endpoint }: { endpoint: EndpointDoc }) {
       });
 
       const encryptionHeader = res.headers.get(PAYLOAD_ENCRYPTION_HEADER);
-      if ((encryptionHeader ?? '').toLowerCase() !== PAYLOAD_ENCRYPTION_ALGORITHM) {
+      if ((encryptionHeader ?? '') !== PAYLOAD_ENCRYPTION_MARKER) {
         throw new Error(
-          `Expected encrypted response header ${PAYLOAD_ENCRYPTION_HEADER}: ${PAYLOAD_ENCRYPTION_ALGORITHM}.`,
+          `Expected encrypted response header ${PAYLOAD_ENCRYPTION_HEADER}: ${PAYLOAD_ENCRYPTION_MARKER}.`,
         );
       }
 

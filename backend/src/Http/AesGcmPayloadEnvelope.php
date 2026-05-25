@@ -13,7 +13,11 @@ final class AesGcmPayloadEnvelope
 {
     public const HEADER_NAME = 'X-Payload-Encryption';
     public const HEADER_NAME_LOWER = 'x-payload-encryption';
-    public const ALGORITHM = 'aes-256-gcm';
+    public const TRANSPORT_MARKER = 'v1';
+
+    private const OPAQUE_FIELD = 'payload';
+    private const IV_LENGTH = 12;
+    private const TAG_LENGTH = 16;
 
     /**
      * @param array<string, mixed> $envelope
@@ -21,11 +25,8 @@ final class AesGcmPayloadEnvelope
      */
     public static function decryptRequestBody(array $envelope, AesGcmCrypto $crypto): array
     {
-        $ciphertext = self::requireEnvelopeField($envelope, 'ciphertext');
-        $iv = self::requireEnvelopeField($envelope, 'iv');
-        $tag = self::requireEnvelopeField($envelope, 'tag');
-
-        $json = $crypto->decryptFromParts($ciphertext, $iv, $tag);
+        $opaquePayload = self::requireEnvelopeField($envelope, self::OPAQUE_FIELD);
+        $json = $crypto->decryptLegacy($opaquePayload);
         if ($json === null) {
             throw new ApiException(400, 'Encrypted request payload could not be decrypted.');
         }
@@ -45,7 +46,7 @@ final class AesGcmPayloadEnvelope
 
     /**
      * @param array<string, mixed>|array<int, mixed> $payload
-     * @return array{ciphertext: string, iv: string, tag: string}
+     * @return array{payload: string}
      */
     public static function encryptJsonPayload(array $payload, AesGcmCrypto $crypto): array
     {
@@ -59,18 +60,20 @@ final class AesGcmPayloadEnvelope
             throw new RuntimeException('Failed to AES-GCM encrypt transport payload.');
         }
 
-        return $encrypted;
+        return [
+            self::OPAQUE_FIELD => self::packOpaquePayload($encrypted),
+        ];
     }
 
     public static function requireHeaderValue(?string $value): void
     {
-        if (strtolower(trim((string) $value)) === self::ALGORITHM) {
+        if (trim((string) $value) === self::TRANSPORT_MARKER) {
             return;
         }
 
         throw new ApiException(
             400,
-            sprintf('Request payloads must include %s: %s.', self::HEADER_NAME, self::ALGORITHM),
+            sprintf('Request payloads must include %s: %s.', self::HEADER_NAME, self::TRANSPORT_MARKER),
         );
     }
 
@@ -88,5 +91,25 @@ final class AesGcmPayloadEnvelope
             400,
             sprintf('Encrypted request payload is missing required field "%s".', $field),
         );
+    }
+
+    /**
+     * @param array{ciphertext: string, iv: string, tag: string} $payload
+     */
+    private static function packOpaquePayload(array $payload): string
+    {
+        $iv = base64_decode($payload['iv'], true);
+        $tag = base64_decode($payload['tag'], true);
+        $ciphertext = base64_decode($payload['ciphertext'], true);
+
+        if ($iv === false || $tag === false || $ciphertext === false) {
+            throw new RuntimeException('Failed to encode encrypted payload envelope.');
+        }
+
+        if (strlen($iv) !== self::IV_LENGTH || strlen($tag) !== self::TAG_LENGTH || $ciphertext === '') {
+            throw new RuntimeException('Failed to encode encrypted payload envelope.');
+        }
+
+        return base64_encode($iv . $tag . $ciphertext);
     }
 }

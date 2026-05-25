@@ -1,11 +1,9 @@
 export interface EncryptedPayloadEnvelope {
-  ciphertext: string;
-  iv: string;
-  tag: string;
+  payload: string;
 }
 
 export const PAYLOAD_ENCRYPTION_HEADER = 'X-Payload-Encryption';
-export const PAYLOAD_ENCRYPTION_ALGORITHM = 'aes-256-gcm';
+export const PAYLOAD_ENCRYPTION_MARKER = 'v1';
 
 const IV_LENGTH_BYTES = 12;
 const TAG_LENGTH_BYTES = 16;
@@ -18,7 +16,7 @@ let cachedCryptoKeyPromise: Promise<CryptoKey> | null = null;
 function getCryptoApi(): Crypto {
   const api = globalThis.crypto;
   if (!api?.subtle) {
-    throw new Error('Web Crypto API is unavailable for AES-256-GCM transport encryption.');
+    throw new Error('Web Crypto API is unavailable for encrypted transport payloads.');
   }
   return api;
 }
@@ -130,23 +128,36 @@ function parseEnvelope(payload: unknown): EncryptedPayloadEnvelope {
     throw new Error('Encrypted payload envelope must be a JSON object.');
   }
 
-  const ciphertext = payload.ciphertext;
-  const iv = payload.iv;
-  const tag = payload.tag;
-
-  if (typeof ciphertext !== 'string' || ciphertext.trim() === '') {
-    throw new Error('Encrypted payload envelope is missing "ciphertext".');
+  const opaquePayload = payload.payload;
+  if (typeof opaquePayload !== 'string' || opaquePayload.trim() === '') {
+    throw new Error('Encrypted payload envelope is missing "payload".');
   }
 
-  if (typeof iv !== 'string' || iv.trim() === '') {
-    throw new Error('Encrypted payload envelope is missing "iv".');
+  return { payload: opaquePayload };
+}
+
+function packOpaquePayload(iv: Uint8Array, tag: Uint8Array, cipherText: Uint8Array): string {
+  const packed = new Uint8Array(iv.byteLength + tag.byteLength + cipherText.byteLength);
+  packed.set(iv, 0);
+  packed.set(tag, iv.byteLength);
+  packed.set(cipherText, iv.byteLength + tag.byteLength);
+  return encodeBase64(packed);
+}
+
+function unpackOpaquePayload(payload: string): {
+  iv: Uint8Array;
+  tag: Uint8Array;
+  cipherText: Uint8Array;
+} {
+  const packed = decodeBase64(payload);
+  if (packed.byteLength <= IV_LENGTH_BYTES + TAG_LENGTH_BYTES) {
+    throw new Error('Encrypted payload envelope has an invalid payload shape.');
   }
 
-  if (typeof tag !== 'string' || tag.trim() === '') {
-    throw new Error('Encrypted payload envelope is missing "tag".');
-  }
-
-  return { ciphertext, iv, tag };
+  const iv = packed.slice(0, IV_LENGTH_BYTES);
+  const tag = packed.slice(IV_LENGTH_BYTES, IV_LENGTH_BYTES + TAG_LENGTH_BYTES);
+  const cipherText = packed.slice(IV_LENGTH_BYTES + TAG_LENGTH_BYTES);
+  return { iv, tag, cipherText };
 }
 
 export async function encryptTransportPayload(payload: unknown): Promise<EncryptedPayloadEnvelope> {
@@ -169,28 +180,20 @@ export async function encryptTransportPayload(payload: unknown): Promise<Encrypt
   );
 
   if (encrypted.byteLength <= TAG_LENGTH_BYTES) {
-    throw new Error('AES-256-GCM transport encryption returned an invalid payload.');
+    throw new Error('Encrypted transport payload returned an invalid payload.');
   }
 
   const cipherText = encrypted.slice(0, encrypted.byteLength - TAG_LENGTH_BYTES);
   const tag = encrypted.slice(encrypted.byteLength - TAG_LENGTH_BYTES);
 
   return {
-    ciphertext: encodeBase64(cipherText),
-    iv: encodeBase64(iv),
-    tag: encodeBase64(tag),
+    payload: packOpaquePayload(iv, tag, cipherText),
   };
 }
 
 export async function decryptTransportPayload<T = unknown>(payload: unknown): Promise<T> {
   const envelope = parseEnvelope(payload);
-  const iv = decodeBase64(envelope.iv);
-  const cipherText = decodeBase64(envelope.ciphertext);
-  const tag = decodeBase64(envelope.tag);
-
-  if (iv.byteLength !== IV_LENGTH_BYTES || tag.byteLength !== TAG_LENGTH_BYTES) {
-    throw new Error('Encrypted payload envelope has invalid IV or tag length.');
-  }
+  const { iv, tag, cipherText } = unpackOpaquePayload(envelope.payload);
 
   const encrypted = new Uint8Array(cipherText.byteLength + tag.byteLength);
   encrypted.set(cipherText, 0);
@@ -205,7 +208,7 @@ export async function decryptTransportPayload<T = unknown>(payload: unknown): Pr
       encrypted,
     );
   } catch {
-    throw new Error('Encrypted payload could not be decrypted with AES-256-GCM.');
+    throw new Error('Encrypted payload could not be decrypted.');
   }
 
   const json = textDecoder.decode(new Uint8Array(decryptedBuffer));
