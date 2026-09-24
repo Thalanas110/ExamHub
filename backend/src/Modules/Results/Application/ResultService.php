@@ -11,6 +11,7 @@ use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
+use App\Modules\Results\Application\ResultMapper;
 
 final class ResultService
 {
@@ -18,6 +19,7 @@ final class ResultService
         private RoutineGateway $gateway,
         private AesGcmCrypto $crypto,
         private ExamMapper $mapper,
+        private ResultMapper $resultMapper,
         private ValueNormalizer $normalizer,
         private StudentExamAccommodationService $accommodationService,
     ) {
@@ -72,7 +74,7 @@ final class ResultService
             throw new ApiException(500, 'Attempt start failed.');
         }
 
-        return $this->mapper->mapSubmissionRow($row);
+        return $this->resultMapper->mapSubmissionRow($row);
     }
 
     /**
@@ -161,7 +163,7 @@ final class ResultService
             );
         }
 
-        return $this->mapper->mapSubmissionRow($row);
+        return $this->resultMapper->mapSubmissionRow($row);
     }
 
     /**
@@ -176,7 +178,7 @@ final class ResultService
             $authUser['id'],
         ]);
 
-        return array_map(fn (array $row): array => $this->mapper->mapSubmissionRow($row), $rows);
+        return array_map(fn (array $row): array => $this->resultMapper->mapSubmissionRow($row), $rows);
     }
 
     /**
@@ -197,7 +199,7 @@ final class ResultService
             throw new ApiException(404, 'Submission not found.');
         }
 
-        $submission = $this->mapper->mapSubmissionRow($row);
+        $submission = $this->resultMapper->mapSubmissionRow($row);
         $answers = $submission['answers'];
 
         $gradeMap = [];
@@ -250,7 +252,7 @@ final class ResultService
             throw new ApiException(500, 'Grade update failed.');
         }
 
-        return $this->mapper->mapSubmissionRow($updatedRow);
+        return $this->resultMapper->mapSubmissionRow($updatedRow);
     }
 
     /**
@@ -360,7 +362,7 @@ final class ResultService
     private function loadAttemptsForStudentExam(string $examId, string $studentId): array
     {
         $rows = $this->gateway->call('sp_results_get_by_exam_and_student', [$examId, $studentId]);
-        return array_map(fn (array $row): array => $this->mapper->mapSubmissionRow($row), $rows);
+        return array_map(fn (array $row): array => $this->resultMapper->mapSubmissionRow($row), $rows);
     }
 
     /**
@@ -380,7 +382,7 @@ final class ResultService
             throw new ApiException(404, 'Submission not found.');
         }
 
-        return $this->mapper->mapSubmissionRow($row);
+        return $this->resultMapper->mapSubmissionRow($row);
     }
 
     /**
