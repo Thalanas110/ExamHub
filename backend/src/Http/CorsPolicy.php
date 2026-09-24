@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Http;
 
-use App\Config\AppConfig;
+use App\Shared\Config\AppConfig;
 
 final class CorsPolicy
 {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Database;
 
-use App\Config\AppConfig;
+use App\Shared\Config\AppConfig;
 use PDO;
 
 final class DbConnection

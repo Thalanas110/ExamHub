@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Config\AppConfig;
-use App\Config\Env;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
 use App\Database\DbConnection;
 use App\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;

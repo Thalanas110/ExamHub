@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Config\AppConfig;
+use App\Shared\Config\AppConfig;
 use App\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;
 use App\Security\JwtService;

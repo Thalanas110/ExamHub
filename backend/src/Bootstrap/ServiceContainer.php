@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Bootstrap;
 
-use App\Config\AppConfig;
+use App\Shared\Config\AppConfig;
 use App\Controllers\AdminController;
 use App\Controllers\AuthController;
 use App\Controllers\ClassesController;
