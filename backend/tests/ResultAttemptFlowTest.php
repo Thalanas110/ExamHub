@@ -14,6 +14,7 @@ use App\Modules\Exams\Application\ExamService;
 use App\Services\ResultService;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
+use App\Modules\Exams\Infrastructure\RoutineExamRepository;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\ValueNormalizer;
@@ -30,7 +31,7 @@ $mapper = new ExamMapper($crypto, $normalizer);
 $seedService = new SeedService($config, $gateway, $crypto, $passwordHasher);
 $seedService->bootstrap();
 $accommodationService = new StudentExamAccommodationService($gateway, $crypto, $mapper, $normalizer);
-$examService = new ExamService($gateway, $mapper, $normalizer, new ExamPayloadValidator(), $accommodationService);
+$examService = new ExamService(new RoutineExamRepository($gateway), $mapper, $normalizer, new ExamPayloadValidator(), $accommodationService);
 $resultService = new ResultService($gateway, $crypto, $mapper, $normalizer, $accommodationService);
 
 /**

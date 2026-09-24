@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Exams\Application;
 
-use App\Shared\Database\RoutineGateway;
+use App\Modules\Exams\Domain\ExamRepository;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\ValueNormalizer;
@@ -14,7 +14,7 @@ use App\Shared\Support\Helpers;
 final class ExamService
 {
     public function __construct(
-        private RoutineGateway $gateway,
+        private ExamRepository $repository,
         private ExamMapper $mapper,
         private ValueNormalizer $normalizer,
         private ExamPayloadValidator $validator,
@@ -28,10 +28,7 @@ final class ExamService
      */
     public function getExams(array $authUser): array
     {
-        $rows = $this->gateway->call('sp_exams_get_for_user', [
-            $authUser['role'],
-            $authUser['id'],
-        ]);
+        $rows = $this->repository->findForUser((string) $authUser['role'], (string) $authUser['id']);
 
         $exams = array_map(fn (array $row): array => $this->mapper->mapExamRow($row), $rows);
         if (($authUser['role'] ?? '') === 'student') {
@@ -47,13 +44,7 @@ final class ExamService
      */
     public function getExamById(array $authUser, string $examId): array
     {
-        $rows = $this->gateway->call('sp_exams_get_by_id_for_user', [
-            $examId,
-            $authUser['role'],
-            $authUser['id'],
-        ]);
-
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findByIdForUser($examId, (string) $authUser['role'], (string) $authUser['id']);
         if (!is_array($row)) {
             throw new ApiException(404, 'Exam not found.');
         }
@@ -113,7 +104,7 @@ final class ExamService
         $examId = $this->resolveExamId($payload);
         $teacherId = $this->resolveTeacherId($authUser, $payload);
 
-        $rows = $this->gateway->call('sp_exams_create', [
+        $row = $this->repository->create([
             $examId,
             $validated['title'],
             $validated['description'],
@@ -129,7 +120,6 @@ final class ExamService
             $this->normalizer->normalizeDate((string) ($payload['createdAt'] ?? date('Y-m-d')), false),
         ]);
 
-        $row = $rows[0] ?? null;
         if (!is_array($row)) {
             throw new ApiException(500, 'Exam creation failed.');
         }
@@ -144,8 +134,7 @@ final class ExamService
      */
     public function updateExam(array $authUser, string $examId, array $payload): array
     {
-        $rows = $this->gateway->call('sp_exams_get_by_id', [$examId]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findById($examId);
         if (!is_array($row)) {
             throw new ApiException(404, 'Exam not found.');
         }
@@ -159,7 +148,7 @@ final class ExamService
         $validated = $this->validator->validateAndBuild($payload, $existing);
         $teacherId = $this->resolveTeacherId($authUser, $payload, $existing);
 
-        $updatedRows = $this->gateway->call('sp_exams_update', [
+        $updatedRow = $this->repository->update([
             $examId,
             $validated['title'],
             $validated['description'],
@@ -174,7 +163,6 @@ final class ExamService
             $this->encodeQuestions($validated['questions']),
         ]);
 
-        $updatedRow = $updatedRows[0] ?? null;
         if (!is_array($updatedRow)) {
             throw new ApiException(500, 'Exam update failed.');
         }
@@ -187,8 +175,7 @@ final class ExamService
      */
     public function deleteExam(array $authUser, string $examId): void
     {
-        $rows = $this->gateway->call('sp_exams_get_by_id', [$examId]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findById($examId);
         if (!is_array($row)) {
             throw new ApiException(404, 'Exam not found.');
         }
@@ -198,7 +185,7 @@ final class ExamService
             throw new ApiException(403, 'Teachers can only delete their own exams.');
         }
 
-        $this->gateway->call('sp_exams_delete', [$examId]);
+        $this->repository->delete($examId);
     }
 
     /**

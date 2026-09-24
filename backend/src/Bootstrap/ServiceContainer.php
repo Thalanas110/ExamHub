@@ -40,6 +40,7 @@ use App\Services\ReportService;
 use App\Services\ResultService;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
+use App\Modules\Exams\Infrastructure\RoutineExamRepository;
 use App\Services\ViolationCaseService;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
@@ -113,7 +114,7 @@ final class ServiceContainer
         );
 
         $examService = new ExamService(
-            gateway: $gateway,
+            repository: new RoutineExamRepository($gateway),
             mapper: $mapper,
             normalizer: $normalizer,
             validator: $examPayloadValidator,
