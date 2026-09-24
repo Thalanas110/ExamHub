@@ -8,10 +8,10 @@ import {
   getSubmissionsByExam,
   getSubmissionsByStudent,
   getUserById,
-} from './app-context.selectors';
+} from '@/app/providers/app-context.selectors';
 import { persistStoredUser, readStoredUser } from '@/app/providers/app-context.storage';
 import type { AppContextType } from '@/app/providers/app-context.types';
-import { createAuthDomain } from './domains/auth-domain';
+import { createAuthDomain } from '@/app/providers/domains/auth-domain';
 import { createClassDomain } from './domains/class-domain';
 import { createExamDomain } from './domains/exam-domain';
 import { createSubmissionDomain } from './domains/submission-domain';
