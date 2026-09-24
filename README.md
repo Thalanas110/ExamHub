@@ -26,6 +26,8 @@ The local MySQL container now initializes from:
 - `backend/database/app_003_migrate_add_question_analytics.sql`
 - `backend/database/app_004_migrate_add_student_exam_accommodations.sql`
 - `backend/database/app_005_migrate_enable_submission_attempts.sql`
+- `backend/database/app_006_migrate_fix_class_student_json_aggregation.sql`
+- `backend/database/app_007_migrate_optimize_read_paths.sql`
 - `backend/database/logs_001_logging_routines.sql`
 - `backend/database/logs_002_migrate_add_exam_violations.sql`
 - `backend/database/logs_003_migrate_add_violation_cases.sql`

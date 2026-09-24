@@ -4,6 +4,14 @@ This backend is a vanilla PHP 8.5 JSON API that matches the frontend contract an
 
 The backend is organized as a modular monolith. See docs/architecture/backend-modular-monolith.md for module boundaries and composition.
 
+## Read-path performance
+
+`app_007_migrate_optimize_read_paths.sql` adds indexes for the current filter and sort paths and introduces role-scoped read routines. `/data/all` and question analytics now apply authorization predicates in MySQL before rows cross the PHP boundary, while preserving their existing four-part response shape and fields.
+
+This is intentionally an in-repo optimization: it uses MySQL/MariaDB indexes, stored routines, and PHP mapping only. It does not add Redis, a queue, a proxy, or another external service. The migration is idempotent and is applied automatically by `composer bootstrap-database`.
+
+The 3,000–6,000-user target still requires validation against the actual database hardware and connection limits. Before a production rollout, capture `EXPLAIN` plans for the scoped routines and run a representative concurrent read test; no application-only change can guarantee zero latency increase on unspecified infrastructure.
+
 ## Compliance Summary
 
 - Runtime: vanilla PHP 8.5 with custom routing/controllers
@@ -70,6 +78,8 @@ Decryption is centralized in `App\Services\Support\ExamMapper` before JSON is re
 - App question analytics migration: `backend/database/app_003_migrate_add_question_analytics.sql`
 - App student accommodations migration: `backend/database/app_004_migrate_add_student_exam_accommodations.sql`
 - App submission attempts migration: `backend/database/app_005_migrate_enable_submission_attempts.sql`
+- App class aggregation migration: `backend/database/app_006_migrate_fix_class_student_json_aggregation.sql`
+- App read-path optimization migration: `backend/database/app_007_migrate_optimize_read_paths.sql`
 - Logs schema and routines: `backend/database/logs_001_logging_routines.sql`
 - Logs exam violations migration: `backend/database/logs_002_migrate_add_exam_violations.sql`
 - Logs violation cases migration: `backend/database/logs_003_migrate_add_violation_cases.sql`
@@ -88,6 +98,8 @@ Decryption is centralized in `App\Services\Support\ExamMapper` before JSON is re
    - `app_003_migrate_add_question_analytics.sql`
    - `app_004_migrate_add_student_exam_accommodations.sql`
    - `app_005_migrate_enable_submission_attempts.sql`
+   - `app_006_migrate_fix_class_student_json_aggregation.sql`
+   - `app_007_migrate_optimize_read_paths.sql`
    - `logs_001_logging_routines.sql`
    - `logs_002_migrate_add_exam_violations.sql`
    - `logs_003_migrate_add_violation_cases.sql`

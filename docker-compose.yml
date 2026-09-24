@@ -11,11 +11,13 @@ services:
       - ./backend/database/app_003_migrate_add_question_analytics.sql:/docker-entrypoint-initdb.d/03-app_003_migrate_add_question_analytics.sql:ro
       - ./backend/database/app_004_migrate_add_student_exam_accommodations.sql:/docker-entrypoint-initdb.d/04-app_004_migrate_add_student_exam_accommodations.sql:ro
       - ./backend/database/app_005_migrate_enable_submission_attempts.sql:/docker-entrypoint-initdb.d/05-app_005_migrate_enable_submission_attempts.sql:ro
-      - ./backend/database/logs_001_logging_routines.sql:/docker-entrypoint-initdb.d/06-logs_001_logging_routines.sql:ro
-      - ./backend/database/logs_002_migrate_add_exam_violations.sql:/docker-entrypoint-initdb.d/07-logs_002_migrate_add_exam_violations.sql:ro
-      - ./backend/database/logs_003_migrate_add_violation_cases.sql:/docker-entrypoint-initdb.d/08-logs_003_migrate_add_violation_cases.sql:ro
-      - ./backend/database/logs_004_migrate_fix_violation_case_procedures.sql:/docker-entrypoint-initdb.d/09-logs_004_migrate_fix_violation_case_procedures.sql:ro
-      - ./backend/database/logs_005_admin_log_read_models.sql:/docker-entrypoint-initdb.d/10-logs_005_admin_log_read_models.sql:ro
+      - ./backend/database/app_006_migrate_fix_class_student_json_aggregation.sql:/docker-entrypoint-initdb.d/06-app_006_migrate_fix_class_student_json_aggregation.sql:ro
+      - ./backend/database/app_007_migrate_optimize_read_paths.sql:/docker-entrypoint-initdb.d/07-app_007_migrate_optimize_read_paths.sql:ro
+      - ./backend/database/logs_001_logging_routines.sql:/docker-entrypoint-initdb.d/08-logs_001_logging_routines.sql:ro
+      - ./backend/database/logs_002_migrate_add_exam_violations.sql:/docker-entrypoint-initdb.d/09-logs_002_migrate_add_exam_violations.sql:ro
+      - ./backend/database/logs_003_migrate_add_violation_cases.sql:/docker-entrypoint-initdb.d/10-logs_003_migrate_add_violation_cases.sql:ro
+      - ./backend/database/logs_004_migrate_fix_violation_case_procedures.sql:/docker-entrypoint-initdb.d/11-logs_004_migrate_fix_violation_case_procedures.sql:ro
+      - ./backend/database/logs_005_admin_log_read_models.sql:/docker-entrypoint-initdb.d/12-logs_005_admin_log_read_models.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD || exit 1"]
       interval: 5s

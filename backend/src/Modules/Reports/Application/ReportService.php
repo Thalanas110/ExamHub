@@ -132,7 +132,10 @@ final class ReportService
     public function getQuestionAnalyticsReport(array $authUser): array
     {
         $scopedData = $this->dataService->getAllData($authUser);
-        $metricRows = $this->gateway->call('sp_submission_question_metrics_get_all');
+        $metricRows = $this->gateway->call('sp_submission_question_metrics_get_for_user', [
+            (string) ($authUser['role'] ?? ''),
+            (string) ($authUser['id'] ?? ''),
+        ]);
 
         return $this->questionAnalyticsBuilder->build(
             authUser: $authUser,
