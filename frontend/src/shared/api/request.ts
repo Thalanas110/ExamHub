@@ -1,8 +1,6 @@
 import { PHP_BASE_URL } from './base-url';
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === 'object' && value !== null;
-}
+import { getAuthHeaders } from './auth-headers';
+import { createRequestError } from './errors';
 
 export async function request<T>(
   method: string,
@@ -10,14 +8,7 @@ export async function request<T>(
   body?: unknown,
   auth = false,
 ): Promise<T> {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-
-  if (auth) {
-    const token = localStorage.getItem('examhub_token');
-    if (token) {
-      headers.Authorization = `Bearer ${token}`;
-    }
-  }
+  const headers = getAuthHeaders(auth);
 
   const response = await fetch(`${PHP_BASE_URL}${path}`, {
     method,
@@ -31,15 +22,7 @@ export async function request<T>(
   }
 
   if (!response.ok) {
-    const errorPayload = isRecord(payload) ? payload : {};
-    const error = errorPayload.error;
-    const message = errorPayload.message;
-    throw new Error(
-      (typeof error === 'string' && error) ||
-        (typeof message === 'string' && message) ||
-        response.statusText ||
-        `HTTP ${response.status}`,
-    );
+    throw createRequestError(payload, response);
   }
 
   return payload as T;
