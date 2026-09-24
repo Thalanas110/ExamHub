@@ -7,7 +7,7 @@ import {
   createRootRoute,
 } from '@tanstack/react-router';
 import App from '../app/App';
-import appCss from '../styles/index.css?url';
+import appCss from '../shared/styles/index.css?url';
 
 export const Route = createRootRoute({
   head: () => ({
