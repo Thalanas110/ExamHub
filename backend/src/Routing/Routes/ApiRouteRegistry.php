@@ -10,6 +10,7 @@ use App\Modules\Users\Presentation\ProfileRoutes;
 use App\Modules\Users\Presentation\UserRoutes;
 use App\Modules\Classes\Presentation\ClassRoutes;
 use App\Modules\Exams\Presentation\ExamRoutes;
+use App\Modules\Results\Presentation\ResultRoutes;
 use App\Shared\Http\Router;
 
 final class ApiRouteRegistry

@@ -15,7 +15,7 @@ use App\Modules\Exams\Presentation\ExamsController;
 use App\Controllers\HealthController;
 use App\Modules\Users\Presentation\ProfileController;
 use App\Controllers\ReportsController;
-use App\Controllers\ResultsController;
+use App\Modules\Results\Presentation\ResultsController;
 use App\Modules\Users\Presentation\UsersController;
 use App\Shared\Database\LogDbConnection;
 use App\Shared\Database\RoutineGateway;
