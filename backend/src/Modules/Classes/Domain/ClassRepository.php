@@ -20,4 +20,20 @@ interface ClassRepository
      * @return array<string, mixed>|null
      */
     public function findByCode(string $code): ?array;
+
+    /**
+     * @param array<int, mixed> $parameters
+     */
+    public function create(array $parameters): void;
+
+    /**
+     * @param array<int, mixed> $parameters
+     */
+    public function update(array $parameters): void;
+
+    public function delete(string $classId): void;
+
+    public function enrollStudent(string $classId, string $studentId): void;
+
+    public function removeStudent(string $classId, string $studentId): void;
 }

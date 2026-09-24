@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Classes\Application;
 
-use App\Shared\Database\RoutineGateway;
-use App\Modules\Classes\Application\ClassMapper;
+use App\Modules\Classes\Domain\ClassRepository;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
@@ -13,7 +12,7 @@ use App\Shared\Support\Helpers;
 final class ClassService
 {
     public function __construct(
-        private RoutineGateway $gateway,
+        private ClassRepository $repository,
         private ClassMapper $mapper,
         private ValueNormalizer $normalizer,
     ) {
@@ -24,7 +23,7 @@ final class ClassService
      */
     public function getClasses(): array
     {
-        $rows = $this->gateway->call('sp_classes_get_all');
+        $rows = $this->repository->findAll();
         return array_map(fn (array $row): array => $this->mapper->mapRow($row), $rows);
     }
 
@@ -49,7 +48,7 @@ final class ClassService
         $code = strtoupper(trim((string) ($payload['code'] ?? strtoupper(substr(bin2hex(random_bytes(4)), 0, 6)))));
         $createdAt = $this->normalizer->normalizeDate((string) ($payload['createdAt'] ?? date('Y-m-d')), false);
 
-        $this->gateway->call('sp_classes_create', [
+        $this->repository->create([
             $classId,
             $name,
             $subject,
@@ -62,7 +61,7 @@ final class ClassService
         if (isset($payload['studentIds']) && is_array($payload['studentIds'])) {
             foreach ($payload['studentIds'] as $studentId) {
                 if (is_string($studentId) && $studentId !== '') {
-                    $this->gateway->call('sp_classes_enroll_student', [$classId, $studentId]);
+                    $this->repository->enrollStudent($classId, $studentId);
                 }
             }
         }
@@ -99,7 +98,7 @@ final class ClassService
             ? $this->normalizer->nullableString($payload['description'])
             : ($existing['description'] ?? null);
 
-        $this->gateway->call('sp_classes_update', [
+        $this->repository->update([
             $classId,
             $name,
             $subject,
@@ -118,12 +117,12 @@ final class ClassService
 
             foreach ($existing['studentIds'] as $studentId) {
                 if (!isset($target[$studentId])) {
-                    $this->gateway->call('sp_classes_remove_student', [$classId, $studentId]);
+                    $this->repository->removeStudent($classId, $studentId);
                 }
             }
 
             foreach (array_keys($target) as $studentId) {
-                $this->gateway->call('sp_classes_enroll_student', [$classId, $studentId]);
+                $this->repository->enrollStudent($classId, $studentId);
             }
         }
 
@@ -141,7 +140,7 @@ final class ClassService
             throw new ApiException(403, 'Teachers can only manage their own classes.');
         }
 
-        $this->gateway->call('sp_classes_delete', [$classId]);
+        $this->repository->delete($classId);
     }
 
     /**
@@ -149,8 +148,7 @@ final class ClassService
      */
     public function joinClass(string $studentId, string $code): array
     {
-        $rows = $this->gateway->call('sp_classes_get_by_code', [$code]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findByCode($code);
 
         if (!is_array($row)) {
             throw new ApiException(404, 'Class not found. Check the code and try again.');
@@ -161,7 +159,7 @@ final class ClassService
             throw new ApiException(409, 'You are already enrolled in this class.');
         }
 
-        $this->gateway->call('sp_classes_enroll_student', [$class['id'], $studentId]);
+        $this->repository->enrollStudent($class['id'], $studentId);
 
         return $this->getClassById($class['id']);
     }
@@ -172,7 +170,7 @@ final class ClassService
     public function leaveClass(string $classId, string $studentId): array
     {
         $this->getClassById($classId);
-        $this->gateway->call('sp_classes_remove_student', [$classId, $studentId]);
+        $this->repository->removeStudent($classId, $studentId);
 
         return $this->getClassById($classId);
     }
@@ -188,7 +186,7 @@ final class ClassService
             throw new ApiException(403, 'Teachers can only manage their own classes.');
         }
 
-        $this->gateway->call('sp_classes_enroll_student', [$classId, $studentId]);
+        $this->repository->enrollStudent($classId, $studentId);
 
         return $this->getClassById($classId);
     }
@@ -204,7 +202,7 @@ final class ClassService
             throw new ApiException(403, 'Teachers can only manage their own classes.');
         }
 
-        $this->gateway->call('sp_classes_remove_student', [$classId, $studentId]);
+        $this->repository->removeStudent($classId, $studentId);
 
         return $this->getClassById($classId);
     }
@@ -214,8 +212,7 @@ final class ClassService
      */
     private function getClassById(string $classId): array
     {
-        $rows = $this->gateway->call('sp_classes_get_by_id', [$classId]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findById($classId);
 
         if (!is_array($row)) {
             throw new ApiException(404, 'Class not found.');

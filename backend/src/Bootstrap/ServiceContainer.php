@@ -7,7 +7,7 @@ namespace App\Bootstrap;
 use App\Shared\Config\AppConfig;
 use App\Controllers\AdminController;
 use App\Modules\Auth\Presentation\AuthController;
-use App\Controllers\ClassesController;
+use App\Modules\Classes\Presentation\ClassesController;
 use App\Controllers\DataController;
 use App\Controllers\DocsController;
 use App\Controllers\ExamViolationsController;
@@ -33,6 +33,7 @@ use App\Modules\Users\Infrastructure\RoutineUserRepository;
 use App\Services\ApiDocsVerificationService;
 use App\Modules\Classes\Application\ClassService;
 use App\Modules\Classes\Application\ClassMapper;
+use App\Modules\Classes\Infrastructure\RoutineClassRepository;
 use App\Services\DataService;
 use App\Services\ExamService;
 use App\Services\ReportService;
@@ -99,7 +100,7 @@ final class ServiceContainer
         );
 
         $classService = new ClassService(
-            gateway: $gateway,
+            repository: new RoutineClassRepository($gateway),
             mapper: new ClassMapper($normalizer),
             normalizer: $normalizer,
         );
