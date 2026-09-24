@@ -8,7 +8,7 @@ const Register = lazy(() => import('@/features/auth/ui/Register').then(m => ({ d
 const ExamTakingPreview = lazy(() => import('./pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
 
 const StudentLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.StudentLayout })));
-const StudentDashboard = lazy(() => import('./pages/student/StudentDashboard').then(m => ({ default: m.StudentDashboard })));
+const StudentDashboard = lazy(() => import('@/widgets/student-dashboard/StudentDashboard').then(m => ({ default: m.StudentDashboard })));
 const StudentExams = lazy(() => import('./pages/student/StudentExams').then(m => ({ default: m.StudentExams })));
 const StudentResults = lazy(() => import('./pages/student/StudentResults').then(m => ({ default: m.StudentResults })));
 const StudentClasses = lazy(() => import('./pages/student/StudentClasses').then(m => ({ default: m.StudentClasses })));
@@ -16,7 +16,7 @@ const StudentProfile = lazy(() => import('./pages/student/StudentProfile').then(
 const TakeExam = lazy(() => import('./pages/student/TakeExam').then(m => ({ default: m.TakeExam })));
 
 const TeacherLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.TeacherLayout })));
-const TeacherDashboard = lazy(() => import('./pages/teacher/TeacherDashboard').then(m => ({ default: m.TeacherDashboard })));
+const TeacherDashboard = lazy(() => import('@/widgets/teacher-dashboard/TeacherDashboard').then(m => ({ default: m.TeacherDashboard })));
 const TeacherExams = lazy(() => import('./pages/teacher/TeacherExams').then(m => ({ default: m.TeacherExams })));
 const TeacherClasses = lazy(() => import('./pages/teacher/TeacherClasses').then(m => ({ default: m.TeacherClasses })));
 const TeacherGrade = lazy(() => import('./pages/teacher/TeacherGrade').then(m => ({ default: m.TeacherGrade })));
@@ -25,7 +25,7 @@ const TeacherViolationCases = lazy(() => import('./pages/teacher/TeacherViolatio
 const TeacherTools = lazy(() => import('./pages/teacher/TeacherTools').then(m => ({ default: m.TeacherTools })));
 
 const AdminLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.AdminLayout })));
-const AdminDashboard = lazy(() => import('./pages/admin/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
+const AdminDashboard = lazy(() => import('@/widgets/admin-dashboard/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
 const AdminExams = lazy(() => import('./pages/admin/AdminExams').then(m => ({ default: m.AdminExams })));
 const AdminResults = lazy(() => import('./pages/admin/AdminResults').then(m => ({ default: m.AdminResults })));
 const AdminReports = lazy(() => import('./pages/admin/AdminReports').then(m => ({ default: m.AdminReports })));
