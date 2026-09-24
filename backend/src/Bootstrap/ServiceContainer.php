@@ -11,7 +11,7 @@ use App\Modules\Classes\Presentation\ClassesController;
 use App\Controllers\DataController;
 use App\Controllers\DocsController;
 use App\Controllers\ExamViolationsController;
-use App\Controllers\ExamsController;
+use App\Modules\Exams\Presentation\ExamsController;
 use App\Controllers\HealthController;
 use App\Modules\Users\Presentation\ProfileController;
 use App\Controllers\ReportsController;
