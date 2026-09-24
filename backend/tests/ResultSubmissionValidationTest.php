@@ -10,7 +10,7 @@ use App\Shared\Database\DbConnection;
 use App\Shared\Database\RoutineGateway;
 use App\Shared\Security\AesGcmCrypto;
 use App\Modules\Results\Application\ResultService;
-use App\Services\SeedService;
+use App\Modules\Data\Application\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Results\Application\ResultMapper;
 use App\Modules\Results\Infrastructure\RoutineResultRepository;

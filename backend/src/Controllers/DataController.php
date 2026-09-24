@@ -6,7 +6,7 @@ namespace App\Controllers;
 
 use App\Shared\Http\Request;
 use App\Modules\Data\Application\DataService;
-use App\Services\SeedService;
+use App\Modules\Data\Application\SeedService;
 use App\Shared\Support\ApiException;
 
 final class DataController

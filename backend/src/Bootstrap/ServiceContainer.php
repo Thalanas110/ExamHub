@@ -40,7 +40,7 @@ use App\Modules\Reports\Application\ReportService;
 use App\Modules\Results\Application\ResultService;
 use App\Modules\Results\Application\ResultMapper;
 use App\Modules\Results\Infrastructure\RoutineResultRepository;
-use App\Services\SeedService;
+use App\Modules\Data\Application\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;
 use App\Services\ViolationCaseService;

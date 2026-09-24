@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Data\Application;
 
 use App\Shared\Config\AppConfig;
 use App\Shared\Database\RoutineGateway;

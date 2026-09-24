@@ -12,7 +12,7 @@ use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
 use App\Modules\Exams\Application\ExamService;
 use App\Modules\Results\Application\ResultService;
-use App\Services\SeedService;
+use App\Modules\Data\Application\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;
 use App\Modules\Results\Application\ResultMapper;
