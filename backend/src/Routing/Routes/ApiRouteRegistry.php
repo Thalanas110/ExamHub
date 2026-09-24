@@ -13,6 +13,8 @@ use App\Modules\Exams\Presentation\ExamRoutes;
 use App\Modules\Results\Presentation\ResultRoutes;
 use App\Modules\Reports\Presentation\AdminRoutes;
 use App\Modules\Reports\Presentation\ReportRoutes;
+use App\Modules\Data\Presentation\DataRoutes;
+use App\Modules\Docs\Presentation\DocsRoutes;
 use App\Shared\Http\Router;
 
 final class ApiRouteRegistry

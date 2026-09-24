@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Data\Presentation;
 
 use App\Shared\Http\Request;
 use App\Modules\Data\Application\DataService;

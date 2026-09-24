@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Docs\Presentation;
 
 use App\Modules\Docs\Application\ApiDocsVerificationService;
 
