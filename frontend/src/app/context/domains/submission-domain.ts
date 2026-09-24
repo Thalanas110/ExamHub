@@ -1,6 +1,6 @@
 import type { Answer, Exam, Submission } from '../../data/types';
 import { resultApi } from '../../services/api';
-import type { AppDomainState, AppStateSetters, GradeAnswerInput, SubmissionPayload } from '../app-context.types';
+import type { AppDomainState, AppStateSetters, GradeAnswerInput, SubmissionPayload } from '@/app/providers/app-context.types';
 
 function generateId() {
   return Math.random().toString(36).substring(2, 9) + Date.now().toString(36);

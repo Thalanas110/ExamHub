@@ -9,8 +9,8 @@ import {
   getSubmissionsByStudent,
   getUserById,
 } from './app-context.selectors';
-import { persistStoredUser, readStoredUser } from './app-context.storage';
-import type { AppContextType } from './app-context.types';
+import { persistStoredUser, readStoredUser } from '@/app/providers/app-context.storage';
+import type { AppContextType } from '@/app/providers/app-context.types';
 import { createAuthDomain } from './domains/auth-domain';
 import { createClassDomain } from './domains/class-domain';
 import { createExamDomain } from './domains/exam-domain';

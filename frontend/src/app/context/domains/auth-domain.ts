@@ -4,8 +4,8 @@ import {
   clearStoredSession,
   readStoredToken,
   writeStoredToken,
-} from '../app-context.storage';
-import type { AppStateSetters } from '../app-context.types';
+} from '@/app/providers/app-context.storage';
+import type { AppStateSetters } from '@/app/providers/app-context.types';
 
 type AuthDomainDeps = AppStateSetters;
 
