@@ -1,4 +1,7 @@
-import type { Class, Exam, Submission, User } from '../data/types';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
 
 export function getUserById(users: User[], id: string) {
   return users.find(user => user.id === id);

@@ -1,5 +1,5 @@
-import type { Exam } from '../../data/types';
-import { examApi } from '../../services/api';
+import type { Exam } from '@/entities/exam';
+import { examApi } from '@/entities/exam';
 import type { AppStateSetters } from '@/app/providers/app-context.types';
 
 type ExamDomainDeps = Pick<AppStateSetters, 'setExams'>;

@@ -1,5 +1,6 @@
-import type { Answer, Exam, Submission } from '../../data/types';
-import { resultApi } from '../../services/api';
+import type { Answer, Submission } from '@/entities/submission';
+import type { Exam } from '@/entities/exam';
+import { resultApi } from '@/entities/submission';
 import type { AppDomainState, AppStateSetters, GradeAnswerInput, SubmissionPayload } from '@/app/providers/app-context.types';
 
 function generateId() {

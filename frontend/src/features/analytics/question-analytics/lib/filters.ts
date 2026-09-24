@@ -3,7 +3,7 @@ import type {
   QuestionAnalyticsQuestion,
   QuestionAnalyticsReport,
   WeakTopicByClassReport,
-} from '../../../../services/api';
+} from '@/entities/report';
 
 export function getClassOptions(report: QuestionAnalyticsReport | null) {
   const index = new Map<string, string>();

@@ -1,5 +1,6 @@
-import type { Class, User } from '../../data/types';
-import { classApi } from '../../services/api';
+import type { Class } from '@/entities/class';
+import type { User } from '@/entities/user';
+import { classApi } from '@/entities/class';
 import type { AppDomainState, AppStateSetters } from '@/app/providers/app-context.types';
 
 function generateId() {

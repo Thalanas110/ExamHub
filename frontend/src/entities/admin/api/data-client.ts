@@ -1,7 +1,7 @@
 import { request } from '@/shared/api/request';
-import type { ExamResponse } from './exam.service';
-import type { ResultResponse } from './result.service';
-import type { UserProfile } from './user.service';
+import type { ExamResponse } from '@/entities/exam';
+import type { ResultResponse } from '@/entities/submission';
+import type { UserProfile } from '@/entities/user';
 
 export interface AllData {
   users: (UserProfile & { password?: string })[];

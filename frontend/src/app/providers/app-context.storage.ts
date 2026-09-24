@@ -1,4 +1,4 @@
-import type { User } from '../data/types';
+import type { User } from '@/entities/user';
 
 export const APP_STORAGE_KEYS = {
   token: 'examhub_token',

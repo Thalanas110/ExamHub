@@ -1,6 +1,9 @@
 import React, { createContext, useContext, useEffect, useState, useMemo, useRef, type ReactNode } from 'react';
-import type { Class, Exam, Submission, User } from '../data/types';
-import type { DataSummary } from '../services/data.service';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
+import type { DataSummary } from '@/entities/admin';
 import {
   getClassById,
   getExamById,

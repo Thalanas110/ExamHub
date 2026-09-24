@@ -1,5 +1,9 @@
-import type { Class, Exam, Submission, User } from '../../data/types';
-import { authApi, dataApi } from '../../services/api';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
+import { dataApi } from '@/entities/admin';
+import { authApi } from '@/features/auth';
 import {
   clearStoredSession,
   readStoredToken,
