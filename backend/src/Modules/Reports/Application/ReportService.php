@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Reports\Application;
 
 use App\Shared\Database\RoutineGateway;
 use App\Services\Support\QuestionAnalyticsBuilder;
 use App\Services\Support\ExamMapper;
+use App\Services\DataService;
 
 final class ReportService
 {
