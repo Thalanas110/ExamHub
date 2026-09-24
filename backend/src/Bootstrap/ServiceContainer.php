@@ -6,7 +6,7 @@ namespace App\Bootstrap;
 
 use App\Shared\Config\AppConfig;
 use App\Controllers\AdminController;
-use App\Controllers\AuthController;
+use App\Modules\Auth\Presentation\AuthController;
 use App\Controllers\ClassesController;
 use App\Controllers\DataController;
 use App\Controllers\DocsController;

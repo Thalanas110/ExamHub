@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Auth\Presentation;
 
 use App\Shared\Http\Request;
 use App\Modules\Auth\Application\AuthService;

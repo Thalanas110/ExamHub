@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Routing\Routes;
+namespace App\Modules\Auth\Presentation;
 
-use App\Controllers\AuthController;
+use App\Modules\Auth\Presentation\AuthController;
 use App\Shared\Http\Request;
 use App\Shared\Http\Router;
 
