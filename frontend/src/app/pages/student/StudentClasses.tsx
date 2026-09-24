@@ -3,7 +3,7 @@ import { Users, BookOpen, Hash, LogOut, Plus, GraduationCap, Search } from 'luci
 import { useApp } from '../../context/AppContext';
 import { toast } from 'sonner';
 import { ConfirmDialog } from '../../components/shared/Modal';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 
 export function StudentClasses() {
   const { currentUser, classes, exams, joinClassByCode, leaveClass, getUserById } = useApp();

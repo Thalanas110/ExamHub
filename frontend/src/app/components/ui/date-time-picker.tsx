@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { format, parse, isValid } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
-import { Calendar } from './calendar';
+import { Calendar } from '@/shared/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './popover';
 import { cn } from '@/shared/ui/utils';
 

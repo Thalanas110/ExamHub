@@ -5,7 +5,7 @@ import { ConfirmDialog, Modal } from '../../components/shared/Modal';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { Class } from '../../data/types';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 
 export function AdminClasses() {
   const { classes, exams, users, updateClass, deleteClass, getUserById } = useApp();

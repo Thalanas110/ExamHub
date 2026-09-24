@@ -4,8 +4,8 @@ import { Modal, ConfirmDialog } from './Modal';
 import { accommodationApi, AccommodationRecord, AccommodationPayload } from '../../services/api';
 import { Exam, Class, User } from '../../data/types';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-import { DateTimePicker } from '../ui/date-time-picker';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { DateTimePicker } from '@/app/components/ui/date-time-picker';
 
 interface Props {
   exam: Exam | null;

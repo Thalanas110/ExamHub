@@ -5,7 +5,7 @@ import { ConfirmDialog } from '../../components/shared/Modal';
 import { useApp } from '../../context/AppContext';
 import { toast } from 'sonner';
 import type { Exam, ExamStatus, Question } from '../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 import { ExamCard } from '../../features/teacher/exams/components/ExamCard';
 import { ExamEditorModal } from '../../features/teacher/exams/components/ExamEditorModal';
 import { EmptyExamsState } from '../../features/teacher/exams/components/EmptyExamsState';

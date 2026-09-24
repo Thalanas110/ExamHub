@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Save } from 'lucide-react';
 import { toast } from 'sonner';
 import { Modal } from '../../../components/shared/Modal';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 import {
   violationCaseApi,
   type ViolationCase,

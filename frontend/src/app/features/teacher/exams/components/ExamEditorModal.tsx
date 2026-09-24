@@ -1,10 +1,10 @@
 import { PlusCircle } from 'lucide-react';
-import { DateTimePicker } from '../../../../components/ui/date-time-picker';
+import { DateTimePicker } from '@/app/components/ui/date-time-picker';
 import { Modal } from '../../../../components/shared/Modal';
 import type { Class, Exam, ExamStatus, Question } from '../../../../data/types';
 import type { ExamFormData } from '../lib/exam-form';
 import { QuestionEditorCard } from './QuestionEditorCard';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 
 interface ExamEditorModalProps {
   isOpen: boolean;

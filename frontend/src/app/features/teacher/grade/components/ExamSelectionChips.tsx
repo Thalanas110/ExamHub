@@ -1,7 +1,7 @@
 import { Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import type { Class, Exam } from '../../../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 
 interface ExamSelectionChipsProps {
   exams: Exam[];

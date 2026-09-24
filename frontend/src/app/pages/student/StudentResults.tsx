@@ -3,7 +3,7 @@ import { TrendingUp, Award, FileText, AlertTriangle, Search } from 'lucide-react
 import { useApp } from '../../context/AppContext';
 import { Badge, getGradeBadge } from '../../components/shared/Badge';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, Legend } from 'recharts';
 
 const GRADE_COLORS: Record<string, string> = {

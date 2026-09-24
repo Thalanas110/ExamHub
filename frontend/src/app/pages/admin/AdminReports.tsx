@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TrendingUp, Award, Users, FileText } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend, LineChart, Line

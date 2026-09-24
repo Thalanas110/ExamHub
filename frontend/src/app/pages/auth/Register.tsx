@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router';
 import { BookOpen, Eye, EyeOff, UserPlus, X, ScrollText } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { UserRole } from '../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
 
 export function Register() {
   const { register, currentUser } = useApp();
