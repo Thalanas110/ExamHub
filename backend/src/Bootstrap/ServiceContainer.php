@@ -28,6 +28,7 @@ use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\JwtService;
 use App\Shared\Security\PasswordHasher;
 use App\Modules\Auth\Application\AuthService;
+use App\Modules\Auth\Infrastructure\RoutineAuthRepository;
 use App\Services\ApiDocsVerificationService;
 use App\Services\ClassService;
 use App\Services\DataService;
@@ -78,7 +79,7 @@ final class ServiceContainer
 
         $authService = new AuthService(
             config: $config,
-            gateway: $gateway,
+            repository: new RoutineAuthRepository($gateway),
             crypto: $crypto,
             passwordHasher: $passwordHasher,
             jwtService: $jwtService,

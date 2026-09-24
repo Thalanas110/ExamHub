@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Auth\Application;
 
 use App\Shared\Config\AppConfig;
-use App\Shared\Database\RoutineGateway;
+use App\Modules\Auth\Domain\AuthRepository;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\JwtService;
 use App\Shared\Security\PasswordHasher;
@@ -19,7 +19,7 @@ final class AuthService
 {
     public function __construct(
         private AppConfig $config,
-        private RoutineGateway $gateway,
+        private AuthRepository $repository,
         private AesGcmCrypto $crypto,
         private PasswordHasher $passwordHasher,
         private JwtService $jwtService,
@@ -43,8 +43,7 @@ final class AuthService
         }
 
         $tokenHash = hash('sha256', $token);
-        $rows = $this->gateway->call('sp_auth_get_user_by_session', [$tokenHash]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findUserBySessionHash($tokenHash);
         if (!is_array($row)) {
             return null;
         }
@@ -91,7 +90,7 @@ final class AuthService
         [$departmentCiphertext, $departmentIv, $departmentTag] = $this->crypto->encryptParams($department);
 
         try {
-            $rows = $this->gateway->call('sp_auth_register', [
+            $row = $this->repository->register([
                 $id,
                 $name,
                 $email,
@@ -112,7 +111,6 @@ final class AuthService
             throw new ApiException(500, 'Registration failed.');
         }
 
-        $row = $rows[0] ?? null;
         if (!is_array($row)) {
             throw new ApiException(500, 'Registration failed.');
         }
@@ -139,8 +137,7 @@ final class AuthService
             throw new ApiException(422, 'email and password are required.');
         }
 
-        $rows = $this->gateway->call('sp_auth_get_user_by_email', [$email]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findUserByEmail($email);
 
         if (!is_array($row)) {
             throw new ApiException(401, 'Invalid credentials.');
@@ -166,7 +163,7 @@ final class AuthService
             return;
         }
 
-        $this->gateway->call('sp_session_revoke', [hash('sha256', $token)]);
+        $this->repository->revokeSession(hash('sha256', $token));
     }
 
     /**
@@ -174,8 +171,7 @@ final class AuthService
      */
     public function getProfile(string $userId): array
     {
-        $rows = $this->gateway->call('sp_auth_get_user_by_id', [$userId]);
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findUserById($userId);
 
         if (!is_array($row)) {
             throw new ApiException(404, 'User not found.');
@@ -190,7 +186,7 @@ final class AuthService
      */
     public function updateProfile(string $userId, array $payload): array
     {
-        $existingRow = $this->gateway->call('sp_auth_get_user_by_id', [$userId])[0] ?? null;
+        $existingRow = $this->repository->findUserById($userId);
         if (!is_array($existingRow)) {
             throw new ApiException(404, 'User not found.');
         }
@@ -216,7 +212,7 @@ final class AuthService
         [$phoneCiphertext, $phoneIv, $phoneTag] = $this->crypto->encryptParams($phone);
         [$bioCiphertext, $bioIv, $bioTag] = $this->crypto->encryptParams($bio);
 
-        $rows = $this->gateway->call('sp_users_update_profile', [
+        $row = $this->repository->updateProfile([
             $userId,
             $name,
             $departmentCiphertext,
@@ -233,7 +229,6 @@ final class AuthService
             null,
         ]);
 
-        $row = $rows[0] ?? null;
         if (!is_array($row)) {
             throw new ApiException(500, 'Profile update failed.');
         }
@@ -260,7 +255,7 @@ final class AuthService
         $issuedAt = gmdate('Y-m-d H:i:s');
         $expiresAt = $this->sessionExpiryTimestamp();
 
-        $this->gateway->call('sp_session_create', [
+        $this->repository->createSession([
             Helpers::uuidV4(),
             $user['id'],
             hash('sha256', $token),
@@ -273,7 +268,7 @@ final class AuthService
 
     private function refreshSessionActivity(string $tokenHash, string $userId): void
     {
-        $this->gateway->call('sp_session_create', [
+        $this->repository->createSession([
             Helpers::uuidV4(),
             $userId,
             $tokenHash,
