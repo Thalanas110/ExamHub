@@ -9,7 +9,7 @@ import {
   type ViolationCaseOutcome,
   type ViolationCaseSeverity,
   type ViolationRecord,
-} from '../../../services/api';
+} from '@/entities/violation';
 import {
   OUTCOME_META,
   SEVERITY_META,

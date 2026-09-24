@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
-import type { Class, Exam, User } from '../../../data/types';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { User } from '@/entities/user';
 import {
   violationApi,
   violationCaseApi,
   type ViolationCase,
   type ViolationRecord,
-} from '../../../services/api';
+} from '@/entities/violation';
 import { suggestSeverity, type ViolationCaseRow, type ViolationReviewMode } from './case-meta';
 
 type CacheEntry = {

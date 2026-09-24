@@ -14,8 +14,8 @@ import {
 import { Badge } from '@/widgets/layouts/Badge';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { StatCard } from '@/widgets/layouts/StatCard';
-import { ReviewModal } from '../../features/teacher/violation-cases/ReviewModal';
-import { OUTCOME_META, SEVERITY_META, violationTypeLabel } from '../../features/teacher/violation-cases/case-meta';
+import { ReviewModal } from '@/features/teacher/violation-cases/ReviewModal';
+import { OUTCOME_META, SEVERITY_META, violationTypeLabel } from '@/features/teacher/violation-cases/case-meta';
 
 const emptyDashboard: AdminViolationDashboardResponse = {
   summary: {

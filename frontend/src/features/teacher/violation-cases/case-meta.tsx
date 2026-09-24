@@ -10,7 +10,7 @@ import type {
   ViolationCaseOutcome,
   ViolationCaseSeverity,
   ViolationRecord,
-} from '../../../services/api';
+} from '@/entities/violation';
 
 export const MAX_TAB_SWITCHES = 3;
 
