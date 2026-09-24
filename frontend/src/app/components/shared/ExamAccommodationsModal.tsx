@@ -5,7 +5,7 @@ import { accommodationApi, AccommodationRecord, AccommodationPayload } from '../
 import { Exam, Class, User } from '../../data/types';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
-import { DateTimePicker } from '@/app/components/ui/date-time-picker';
+import { DateTimePicker } from '@/shared/ui/date-time-picker';
 
 interface Props {
   exam: Exam | null;

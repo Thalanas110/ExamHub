@@ -2,7 +2,7 @@ import * as React from 'react';
 import { format, parse, isValid } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import { Calendar } from '@/shared/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from './popover';
+import { Popover, PopoverContent, PopoverTrigger } from '@/app/components/ui/popover';
 import { cn } from '@/shared/ui/utils';
 
 interface DateTimePickerProps {
