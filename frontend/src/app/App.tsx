@@ -1,4 +1,4 @@
-import React, { useMemo, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { RouterProvider } from 'react-router';
 import { createAppRouter } from './router/app-router';
 import { AppProvider } from '@/app/providers/AppProvider';
@@ -13,14 +13,9 @@ function ToasterLazy() {
   );
 }
 
-function createRouter() {
-  if (typeof window === 'undefined') return null;
-  return createAppRouter();
-}
+const router = typeof window === 'undefined' ? null : createAppRouter();
 
 export default function App() {
-  const router = useMemo(() => createRouter(), []);
-
   if (!router) return null;
 
   return (
