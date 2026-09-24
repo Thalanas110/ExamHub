@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Database;
+namespace App\Shared\Database;
 
 use App\Shared\Config\AppConfig;
 use PDO;
+use Pdo\Mysql;
 
-final class LogDbConnection
+final class DbConnection
 {
     private ?PDO $pdo = null;
 
@@ -20,16 +21,15 @@ final class LogDbConnection
         if ($this->pdo instanceof PDO) {
             return $this->pdo;
         }
-
+        
         $this->pdo = MysqlPdoFactory::create(
-            $this->config->logDbHost,
-            $this->config->logDbPort,
-            $this->config->logDbName,
-            $this->config->logDbUser,
-            $this->config->logDbPass,
-            $this->config->logDbSslMode,
-            $this->config->logDbSslCa,
-            false,
+            $this->config->dbHost,
+            $this->config->dbPort,
+            $this->config->dbName,
+            $this->config->dbUser,
+            $this->config->dbPass,
+            $this->config->dbSslMode,
+            $this->config->dbSslCa,
         );
 
         return $this->pdo;

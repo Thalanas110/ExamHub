@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use App\Database\RoutineGateway;
+use App\Shared\Database\RoutineGateway;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 use Throwable;

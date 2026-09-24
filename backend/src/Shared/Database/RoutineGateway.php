@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Database;
+namespace App\Shared\Database;
 
 use PDO;
+use Pdo\Mysql;
 use RuntimeException;
 
 final class RoutineGateway

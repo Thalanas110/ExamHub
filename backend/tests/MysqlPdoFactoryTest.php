@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Database\MysqlPdoFactory;
+use App\Shared\Database\MysqlPdoFactory;
 
 $failures = [];
 $caPath = tempnam(sys_get_temp_dir(), 'aiven-ca-');

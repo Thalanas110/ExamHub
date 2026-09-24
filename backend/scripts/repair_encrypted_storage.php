@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 use App\Shared\Config\AppConfig;
 use App\Shared\Config\Env;
-use App\Database\DbConnection;
-use App\Database\RoutineGateway;
+use App\Shared\Database\DbConnection;
+use App\Shared\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;
 use App\Services\EncryptionRepairService;
 use App\Services\Support\LegacyEncryptedDataRepair;

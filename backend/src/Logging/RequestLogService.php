@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Logging;
 
-use App\Database\RoutineGateway;
+use App\Shared\Database\RoutineGateway;
 use Throwable;
 
 final class RequestLogService

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Shared\Config\AppConfig;
-use App\Database\RoutineGateway;
+use App\Shared\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;
 use App\Security\JwtService;
 use App\Security\PasswordHasher;

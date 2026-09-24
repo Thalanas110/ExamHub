@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Database;
+namespace App\Shared\Database;
 
 use PDO;
+use Pdo\Mysql;
 use RuntimeException;
 
 final class MysqlPdoFactory
@@ -67,11 +68,11 @@ final class MysqlPdoFactory
         ];
 
         if ($useBufferedQueries) {
-            $options[PDO::MYSQL_ATTR_USE_BUFFERED_QUERY] = true;
+            $options[Mysql::ATTR_USE_BUFFERED_QUERY] = true;
         }
 
         if ($sslCa !== null) {
-            $options[PDO::MYSQL_ATTR_SSL_CA] = $sslCa;
+            $options[Mysql::ATTR_SSL_CA] = $sslCa;
         }
 
         if (in_array($sslMode, ['verify-ca', 'verify-full'], true)) {
@@ -79,7 +80,7 @@ final class MysqlPdoFactory
                 throw new RuntimeException('MySQL SSL CA file is required when DB_SSL_MODE is verify-ca or verify-full.');
             }
 
-            $options[PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT] = true;
+            $options[Mysql::ATTR_SSL_VERIFY_SERVER_CERT] = true;
         }
 
         return $options;
