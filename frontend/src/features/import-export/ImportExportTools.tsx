@@ -14,7 +14,6 @@ import {
 import { toast } from 'sonner';
 import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/status-badge';
 import { StatCard } from '@/shared/ui/StatCard';
-import { useApp } from '@/app/providers/AppProvider';
 import type { Class } from '@/entities/class';
 import type { Exam, ExamStatus, Question, QuestionType } from '@/entities/exam';
 import type { Submission } from '@/entities/submission';
@@ -30,8 +29,17 @@ import {
   timestampSlug,
 } from './import-export-utils';
 
-interface ImportExportToolsProps {
+export interface ImportExportToolsProps {
   audience: 'admin' | 'teacher';
+  currentUser: User | null;
+  users: User[];
+  classes: Class[];
+  exams: Exam[];
+  submissions: Submission[];
+  addUser: (user: Omit<User, 'id'>) => Promise<User>;
+  updateClass: (id: string, data: Partial<Class>) => void;
+  addExam: (exam: Omit<Exam, 'id' | 'createdAt'>) => Promise<Exam>;
+  getUserById: (id: string) => User | undefined;
 }
 
 type AnalyticsExportKind = 'submissions' | 'classes' | 'exams';
@@ -267,18 +275,18 @@ function ResultSlipPrint({
   );
 }
 
-export function ImportExportTools({ audience }: ImportExportToolsProps) {
-  const {
-    currentUser,
-    users,
-    classes,
-    exams,
-    submissions,
-    addUser,
-    updateClass,
-    addExam,
-    getUserById,
-  } = useApp();
+export function ImportExportTools({
+  audience,
+  currentUser,
+  users,
+  classes,
+  exams,
+  submissions,
+  addUser,
+  updateClass,
+  addExam,
+  getUserById,
+}: ImportExportToolsProps) {
   const rosterInputRef = useRef<HTMLInputElement | null>(null);
   const examInputRef = useRef<HTMLInputElement | null>(null);
   const [selectedClassId, setSelectedClassId] = useState('');

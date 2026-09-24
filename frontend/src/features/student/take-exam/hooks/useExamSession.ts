@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
-import type { AppContextType } from '@/app/providers/app-context.types';
 import type { Exam } from '@/entities/exam';
-import type { Answer, QuestionTelemetry } from '@/entities/submission';
+import type { Answer, QuestionTelemetry, Submission } from '@/entities/submission';
 
 type ActiveQuestionSession = {
   questionId: string;
@@ -12,7 +11,7 @@ type ActiveQuestionSession = {
 interface UseExamSessionParams {
   exam: Exam | null;
   studentId?: string;
-  submitExam: AppContextType['submitExam'];
+  submitExam: (submission: Omit<Submission, 'id'>) => void;
 }
 
 export function useExamSession({

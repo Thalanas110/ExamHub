@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { BookOpen, Eye, EyeOff, LogIn, ShieldCheck } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
+import type { User } from '@/entities/user';
+
+type LoginProps = {
+  currentUser: User | null;
+  login: (email: string, password: string) => Promise<{ success: boolean; error?: string }>;
+};
 
 const securityNotes = [
   'Role-based authentication for students, teachers, and admins',
@@ -9,8 +14,7 @@ const securityNotes = [
   'Built for responsive access across desktop and mobile devices',
 ];
 
-export function Login() {
-  const { login, currentUser } = useApp();
+export function Login({ login, currentUser }: LoginProps) {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

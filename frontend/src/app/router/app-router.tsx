@@ -3,8 +3,8 @@ import { lazy, Suspense } from 'react';
 import { RouterErrorPage } from '@/widgets/layouts/RouterErrorPage';
 
 const Landing = lazy(() => import('@/app/providers/route-pages/public/Landing').then(m => ({ default: m.Landing })));
-const Login = lazy(() => import('@/features/auth/ui/Login').then(m => ({ default: m.Login })));
-const Register = lazy(() => import('@/features/auth/ui/Register').then(m => ({ default: m.Register })));
+const Login = lazy(() => import('@/app/providers/route-pages/auth/LoginPage').then(m => ({ default: m.LoginPage })));
+const Register = lazy(() => import('@/app/providers/route-pages/auth/RegisterPage').then(m => ({ default: m.RegisterPage })));
 const ExamTakingPreview = lazy(() => import('@/pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
 
 const StudentLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.StudentLayout })));
@@ -22,10 +22,10 @@ const TeacherClasses = lazy(() => import('@/app/providers/route-pages/teacher/Te
 const TeacherGrade = lazy(() => import('@/app/providers/route-pages/teacher/TeacherGrade').then(m => ({ default: m.TeacherGrade })));
 const TeacherProfile = lazy(() => import('@/app/providers/route-pages/teacher/TeacherProfile').then(m => ({ default: m.TeacherProfile })));
 const TeacherViolationCases = lazy(() => import('@/app/providers/route-pages/teacher/TeacherViolationCases').then(m => ({ default: m.TeacherViolationCases })));
-const TeacherTools = lazy(() => import('@/pages/teacher/TeacherTools').then(m => ({ default: m.TeacherTools })));
+const TeacherTools = lazy(() => import('@/app/providers/route-pages/teacher/TeacherToolsPage').then(m => ({ default: m.TeacherToolsPage })));
 
 const AdminLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.AdminLayout })));
-const AdminDashboard = lazy(() => import('@/widgets/admin-dashboard/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
+const AdminDashboard = lazy(() => import('@/app/providers/admin-dashboard-page').then(m => ({ default: m.AdminDashboardPage })));
 const AdminExams = lazy(() => import('@/app/providers/route-pages/admin/AdminExams').then(m => ({ default: m.AdminExams })));
 const AdminResults = lazy(() => import('@/app/providers/route-pages/admin/AdminResults').then(m => ({ default: m.AdminResults })));
 const AdminReports = lazy(() => import('@/app/providers/route-pages/admin/AdminReports').then(m => ({ default: m.AdminReports })));
@@ -34,7 +34,7 @@ const AdminClasses = lazy(() => import('@/app/providers/route-pages/admin/AdminC
 const AdminViolations = lazy(() => import('@/pages/admin/AdminViolations').then(m => ({ default: m.AdminViolations })));
 const AdminProfile = lazy(() => import('@/app/providers/route-pages/admin/AdminProfile').then(m => ({ default: m.AdminProfile })));
 const AdminApiReference = lazy(() => import('@/pages/admin/AdminApiReference').then(m => ({ default: m.AdminApiReference })));
-const AdminTools = lazy(() => import('@/pages/admin/AdminTools').then(m => ({ default: m.AdminTools })));
+const AdminTools = lazy(() => import('@/app/providers/route-pages/admin/AdminToolsPage').then(m => ({ default: m.AdminToolsPage })));
 
 function Loading() {
   return null;

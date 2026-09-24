@@ -1,6 +1,6 @@
 import React from 'react';
-import { ImportExportTools } from '@/features/import-export/ImportExportTools';
+import { ImportExportTools, type ImportExportToolsProps } from '@/features/import-export/ImportExportTools';
 
-export function AdminTools() {
-  return <ImportExportTools audience="admin" />;
+export function AdminTools(props: Omit<ImportExportToolsProps, 'audience'>) {
+  return <ImportExportTools audience="admin" {...props} />;
 }

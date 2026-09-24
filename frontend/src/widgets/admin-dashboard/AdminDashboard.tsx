@@ -1,14 +1,26 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { Users, FileText, Clipboard, TrendingUp, ArrowRight, Code2, BarChart2, Archive } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
+import type { DataSummary } from '@/entities/admin';
 import { StatCard } from '@/shared/ui/StatCard';
 import { Badge, getStatusBadge } from '@/shared/ui/status-badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
-export function AdminDashboard() {
-  const { users, exams, submissions, classes, summary, getUserById } = useApp();
+type AdminDashboardProps = {
+  users: User[];
+  exams: Exam[];
+  submissions: Submission[];
+  classes: Class[];
+  summary: DataSummary | null;
+  getUserById: (id: string) => User | undefined;
+};
+
+export function AdminDashboard({ users, exams, submissions, classes, summary, getUserById }: AdminDashboardProps) {
   const navigate = useNavigate();
 
   const students = users.filter(u => u.role === 'student');

@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { BookOpen, Eye, EyeOff, UserPlus, X, ScrollText } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
-import type { UserRole } from '@/entities/user';
+import type { User, UserRole } from '@/entities/user';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
-export function Register() {
-  const { register, currentUser } = useApp();
+type RegisterProps = {
+  currentUser: User | null;
+  register: (data: Partial<User>) => Promise<{ success: boolean; error?: string }>;
+};
+
+export function Register({ register, currentUser }: RegisterProps) {
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',

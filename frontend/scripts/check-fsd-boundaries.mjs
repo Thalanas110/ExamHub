@@ -12,7 +12,8 @@ const layerOrder = new Map([
 ]);
 
 const sourceExtensions = new Set(['.js', '.jsx', '.mjs', '.ts', '.tsx']);
-const allowedRootFiles = new Set(['main.tsx', 'vite-env.d.ts']);
+const allowedRootFiles = new Set(['main.tsx', 'router.tsx', 'routeTree.gen.ts', 'vite-env.d.ts']);
+const frameworkDirectories = new Set(['routes']);
 const legacyAppDirectories = new Set([
   'components',
   'context',
@@ -127,6 +128,10 @@ export async function findProductionOwnerViolations(rootDir) {
     const owner = segments[0];
 
     if (segments.length === 1 && allowedRootFiles.has(sourceRelativePath)) {
+      continue;
+    }
+
+    if (frameworkDirectories.has(owner)) {
       continue;
     }
 
