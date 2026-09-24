@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Shared\Http\Request;
-use App\Services\UserService;
+use App\Modules\Users\Application\UserService;
 use App\Shared\Support\ApiException;
 
 final class UsersController

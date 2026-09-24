@@ -13,7 +13,7 @@ use App\Shared\Security\PasswordHasher;
 use App\Services\SeedService;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
-use App\Services\UserService;
+use App\Modules\Users\Application\UserService;
 use App\Shared\Support\ApiException;
 
 $failures = [];

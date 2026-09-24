@@ -42,7 +42,7 @@ use App\Services\Support\ExamMapper;
 use App\Services\Support\ExamPayloadValidator;
 use App\Services\Support\QuestionAnalyticsBuilder;
 use App\Services\Support\ValueNormalizer;
-use App\Services\UserService;
+use App\Modules\Users\Application\UserService;
 use Throwable;
 
 final class ServiceContainer
