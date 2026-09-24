@@ -13,6 +13,7 @@ use App\Modules\Results\Application\ResultService;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Results\Application\ResultMapper;
+use App\Modules\Results\Infrastructure\RoutineResultRepository;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
@@ -28,7 +29,7 @@ $passwordHasher = new App\Shared\Security\PasswordHasher();
 $seedService = new SeedService($config, $gateway, $crypto, $passwordHasher);
 $seedService->bootstrap();
 $accommodationService = new StudentExamAccommodationService($gateway, $crypto, $mapper, $normalizer);
-$service = new ResultService($gateway, $crypto, $mapper, new ResultMapper($crypto, $normalizer), $normalizer, $accommodationService);
+$service = new ResultService($crypto, $mapper, new ResultMapper($crypto, $normalizer), $normalizer, $accommodationService, new RoutineResultRepository($gateway));
 
 $studentRow = $gateway->call('sp_auth_get_user_by_email', ['student@examhub.local'])[0] ?? null;
 $examRow = null;

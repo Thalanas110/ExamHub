@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Results\Application;
 
-use App\Shared\Database\RoutineGateway;
+use App\Modules\Results\Domain\ResultRepository;
 use App\Shared\Security\AesGcmCrypto;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
@@ -16,12 +16,12 @@ use App\Modules\Results\Application\ResultMapper;
 final class ResultService
 {
     public function __construct(
-        private RoutineGateway $gateway,
         private AesGcmCrypto $crypto,
         private ExamMapper $mapper,
         private ResultMapper $resultMapper,
         private ValueNormalizer $normalizer,
         private StudentExamAccommodationService $accommodationService,
+        private ResultRepository $repository,
     ) {
     }
 
@@ -58,7 +58,7 @@ final class ResultService
             $nextAttemptNo = max($nextAttemptNo, (int) ($attempt['attemptNo'] ?? 0) + 1);
         }
 
-        $rows = $this->gateway->call('sp_results_start_attempt', [
+        $row = $this->repository->startAttempt([
             (string) ($payload['id'] ?? Helpers::uuidV4()),
             $examId,
             (string) $authUser['id'],
@@ -69,7 +69,6 @@ final class ResultService
             $this->normalizeStoredDateTime((string) $policy['effectiveEndDate']),
         ]);
 
-        $row = $rows[0] ?? null;
         if (!is_array($row)) {
             throw new ApiException(500, 'Attempt start failed.');
         }
@@ -133,7 +132,7 @@ final class ResultService
             throw new ApiException(500, 'Unable to encode graded answers.');
         }
 
-        $rows = $this->gateway->call('sp_results_submit_started_attempt', [
+        $row = $this->repository->submitStartedAttempt([
             $submissionId,
             $encodedAnswers,
             $totalScore,
@@ -148,7 +147,6 @@ final class ResultService
             $status,
         ]);
 
-        $row = $rows[0] ?? null;
         if (!is_array($row)) {
             throw new ApiException(500, 'Submission failed.');
         }
@@ -172,11 +170,7 @@ final class ResultService
      */
     public function getResultsByStudent(array $authUser, string $studentId): array
     {
-        $rows = $this->gateway->call('sp_results_get_by_student_for_user', [
-            $studentId,
-            $authUser['role'],
-            $authUser['id'],
-        ]);
+        $rows = $this->repository->findByStudentForUser($studentId, (string) $authUser['role'], (string) $authUser['id']);
 
         return array_map(fn (array $row): array => $this->resultMapper->mapSubmissionRow($row), $rows);
     }
@@ -188,13 +182,7 @@ final class ResultService
      */
     public function gradeSubmission(array $authUser, string $submissionId, array $grades, string $feedback): array
     {
-        $rows = $this->gateway->call('sp_results_get_by_id_for_user', [
-            $submissionId,
-            $authUser['role'],
-            $authUser['id'],
-        ]);
-
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findByIdForUser($submissionId, (string) $authUser['role'], (string) $authUser['id']);
         if (!is_array($row)) {
             throw new ApiException(404, 'Submission not found.');
         }
@@ -233,7 +221,7 @@ final class ResultService
         $grade = Helpers::gradeFromPercentage($percentage);
         [$feedbackCiphertext, $feedbackIv, $feedbackTag] = $this->crypto->encryptParams($feedback);
 
-        $updatedRows = $this->gateway->call('sp_results_grade_update', [
+        $updatedRow = $this->repository->updateGrade([
             $submissionId,
             json_encode($this->encryptAnswerPayload($answers), JSON_UNESCAPED_UNICODE),
             $totalScore,
@@ -247,7 +235,6 @@ final class ResultService
             'graded',
         ]);
 
-        $updatedRow = $updatedRows[0] ?? null;
         if (!is_array($updatedRow)) {
             throw new ApiException(500, 'Grade update failed.');
         }
@@ -347,8 +334,7 @@ final class ResultService
      */
     private function loadAccessibleExam(array $authUser, string $examId): array
     {
-        $examRows = $this->gateway->call('sp_exams_get_by_id_for_user', [$examId, $authUser['role'], $authUser['id']]);
-        $examRow = $examRows[0] ?? null;
+        $examRow = $this->repository->findExamForUser($examId, (string) $authUser['role'], (string) $authUser['id']);
         if (!is_array($examRow)) {
             throw new ApiException(404, 'Exam not found.');
         }
@@ -361,7 +347,7 @@ final class ResultService
      */
     private function loadAttemptsForStudentExam(string $examId, string $studentId): array
     {
-        $rows = $this->gateway->call('sp_results_get_by_exam_and_student', [$examId, $studentId]);
+        $rows = $this->repository->findByExamAndStudent($examId, $studentId);
         return array_map(fn (array $row): array => $this->resultMapper->mapSubmissionRow($row), $rows);
     }
 
@@ -371,13 +357,7 @@ final class ResultService
      */
     private function loadSubmissionForUser(array $authUser, string $submissionId): array
     {
-        $rows = $this->gateway->call('sp_results_get_by_id_for_user', [
-            $submissionId,
-            $authUser['role'],
-            $authUser['id'],
-        ]);
-
-        $row = $rows[0] ?? null;
+        $row = $this->repository->findByIdForUser($submissionId, (string) $authUser['role'], (string) $authUser['id']);
         if (!is_array($row)) {
             throw new ApiException(404, 'Submission not found.');
         }
@@ -468,11 +448,7 @@ final class ResultService
 
     private function markAttemptExpired(string $submissionId, string $now): void
     {
-        $this->gateway->call('sp_results_update_status', [
-            $submissionId,
-            'expired',
-            $now,
-        ]);
+        $this->repository->updateStatus($submissionId, 'expired', $now);
     }
 
     private function normalizeStoredDateTime(string $value): string
@@ -554,7 +530,7 @@ final class ResultService
             $questionTopicMap[$questionId] = $this->normalizer->nullableString($question['topic'] ?? null);
         }
 
-        $this->gateway->call('sp_submission_question_metrics_delete_by_submission', [$submissionId]);
+        $this->repository->deleteQuestionMetrics($submissionId);
 
         foreach ($questionTelemetry as $metric) {
             if (!is_array($metric)) {
@@ -568,7 +544,7 @@ final class ResultService
 
             $topic = $this->normalizer->nullableString($metric['topic'] ?? ($questionTopicMap[$questionId] ?? null));
 
-            $this->gateway->call('sp_submission_question_metrics_upsert', [
+            $this->repository->upsertQuestionMetric([
                 $submissionId,
                 $examId,
                 $studentId,

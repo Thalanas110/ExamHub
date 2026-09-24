@@ -39,6 +39,7 @@ use App\Modules\Exams\Application\ExamService;
 use App\Services\ReportService;
 use App\Modules\Results\Application\ResultService;
 use App\Modules\Results\Application\ResultMapper;
+use App\Modules\Results\Infrastructure\RoutineResultRepository;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;
@@ -123,12 +124,12 @@ final class ServiceContainer
         );
 
         $resultService = new ResultService(
-            gateway: $gateway,
             crypto: $crypto,
             mapper: $mapper,
             resultMapper: new ResultMapper($crypto, $normalizer),
             normalizer: $normalizer,
             accommodationService: $studentExamAccommodationService,
+            repository: new RoutineResultRepository($gateway),
         );
 
         $dataService = new DataService(
