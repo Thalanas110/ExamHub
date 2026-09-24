@@ -27,7 +27,7 @@ use App\Shared\Observability\RequestLogService;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\JwtService;
 use App\Shared\Security\PasswordHasher;
-use App\Services\AuthService;
+use App\Modules\Auth\Application\AuthService;
 use App\Services\ApiDocsVerificationService;
 use App\Services\ClassService;
 use App\Services\DataService;

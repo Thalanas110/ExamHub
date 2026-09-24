@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Shared\Http\Request;
-use App\Services\AuthService;
+use App\Modules\Auth\Application\AuthService;
 
 final class ProfileController
 {
