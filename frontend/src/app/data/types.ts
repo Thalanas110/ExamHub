@@ -1,19 +1,7 @@
-export type UserRole = 'student' | 'teacher' | 'admin';
+export type { UserRole, User } from '@/entities/user';
 export type ExamStatus = 'draft' | 'published' | 'completed';
 export type SubmissionStatus = 'submitted' | 'graded';
 export type QuestionType = 'mcq' | 'short_answer' | 'essay';
-
-export interface User {
-  id: string;
-  name: string;
-  email: string;
-  password?: string; // optional — not returned by the API (only present in mock data)
-  role: UserRole;
-  joinedAt: string;
-  phone?: string;
-  bio?: string;
-  department?: string;
-}
 
 export interface Class {
   id: string;
