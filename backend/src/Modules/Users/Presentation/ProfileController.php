@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Users\Presentation;
 
 use App\Shared\Http\Request;
-use App\Modules\Auth\Application\AuthService;
+use App\Modules\Users\Application\ProfileService;
 
 final class ProfileController
 {
-    public function __construct(private AuthService $authService)
+    public function __construct(private ProfileService $profileService)
     {
     }
 
@@ -21,7 +21,7 @@ final class ProfileController
     {
         return [
             'status' => 200,
-            'data' => $this->authService->getProfile((string) $authUser['id']),
+            'data' => $this->profileService->getProfile((string) $authUser['id']),
         ];
     }
 
@@ -33,7 +33,7 @@ final class ProfileController
     {
         return [
             'status' => 200,
-            'data' => $this->authService->updateProfile((string) $authUser['id'], $request->body),
+            'data' => $this->profileService->updateProfile((string) $authUser['id'], $request->body),
         ];
     }
 }

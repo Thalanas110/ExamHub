@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Routing\Routes;
+namespace App\Modules\Users\Presentation;
 
-use App\Controllers\ProfileController;
 use App\Shared\Http\Request;
 use App\Shared\Http\Router;
 

@@ -6,6 +6,8 @@ namespace App\Routing\Routes;
 
 use App\Bootstrap\ServiceContainer;
 use App\Modules\Auth\Presentation\AuthRoutes;
+use App\Modules\Users\Presentation\ProfileRoutes;
+use App\Modules\Users\Presentation\UserRoutes;
 use App\Shared\Http\Router;
 
 final class ApiRouteRegistry

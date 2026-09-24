@@ -13,10 +13,10 @@ use App\Controllers\DocsController;
 use App\Controllers\ExamViolationsController;
 use App\Controllers\ExamsController;
 use App\Controllers\HealthController;
-use App\Controllers\ProfileController;
+use App\Modules\Users\Presentation\ProfileController;
 use App\Controllers\ReportsController;
 use App\Controllers\ResultsController;
-use App\Controllers\UsersController;
+use App\Modules\Users\Presentation\UsersController;
 use App\Shared\Database\LogDbConnection;
 use App\Shared\Database\RoutineGateway;
 use App\Logging\AdminLogReadService;
@@ -44,6 +44,7 @@ use App\Services\Support\ExamPayloadValidator;
 use App\Services\Support\QuestionAnalyticsBuilder;
 use App\Services\Support\ValueNormalizer;
 use App\Modules\Users\Application\UserService;
+use App\Modules\Users\Application\ProfileService;
 use Throwable;
 
 final class ServiceContainer
@@ -162,7 +163,7 @@ final class ServiceContainer
             logRetentionService: new LogRetentionService($logGateway, $config->logRetentionDays),
             healthController: new HealthController(),
             authController: new AuthController($authService),
-            profileController: new ProfileController($authService),
+            profileController: new ProfileController(new ProfileService($authService)),
             usersController: new UsersController($userService),
             classesController: new ClassesController($classService),
             examsController: new ExamsController($examService),
