@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Shared\Http\Request;
-use App\Services\DataService;
+use App\Modules\Data\Application\DataService;
 use App\Services\SeedService;
 use App\Shared\Support\ApiException;
 

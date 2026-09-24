@@ -7,7 +7,7 @@ namespace App\Modules\Reports\Application;
 use App\Shared\Database\RoutineGateway;
 use App\Services\Support\QuestionAnalyticsBuilder;
 use App\Services\Support\ExamMapper;
-use App\Services\DataService;
+use App\Modules\Data\Application\DataService;
 
 final class ReportService
 {

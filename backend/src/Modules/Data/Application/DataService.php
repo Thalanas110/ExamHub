@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Data\Application;
 
 use App\Shared\Database\RoutineGateway;
 use App\Services\Support\ExamMapper;

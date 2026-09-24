@@ -34,7 +34,7 @@ use App\Services\ApiDocsVerificationService;
 use App\Modules\Classes\Application\ClassService;
 use App\Modules\Classes\Application\ClassMapper;
 use App\Modules\Classes\Infrastructure\RoutineClassRepository;
-use App\Services\DataService;
+use App\Modules\Data\Application\DataService;
 use App\Modules\Exams\Application\ExamService;
 use App\Modules\Reports\Application\ReportService;
 use App\Modules\Results\Application\ResultService;
