@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TrendingUp, Award, FileText, AlertTriangle, Search } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { Badge, getGradeBadge } from '@/widgets/layouts/Badge';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

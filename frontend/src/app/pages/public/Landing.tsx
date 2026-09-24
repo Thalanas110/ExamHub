@@ -12,7 +12,7 @@ import {
   Users,
   Zap,
 } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 
 const features = [
   { icon: ShieldCheck, title: 'Proctored by Default', text: 'Full-screen enforcement, tab-switch & monitor detection built into every exam.', color: 'text-emerald-700', bg: 'bg-emerald-50', border: 'border-emerald-200' },

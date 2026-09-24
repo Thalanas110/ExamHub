@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Hash, Pencil, Search, Trash2, Users } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { ConfirmDialog, Modal } from '@/widgets/layouts/Modal';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { Class } from '../../data/types';

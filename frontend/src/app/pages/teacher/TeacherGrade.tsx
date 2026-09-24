@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
 import type { Exam, Submission } from '../../data/types';
 import { ExamSelectionChips } from '../../features/teacher/grade/components/ExamSelectionChips';

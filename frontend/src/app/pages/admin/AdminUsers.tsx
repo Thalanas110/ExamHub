@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Search, Users, GraduationCap, BookOpen, Shield } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { Badge } from '@/widgets/layouts/Badge';
 import { Modal, ConfirmDialog } from '@/widgets/layouts/Modal';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';

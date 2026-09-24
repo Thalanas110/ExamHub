@@ -1,7 +1,7 @@
 import React, { useMemo, lazy, Suspense } from 'react';
 import { RouterProvider } from 'react-router';
 import { createAppRouter } from './routes';
-import { AppProvider } from './context/AppContext';
+import { AppProvider } from '@/app/providers/AppProvider';
 
 const Toaster = lazy(() => import('sonner').then(m => ({ default: m.Toaster })));
 

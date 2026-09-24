@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { LayoutDashboard, BookOpen, BarChart2, Users, User } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { DashboardLayout } from '@/widgets/layouts/DashboardLayout';
 
 const navItems = [

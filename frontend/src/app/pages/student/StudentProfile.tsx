@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, Building, Edit2, Save, X, Key, GraduationCap, User } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
 
 export function StudentProfile() {

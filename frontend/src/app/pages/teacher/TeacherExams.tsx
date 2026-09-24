@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Plus, Search } from 'lucide-react';
 import { ExamAccommodationsModal } from '../../components/shared/ExamAccommodationsModal';
 import { ConfirmDialog } from '@/widgets/layouts/Modal';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
 import type { Exam, ExamStatus, Question } from '../../data/types';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { Users, FileText, Clipboard, TrendingUp, ArrowRight, Code2, BarChart2, Archive } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { StatCard } from '@/widgets/layouts/StatCard';
 import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';

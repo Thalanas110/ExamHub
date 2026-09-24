@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Clock, Search, CheckCircle2, AlertCircle, BookOpen, Calendar, UserCog } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 

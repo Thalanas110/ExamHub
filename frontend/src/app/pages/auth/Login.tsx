@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { BookOpen, Eye, EyeOff, LogIn, ShieldCheck } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 
 const securityNotes = [
   'Role-based authentication for students, teachers, and admins',

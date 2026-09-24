@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { User, Mail, Phone, Building, Edit2, Save, X, Key, Shield } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
 
 export function AdminProfile() {

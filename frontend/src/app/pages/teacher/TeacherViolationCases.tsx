@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { CheckCircle2, RefreshCw, ShieldAlert } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { ReviewModal } from '../../features/teacher/violation-cases/ReviewModal';
 import { useViolationCases } from '../../features/teacher/violation-cases/useViolationCases';
 import { ViolationCasesTable } from '../../features/teacher/violation-cases/ViolationCasesTable';

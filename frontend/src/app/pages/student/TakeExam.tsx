@@ -14,7 +14,7 @@ import {
   ShieldAlert,
   UserCog,
 } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
+import { useApp } from '@/app/providers/AppProvider';
 import { Answer, QuestionTelemetry } from '../../data/types';
 import { ConfirmDialog } from '@/widgets/layouts/Modal';
 import { toast } from 'sonner';
