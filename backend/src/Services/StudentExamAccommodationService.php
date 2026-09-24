@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Shared\Database\RoutineGateway;
-use App\Security\AesGcmCrypto;
+use App\Shared\Security\AesGcmCrypto;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;

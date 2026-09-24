@@ -12,7 +12,7 @@ use App\Shared\Http\Request;
 use App\Shared\Http\Response;
 use App\Shared\Http\Router;
 use App\Routing\Routes\ApiRouteRegistry;
-use App\Security\AesGcmCrypto;
+use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 

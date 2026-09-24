@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Security\AesGcmCrypto;
-use App\Security\JwtService;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Security\JwtService;
 use App\Shared\Support\Helpers;
 
 $failures = [];

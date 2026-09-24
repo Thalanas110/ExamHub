@@ -8,7 +8,7 @@ use App\Shared\Database\DbConnection;
 use App\Shared\Database\MysqlPdoFactory;
 use App\Shared\Database\RoutineGateway;
 use App\Shared\Database\SqlScriptRunner;
-use App\Security\AesGcmCrypto;
+use App\Shared\Security\AesGcmCrypto;
 use App\Services\EncryptionRepairService;
 use App\Services\Support\LegacyEncryptedDataRepair;
 

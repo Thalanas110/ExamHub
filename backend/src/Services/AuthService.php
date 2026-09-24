@@ -6,9 +6,9 @@ namespace App\Services;
 
 use App\Shared\Config\AppConfig;
 use App\Shared\Database\RoutineGateway;
-use App\Security\AesGcmCrypto;
-use App\Security\JwtService;
-use App\Security\PasswordHasher;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Security\JwtService;
+use App\Shared\Security\PasswordHasher;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
