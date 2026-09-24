@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Routing\Routes;
 
 use App\Bootstrap\ServiceContainer;
-use App\Routing\Router;
+use App\Shared\Http\Router;
 
 final class ApiRouteRegistry
 {

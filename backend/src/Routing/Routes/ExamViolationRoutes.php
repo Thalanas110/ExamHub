@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Routing\Routes;
 
 use App\Controllers\ExamViolationsController;
-use App\Http\Request;
-use App\Routing\Router;
+use App\Shared\Http\Request;
+use App\Shared\Http\Router;
 
 final class ExamViolationRoutes
 {

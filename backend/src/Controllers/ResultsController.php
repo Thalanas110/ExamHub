@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Http\Request;
+use App\Shared\Http\Request;
 use App\Services\ResultService;
 use App\Shared\Support\ApiException;
 

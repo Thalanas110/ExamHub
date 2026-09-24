@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Routing;
+namespace App\Shared\Http;
 
-use App\Http\Request;
+use App\Shared\Http\Request;
 use App\Shared\Support\ApiException;
 use Throwable;
 

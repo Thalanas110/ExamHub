@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Http\AesGcmPayloadEnvelope;
+use App\Shared\Http\AesGcmPayloadEnvelope;
 use App\Security\AesGcmCrypto;
 use App\Shared\Support\ApiException;
 

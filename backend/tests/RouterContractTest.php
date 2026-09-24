@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Http\Request;
-use App\Routing\Router;
+use App\Shared\Http\Request;
+use App\Shared\Http\Router;
 use App\Shared\Support\ApiException;
 
 function routerAssertSame(mixed $expected, mixed $actual, string $message): void

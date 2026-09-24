@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http;
+namespace App\Shared\Http;
 
 use App\Security\AesGcmCrypto;
 use App\Shared\Support\ApiException;
