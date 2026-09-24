@@ -3,7 +3,7 @@ import { Search, FileText, Trash2, Eye, Clock, Users, CheckSquare } from 'lucide
 import { useApp } from '@/app/providers/AppProvider';
 import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
 import { ConfirmDialog, Modal } from '@/widgets/layouts/Modal';
-import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
+import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { ExamStatus } from '../../data/types';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

@@ -3,7 +3,7 @@ import { Activity, AlertTriangle, Clock3, RefreshCw, ScrollText, ShieldCheck, Us
 import { toast } from 'sonner';
 import { adminApi, type AdminLogsResponse } from '../../services/api';
 import { Badge } from '@/widgets/layouts/Badge';
-import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
+import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { StatCard } from '@/widgets/layouts/StatCard';
 
 type LogTab = 'requests' | 'audit';

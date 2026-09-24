@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BookOpen, Hash, Pencil, Search, Trash2, Users } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
 import { ConfirmDialog, Modal } from '@/widgets/layouts/Modal';
-import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
+import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { Class } from '../../data/types';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
