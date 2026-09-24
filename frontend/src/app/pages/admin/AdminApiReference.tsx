@@ -20,7 +20,7 @@ import { CopyButton } from '../../features/admin/api-reference/components/CopyBu
 import { GroupSection } from '../../features/admin/api-reference/components/EndpointCard';
 import { PhpBackendPanel } from '../../features/admin/api-reference/components/PhpBackendPanel';
 import { VerificationPanel } from '../../features/admin/api-reference/components/VerificationPanel';
-import { Modal } from '../../components/shared/Modal';
+import { Modal } from '@/widgets/layouts/Modal';
 import templateFooterUrl from '../../assets/api-docs-template-contact-footer.jpg';
 import templateHeaderUrl from '../../assets/api-docs-template-header.jpg';
 

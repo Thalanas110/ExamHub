@@ -1,6 +1,6 @@
 import { CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import { Badge, getGradeBadge, getStatusBadge } from '../../../../components/shared/Badge';
-import { PaginatedTable } from '../../../../components/shared/PaginatedTable';
+import { Badge, getGradeBadge, getStatusBadge } from '@/widgets/layouts/Badge';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import type { Exam, Submission, User } from '../../../../data/types';
 
 interface SubmissionsTableProps {

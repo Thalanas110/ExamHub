@@ -1,5 +1,5 @@
 import { BookOpen, ChevronDown, ChevronUp, Clock, Edit2, FileText, ShieldAlert, Trash2, UserCog } from 'lucide-react';
-import { Badge, getStatusBadge } from '../../../../components/shared/Badge';
+import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
 import type { Class, Exam, ExamStatus, Submission } from '../../../../data/types';
 import { EXAM_STATUS_ACTIONS } from '../constants';
 

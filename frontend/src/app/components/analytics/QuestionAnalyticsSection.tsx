@@ -25,7 +25,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '../ui/select';
+} from '@/shared/ui/select';
 import {
   filterQuestions,
   filterWeakTopics,

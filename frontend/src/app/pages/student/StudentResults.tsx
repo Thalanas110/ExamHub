@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { TrendingUp, Award, FileText, AlertTriangle, Search } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { Badge, getGradeBadge } from '../../components/shared/Badge';
-import { PaginatedTable } from '../../components/shared/PaginatedTable';
+import { Badge, getGradeBadge } from '@/widgets/layouts/Badge';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell, Legend } from 'recharts';
 

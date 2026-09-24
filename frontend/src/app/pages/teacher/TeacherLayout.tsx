@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { LayoutDashboard, FileText, Users, CheckSquare, User, ShieldAlert, Archive } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { DashboardLayout } from '../../components/shared/DashboardLayout';
+import { DashboardLayout } from '@/widgets/layouts/DashboardLayout';
 
 const navItems = [
   { path: '/teacher', label: 'Dashboard', icon: LayoutDashboard },
@@ -15,7 +15,7 @@ const navItems = [
 ];
 
 export function TeacherLayout() {
-  const { currentUser } = useApp();
+  const { currentUser, logout } = useApp();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,5 +25,5 @@ export function TeacherLayout() {
 
   if (!currentUser || currentUser.role !== 'teacher') return null;
 
-  return <DashboardLayout navItems={navItems} roleLabel="Teacher" />;
+  return <DashboardLayout navItems={navItems} roleLabel="Teacher" currentUser={currentUser} onLogout={logout} />;
 }

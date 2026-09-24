@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Plus, Users, Trash2, UserPlus, UserMinus, Search, Copy, BookOpen, Hash, Pencil } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { Modal, ConfirmDialog } from '../../components/shared/Modal';
-import { Badge } from '../../components/shared/Badge';
+import { Modal, ConfirmDialog } from '@/widgets/layouts/Modal';
+import { Badge } from '@/widgets/layouts/Badge';
 import { toast } from 'sonner';
 import { Class } from '../../data/types';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

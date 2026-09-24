@@ -1,6 +1,6 @@
 import React from 'react';
-import { Badge } from '../../../components/shared/Badge';
-import { PaginatedTable } from '../../../components/shared/PaginatedTable';
+import { Badge } from '@/widgets/layouts/Badge';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import {
   OUTCOME_META,
   SEVERITY_META,

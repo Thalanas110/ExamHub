@@ -1,5 +1,5 @@
 import { ShieldAlert } from 'lucide-react';
-import { Modal } from '../../../../components/shared/Modal';
+import { Modal } from '@/widgets/layouts/Modal';
 import type { ViolationRecord } from '../../../../services/api';
 import { getViolationBadgeClassName } from '../../exams/constants';
 

@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { BookOpen, Users, CheckCircle, TrendingUp, Clock, ArrowRight } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { StatCard } from '../../components/shared/StatCard';
-import { Badge, getGradeBadge } from '../../components/shared/Badge';
-import { PaginatedTable } from '../../components/shared/PaginatedTable';
+import { StatCard } from '@/widgets/layouts/StatCard';
+import { Badge, getGradeBadge } from '@/widgets/layouts/Badge';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 export function StudentDashboard() {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Users, BookOpen, Hash, LogOut, Plus, GraduationCap, Search } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { toast } from 'sonner';
-import { ConfirmDialog } from '../../components/shared/Modal';
+import { ConfirmDialog } from '@/widgets/layouts/Modal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function StudentClasses() {

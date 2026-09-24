@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TrendingUp, Award, Users, FileText } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { PaginatedTable } from '../../components/shared/PaginatedTable';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,

@@ -1,6 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router';
 import { lazy, Suspense } from 'react';
-import { RouterErrorPage } from './components/shared/RouterErrorPage';
+import { RouterErrorPage } from '@/widgets/layouts/RouterErrorPage';
 
 const Landing = lazy(() => import('./pages/public/Landing').then(m => ({ default: m.Landing })));
 const Login = lazy(() => import('./pages/auth/Login').then(m => ({ default: m.Login })));

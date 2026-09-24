@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { LayoutDashboard, Users, FileText, Clipboard, BarChart2, User, Code2, Archive, BookOpen, ShieldAlert } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { DashboardLayout } from '../../components/shared/DashboardLayout';
+import { DashboardLayout } from '@/widgets/layouts/DashboardLayout';
 
 const navItems = [
   { path: '/admin', label: 'Dashboard', icon: LayoutDashboard },
@@ -18,7 +18,7 @@ const navItems = [
 ];
 
 export function AdminLayout() {
-  const { currentUser } = useApp();
+  const { currentUser, logout } = useApp();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,5 +28,5 @@ export function AdminLayout() {
 
   if (!currentUser || currentUser.role !== 'admin') return null;
 
-  return <DashboardLayout navItems={navItems} roleLabel="Admin" />;
+  return <DashboardLayout navItems={navItems} roleLabel="Admin" currentUser={currentUser} onLogout={logout} />;
 }

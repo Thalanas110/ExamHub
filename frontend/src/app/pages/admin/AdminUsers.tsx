@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Search, Users, GraduationCap, BookOpen, Shield } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { Badge } from '../../components/shared/Badge';
-import { Modal, ConfirmDialog } from '../../components/shared/Modal';
-import { PaginatedTable } from '../../components/shared/PaginatedTable';
+import { Badge } from '@/widgets/layouts/Badge';
+import { Modal, ConfirmDialog } from '@/widgets/layouts/Modal';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { User, UserRole } from '../../data/types';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

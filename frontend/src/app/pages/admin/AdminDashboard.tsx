@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router';
 import { Users, FileText, Clipboard, TrendingUp, ArrowRight, Code2, BarChart2, Archive } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { StatCard } from '../../components/shared/StatCard';
-import { Badge, getStatusBadge } from '../../components/shared/Badge';
-import { PaginatedTable } from '../../components/shared/PaginatedTable';
+import { StatCard } from '@/widgets/layouts/StatCard';
+import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
+import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 export function AdminDashboard() {

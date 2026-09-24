@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { LayoutDashboard, BookOpen, BarChart2, Users, User } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
-import { DashboardLayout } from '../../components/shared/DashboardLayout';
+import { DashboardLayout } from '@/widgets/layouts/DashboardLayout';
 
 const navItems = [
   { path: '/student', label: 'Dashboard', icon: LayoutDashboard },
@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 export function StudentLayout() {
-  const { currentUser } = useApp();
+  const { currentUser, logout } = useApp();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,5 +23,5 @@ export function StudentLayout() {
 
   if (!currentUser || currentUser.role !== 'student') return null;
 
-  return <DashboardLayout navItems={navItems} roleLabel="Student" />;
+  return <DashboardLayout navItems={navItems} roleLabel="Student" currentUser={currentUser} onLogout={logout} />;
 }

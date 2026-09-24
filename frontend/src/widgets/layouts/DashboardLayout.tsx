@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router';
 import { LucideIcon, BookOpen, LogOut, Menu, X, ChevronRight } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
 import { ConfirmDialog } from './Modal';
 
 export interface NavItem {
@@ -10,19 +9,26 @@ export interface NavItem {
   icon: LucideIcon;
 }
 
+export interface DashboardUser {
+  name?: string;
+  email?: string;
+  role?: string;
+}
+
 interface DashboardLayoutProps {
   navItems: NavItem[];
   roleLabel?: string;
+  currentUser: DashboardUser | null;
+  onLogout: () => void;
 }
 
-export function DashboardLayout({ navItems, roleLabel }: DashboardLayoutProps) {
-  const { currentUser, logout } = useApp();
+export function DashboardLayout({ navItems, roleLabel, currentUser, onLogout }: DashboardLayoutProps) {
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [confirmSignOut, setConfirmSignOut] = useState(false);
 
   const handleLogout = () => {
-    logout();
+    onLogout();
     navigate('/');
   };
 
