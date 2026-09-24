@@ -15,10 +15,10 @@ import {
   type QuestionAnalyticsQuestion,
   type QuestionAnalyticsReport,
   type WeakTopicByClassReport,
-} from '../../services/api';
-import { EmptyState } from '../../features/analytics/question-analytics/components/EmptyState';
-import { ListCard } from '../../features/analytics/question-analytics/components/ListCard';
-import { PaginatedTable } from '../shared/PaginatedTable';
+} from '@/entities/report';
+import { EmptyState } from './components/EmptyState';
+import { ListCard } from './components/ListCard';
+import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import {
   Select,
   SelectContent,
@@ -36,8 +36,8 @@ import {
   getSelectedExamClassId,
   getSlowestQuestions,
   getTopicOptions,
-} from '../../features/analytics/question-analytics/lib/filters';
-import { formatSeconds, scoreTone } from '../../features/analytics/question-analytics/lib/formatters';
+} from './lib/filters';
+import { formatSeconds, scoreTone } from './lib/formatters';
 
 type QuestionAnalyticsSectionProps = {
   audienceLabel: 'Teacher' | 'Admin';

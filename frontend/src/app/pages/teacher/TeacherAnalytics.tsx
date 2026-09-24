@@ -1,5 +1,5 @@
 import React from 'react';
-import { QuestionAnalyticsSection } from '../../components/analytics/QuestionAnalyticsSection';
+import { QuestionAnalyticsSection } from '@/features/analytics/question-analytics/QuestionAnalyticsSection';
 
 export function TeacherAnalytics() {
   return (
