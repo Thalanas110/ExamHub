@@ -8,7 +8,6 @@ import {
 import {
   API_ENDPOINTS,
   docsApi,
-  PHP_BASE_URL,
   type ApiDocsVerifyCheck,
   type ApiDocsVerifyResult,
   type HttpMethod,
