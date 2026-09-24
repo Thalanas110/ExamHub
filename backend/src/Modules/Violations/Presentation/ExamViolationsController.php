@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Violations\Presentation;
 
 use App\Shared\Http\Request;
 use App\Logging\ExamViolationService;

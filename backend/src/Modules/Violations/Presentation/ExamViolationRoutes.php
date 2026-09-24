@@ -2,9 +2,8 @@
 
 declare(strict_types=1);
 
-namespace App\Routing\Routes;
+namespace App\Modules\Violations\Presentation;
 
-use App\Controllers\ExamViolationsController;
 use App\Shared\Http\Request;
 use App\Shared\Http\Router;
 
