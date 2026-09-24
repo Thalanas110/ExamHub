@@ -8,7 +8,7 @@ const Register = lazy(() => import('@/features/auth/ui/Register').then(m => ({ d
 const ExamTakingPreview = lazy(() => import('./pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
 
 const StudentLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.StudentLayout })));
-const StudentDashboard = lazy(() => import('@/widgets/student-dashboard/StudentDashboard').then(m => ({ default: m.StudentDashboard })));
+const StudentDashboard = lazy(() => import('@/app/providers/student-dashboard-page').then(m => ({ default: m.StudentDashboardPage })));
 const StudentExams = lazy(() => import('./pages/student/StudentExams').then(m => ({ default: m.StudentExams })));
 const StudentResults = lazy(() => import('./pages/student/StudentResults').then(m => ({ default: m.StudentResults })));
 const StudentClasses = lazy(() => import('./pages/student/StudentClasses').then(m => ({ default: m.StudentClasses })));

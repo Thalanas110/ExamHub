@@ -1,14 +1,36 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { BookOpen, Users, CheckCircle, TrendingUp, Clock, ArrowRight } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { User } from '@/entities/user';
+import type { Submission } from '@/entities/submission';
 import { StatCard } from '@/widgets/layouts/StatCard';
 import { Badge, getGradeBadge } from '@/widgets/layouts/Badge';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
-export function StudentDashboard() {
-  const { currentUser, classes, exams, summary, getSubmissionsByStudent, getStudentSubmission } = useApp();
+interface StudentDashboardProps {
+  currentUser: User;
+  classes: Class[];
+  exams: Exam[];
+  summary: {
+    classes: { total: number };
+    exams: { published: number };
+    submissions: { total: number; averageScore: number };
+  } | null;
+  getSubmissionsByStudent: (studentId: string) => Submission[];
+  getStudentSubmission: (examId: string, studentId: string) => Submission | undefined;
+}
+
+export function StudentDashboard({
+  currentUser,
+  classes,
+  exams,
+  summary,
+  getSubmissionsByStudent,
+  getStudentSubmission,
+}: StudentDashboardProps) {
   const navigate = useNavigate();
 
   if (!currentUser) return null;
