@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
 import type { AppContextType } from '@/app/providers/app-context.types';
-import type { Answer, Exam, QuestionTelemetry } from '../../../../data/types';
+import type { Exam } from '@/entities/exam';
+import type { Answer, QuestionTelemetry } from '@/entities/submission';
 
 type ActiveQuestionSession = {
   questionId: string;

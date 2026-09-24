@@ -22,7 +22,7 @@ import { violationApi, ViolationType } from '../../services/api';
 import {
   createExamFocusViolationState as CreateExamFocusViolationState,
   resolveExamFocusViolation as ResolveExamFocusViolation,
-} from '../../features/student/take-exam/lib/focus-violation-state';
+} from '@/features/student/take-exam/lib/focus-violation-state';
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D', 'E'];
 const MAX_TAB_SWITCHES = 3;

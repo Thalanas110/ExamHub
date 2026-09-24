@@ -1,4 +1,4 @@
-import type { ViolationType } from '../../../../services/api';
+import type { ViolationType } from '@/entities/violation';
 
 export type ExamFocusViolationEvent =
   | { type: 'visibilitychange'; hidden: boolean }

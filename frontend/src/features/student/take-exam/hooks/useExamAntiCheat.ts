@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { violationApi, type ViolationType } from '../../../../services/api';
+import { violationApi, type ViolationType } from '@/entities/violation';
 import { MAX_TAB_SWITCHES, VIOLATION_COOLDOWN_MS } from '../constants';
 import { createExamFocusViolationState, resolveExamFocusViolation } from '../lib/focus-violation-state';
 
