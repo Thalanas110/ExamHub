@@ -7,7 +7,7 @@ namespace App\Modules\Exams\Application;
 use App\Modules\Exams\Domain\ExamRepository;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 

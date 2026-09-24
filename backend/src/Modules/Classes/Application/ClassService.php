@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Classes\Application;
 
 use App\Modules\Classes\Domain\ClassRepository;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 

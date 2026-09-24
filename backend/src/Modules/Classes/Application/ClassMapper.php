@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Classes\Application;
 
 use App\Shared\Support\Helpers;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 final class ClassMapper
 {

@@ -47,7 +47,7 @@ use App\Modules\Violations\Application\ViolationCaseService;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\QuestionAnalyticsBuilder;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 use App\Modules\Users\Application\UserService;
 use App\Modules\Users\Application\ProfileService;
 use Throwable;

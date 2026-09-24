@@ -7,7 +7,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 use App\Modules\Classes\Application\ClassMapper;
 use App\Modules\Classes\Domain\Classroom;
 use App\Modules\Classes\Domain\ClassRepository;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 $class = Classroom::fromArray([
     'id' => 'class-1',

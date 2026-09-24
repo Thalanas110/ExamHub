@@ -7,7 +7,7 @@ namespace App\Modules\Results\Application;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Support\Helpers;
 use App\Shared\Support\ApiException;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 final class ResultMapper
 {

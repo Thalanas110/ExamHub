@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Users\Application;
 
 use App\Shared\Security\AesGcmCrypto;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 final class UserMapper
 {

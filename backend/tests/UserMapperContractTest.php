@@ -6,7 +6,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 
 use App\Modules\Users\Application\UserMapper;
 use App\Shared\Security\AesGcmCrypto;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 $mapper = new UserMapper(
     new AesGcmCrypto('0123456789abcdef0123456789abcdef'),

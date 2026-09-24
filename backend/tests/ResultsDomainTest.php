@@ -7,7 +7,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 use App\Modules\Results\Application\ResultMapper;
 use App\Modules\Results\Domain\Submission;
 use App\Shared\Security\AesGcmCrypto;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 $submission = Submission::fromArray([
     'id' => 'submission-1',

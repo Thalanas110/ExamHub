@@ -14,7 +14,7 @@ use App\Shared\Security\PasswordHasher;
 use App\Modules\Auth\Application\AuthService;
 use App\Modules\Data\Application\SeedService;
 use App\Services\Support\ExamMapper;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));

@@ -8,7 +8,7 @@ use App\Modules\Users\Domain\UserRepository;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
 use App\Services\Support\ExamMapper;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 use PDOException;
