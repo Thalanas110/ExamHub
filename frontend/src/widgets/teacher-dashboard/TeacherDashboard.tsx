@@ -5,9 +5,9 @@ import type { Class } from '@/entities/class';
 import type { Exam } from '@/entities/exam';
 import type { Submission } from '@/entities/submission';
 import type { User } from '@/entities/user';
-import { StatCard } from '@/widgets/layouts/StatCard';
-import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
-import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
+import { StatCard } from '@/shared/ui/StatCard';
+import { Badge, getStatusBadge } from '@/shared/ui/status-badge';
+import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 interface TeacherDashboardProps {

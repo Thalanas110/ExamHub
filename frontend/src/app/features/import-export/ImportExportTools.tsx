@@ -12,7 +12,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/Badge';
+import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/status-badge';
 import { StatCard } from '@/shared/ui/StatCard';
 import { useApp } from '@/app/providers/AppProvider';
 import type { Class, Exam, ExamStatus, Question, QuestionType, Submission, User } from '../../data/types';

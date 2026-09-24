@@ -1,5 +1,5 @@
 import { CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/Badge';
+import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/status-badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import type { Exam } from '@/entities/exam';
 import type { Submission } from '@/entities/submission';

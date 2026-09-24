@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge } from '@/shared/ui/Badge';
+import { Badge } from '@/shared/ui/status-badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import {
   OUTCOME_META,

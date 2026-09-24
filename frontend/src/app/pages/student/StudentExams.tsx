@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Clock, Search, CheckCircle2, AlertCircle, BookOpen, Calendar, UserCog } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { Badge, getStatusBadge } from '@/shared/ui/Badge';
+import { Badge, getStatusBadge } from '@/shared/ui/status-badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 type ExamFilter = 'all' | 'available' | 'submitted' | 'graded';

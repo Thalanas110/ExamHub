@@ -11,7 +11,7 @@ import {
   type ViolationCaseSeverity,
   type ViolationRecord,
 } from '../../services/api';
-import { Badge } from '@/shared/ui/Badge';
+import { Badge } from '@/shared/ui/status-badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { StatCard } from '@/shared/ui/StatCard';
 import { ReviewModal } from '@/features/teacher/violation-cases/ReviewModal';
