@@ -35,7 +35,7 @@ use App\Modules\Classes\Application\ClassService;
 use App\Modules\Classes\Application\ClassMapper;
 use App\Modules\Classes\Infrastructure\RoutineClassRepository;
 use App\Services\DataService;
-use App\Services\ExamService;
+use App\Modules\Exams\Application\ExamService;
 use App\Services\ReportService;
 use App\Services\ResultService;
 use App\Services\SeedService;

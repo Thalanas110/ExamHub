@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Exams\Application;
 
 use App\Shared\Database\RoutineGateway;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
+use App\Services\StudentExamAccommodationService;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;

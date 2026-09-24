@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Shared\Http\Request;
-use App\Services\ExamService;
+use App\Modules\Exams\Application\ExamService;
 use App\Shared\Support\ApiException;
 
 final class ExamsController
