@@ -14,7 +14,7 @@ use App\Services\SeedService;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Services\UserService;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));

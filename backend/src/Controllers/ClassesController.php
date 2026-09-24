@@ -6,7 +6,7 @@ namespace App\Controllers;
 
 use App\Http\Request;
 use App\Services\ClassService;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 final class ClassesController
 {

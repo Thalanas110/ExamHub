@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Routing;
 
 use App\Http\Request;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 use Throwable;
 
 final class Router

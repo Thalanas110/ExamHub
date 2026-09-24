@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Http;
 
 use App\Security\AesGcmCrypto;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 use JsonException;
 use RuntimeException;
 

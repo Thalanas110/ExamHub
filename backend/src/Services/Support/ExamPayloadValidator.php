@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Services\Support;
 
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 
 final class ExamPayloadValidator
 {

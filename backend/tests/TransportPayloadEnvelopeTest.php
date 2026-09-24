@@ -6,7 +6,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 
 use App\Http\AesGcmPayloadEnvelope;
 use App\Security\AesGcmCrypto;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 

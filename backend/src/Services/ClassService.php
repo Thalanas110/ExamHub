@@ -7,8 +7,8 @@ namespace App\Services;
 use App\Database\RoutineGateway;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 
 final class ClassService
 {

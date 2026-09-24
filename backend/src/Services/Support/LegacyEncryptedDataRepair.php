@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Services\Support;
 
 use App\Security\AesGcmCrypto;
-use App\Support\Helpers;
+use App\Shared\Support\Helpers;
 
 final class LegacyEncryptedDataRepair
 {

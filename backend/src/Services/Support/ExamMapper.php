@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Services\Support;
 
 use App\Security\AesGcmCrypto;
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 
 final class ExamMapper
 {

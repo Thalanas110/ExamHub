@@ -9,8 +9,8 @@ use App\Security\AesGcmCrypto;
 use App\Security\PasswordHasher;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 use PDOException;
 
 final class UserService

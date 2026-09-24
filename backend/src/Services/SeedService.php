@@ -8,7 +8,7 @@ use App\Config\AppConfig;
 use App\Database\RoutineGateway;
 use App\Security\AesGcmCrypto;
 use App\Security\PasswordHasher;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 final class SeedService
 {

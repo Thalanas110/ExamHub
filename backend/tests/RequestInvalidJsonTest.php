@@ -5,7 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
 use App\Http\Request;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 

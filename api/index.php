@@ -13,8 +13,8 @@ use App\Http\Response;
 use App\Routing\Router;
 use App\Routing\Routes\ApiRouteRegistry;
 use App\Security\AesGcmCrypto;
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 
 require_once __DIR__ . '/../backend/bootstrap/autoload.php';
 

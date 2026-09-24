@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Logging;
 
 use App\Database\RoutineGateway;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 use Throwable;
 
 final class AdminLogReadService

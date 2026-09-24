@@ -17,7 +17,7 @@ use App\Services\StudentExamAccommodationService;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ExamPayloadValidator;
 use App\Services\Support\ValueNormalizer;
-use App\Support\ApiException;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));

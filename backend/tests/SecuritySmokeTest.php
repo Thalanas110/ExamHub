@@ -6,7 +6,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 
 use App\Security\AesGcmCrypto;
 use App\Security\JwtService;
-use App\Support\Helpers;
+use App\Shared\Support\Helpers;
 
 $failures = [];
 
