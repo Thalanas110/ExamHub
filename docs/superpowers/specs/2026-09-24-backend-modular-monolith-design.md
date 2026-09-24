@@ -6,17 +6,19 @@ Refactor the ExamHub PHP backend from a globally layered structure into a modula
 
 ## Scope and invariants
 
+- The runtime target is vanilla PHP 8.5.x. The implementation must run on PHP 8.5 without a framework, runtime transpiler, or Node.js backend.
 - Preserve every existing endpoint path, HTTP method, status code, public error message, response field name, authorization rule, encryption rule, and database routine call.
 - Preserve the `api/index.php` deployment entrypoint and the Docker/Render deployment shape.
 - Do not change database schemas, migration order, stored routines, SQL behavior, or seed data semantics.
 - Do not add compatibility facades for the legacy `App\Controllers`, `App\Services`, `App\Routing\Routes`, or `App\Logging` namespaces.
 - Update all production imports, scripts, tests, documentation references, and bootstrap wiring to the final module namespaces.
 - Do not add runtime dependencies.
+- Composer remains an autoload/package metadata tool only; this refactor does not introduce a framework or application runtime dependency.
 - Existing user changes and unrelated files remain untouched.
 
 ## Target architecture
 
-The backend will retain one deployable PHP application and one process, but its code will be organized around explicit bounded contexts.
+The backend will retain one deployable vanilla PHP application and one PHP process, but its code will be organized around explicit bounded contexts. The module structure is a PHP namespace and file-organization convention, not a framework convention.
 
 ```text
 api/index.php
@@ -44,7 +46,7 @@ backend/src/
     Violations/
 ```
 
-Each business module owns the layers it needs:
+Each business module owns the PHP classes and layers it needs:
 
 ```text
 Modules/<Module>/
@@ -54,7 +56,7 @@ Modules/<Module>/
   Presentation/
 ```
 
-The final namespace and directory casing will follow the repository's existing PSR-4 `App\\` autoload mapping and PHP naming conventions. Modules expose registration/composition entrypoints; their internal infrastructure is not imported by other modules.
+The final namespace and directory casing will follow the repository's existing PSR-4 `App\\` autoload mapping and PHP 8.5 naming conventions. Modules expose plain PHP registration/composition entrypoints; their internal infrastructure is not imported by other modules.
 
 ### Shared platform
 
@@ -92,7 +94,7 @@ Presentation depends on application contracts. Application depends on domain typ
 
 ## Testing and quality gates
 
-Before migration, characterize route registration, response metadata, and endpoint contracts. During migration, use test-first changes for new module contracts and run the smallest affected standalone PHP test lane after each commit. Cutover commits run the complete backend aggregate test command. Architecture tests enforce:
+Before migration, characterize route registration, response metadata, and endpoint contracts. During migration, use test-first changes for new module contracts and run the smallest affected standalone PHP test lane after each commit. Tests remain executable PHP scripts unless a dependency-free test harness is already present; no PHPUnit or other runtime test framework is required by this design. Cutover commits run the complete backend aggregate PHP command. Architecture tests enforce:
 
 - no imports from the removed legacy namespaces;
 - module dependency direction;
@@ -101,7 +103,7 @@ Before migration, characterize route registration, response metadata, and endpoi
 - one composition root;
 - no module presentation/application code reaching directly into infrastructure from another module.
 
-The repository has no GitHub Actions workflow. The local completion gate is the documented Composer/standalone PHP suite plus any available frontend build or deployment configuration validation affected by the change. Database integration tests that require credentials are reported separately when unavailable; they are not silently skipped.
+The repository has no GitHub Actions workflow. The local completion gate is the documented Composer scripts executed under PHP 8.5, the standalone PHP suite, and any available frontend build or deployment configuration validation affected by the change. The Docker image must move from `php:8.3-apache` to the PHP 8.5 Apache image. Database integration tests that require credentials are reported separately when unavailable; they are not silently skipped.
 
 ## Commit plan
 
