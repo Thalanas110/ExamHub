@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Modules\Reports\Presentation;
 
 use App\Logging\AdminLogReadService;
 use App\Modules\Reports\Application\ReportService;

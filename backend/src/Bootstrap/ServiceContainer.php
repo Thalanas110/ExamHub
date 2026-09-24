@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Bootstrap;
 
 use App\Shared\Config\AppConfig;
-use App\Controllers\AdminController;
+use App\Modules\Reports\Presentation\AdminController;
 use App\Modules\Auth\Presentation\AuthController;
 use App\Modules\Classes\Presentation\ClassesController;
 use App\Controllers\DataController;
@@ -14,7 +14,7 @@ use App\Controllers\ExamViolationsController;
 use App\Modules\Exams\Presentation\ExamsController;
 use App\Controllers\HealthController;
 use App\Modules\Users\Presentation\ProfileController;
-use App\Controllers\ReportsController;
+use App\Modules\Reports\Presentation\ReportsController;
 use App\Modules\Results\Presentation\ResultsController;
 use App\Modules\Users\Presentation\UsersController;
 use App\Shared\Database\LogDbConnection;
