@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router';
 import { LayoutDashboard, Users, FileText, Clipboard, BarChart2, User, Code2, Archive, BookOpen, ShieldAlert } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
-import { DashboardLayout } from '@/widgets/layouts/DashboardLayout';
+import type { User as UserEntity } from '@/entities/user';
+import { DashboardLayout } from './DashboardLayout';
 
 const navItems = [
   { path: '/admin', label: 'Dashboard', icon: LayoutDashboard },
@@ -17,16 +15,6 @@ const navItems = [
   { path: '/admin/profile', label: 'Profile', icon: User },
 ];
 
-export function AdminLayout() {
-  const { currentUser, logout } = useApp();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!currentUser) { navigate('/', { replace: true }); return; }
-    if (currentUser.role !== 'admin') { navigate(`/${currentUser.role}`, { replace: true }); }
-  }, [currentUser, navigate]);
-
-  if (!currentUser || currentUser.role !== 'admin') return null;
-
-  return <DashboardLayout navItems={navItems} roleLabel="Admin" currentUser={currentUser} onLogout={logout} />;
+export function AdminLayout({ currentUser, onLogout }: { currentUser: UserEntity; onLogout: () => void }) {
+  return <DashboardLayout navItems={navItems} roleLabel="Admin" currentUser={currentUser} onLogout={onLogout} />;
 }
