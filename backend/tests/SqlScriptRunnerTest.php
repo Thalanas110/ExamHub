@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Database\SqlScriptRunner;
+use App\Shared\Database\SqlScriptRunner;
 
 $failures = [];
 

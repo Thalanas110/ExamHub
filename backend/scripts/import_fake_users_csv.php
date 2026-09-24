@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\DbConnection;
-use App\Security\AesGcmCrypto;
-use App\Security\PasswordHasher;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\DbConnection;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Security\PasswordHasher;
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 

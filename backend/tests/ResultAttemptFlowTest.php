@@ -4,20 +4,23 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\DbConnection;
-use App\Database\RoutineGateway;
-use App\Security\AesGcmCrypto;
-use App\Security\PasswordHasher;
-use App\Services\ExamService;
-use App\Services\ResultService;
-use App\Services\SeedService;
-use App\Services\StudentExamAccommodationService;
-use App\Services\Support\ExamMapper;
-use App\Services\Support\ExamPayloadValidator;
-use App\Services\Support\ValueNormalizer;
-use App\Support\ApiException;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\DbConnection;
+use App\Shared\Database\RoutineGateway;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Security\PasswordHasher;
+use App\Modules\Exams\Application\ExamService;
+use App\Modules\Results\Application\ResultService;
+use App\Modules\Data\Application\SeedService;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
+use App\Modules\Exams\Infrastructure\RoutineExamRepository;
+use App\Modules\Results\Application\ResultMapper;
+use App\Modules\Results\Infrastructure\RoutineResultRepository;
+use App\Shared\Mapping\ExamMapper;
+use App\Modules\Exams\Application\ExamPayloadValidator;
+use App\Shared\Support\ValueNormalizer;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));
@@ -30,8 +33,8 @@ $mapper = new ExamMapper($crypto, $normalizer);
 $seedService = new SeedService($config, $gateway, $crypto, $passwordHasher);
 $seedService->bootstrap();
 $accommodationService = new StudentExamAccommodationService($gateway, $crypto, $mapper, $normalizer);
-$examService = new ExamService($gateway, $mapper, $normalizer, new ExamPayloadValidator(), $accommodationService);
-$resultService = new ResultService($gateway, $crypto, $mapper, $normalizer, $accommodationService);
+$examService = new ExamService(new RoutineExamRepository($gateway), $mapper, $normalizer, new ExamPayloadValidator(), $accommodationService);
+$resultService = new ResultService($crypto, $mapper, new ResultMapper($crypto, $normalizer), $normalizer, $accommodationService, new RoutineResultRepository($gateway));
 
 /**
  * @param callable(): void $callback

@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\DbConnection;
-use App\Database\RoutineGateway;
-use App\Security\AesGcmCrypto;
-use App\Services\ResultService;
-use App\Services\SeedService;
-use App\Services\StudentExamAccommodationService;
-use App\Services\Support\ExamMapper;
-use App\Services\Support\ValueNormalizer;
-use App\Support\ApiException;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\DbConnection;
+use App\Shared\Database\RoutineGateway;
+use App\Shared\Security\AesGcmCrypto;
+use App\Modules\Results\Application\ResultService;
+use App\Modules\Data\Application\SeedService;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
+use App\Modules\Results\Application\ResultMapper;
+use App\Modules\Results\Infrastructure\RoutineResultRepository;
+use App\Shared\Mapping\ExamMapper;
+use App\Shared\Support\ValueNormalizer;
+use App\Shared\Support\ApiException;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));
@@ -23,11 +25,11 @@ $gateway = new RoutineGateway($pdo);
 $crypto = new AesGcmCrypto($config->encryptionKey);
 $normalizer = new ValueNormalizer();
 $mapper = new ExamMapper($crypto, $normalizer);
-$passwordHasher = new App\Security\PasswordHasher();
+$passwordHasher = new App\Shared\Security\PasswordHasher();
 $seedService = new SeedService($config, $gateway, $crypto, $passwordHasher);
 $seedService->bootstrap();
 $accommodationService = new StudentExamAccommodationService($gateway, $crypto, $mapper, $normalizer);
-$service = new ResultService($gateway, $crypto, $mapper, $normalizer, $accommodationService);
+$service = new ResultService($crypto, $mapper, new ResultMapper($crypto, $normalizer), $normalizer, $accommodationService, new RoutineResultRepository($gateway));
 
 $studentRow = $gateway->call('sp_auth_get_user_by_email', ['student@examhub.local'])[0] ?? null;
 $examRow = null;

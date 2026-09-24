@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\LogDbConnection;
-use App\Database\RoutineGateway;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\LogDbConnection;
+use App\Shared\Database\RoutineGateway;
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 

@@ -2,19 +2,17 @@
 
 declare(strict_types=1);
 
-use App\Bootstrap\ServiceContainer;
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\DbConnection;
-use App\Database\RoutineGateway;
-use App\Http\CorsPolicy;
-use App\Http\Request;
-use App\Http\Response;
-use App\Routing\Router;
-use App\Routing\Routes\ApiRouteRegistry;
-use App\Security\AesGcmCrypto;
-use App\Support\ApiException;
-use App\Support\Helpers;
+use App\Application\BackendApplicationFactory;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\DbConnection;
+use App\Shared\Database\RoutineGateway;
+use App\Shared\Http\CorsPolicy;
+use App\Shared\Http\Request;
+use App\Shared\Http\Response;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Support\ApiException;
+use App\Shared\Support\Helpers;
 
 require_once __DIR__ . '/../backend/bootstrap/autoload.php';
 
@@ -75,12 +73,10 @@ try {
     $pdo = (new DbConnection($config))->pdo();
     $gateway = new RoutineGateway($pdo);
 
-    $container = ServiceContainer::build($config, $gateway);
+    $application = BackendApplicationFactory::create($config, $gateway);
+    $container = $application->services;
     $container->seedService->bootstrap();
     $container->logRetentionService->maybeRun();
-
-    $router = new Router();
-    ApiRouteRegistry::register($router, $container);
 
     $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
     $basePath = rtrim(str_replace('/index.php', '', $scriptName), '/');
@@ -89,7 +85,7 @@ try {
     header('X-Request-Id: ' . $requestId);
     $startedAt = microtime(true);
 
-    $result = $router->dispatch(
+    $result = $application->router->dispatch(
         $request,
         static fn (Request $incomingRequest): ?array => $container->authService->authenticateFromToken($incomingRequest->bearerToken()),
     );

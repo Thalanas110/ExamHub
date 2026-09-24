@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Config\AppConfig;
-use App\Config\Env;
-use App\Database\DbConnection;
-use App\Database\RoutineGateway;
-use App\Security\AesGcmCrypto;
-use App\Security\JwtService;
-use App\Security\PasswordHasher;
-use App\Services\AuthService;
-use App\Services\SeedService;
-use App\Services\Support\ExamMapper;
-use App\Services\Support\ValueNormalizer;
+use App\Shared\Config\AppConfig;
+use App\Shared\Config\Env;
+use App\Shared\Database\DbConnection;
+use App\Shared\Database\RoutineGateway;
+use App\Shared\Security\AesGcmCrypto;
+use App\Shared\Security\JwtService;
+use App\Shared\Security\PasswordHasher;
+use App\Modules\Auth\Application\AuthService;
+use App\Modules\Data\Application\SeedService;
+use App\Shared\Mapping\ExamMapper;
+use App\Shared\Support\ValueNormalizer;
 
 $failures = [];
 $config = AppConfig::fromEnv(new Env(__DIR__ . '/../.env'));

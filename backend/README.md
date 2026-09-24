@@ -1,10 +1,12 @@
 # ExamHub PHP Backend
 
-This backend is a vanilla PHP 8+ JSON API that matches the frontend contract and keeps AES-256-GCM encryption isolated in dedicated backend utilities.
+This backend is a vanilla PHP 8.5 JSON API that matches the frontend contract and keeps AES-256-GCM encryption isolated in dedicated backend utilities.
+
+The backend is organized as a modular monolith. See docs/architecture/backend-modular-monolith.md for module boundaries and composition.
 
 ## Compliance Summary
 
-- Runtime: vanilla PHP 8+ with custom routing/controllers
+- Runtime: vanilla PHP 8.5 with custom routing/controllers
 - API style: REST-style JSON responses with proper HTTP status codes
 - Database: MySQL/MariaDB using group-designed schema + stored routines
 - Authentication: custom JWT plus persisted token sessions
