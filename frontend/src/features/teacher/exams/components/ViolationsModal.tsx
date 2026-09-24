@@ -1,6 +1,6 @@
 import { Modal } from '@/widgets/layouts/Modal';
-import type { Exam } from '../../../../data/types';
-import type { ViolationRecord } from '../../../../services/api';
+import type { Exam } from '@/entities/exam';
+import type { ViolationRecord } from '@/entities/violation';
 import { getViolationBadgeClassName } from '../constants';
 import { ShieldAlert } from 'lucide-react';
 

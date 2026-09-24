@@ -1,4 +1,4 @@
-import type { Exam, Question } from '../../../../data/types';
+import type { Exam, Question } from '@/entities/exam';
 
 export type ExamFormData = Omit<Exam, 'id' | 'createdAt' | 'teacherId'>;
 

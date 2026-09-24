@@ -1,7 +1,8 @@
 import { PlusCircle } from 'lucide-react';
 import { DateTimePicker } from '@/shared/ui/date-time-picker';
 import { Modal } from '@/widgets/layouts/Modal';
-import type { Class, Exam, ExamStatus, Question } from '../../../../data/types';
+import type { Class } from '@/entities/class';
+import type { Exam, ExamStatus, Question } from '@/entities/exam';
 import type { ExamFormData } from '../lib/exam-form';
 import { QuestionEditorCard } from './QuestionEditorCard';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

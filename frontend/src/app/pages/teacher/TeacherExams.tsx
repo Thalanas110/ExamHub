@@ -4,16 +4,16 @@ import { ExamAccommodationsModal } from '../../components/shared/ExamAccommodati
 import { ConfirmDialog } from '@/widgets/layouts/Modal';
 import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
-import type { Exam, ExamStatus, Question } from '../../data/types';
+import type { Exam, ExamStatus, Question } from '@/entities/exam';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
-import { ExamCard } from '../../features/teacher/exams/components/ExamCard';
-import { ExamEditorModal } from '../../features/teacher/exams/components/ExamEditorModal';
-import { EmptyExamsState } from '../../features/teacher/exams/components/EmptyExamsState';
-import { ExamFilterTabs } from '../../features/teacher/exams/components/ExamFilterTabs';
-import { ViolationsModal } from '../../features/teacher/exams/components/ViolationsModal';
-import type { TeacherExamFilter } from '../../features/teacher/exams/constants';
-import { createBlankQuestion, createEditableExamForm, createInitialExamForm, type ExamFormData, validateExamForm } from '../../features/teacher/exams/lib/exam-form';
-import { useExamViolations } from '../../features/teacher/exams/hooks/useExamViolations';
+import { ExamCard } from '@/features/teacher/exams/components/ExamCard';
+import { ExamEditorModal } from '@/features/teacher/exams/components/ExamEditorModal';
+import { EmptyExamsState } from '@/features/teacher/exams/components/EmptyExamsState';
+import { ExamFilterTabs } from '@/features/teacher/exams/components/ExamFilterTabs';
+import { ViolationsModal } from '@/features/teacher/exams/components/ViolationsModal';
+import type { TeacherExamFilter } from '@/features/teacher/exams/constants';
+import { createBlankQuestion, createEditableExamForm, createInitialExamForm, type ExamFormData, validateExamForm } from '@/features/teacher/exams/lib/exam-form';
+import { useExamViolations } from '@/features/teacher/exams/hooks/useExamViolations';
 
 export function TeacherExams() {
   const {

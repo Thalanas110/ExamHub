@@ -1,4 +1,5 @@
-import type { ExamStatus, ViolationRecord } from '../../../../data/types';
+import type { ExamStatus } from '@/entities/exam';
+import type { ViolationRecord } from '@/entities/violation';
 
 export type TeacherExamFilter = 'all' | ExamStatus;
 

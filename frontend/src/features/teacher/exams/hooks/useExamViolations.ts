@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { violationApi, type ViolationRecord } from '../../../../services/api';
-import type { Exam } from '../../../../data/types';
+import { violationApi, type ViolationRecord } from '@/entities/violation';
+import type { Exam } from '@/entities/exam';
 
 export function useExamViolations() {
   const [violationsExam, setViolationsExam] = useState<Exam | null>(null);
