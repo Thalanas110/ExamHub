@@ -232,7 +232,7 @@ function readCsvRows(string $csvPath, array $requiredColumns): array
     }
 
     try {
-        $header = fgetcsv($handle);
+        $header = fgetcsv($handle, 0, ',', '"', '\\');
         if ($header === false) {
             throw new RuntimeException('CSV is empty: ' . $csvPath);
         }
@@ -240,7 +240,7 @@ function readCsvRows(string $csvPath, array $requiredColumns): array
         assertRequiredColumns($header, $requiredColumns, $csvPath);
 
         $rows = [];
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '\\')) !== false) {
             if (isBlankRow($row)) {
                 continue;
             }

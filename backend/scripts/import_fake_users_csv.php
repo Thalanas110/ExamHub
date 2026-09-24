@@ -43,7 +43,7 @@ function main(array $argv): void
         throw new RuntimeException('Unable to open CSV file: ' . $csvPath);
     }
 
-    $header = fgetcsv($handle);
+    $header = fgetcsv($handle, 0, ',', '"', '\\');
     if ($header === false) {
         throw new RuntimeException('CSV file is empty: ' . $csvPath);
     }
@@ -88,7 +88,7 @@ SQL;
     try {
         $pdo->beginTransaction();
 
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '\\')) !== false) {
             $lineNumber++;
             if (isBlankRow($row)) {
                 continue;

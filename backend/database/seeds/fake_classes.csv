@@ -1,0 +1,701 @@
+id,name,subject,teacher_id,code,description,created_at
+d07b0400-e5c5-4396-ae84-a6f5a6c795d2,"Demo Accounting Section 001",Accounting,44154033-5719-4cb1-8f24-3f0f9acaf0b2,DCL0001,"Synthetic class generated for school presentation data.",2024-01-15
+39ec9ef9-16a4-49ed-82e0-45ff9109b66f,"Demo Biology Section 002",Biology,0c04aefd-e3c2-4260-8d14-8fe3141e0244,DCL0002,"Synthetic class generated for school presentation data.",2024-01-17
+2892f195-4729-4809-9a5a-bbc6ef2d9597,"Demo Business Section 003",Business,06e5e44d-d984-4c9c-aea4-485f3ddc1650,DCL0003,"Synthetic class generated for school presentation data.",2024-01-19
+5846881f-7d7f-4c37-9575-ded0a35590bd,"Demo Chemistry Section 004",Chemistry,4d8e621f-9cf5-43b5-af64-13e8b303a72f,DCL0004,"Synthetic class generated for school presentation data.",2024-01-21
+13d0ef3d-4e42-4ab7-906b-6b61a61986c2,"Demo Civil Engineering Section 005","Civil Engineering",85c5949e-233a-45c7-a837-c5790ed146f5,DCL0005,"Synthetic class generated for school presentation data.",2024-01-23
+312fb9e6-ac67-4eb5-840c-c10eb56d9c71,"Demo Computer Science Section 006","Computer Science",bd2d223c-8e46-43be-9efa-e10a5bfa3eef,DCL0006,"Synthetic class generated for school presentation data.",2024-01-25
+53a3824a-a683-4ec1-9d2b-04c762b8980d,"Demo Economics Section 007",Economics,1cb05fe0-b865-4b18-a162-e6b61388f716,DCL0007,"Synthetic class generated for school presentation data.",2024-01-27
+a33207b1-6b2c-4d16-bb00-78ecc4180c7e,"Demo Engineering Section 008",Engineering,6610878f-ed49-4f72-bad9-de53a8c6d8c7,DCL0008,"Synthetic class generated for school presentation data.",2024-01-29
+7036dc85-7049-4b20-9190-3a62a38a357a,"Demo History Section 009",History,61c267c7-cbb9-40ee-bd32-1c091d59f8f6,DCL0009,"Synthetic class generated for school presentation data.",2024-01-31
+dbda42cb-a804-49a7-bbed-8abf5d084027,"Demo Information Technology Section 010","Information Technology",dda049b3-4147-41ff-bbb8-a3cd336b07f4,DCL0010,"Synthetic class generated for school presentation data.",2024-02-02
+baa91f6f-6280-417f-8076-6dc52df4297b,"Demo Literature Section 011",Literature,7fba43e4-d415-44be-8eee-2b06e0db3499,DCL0011,"Synthetic class generated for school presentation data.",2024-02-04
+a252a843-f90e-4a82-bdf5-382f085e6b53,"Demo Marketing Section 012",Marketing,593babd2-2b43-4b9c-83e5-af65490a448e,DCL0012,"Synthetic class generated for school presentation data.",2024-02-06
+364648f6-c4f8-4237-87c1-85a8250c65f6,"Demo Mathematics Section 013",Mathematics,41e48eac-fde9-480a-bbd6-ff7c6b914434,DCL0013,"Synthetic class generated for school presentation data.",2024-02-08
+92532b48-51ca-4789-8b5a-2ea22b55c3b9,"Demo Mechanical Engineering Section 014","Mechanical Engineering",1ee4a7c6-7108-4aad-90ad-7dff8413e6f7,DCL0014,"Synthetic class generated for school presentation data.",2024-02-10
+c4a70300-149a-4922-bd62-d4aa5366bbf1,"Demo Physics Section 015",Physics,62d50f50-ffe8-4baf-8e30-77f6d2a2aaac,DCL0015,"Synthetic class generated for school presentation data.",2024-02-12
+2c1aa018-0963-49e9-b7be-d984f16c3627,"Demo Political Science Section 016","Political Science",6a397c8a-08a4-44d2-870f-aafd5ce00cc0,DCL0016,"Synthetic class generated for school presentation data.",2024-02-14
+8e9bc22e-0a9e-4cf3-9bd8-8908a46e40b0,"Demo Psychology Section 017",Psychology,218bedae-2734-4661-a5fd-9802f0ab85d9,DCL0017,"Synthetic class generated for school presentation data.",2024-02-16
+d85afde6-863f-406d-9fac-5b6418bbe58e,"Demo Accounting Section 018",Accounting,470dec3e-8359-4c0c-be31-43f136f38980,DCL0018,"Synthetic class generated for school presentation data.",2024-02-18
+c7f22768-e5fe-4d11-9ec3-c2c0d29d7290,"Demo Biology Section 019",Biology,8ca8df9c-d395-4226-a267-17e37abb45b2,DCL0019,"Synthetic class generated for school presentation data.",2024-02-20
+ba73de45-8928-494a-a408-5b15c882bdeb,"Demo Business Section 020",Business,91567770-031a-4f4f-83c4-82d1be543d8e,DCL0020,"Synthetic class generated for school presentation data.",2024-02-22
+64f334a4-06f2-49e8-90f9-edc3d71e42be,"Demo Chemistry Section 021",Chemistry,335d4e6b-c581-4754-aee2-69ff5e2f6e64,DCL0021,"Synthetic class generated for school presentation data.",2024-02-24
+e8a0777a-a7f8-45a1-a8b1-d95a0dfd0177,"Demo Civil Engineering Section 022","Civil Engineering",6f8e63e0-a9b9-4fe9-b641-5435333fb365,DCL0022,"Synthetic class generated for school presentation data.",2024-02-26
+5f969b93-8476-48b0-9796-2c8b223dc289,"Demo Computer Science Section 023","Computer Science",4dde8c98-92c5-40c5-b277-9ef8a521bd9f,DCL0023,"Synthetic class generated for school presentation data.",2024-02-28
+9bf705dc-5e04-432e-af26-5c0b39781598,"Demo Economics Section 024",Economics,a45bd0df-f6d8-4bb9-ac91-78a853f92dd2,DCL0024,"Synthetic class generated for school presentation data.",2024-03-01
+649467a7-e381-461b-bfbf-cb50ed110f98,"Demo Engineering Section 025",Engineering,7b7186da-1b68-4845-9259-3512fd561a4b,DCL0025,"Synthetic class generated for school presentation data.",2024-03-03
+eb374a1d-2603-4596-852b-ce74935c799e,"Demo History Section 026",History,47fb6a09-15b7-457c-a6f0-69f6c3eee65b,DCL0026,"Synthetic class generated for school presentation data.",2024-03-05
+f214f980-f1cc-472e-81fe-6e67947cee1c,"Demo Information Technology Section 027","Information Technology",8b947a83-a5ec-47be-a249-52a618432055,DCL0027,"Synthetic class generated for school presentation data.",2024-03-07
+2e93c391-0f47-4c93-914a-c54bce21c8e8,"Demo Literature Section 028",Literature,2917969a-49fb-4662-aad6-bd28c48fb764,DCL0028,"Synthetic class generated for school presentation data.",2024-03-09
+2f2dd0a9-2690-4f86-b515-1caa4295c448,"Demo Marketing Section 029",Marketing,faba37f1-e7ec-4329-997c-4667273e1e8f,DCL0029,"Synthetic class generated for school presentation data.",2024-03-11
+9552849d-2e6d-44bc-a81c-612d6e18ffd7,"Demo Mathematics Section 030",Mathematics,11aa94ce-e6be-4d71-a5bf-91c1c27c98f6,DCL0030,"Synthetic class generated for school presentation data.",2024-03-13
+f978db87-240e-42d9-b825-61563dd30955,"Demo Mechanical Engineering Section 031","Mechanical Engineering",a1f6b503-368b-45cc-a640-3ec0d3785e77,DCL0031,"Synthetic class generated for school presentation data.",2024-03-15
+eb43af58-f236-46c7-b309-115be1962f06,"Demo Physics Section 032",Physics,12b07478-dbe4-45cf-be46-f57118d8dbbc,DCL0032,"Synthetic class generated for school presentation data.",2024-03-17
+f341b8ce-1aa6-46e0-9c7a-37974b1ef7e2,"Demo Political Science Section 033","Political Science",b2918768-0918-4a4c-ad75-87e5936c37d2,DCL0033,"Synthetic class generated for school presentation data.",2024-03-19
+18d607d1-3106-43ee-b98b-bb713522db79,"Demo Psychology Section 034",Psychology,12207d5a-ece9-4f66-94c9-74d1480f4a6a,DCL0034,"Synthetic class generated for school presentation data.",2024-03-21
+1da2e8e8-96f2-4305-a07e-7c008f005df7,"Demo Accounting Section 035",Accounting,c5a023b1-1e79-4181-87e7-5e2e50892241,DCL0035,"Synthetic class generated for school presentation data.",2024-03-23
+5cadb293-0cda-4539-ac89-377219e4169f,"Demo Biology Section 036",Biology,24144705-3075-4a3c-bf11-d506bd744402,DCL0036,"Synthetic class generated for school presentation data.",2024-03-25
+f7b94c90-136e-48a2-9219-ce9978c260de,"Demo Business Section 037",Business,ff8c0bed-dcd9-4577-8bcd-5a93525e2369,DCL0037,"Synthetic class generated for school presentation data.",2024-03-27
+ff81aac8-92b5-4efe-b55a-872e1ee902b8,"Demo Chemistry Section 038",Chemistry,981a8720-9942-4e09-bb97-2a35ee724203,DCL0038,"Synthetic class generated for school presentation data.",2024-03-29
+ee0a0ae0-bae7-43bf-b586-106c8bfa9903,"Demo Civil Engineering Section 039","Civil Engineering",dc87563b-7e49-40f8-aeb0-7465ab5a058d,DCL0039,"Synthetic class generated for school presentation data.",2024-03-31
+a8151c84-1510-4b50-92fa-e443747661e0,"Demo Computer Science Section 040","Computer Science",a982f8e1-aa69-4d0b-9e02-fc9ba4aa9585,DCL0040,"Synthetic class generated for school presentation data.",2024-04-02
+56a339f0-5837-4808-8074-1aac63c920ff,"Demo Economics Section 041",Economics,912a77ce-3455-4b3f-aed3-3846708aa466,DCL0041,"Synthetic class generated for school presentation data.",2024-04-04
+54b2786c-fff3-4e19-8307-9e9aebea6dbd,"Demo Engineering Section 042",Engineering,e3014128-a1a3-4960-a0ea-5758a8f48563,DCL0042,"Synthetic class generated for school presentation data.",2024-04-06
+28a1e5f0-0f5b-4c04-939c-235b657da6fb,"Demo History Section 043",History,fbe078da-3782-489d-a647-21fba6a7b74e,DCL0043,"Synthetic class generated for school presentation data.",2024-04-08
+cbabae57-1913-40e0-8245-b8ae6e432447,"Demo Information Technology Section 044","Information Technology",e6c0c57b-3eba-49e9-9db0-5d53928aff4b,DCL0044,"Synthetic class generated for school presentation data.",2024-04-10
+524b7ab2-014e-4211-830e-783f2d244552,"Demo Literature Section 045",Literature,12dcb5ad-9f54-47b7-a4c1-c5f276a412f3,DCL0045,"Synthetic class generated for school presentation data.",2024-04-12
+366e513b-afd1-4d20-900d-a43a28d16e18,"Demo Marketing Section 046",Marketing,5e15a133-a6d6-4534-953a-bf733ca44c35,DCL0046,"Synthetic class generated for school presentation data.",2024-04-14
+0a4ff0b7-9805-409a-b36e-8f0912aa5348,"Demo Mathematics Section 047",Mathematics,08ffa339-08ff-46f9-abca-4ce7a60aba06,DCL0047,"Synthetic class generated for school presentation data.",2024-04-16
+ae0094b7-22a9-458c-a9a0-d3d9e94adead,"Demo Mechanical Engineering Section 048","Mechanical Engineering",4baeebe3-580a-42ce-975e-e78e9e6b98e0,DCL0048,"Synthetic class generated for school presentation data.",2024-04-18
+c5ecd1bc-c237-45c7-aabb-cbda6775e4bd,"Demo Physics Section 049",Physics,4ce8e153-f2a7-4eeb-ab7d-9aaa05af8be1,DCL0049,"Synthetic class generated for school presentation data.",2024-04-20
+9d212f2f-8890-4bbf-9908-9499863e4870,"Demo Political Science Section 050","Political Science",653989fc-7158-4997-848a-d829db359ea6,DCL0050,"Synthetic class generated for school presentation data.",2024-04-22
+b8d0882f-4f38-4d03-9525-6f86635152ba,"Demo Psychology Section 051",Psychology,b6b035d6-bb35-42c9-96e1-c27a739201b0,DCL0051,"Synthetic class generated for school presentation data.",2024-04-24
+682dde43-fb86-4ca6-8ff2-4ff5ea45c3c0,"Demo Accounting Section 052",Accounting,e01d678a-a377-4949-8306-9a47aa43b700,DCL0052,"Synthetic class generated for school presentation data.",2024-04-26
+1b3e5f4a-1cb0-45d5-863e-c3cad078e2cb,"Demo Biology Section 053",Biology,f3fddcd0-87ff-4257-af51-336d7250710d,DCL0053,"Synthetic class generated for school presentation data.",2024-04-28
+8a30f8ba-d024-4ccc-a13b-0165cdb61b6a,"Demo Business Section 054",Business,4a614ff2-85f1-421a-82bc-88ea7baa9157,DCL0054,"Synthetic class generated for school presentation data.",2024-04-30
+5c5a6940-d403-4560-b99d-028f237fe85c,"Demo Chemistry Section 055",Chemistry,31689826-b681-469d-a937-fae26ca1caed,DCL0055,"Synthetic class generated for school presentation data.",2024-05-02
+ec791c67-73ed-47b6-a298-67c7d8d6ed20,"Demo Civil Engineering Section 056","Civil Engineering",c561369a-fe81-4a42-b856-a31f2008b349,DCL0056,"Synthetic class generated for school presentation data.",2024-05-04
+322c0b10-45df-4dd3-911b-397bc17e10f2,"Demo Computer Science Section 057","Computer Science",5bec68f4-83c7-4e92-b3a9-6bb1d7060b46,DCL0057,"Synthetic class generated for school presentation data.",2024-05-06
+8d06bac2-1722-4949-95af-45f083d01cd1,"Demo Economics Section 058",Economics,ba2b2fa1-25b4-4f53-9382-687461ce98b9,DCL0058,"Synthetic class generated for school presentation data.",2024-05-08
+c4a0d72f-9b7d-4fe6-9163-fca0e9897f39,"Demo Engineering Section 059",Engineering,f6a6831b-e31a-4284-8f85-86ba6682f269,DCL0059,"Synthetic class generated for school presentation data.",2024-05-10
+53338779-02b8-424c-ab31-2299194c7d54,"Demo History Section 060",History,c162b8cf-d77a-43ca-bc69-c3e13a03b7d7,DCL0060,"Synthetic class generated for school presentation data.",2024-05-12
+78f20a34-8f4d-4e17-b1df-274ad3720e62,"Demo Information Technology Section 061","Information Technology",94845bcf-c361-4a85-8629-c5df1ebe14de,DCL0061,"Synthetic class generated for school presentation data.",2024-05-14
+9878dc8e-6ef4-42c7-999d-bf2f88faccd1,"Demo Literature Section 062",Literature,31acda93-0cdb-4dfe-ba69-d17d45ff8551,DCL0062,"Synthetic class generated for school presentation data.",2024-05-16
+bc853894-4cba-4559-a8af-3ff10cc39e9d,"Demo Marketing Section 063",Marketing,d6f95ab5-a863-4a2a-b88c-ea19c86cb29d,DCL0063,"Synthetic class generated for school presentation data.",2024-05-18
+39abd086-5746-4c17-9b6d-68b2f747af19,"Demo Mathematics Section 064",Mathematics,53616bb3-ccdb-4536-b6d0-8d2bfb99b419,DCL0064,"Synthetic class generated for school presentation data.",2024-05-20
+af91b12e-f099-46ae-af34-8b218171fe3a,"Demo Mechanical Engineering Section 065","Mechanical Engineering",02a2e244-b394-463b-b5d2-3be16670bf72,DCL0065,"Synthetic class generated for school presentation data.",2024-05-22
+5197fdcf-da8e-43f4-9e4b-68c4a6763a18,"Demo Physics Section 066",Physics,b6fa442b-8c21-467d-848c-8ee85ba282b2,DCL0066,"Synthetic class generated for school presentation data.",2024-05-24
+f817fc96-d5e4-49c6-8259-ed99ecf18643,"Demo Political Science Section 067","Political Science",3f0c3ec8-af67-4ef3-b131-35ef8d6db353,DCL0067,"Synthetic class generated for school presentation data.",2024-05-26
+6f0ac4cb-9e4a-4f35-beed-555aa8db4b01,"Demo Psychology Section 068",Psychology,350ce0b6-23cf-4834-9280-a07188219f85,DCL0068,"Synthetic class generated for school presentation data.",2024-05-28
+20af66db-80a4-43e2-b031-83375ecc4d1c,"Demo Accounting Section 069",Accounting,13e0558c-2891-4d08-a308-5f0370d9c610,DCL0069,"Synthetic class generated for school presentation data.",2024-05-30
+24a3e5e0-b3f9-426a-8b9d-f7bb6d49fefc,"Demo Biology Section 070",Biology,b3e426f1-2d79-4c64-a460-66eccac320ac,DCL0070,"Synthetic class generated for school presentation data.",2024-06-01
+e71e7525-734c-42c7-9d4f-2431b754e101,"Demo Business Section 071",Business,fbee6fdb-6e1d-4f86-b23b-aa2628756acb,DCL0071,"Synthetic class generated for school presentation data.",2024-06-03
+e66fdeb9-ea04-481c-92b1-75669046ab99,"Demo Chemistry Section 072",Chemistry,1eadd115-fdb3-4e30-b629-06acb7ee7ebc,DCL0072,"Synthetic class generated for school presentation data.",2024-06-05
+c53ba1cc-6441-44f5-bac2-87b9f2007d40,"Demo Civil Engineering Section 073","Civil Engineering",1c3af693-4807-40f5-9cb2-dcaf223e668e,DCL0073,"Synthetic class generated for school presentation data.",2024-06-07
+10add5cb-01e9-4cba-b656-2fc7b38dd113,"Demo Computer Science Section 074","Computer Science",30e99fce-fa56-431e-abed-2a3b9ab666b8,DCL0074,"Synthetic class generated for school presentation data.",2024-06-09
+4b3293d5-e6c0-4bdb-93d2-1fffada7dea4,"Demo Economics Section 075",Economics,b3deddef-c8e6-478e-89ec-b76a0341bf88,DCL0075,"Synthetic class generated for school presentation data.",2024-06-11
+dbb6ad3e-6ea2-4e49-9855-3762fd441f2e,"Demo Engineering Section 076",Engineering,9cb869b6-ab28-4ccc-b818-db35cc80b426,DCL0076,"Synthetic class generated for school presentation data.",2024-06-13
+6878218e-f1fd-4293-84b9-079eb862dc5e,"Demo History Section 077",History,35cc8742-4151-4edb-bcdb-9da38e12a56e,DCL0077,"Synthetic class generated for school presentation data.",2024-06-15
+310f12e3-ac4f-4cf5-8aa5-091a86b3e225,"Demo Information Technology Section 078","Information Technology",b97e64e8-82a4-441b-8095-0b8fff3d76f2,DCL0078,"Synthetic class generated for school presentation data.",2024-06-17
+5a7d5f57-8d49-4cdb-bf53-ce9186390a10,"Demo Literature Section 079",Literature,31de95ba-0ccd-43fe-94cf-bb0055184b8b,DCL0079,"Synthetic class generated for school presentation data.",2024-06-19
+c6b644d1-666c-42fd-b037-b565a5fb5b92,"Demo Marketing Section 080",Marketing,360002e0-bbcf-45be-a9f4-aa04b8b7de5c,DCL0080,"Synthetic class generated for school presentation data.",2024-06-21
+15a9f720-5cc5-4b2b-9e44-bd1286253427,"Demo Mathematics Section 081",Mathematics,9369964d-5909-4161-a16d-0434ca731675,DCL0081,"Synthetic class generated for school presentation data.",2024-06-23
+7ae3aa0d-4e02-4cad-8055-734195209959,"Demo Mechanical Engineering Section 082","Mechanical Engineering",a35aa0b2-2c5b-411e-b734-f802b3c66b2b,DCL0082,"Synthetic class generated for school presentation data.",2024-06-25
+803835e3-f447-47ec-9db4-3b9c5520cfd7,"Demo Physics Section 083",Physics,dc9581fc-fa9d-4e78-a155-4d6f10cb3204,DCL0083,"Synthetic class generated for school presentation data.",2024-06-27
+47213908-792c-41f6-841a-81193965e101,"Demo Political Science Section 084","Political Science",84a5c2ea-2e43-4beb-9eb3-a171af8c5872,DCL0084,"Synthetic class generated for school presentation data.",2024-06-29
+5ab3e01b-bde9-4f9d-9931-69e3626967ec,"Demo Psychology Section 085",Psychology,52b61f08-2bb6-47b9-bc71-39a1f72c0bca,DCL0085,"Synthetic class generated for school presentation data.",2024-07-01
+039d1044-b27b-45a6-bdc4-77c9b4f6c848,"Demo Accounting Section 086",Accounting,f3202500-c034-4b79-9868-bb014532b0c8,DCL0086,"Synthetic class generated for school presentation data.",2024-07-03
+25e4149a-1a84-4315-8a7e-b46c07bf79d1,"Demo Biology Section 087",Biology,60f7dd36-7318-4a79-9352-9365d8251049,DCL0087,"Synthetic class generated for school presentation data.",2024-07-05
+88deff42-9b6f-4810-b462-f24c84bb130e,"Demo Business Section 088",Business,b11f1ecb-a2f7-4fff-80e4-dea777fdd0b9,DCL0088,"Synthetic class generated for school presentation data.",2024-07-07
+c7aaf982-fa6c-4c27-92f5-4a752f900574,"Demo Chemistry Section 089",Chemistry,295bd122-1bf5-43a1-b715-938a9dacb0a7,DCL0089,"Synthetic class generated for school presentation data.",2024-07-09
+6937aa5d-71c7-4e36-99a8-e425a159e8fe,"Demo Civil Engineering Section 090","Civil Engineering",4c3e79c5-e495-476d-8fea-8f88924ed6ed,DCL0090,"Synthetic class generated for school presentation data.",2024-07-11
+2858a669-43f6-4650-9bd7-e3a96626fcb2,"Demo Computer Science Section 091","Computer Science",823c7973-5010-4c9c-af33-2f16b1a16605,DCL0091,"Synthetic class generated for school presentation data.",2024-07-13
+ee71c47e-a3c6-4a3f-bf61-22927e420cf2,"Demo Economics Section 092",Economics,ce949283-62ac-428c-a9bb-645837e79ed4,DCL0092,"Synthetic class generated for school presentation data.",2024-07-15
+ecaf58a2-24b6-4231-8f3f-cee4a34129f4,"Demo Engineering Section 093",Engineering,abdd52d3-f684-47f1-a2af-1732c27972f7,DCL0093,"Synthetic class generated for school presentation data.",2024-07-17
+e4fb02b5-062d-4949-abc9-8b44af3ee4b9,"Demo History Section 094",History,3b773a92-57f2-495d-8996-efbf7885beba,DCL0094,"Synthetic class generated for school presentation data.",2024-07-19
+aa68ecb8-8302-4258-9c0e-80b69c2e1725,"Demo Information Technology Section 095","Information Technology",3d928acd-e676-4fd4-829d-48b73da83ebf,DCL0095,"Synthetic class generated for school presentation data.",2024-07-21
+681c283b-ce85-42ad-ad96-d2d15cc39fab,"Demo Literature Section 096",Literature,fe7d4685-3c5f-4934-869e-b8c77a2a7f59,DCL0096,"Synthetic class generated for school presentation data.",2024-07-23
+3bdf1335-986b-4a5f-991d-873a1a2c91aa,"Demo Marketing Section 097",Marketing,e8567c4d-27bc-4edd-bc94-30412a1e8343,DCL0097,"Synthetic class generated for school presentation data.",2024-07-25
+0d6ae9dc-3697-4bd3-aebe-9f678efb7dc2,"Demo Mathematics Section 098",Mathematics,fa70d9a0-62b6-4408-88b3-e40a7748454f,DCL0098,"Synthetic class generated for school presentation data.",2024-07-27
+377f8b32-5c98-4ada-9c20-411708af52c4,"Demo Mechanical Engineering Section 099","Mechanical Engineering",a9edb0a9-b6d9-4ea7-8129-46a510dd90a7,DCL0099,"Synthetic class generated for school presentation data.",2024-07-29
+689e91ee-0523-4cab-8264-1c68f501f4a5,"Demo Physics Section 100",Physics,99513ba5-62ec-4b34-a763-3540f88eab51,DCL0100,"Synthetic class generated for school presentation data.",2024-07-31
+ceb147d5-0679-4dda-b63c-ba32ac0b3e5c,"Demo Political Science Section 101","Political Science",e36f7903-62fb-4e18-aba6-f827492e6619,DCL0101,"Synthetic class generated for school presentation data.",2024-08-02
+0fe25d5a-f0f1-407a-8a1e-1beee5039ef7,"Demo Psychology Section 102",Psychology,ecfbf023-d1cc-41ff-aa9c-759ed3cc0a93,DCL0102,"Synthetic class generated for school presentation data.",2024-08-04
+bf84022e-27b3-465b-ad46-8a439fbe4c10,"Demo Accounting Section 103",Accounting,99eef08c-2585-418e-ba74-cb63dff4467c,DCL0103,"Synthetic class generated for school presentation data.",2024-08-06
+4442140b-a35d-4598-9b45-a8aa70f450b6,"Demo Biology Section 104",Biology,182b0be7-49ef-4caa-ae6e-33642b48b1df,DCL0104,"Synthetic class generated for school presentation data.",2024-08-08
+e874dfa4-e087-443f-afe9-e7306d96bf1a,"Demo Business Section 105",Business,77576474-fdd0-48cd-9b7f-4477dee4727e,DCL0105,"Synthetic class generated for school presentation data.",2024-08-10
+b66f7e75-5e00-4d37-9854-0d4768aecab2,"Demo Chemistry Section 106",Chemistry,1e573e69-4860-4586-b9f7-6e7c2f12486f,DCL0106,"Synthetic class generated for school presentation data.",2024-08-12
+b331859a-4cbf-44fd-bd9b-5903d1fd2d4c,"Demo Civil Engineering Section 107","Civil Engineering",ad58d5d4-e44e-4866-b423-7a1895edc461,DCL0107,"Synthetic class generated for school presentation data.",2024-08-14
+08fd0b15-eb3e-46dd-9ff0-b498b36d75ae,"Demo Computer Science Section 108","Computer Science",48ecd4ea-5dc3-4411-88f2-12a85eb0ee82,DCL0108,"Synthetic class generated for school presentation data.",2024-08-16
+101dcbd3-6d34-457e-b196-7c938accfed3,"Demo Economics Section 109",Economics,72b5b3f4-1568-4240-adcb-0780a511a5bc,DCL0109,"Synthetic class generated for school presentation data.",2024-08-18
+d0063b3e-8f09-482e-8772-42b9e82c2778,"Demo Engineering Section 110",Engineering,dde0e52d-005e-4bd2-b362-d8b64dc06e36,DCL0110,"Synthetic class generated for school presentation data.",2024-08-20
+7060919e-1cdb-4eb2-a3cd-54c983ca4a2c,"Demo History Section 111",History,f551cdab-0d8f-4dca-ad80-2bb98180f1a2,DCL0111,"Synthetic class generated for school presentation data.",2024-08-22
+c1179923-d5f2-47f4-a3c9-3a981514bfe6,"Demo Information Technology Section 112","Information Technology",fb25a8b7-4578-4bd9-a4c2-2f1842a1cd7a,DCL0112,"Synthetic class generated for school presentation data.",2024-08-24
+8d84c8a8-4d43-4cd3-91c3-bee1c847a0d2,"Demo Literature Section 113",Literature,8230df46-6e72-43a6-b8b9-95894cdaf410,DCL0113,"Synthetic class generated for school presentation data.",2024-08-26
+ea76abde-fb1b-4b2a-bb5e-1118adc4b78e,"Demo Marketing Section 114",Marketing,2ec18961-7fa0-42e8-a3a3-58ac2ede2ede,DCL0114,"Synthetic class generated for school presentation data.",2024-08-28
+b5278b78-8901-4bcc-9dea-ff0d650c5508,"Demo Mathematics Section 115",Mathematics,87b7aa9a-f8b0-4f34-9c9c-0e1a283013cd,DCL0115,"Synthetic class generated for school presentation data.",2024-08-30
+fbe64498-606e-4e5f-93b6-c2002141a8bf,"Demo Mechanical Engineering Section 116","Mechanical Engineering",c14802e8-47ce-4ed7-a3cf-25ad9d3a85d3,DCL0116,"Synthetic class generated for school presentation data.",2024-09-01
+461d203b-1611-42cd-82ad-36f055e5f4c1,"Demo Physics Section 117",Physics,7ebb15d1-bf58-44b1-be1d-9f8bd2aa2b78,DCL0117,"Synthetic class generated for school presentation data.",2024-09-03
+bc6ccb77-1f4b-430d-8b27-e1f39225f3d1,"Demo Political Science Section 118","Political Science",7ecb1df7-7e57-477b-bec6-cda034ad7e26,DCL0118,"Synthetic class generated for school presentation data.",2024-09-05
+b01538f8-a6cc-4867-b1d1-9269ab3baefe,"Demo Psychology Section 119",Psychology,9d2c8c81-7fa0-4dd8-93f5-f5cf33e24440,DCL0119,"Synthetic class generated for school presentation data.",2024-09-07
+2ac57f4d-85ac-489b-8077-377eca2c47c3,"Demo Accounting Section 120",Accounting,68f8fb1e-be96-4185-a7ce-6985355df155,DCL0120,"Synthetic class generated for school presentation data.",2024-09-09
+f0453ade-8dda-4387-91ba-8ffb38feab2c,"Demo Biology Section 121",Biology,ae9a3c3b-37a4-4eaf-9804-a747a4bca7ad,DCL0121,"Synthetic class generated for school presentation data.",2024-09-11
+ffe168ef-784a-4ed5-8bb8-04f8c0335955,"Demo Business Section 122",Business,257704cd-4685-4bf8-a551-2b40e56cbcef,DCL0122,"Synthetic class generated for school presentation data.",2024-09-13
+cb2a028c-1e3c-4156-8cde-937c4d5bc052,"Demo Chemistry Section 123",Chemistry,dff0a256-ee9b-49ba-a281-daa453108571,DCL0123,"Synthetic class generated for school presentation data.",2024-09-15
+c989cfaa-ba0c-4812-bc5e-0038b91933aa,"Demo Civil Engineering Section 124","Civil Engineering",50d54ed8-293b-42d3-bb3e-1552c6f628f7,DCL0124,"Synthetic class generated for school presentation data.",2024-09-17
+67ca615e-d33a-4ea1-a025-fc105aa85914,"Demo Computer Science Section 125","Computer Science",5c56d791-337d-40cc-8857-38302fcf13e1,DCL0125,"Synthetic class generated for school presentation data.",2024-09-19
+537c06a3-1a32-4128-9eeb-9a36c3765c4e,"Demo Economics Section 126",Economics,2c1591d2-7266-4b70-9803-2cb2204346a6,DCL0126,"Synthetic class generated for school presentation data.",2024-09-21
+f74ba35d-aa98-4681-a407-f7b3297d94b1,"Demo Engineering Section 127",Engineering,a2d6810b-dea5-4538-a018-5cc3b0f35891,DCL0127,"Synthetic class generated for school presentation data.",2024-09-23
+0a8261ee-b1fd-4dac-b6ac-bef4c060a39b,"Demo History Section 128",History,2c95fcff-3160-4995-be1d-7856a62173e1,DCL0128,"Synthetic class generated for school presentation data.",2024-09-25
+068f115e-7c92-419a-8702-649a527ac984,"Demo Information Technology Section 129","Information Technology",6c8b3d6e-b0dc-4c3e-9fde-53ed6586f21d,DCL0129,"Synthetic class generated for school presentation data.",2024-09-27
+3e7bdc4a-1c7e-49a9-b3e6-f02f547d8083,"Demo Literature Section 130",Literature,c8a2fa7b-00bf-46a1-b5ad-790272e20c15,DCL0130,"Synthetic class generated for school presentation data.",2024-09-29
+a7d036b6-c35e-4929-acb6-c044c15983c4,"Demo Marketing Section 131",Marketing,7c66fa97-0d7e-4572-abcd-158f0c8fe475,DCL0131,"Synthetic class generated for school presentation data.",2024-10-01
+d07046b8-9c28-41dc-a9eb-1d329ecc0892,"Demo Mathematics Section 132",Mathematics,9aa929d4-05cd-4f01-9a92-935b2201714d,DCL0132,"Synthetic class generated for school presentation data.",2024-10-03
+96d8b1cc-d2af-4cfa-b815-d2046264a5b3,"Demo Mechanical Engineering Section 133","Mechanical Engineering",b661beca-9442-46f7-8b13-c7a626a3435b,DCL0133,"Synthetic class generated for school presentation data.",2024-10-05
+65a96c6e-6442-4552-b3af-102f1b59ca56,"Demo Physics Section 134",Physics,aab0a207-ff7f-4fee-a3f6-a796f3fb2017,DCL0134,"Synthetic class generated for school presentation data.",2024-10-07
+bc4b4c80-613f-4d11-85ee-45cb527afdb4,"Demo Political Science Section 135","Political Science",fe085319-4c58-45db-b705-750c5c6d1f71,DCL0135,"Synthetic class generated for school presentation data.",2024-10-09
+ea099899-2a68-4868-b1f0-2e77a2f4bc1b,"Demo Psychology Section 136",Psychology,393d1f7a-7933-45d6-ae60-d630119d1f9e,DCL0136,"Synthetic class generated for school presentation data.",2024-10-11
+67051c45-9cf6-4adf-b172-daabfa1e1785,"Demo Accounting Section 137",Accounting,a070b6d2-5dc8-4f15-bf0f-1d413ba9cc03,DCL0137,"Synthetic class generated for school presentation data.",2024-10-13
+cc8e5851-57a5-4315-b890-cbc09f5f698a,"Demo Biology Section 138",Biology,837d5b61-eb7b-4330-a62d-f2140a907908,DCL0138,"Synthetic class generated for school presentation data.",2024-10-15
+43dad213-32b1-4eb6-8f05-e3b9ccdddd86,"Demo Business Section 139",Business,634b50fb-4d1e-4528-a157-6535eba4c81d,DCL0139,"Synthetic class generated for school presentation data.",2024-10-17
+4891ace6-eee7-413f-b59d-29551ac64c69,"Demo Chemistry Section 140",Chemistry,38e6c503-5244-4f40-aaf9-dff20e24a9d8,DCL0140,"Synthetic class generated for school presentation data.",2024-10-19
+e3701069-fa6b-4248-9b21-4ca120b79490,"Demo Civil Engineering Section 141","Civil Engineering",4b91bfe2-1f2f-4dfd-9d9d-d5bfe95cc7d7,DCL0141,"Synthetic class generated for school presentation data.",2024-10-21
+20c96005-c617-4950-aad6-b8df50e5d9f5,"Demo Computer Science Section 142","Computer Science",edc99b2d-2772-415a-969b-2fc5b300a332,DCL0142,"Synthetic class generated for school presentation data.",2024-10-23
+c57ea2e9-4952-4a99-8bc0-85c3b03b9a1a,"Demo Economics Section 143",Economics,a8223d0a-ff53-436c-a7a1-9b5b670e0577,DCL0143,"Synthetic class generated for school presentation data.",2024-10-25
+e0c91319-5721-41d9-914d-992a6150c825,"Demo Engineering Section 144",Engineering,037136cd-0f9b-43bd-86d2-7f167e1545e2,DCL0144,"Synthetic class generated for school presentation data.",2024-10-27
+8510f5b1-1fdb-456c-aab4-7d1b868a3299,"Demo History Section 145",History,53708d4f-93af-45b8-b691-502fd6434d48,DCL0145,"Synthetic class generated for school presentation data.",2024-10-29
+2a9f2345-14f7-41e3-aa21-47f341308c73,"Demo Information Technology Section 146","Information Technology",7a598902-24e7-4641-89f5-f7224d1c826b,DCL0146,"Synthetic class generated for school presentation data.",2024-10-31
+9e2b2fc8-aab0-460a-a942-f1fe78447580,"Demo Literature Section 147",Literature,1ee77759-8f81-4429-b170-f7138d70bff7,DCL0147,"Synthetic class generated for school presentation data.",2024-11-02
+67b2c1a3-70bc-4bb4-bc7b-e7547bda7ef6,"Demo Marketing Section 148",Marketing,37dd6ce1-7ec6-4dc0-86ec-fc79564f22cb,DCL0148,"Synthetic class generated for school presentation data.",2024-11-04
+7b195660-d008-4cd0-9fa9-a25f41666495,"Demo Mathematics Section 149",Mathematics,58ddbb5d-f786-4c05-8ac8-05e82086e71c,DCL0149,"Synthetic class generated for school presentation data.",2024-11-06
+8b88aa18-0f4f-4954-802c-08671d7d0fa8,"Demo Mechanical Engineering Section 150","Mechanical Engineering",915bff59-62d2-435a-88eb-747d87359063,DCL0150,"Synthetic class generated for school presentation data.",2024-11-08
+89ca31a1-8ab6-420d-8e7e-1665879d34a8,"Demo Physics Section 151",Physics,3324c538-d618-4c04-af68-a19808ca1068,DCL0151,"Synthetic class generated for school presentation data.",2024-11-10
+533991fd-9961-462d-bdbe-540eddaa6321,"Demo Political Science Section 152","Political Science",8c4c9203-3da4-4c1b-bbce-b611f69bc6e7,DCL0152,"Synthetic class generated for school presentation data.",2024-11-12
+a78d60bd-67bc-4cb2-9b6d-adda23dc2277,"Demo Psychology Section 153",Psychology,fca6e511-a6aa-4719-ace2-ebcbbb9b3f2b,DCL0153,"Synthetic class generated for school presentation data.",2024-11-14
+f0934e8f-9ba5-47cc-8957-892160506b01,"Demo Accounting Section 154",Accounting,6fb259e1-78f5-49e5-8875-3de3c562e68f,DCL0154,"Synthetic class generated for school presentation data.",2024-11-16
+e907afab-99b8-4e8c-a259-93e9ec3c7d01,"Demo Biology Section 155",Biology,38b58542-6ef0-426c-a0fe-87b340aa9bba,DCL0155,"Synthetic class generated for school presentation data.",2024-11-18
+beb8dc89-b370-4a38-a900-335adf628a45,"Demo Business Section 156",Business,c7d360e0-7597-4b82-859a-4d84987f6fe9,DCL0156,"Synthetic class generated for school presentation data.",2024-11-20
+a4c2e09d-951a-4a3d-ae35-71368e151cd9,"Demo Chemistry Section 157",Chemistry,008826db-1c35-4690-8b16-7e009ee51cab,DCL0157,"Synthetic class generated for school presentation data.",2024-11-22
+edefc3de-80c1-45b7-b054-e3b1e965482a,"Demo Civil Engineering Section 158","Civil Engineering",efd61ae9-5b90-4c4a-afb8-f389db47f37b,DCL0158,"Synthetic class generated for school presentation data.",2024-11-24
+2e0b2c3a-3168-4393-99d2-7594c72d02ae,"Demo Computer Science Section 159","Computer Science",a6b1aaab-6196-4f25-a75a-5bb17f15f401,DCL0159,"Synthetic class generated for school presentation data.",2024-11-26
+ce98a542-811c-4c05-9b86-1219eeb6455e,"Demo Economics Section 160",Economics,1d7b5b80-d40a-4739-9d08-e1a7352b0cb1,DCL0160,"Synthetic class generated for school presentation data.",2024-11-28
+d5c46fb9-550c-4d1e-8812-79b311356d83,"Demo Engineering Section 161",Engineering,2012fce5-0433-41d3-bc4c-6cb63c7ee00b,DCL0161,"Synthetic class generated for school presentation data.",2024-11-30
+1f20d7cb-ad98-4de4-8112-1bc4f0c6088f,"Demo History Section 162",History,3fc6bc10-fd53-44d5-8d34-1e3141add13a,DCL0162,"Synthetic class generated for school presentation data.",2024-12-02
+4df9b673-c08a-4807-a35c-e20a6a310f5f,"Demo Information Technology Section 163","Information Technology",1ce78530-8f16-45a5-9531-64904d55fce2,DCL0163,"Synthetic class generated for school presentation data.",2024-12-04
+9206cdd1-67b1-455f-b9ac-6cffd264bca2,"Demo Literature Section 164",Literature,0dde36b3-051a-417c-bb4a-8005fee6df09,DCL0164,"Synthetic class generated for school presentation data.",2024-12-06
+b1d8437c-063d-4083-9621-d3a9393ac5b2,"Demo Marketing Section 165",Marketing,2984a405-b936-4b17-91f2-24c1a3daf172,DCL0165,"Synthetic class generated for school presentation data.",2024-12-08
+5fab091c-acbf-41c2-9bde-8276c81195e0,"Demo Mathematics Section 166",Mathematics,cbb1e63a-c48b-45d8-bd25-f024f044a6ef,DCL0166,"Synthetic class generated for school presentation data.",2024-12-10
+5d858845-8d8c-4cb9-978e-42b6bb3c025d,"Demo Mechanical Engineering Section 167","Mechanical Engineering",bcdf9a6b-3430-4349-95a6-fc01d3b16413,DCL0167,"Synthetic class generated for school presentation data.",2024-12-12
+dc96700d-f67e-4861-a629-c5c9bcf218fe,"Demo Physics Section 168",Physics,2c955b64-4ef2-483d-a44a-8a769d29787d,DCL0168,"Synthetic class generated for school presentation data.",2024-12-14
+8603da84-ed6c-4e3c-9b04-5fec6a4242f3,"Demo Political Science Section 169","Political Science",c2a46866-1f88-4746-90d9-806de7a9643d,DCL0169,"Synthetic class generated for school presentation data.",2024-12-16
+97bfbcf8-6463-4fe3-a03c-b1faf2a2487e,"Demo Psychology Section 170",Psychology,f4538667-141f-49ff-9c6d-1783ff71ee7e,DCL0170,"Synthetic class generated for school presentation data.",2024-12-18
+56c45de8-0fee-461a-9d66-8cac638bd324,"Demo Accounting Section 171",Accounting,452fa619-41fb-43c6-9e4d-af95577e369c,DCL0171,"Synthetic class generated for school presentation data.",2024-12-20
+3fab1987-afd6-4ec3-8eda-51edb3f79293,"Demo Biology Section 172",Biology,ede684e0-3772-44d9-9a48-c591e883e147,DCL0172,"Synthetic class generated for school presentation data.",2024-12-22
+6e818ab5-6315-4774-8edb-1585075e79b6,"Demo Business Section 173",Business,e434b478-eb5f-400d-aa7c-4ee7cfc46b74,DCL0173,"Synthetic class generated for school presentation data.",2024-12-24
+bd0c2112-2af7-471d-8475-5eb16f3efd7f,"Demo Chemistry Section 174",Chemistry,cecbea98-afe7-438c-8c76-cd1e98232651,DCL0174,"Synthetic class generated for school presentation data.",2024-12-26
+4fa07e5e-3cee-425f-8655-d68809d2be5c,"Demo Civil Engineering Section 175","Civil Engineering",601a66af-a5ec-47cf-a0b4-2b7321b44194,DCL0175,"Synthetic class generated for school presentation data.",2024-12-28
+07889af1-b849-48e7-91be-12e0dac79767,"Demo Computer Science Section 176","Computer Science",5b2099a9-232d-46ca-bbce-096c7ffc9454,DCL0176,"Synthetic class generated for school presentation data.",2024-12-30
+7170a45d-58b0-4ee8-a533-82a04a721e2e,"Demo Economics Section 177",Economics,6cf0a646-23fc-4086-aa8e-9ba0abcd9767,DCL0177,"Synthetic class generated for school presentation data.",2025-01-01
+e1b2d2a5-1ed0-4f2e-8304-c43ce52a0d60,"Demo Engineering Section 178",Engineering,5f6e86d0-c375-4913-8a4a-985ba53049f2,DCL0178,"Synthetic class generated for school presentation data.",2025-01-03
+4cf8858d-4a5e-403b-a994-b147cc274381,"Demo History Section 179",History,77ca80ed-0cf7-4a69-9e32-df1e3ed9b317,DCL0179,"Synthetic class generated for school presentation data.",2025-01-05
+9573c936-d003-4265-a2e2-271ccc3b3649,"Demo Information Technology Section 180","Information Technology",9112caf4-5324-4355-8d99-b7a55f723649,DCL0180,"Synthetic class generated for school presentation data.",2025-01-07
+96f2698c-6406-4aac-9c5b-fa0aec062dbe,"Demo Literature Section 181",Literature,e2fd0913-bd4b-43d0-a6a6-e70d21be23b0,DCL0181,"Synthetic class generated for school presentation data.",2025-01-09
+ea5eb9ec-27f2-4404-9c97-18bcc16707cf,"Demo Marketing Section 182",Marketing,16950529-d701-4d89-b6eb-a3a06427c741,DCL0182,"Synthetic class generated for school presentation data.",2025-01-11
+03673d6e-b5a7-42f3-a255-daa0071807d8,"Demo Mathematics Section 183",Mathematics,54d0f71c-3d60-4d02-8538-9349542de908,DCL0183,"Synthetic class generated for school presentation data.",2025-01-13
+56126b85-e477-4c9c-97a2-7b4b509af074,"Demo Mechanical Engineering Section 184","Mechanical Engineering",4f496d19-495d-4e06-bd79-81c420dc5af6,DCL0184,"Synthetic class generated for school presentation data.",2025-01-15
+0e15d2ec-1011-42c2-8a90-fbe0e9ada30c,"Demo Physics Section 185",Physics,2f63a361-f6f0-4ced-8eb5-2e71e9f4b476,DCL0185,"Synthetic class generated for school presentation data.",2025-01-17
+a6bafb71-ff55-4801-b908-8c50414dfb89,"Demo Political Science Section 186","Political Science",89d900af-d99c-4b92-b1ab-1eb2e41b7320,DCL0186,"Synthetic class generated for school presentation data.",2025-01-19
+716486c0-67be-40bd-86ca-56cdfc807e8d,"Demo Psychology Section 187",Psychology,447a08c8-7683-4545-b8f4-a2f88906445d,DCL0187,"Synthetic class generated for school presentation data.",2025-01-21
+006c1305-a915-411a-9043-b31311c47170,"Demo Accounting Section 188",Accounting,5f73862f-6758-4b4b-922f-2da0c24a2080,DCL0188,"Synthetic class generated for school presentation data.",2025-01-23
+419d7be5-bc4d-48bd-a7e3-549f607a01d2,"Demo Biology Section 189",Biology,114f753f-8059-4abe-858b-f413b70d0d94,DCL0189,"Synthetic class generated for school presentation data.",2025-01-25
+b21cfbd3-967f-4fbf-970e-2deb2f22fb80,"Demo Business Section 190",Business,ceef6469-094c-4c49-8e06-ac27e988a6a4,DCL0190,"Synthetic class generated for school presentation data.",2025-01-27
+d9a192b1-1fd6-4f85-8462-e90f91ef753e,"Demo Chemistry Section 191",Chemistry,a9f6d24e-7efc-47c0-af1d-8d5409eb976b,DCL0191,"Synthetic class generated for school presentation data.",2025-01-29
+4846b026-b205-4ed3-a3ff-1bceadf2a214,"Demo Civil Engineering Section 192","Civil Engineering",9c33dc3b-cb66-467f-8169-fb9c0a03dc19,DCL0192,"Synthetic class generated for school presentation data.",2025-01-31
+ab85caf4-26ff-40ee-ad7c-985f94cfa901,"Demo Computer Science Section 193","Computer Science",4d98d403-7ee1-44b0-9f96-20454dd4bbf6,DCL0193,"Synthetic class generated for school presentation data.",2025-02-02
+f3111045-7964-4d61-b357-9459e2309d51,"Demo Economics Section 194",Economics,75ae0915-1fd6-4b85-bdf8-0771d3f92626,DCL0194,"Synthetic class generated for school presentation data.",2025-02-04
+05e84717-4ec4-48b6-872d-100fba9bf7e2,"Demo Engineering Section 195",Engineering,6e4d289e-9e56-4814-aa00-2f9d7867c145,DCL0195,"Synthetic class generated for school presentation data.",2025-02-06
+4b6926cc-89b7-457f-b5f3-9baa87029084,"Demo History Section 196",History,e47caeac-5326-4094-a3d4-477d539b86df,DCL0196,"Synthetic class generated for school presentation data.",2025-02-08
+7b1999e3-4630-4e29-a9fa-111204720da4,"Demo Information Technology Section 197","Information Technology",c2c06446-c35b-4b63-830b-68fd37b69179,DCL0197,"Synthetic class generated for school presentation data.",2025-02-10
+f1229e7c-778b-4934-99b0-845d45aa43f5,"Demo Literature Section 198",Literature,ad242426-f4c6-4c57-8f9c-4d4a377d4b2e,DCL0198,"Synthetic class generated for school presentation data.",2025-02-12
+bd4f6aa8-b250-4d5f-831e-0a54633d0294,"Demo Marketing Section 199",Marketing,48e22728-5b85-464f-b833-8aea82623a35,DCL0199,"Synthetic class generated for school presentation data.",2025-02-14
+5d570c47-ce8c-46d8-afb2-77ef23ce50b5,"Demo Mathematics Section 200",Mathematics,b83b3488-207f-4ff7-9ca1-7bde25b71936,DCL0200,"Synthetic class generated for school presentation data.",2025-02-16
+bf31686d-ea02-4e14-a307-119769620837,"Demo Mechanical Engineering Section 201","Mechanical Engineering",6303f387-914b-4174-8f3e-065b113e87db,DCL0201,"Synthetic class generated for school presentation data.",2025-02-18
+c0f2c4d9-1e6e-45b5-9047-f5bcfe924f43,"Demo Physics Section 202",Physics,899b2d89-3bbd-48fa-81ec-96e80e71d868,DCL0202,"Synthetic class generated for school presentation data.",2025-02-20
+a0d1a31e-5603-42ed-b294-22758bbd611f,"Demo Political Science Section 203","Political Science",3cd7e78a-8e83-4313-82a0-1cb477c878e0,DCL0203,"Synthetic class generated for school presentation data.",2025-02-22
+79976812-cef8-4188-a6a2-144763fd8333,"Demo Psychology Section 204",Psychology,99107fa4-0a03-4465-9e14-6443db1650d2,DCL0204,"Synthetic class generated for school presentation data.",2025-02-24
+ac2b0fe5-fb6d-4cfe-909f-573a16e41158,"Demo Accounting Section 205",Accounting,9e71d4bc-bfbc-4006-9750-316ed5fe333e,DCL0205,"Synthetic class generated for school presentation data.",2025-02-26
+2fa163d2-96fe-4599-93bf-b1e13bea08c0,"Demo Biology Section 206",Biology,6155ea6c-70ca-4267-88e9-839a62d06161,DCL0206,"Synthetic class generated for school presentation data.",2025-02-28
+e361ca0c-efc5-4074-a544-3cacf1bb19f0,"Demo Business Section 207",Business,92083e04-065b-466f-94dc-897ea1397fe6,DCL0207,"Synthetic class generated for school presentation data.",2025-03-02
+82508eae-3cb8-49cc-ae5a-66ec88016408,"Demo Chemistry Section 208",Chemistry,b412f77e-2e29-4e1a-89ce-913ff66abd1e,DCL0208,"Synthetic class generated for school presentation data.",2025-03-04
+03118dd2-1541-4b5c-b934-03ba1d564f98,"Demo Civil Engineering Section 209","Civil Engineering",4bc6e387-7d36-4c29-b5e7-4db6bf467a28,DCL0209,"Synthetic class generated for school presentation data.",2025-03-06
+62cd9bba-7005-4c40-b5ca-a475da0d92e6,"Demo Computer Science Section 210","Computer Science",43d80690-1b48-4432-bfb7-309b563e1195,DCL0210,"Synthetic class generated for school presentation data.",2025-03-08
+bbb038a6-9e34-4e5f-8137-7343182f6acb,"Demo Economics Section 211",Economics,489bc58d-5b6f-49ad-8bb9-cb8b621c13d7,DCL0211,"Synthetic class generated for school presentation data.",2024-01-15
+87dfb0a1-7609-4210-87e9-8a1d8437285a,"Demo Engineering Section 212",Engineering,47cad914-ef09-4e20-9f1f-fedc0d4b5f9d,DCL0212,"Synthetic class generated for school presentation data.",2024-01-17
+68a7eb4a-cd42-42bf-9599-b112696a15a5,"Demo History Section 213",History,f8597118-4037-42ea-a506-77510bb352cb,DCL0213,"Synthetic class generated for school presentation data.",2024-01-19
+54b195ae-f131-466e-b025-5b369382ac12,"Demo Information Technology Section 214","Information Technology",34545ed2-0970-47ec-9b56-a6f6ce24d758,DCL0214,"Synthetic class generated for school presentation data.",2024-01-21
+ab77dab3-224e-4f54-9543-b93730534303,"Demo Literature Section 215",Literature,7851b116-68b6-4248-94b1-d9b675d89bdb,DCL0215,"Synthetic class generated for school presentation data.",2024-01-23
+a956d12c-0a9a-4220-9cd8-0c884b81d4c5,"Demo Marketing Section 216",Marketing,00e888b9-a6a5-4288-8e4f-e15546ce36f9,DCL0216,"Synthetic class generated for school presentation data.",2024-01-25
+08425432-30cd-4734-9259-b6fec4152cf9,"Demo Mathematics Section 217",Mathematics,4e567472-a8ee-4c1f-99b8-8d6bbb2d2b76,DCL0217,"Synthetic class generated for school presentation data.",2024-01-27
+659bd4a0-afe2-45a4-b364-2c9e6734ef30,"Demo Mechanical Engineering Section 218","Mechanical Engineering",175edd14-3421-49e8-b1fa-76764b8b10cf,DCL0218,"Synthetic class generated for school presentation data.",2024-01-29
+f94eb4b6-7339-4043-aedf-1ff7a906b6dd,"Demo Physics Section 219",Physics,57e053cc-b444-49a6-9971-87542a4d8416,DCL0219,"Synthetic class generated for school presentation data.",2024-01-31
+70435147-5509-4a83-a41e-38815617bd0f,"Demo Political Science Section 220","Political Science",2c53b76d-3ed9-4649-b140-d3555f9a090c,DCL0220,"Synthetic class generated for school presentation data.",2024-02-02
+1bb4b779-9334-40bf-9d0a-b336ce325688,"Demo Psychology Section 221",Psychology,3ed2069d-55c5-40a1-b208-012a8d5c1c19,DCL0221,"Synthetic class generated for school presentation data.",2024-02-04
+6cb4da8d-c313-44a5-903b-a7bfd7008d4d,"Demo Accounting Section 222",Accounting,faa261bd-875d-40af-a2c4-dcbf4a077994,DCL0222,"Synthetic class generated for school presentation data.",2024-02-06
+e4299aa9-c659-4a71-a75d-1782b22c8622,"Demo Biology Section 223",Biology,b36aa55c-ef9a-47cd-9a53-54d91cc18d26,DCL0223,"Synthetic class generated for school presentation data.",2024-02-08
+d468a24f-e683-43d7-8633-3156b06f7772,"Demo Business Section 224",Business,490121e1-b8ef-4a83-ad12-26d6eec55f09,DCL0224,"Synthetic class generated for school presentation data.",2024-02-10
+0c75e224-8230-4a6e-8602-dc665ee4d486,"Demo Chemistry Section 225",Chemistry,741da3ef-c28c-466f-a961-a70df134fb09,DCL0225,"Synthetic class generated for school presentation data.",2024-02-12
+413864fc-f3ce-48cd-8209-9deb751a6ee6,"Demo Civil Engineering Section 226","Civil Engineering",64aa98f0-01a7-4bf8-884a-eee4e93d9197,DCL0226,"Synthetic class generated for school presentation data.",2024-02-14
+00b8afa9-4224-40f3-9abf-2b4699fffcb5,"Demo Computer Science Section 227","Computer Science",6cc46a50-9489-492b-a3b8-30c44219cb0e,DCL0227,"Synthetic class generated for school presentation data.",2024-02-16
+8c9b3ebf-03bc-4fc5-8e65-f846e187fc10,"Demo Economics Section 228",Economics,e4375277-c6b6-4827-9af8-312d0d85018a,DCL0228,"Synthetic class generated for school presentation data.",2024-02-18
+40684389-f20c-4dc5-a37f-e8eb0c085cbe,"Demo Engineering Section 229",Engineering,9f8c62f2-7569-4f36-a0ec-e7048fab7212,DCL0229,"Synthetic class generated for school presentation data.",2024-02-20
+614b829c-a538-488c-bbf9-c6f0c3ecc551,"Demo History Section 230",History,cc32ca25-adb9-4a56-a330-738631fa092b,DCL0230,"Synthetic class generated for school presentation data.",2024-02-22
+99ec5e46-207a-4123-8878-f4adeb107f8c,"Demo Information Technology Section 231","Information Technology",0d3c4450-8ced-4ee2-a53b-f92fad102779,DCL0231,"Synthetic class generated for school presentation data.",2024-02-24
+db5368e4-4d81-4dcf-a8f1-6ed0766b9eeb,"Demo Literature Section 232",Literature,7c97b844-7f51-4910-9250-7cc682b4d8d6,DCL0232,"Synthetic class generated for school presentation data.",2024-02-26
+14e9f933-b837-451c-940f-6d851ff21d38,"Demo Marketing Section 233",Marketing,00b94e3d-99c2-4f4b-87ff-9f7c5d5ae2f8,DCL0233,"Synthetic class generated for school presentation data.",2024-02-28
+ea20c1cd-1387-4aa0-bf1a-d2e64ac801b5,"Demo Mathematics Section 234",Mathematics,939ee2e9-3acd-4ec5-8fc5-c946a2b17745,DCL0234,"Synthetic class generated for school presentation data.",2024-03-01
+f42e5598-a4b4-477e-a959-3ef9940acdb5,"Demo Mechanical Engineering Section 235","Mechanical Engineering",234465b5-2344-4975-9a09-63e0223b4014,DCL0235,"Synthetic class generated for school presentation data.",2024-03-03
+70a6039a-3192-406f-8adb-b8998f93ca72,"Demo Physics Section 236",Physics,3981e2c0-ef97-424b-b74d-f26a79cc3934,DCL0236,"Synthetic class generated for school presentation data.",2024-03-05
+a3d59b2b-688d-42f4-8c37-088ee98cd9a4,"Demo Political Science Section 237","Political Science",34ae36f4-7b68-44f3-9ac3-b03918791028,DCL0237,"Synthetic class generated for school presentation data.",2024-03-07
+f642cbfb-1e7f-4f13-9e42-d240a9683ada,"Demo Psychology Section 238",Psychology,8f80b859-7889-4ddc-8ba1-474c4aac6ef6,DCL0238,"Synthetic class generated for school presentation data.",2024-03-09
+a5583ae8-239d-4dc5-9652-1b33855271a7,"Demo Accounting Section 239",Accounting,fbc07dd9-8fe3-4f2b-afa8-da58f016d089,DCL0239,"Synthetic class generated for school presentation data.",2024-03-11
+9c610c76-3f4f-4e8d-806e-e0727de30446,"Demo Biology Section 240",Biology,21d9706f-a15f-44e8-9c14-7b3f0e89bacb,DCL0240,"Synthetic class generated for school presentation data.",2024-03-13
+030f91d3-ead1-428f-9a21-f435430f93d3,"Demo Business Section 241",Business,52ee1b41-92c7-47d8-9f0c-782fcaf77796,DCL0241,"Synthetic class generated for school presentation data.",2024-03-15
+ab136540-05fe-42c4-a434-dffd6dc3708b,"Demo Chemistry Section 242",Chemistry,b81fc2e0-cd24-43ee-a383-e94d6c167b09,DCL0242,"Synthetic class generated for school presentation data.",2024-03-17
+6131115c-3b94-439b-b6e3-a6e9d24bab23,"Demo Civil Engineering Section 243","Civil Engineering",def0db0d-7ba4-4dba-a2d8-1c770d7bca28,DCL0243,"Synthetic class generated for school presentation data.",2024-03-19
+9d350c9d-a9bc-49e6-928a-8d6f74e2e8f6,"Demo Computer Science Section 244","Computer Science",47adb195-5408-44e6-90d5-4ffbda87d252,DCL0244,"Synthetic class generated for school presentation data.",2024-03-21
+da6f9be2-f5d3-4f38-9563-5c811b0f8aeb,"Demo Economics Section 245",Economics,36ef2f2a-3f8c-4615-adac-3feeb940354c,DCL0245,"Synthetic class generated for school presentation data.",2024-03-23
+d89d3cef-0366-484d-9b5c-f8f25b72c4b7,"Demo Engineering Section 246",Engineering,781c1365-f020-4b20-9751-9d8ae4d8e242,DCL0246,"Synthetic class generated for school presentation data.",2024-03-25
+eaaadfc0-4a53-4854-aa24-a3e77f5e1be1,"Demo History Section 247",History,61bc748a-8c8a-42f8-b894-542fa6c83041,DCL0247,"Synthetic class generated for school presentation data.",2024-03-27
+f2cdeeac-c7b4-42be-9229-b6bedca18455,"Demo Information Technology Section 248","Information Technology",43a485e6-76ad-463c-a06c-0382fcdae57e,DCL0248,"Synthetic class generated for school presentation data.",2024-03-29
+0ab446cc-c6b0-461d-a59a-247bfa4c7edf,"Demo Literature Section 249",Literature,750d4144-8a13-4984-92d6-83d02295949e,DCL0249,"Synthetic class generated for school presentation data.",2024-03-31
+d434d52a-bf21-4db8-abb4-48f03703fe0f,"Demo Marketing Section 250",Marketing,0dee185d-5a60-4017-a61e-b93b24cf3c17,DCL0250,"Synthetic class generated for school presentation data.",2024-04-02
+aa80123d-e9a0-453f-b935-8cf85f7346af,"Demo Mathematics Section 251",Mathematics,5632a71b-e978-4dbb-aa11-26158ce12c06,DCL0251,"Synthetic class generated for school presentation data.",2024-04-04
+1502f9d8-cf0b-45fc-835b-8ba0fbe42267,"Demo Mechanical Engineering Section 252","Mechanical Engineering",e0fb5de4-d26e-4374-88ad-a67b3db36ecf,DCL0252,"Synthetic class generated for school presentation data.",2024-04-06
+3e736f7e-45d0-4c6b-aa9d-01fa8a6b5ef8,"Demo Physics Section 253",Physics,d949151a-3e23-4b76-a27c-7a4926ca0410,DCL0253,"Synthetic class generated for school presentation data.",2024-04-08
+eb343ff1-6c9e-43f8-bc2b-def727057706,"Demo Political Science Section 254","Political Science",4b86333a-a971-45f7-8676-fa09c08136c7,DCL0254,"Synthetic class generated for school presentation data.",2024-04-10
+7f1acbf4-0f3a-4587-9d7c-34222c76d105,"Demo Psychology Section 255",Psychology,66e4e22e-4629-4d07-9332-68fa2bb94040,DCL0255,"Synthetic class generated for school presentation data.",2024-04-12
+d32c70d4-f360-4f49-86b8-5735833bf8d1,"Demo Accounting Section 256",Accounting,2110bf4d-0b5c-446b-a948-85d1ae75ef59,DCL0256,"Synthetic class generated for school presentation data.",2024-04-14
+22233d3c-10a6-4125-b41c-a49649c0ed0c,"Demo Biology Section 257",Biology,e88ed7d2-62a4-4973-9060-e19056d13f41,DCL0257,"Synthetic class generated for school presentation data.",2024-04-16
+29501f50-7681-4446-9086-fc586471b450,"Demo Business Section 258",Business,f43e1605-f3cd-4ded-af8a-e78b70146b84,DCL0258,"Synthetic class generated for school presentation data.",2024-04-18
+e52a20d9-1d90-42ae-a17b-13cf266516f2,"Demo Chemistry Section 259",Chemistry,5c756700-2b2c-4fb3-bd5a-7314450687eb,DCL0259,"Synthetic class generated for school presentation data.",2024-04-20
+43f55e0b-84b1-45a5-9f58-f6317f07d10b,"Demo Civil Engineering Section 260","Civil Engineering",dc28905c-a7f8-48b4-a0dd-e22399c38fbb,DCL0260,"Synthetic class generated for school presentation data.",2024-04-22
+50203326-802a-454f-a19b-3e8ddca0774b,"Demo Computer Science Section 261","Computer Science",f39057a9-613c-40da-a0fb-4a39cb833b40,DCL0261,"Synthetic class generated for school presentation data.",2024-04-24
+e171ba06-18bb-4b30-b233-fed36ecff0b5,"Demo Economics Section 262",Economics,718b0a96-1606-4a6a-8da1-cbd8a4c07336,DCL0262,"Synthetic class generated for school presentation data.",2024-04-26
+69f9560d-ccc0-477a-ae80-c2099938e3bf,"Demo Engineering Section 263",Engineering,71d8e23c-90df-4904-bb01-500b7b569575,DCL0263,"Synthetic class generated for school presentation data.",2024-04-28
+ef6efaf8-14ab-4d91-8471-5c93edfa3b58,"Demo History Section 264",History,1841b479-edbd-4f08-98fa-434a9fcf3b6e,DCL0264,"Synthetic class generated for school presentation data.",2024-04-30
+62a5001f-9d9d-487a-b520-cd15eedfb262,"Demo Information Technology Section 265","Information Technology",58f52459-b373-4b76-a37b-1efb7e78ba20,DCL0265,"Synthetic class generated for school presentation data.",2024-05-02
+c5adf317-01a1-4737-aa2c-55e7ccc8d577,"Demo Literature Section 266",Literature,2a00f872-b66d-42f4-a6aa-5842a86018ea,DCL0266,"Synthetic class generated for school presentation data.",2024-05-04
+e7aa6dc3-805c-4c13-9864-4781c37fe067,"Demo Marketing Section 267",Marketing,54a7bbab-9616-4592-ae72-e1bb401562fe,DCL0267,"Synthetic class generated for school presentation data.",2024-05-06
+442407f4-6c3b-4ba4-bd4d-1c5bb6ca55bf,"Demo Mathematics Section 268",Mathematics,57bb506b-ba37-4e62-b217-fda883a43abb,DCL0268,"Synthetic class generated for school presentation data.",2024-05-08
+12fc8531-6e10-46ef-a428-483a310be945,"Demo Mechanical Engineering Section 269","Mechanical Engineering",0d3dae6c-45c9-4f28-b28c-898055d9724d,DCL0269,"Synthetic class generated for school presentation data.",2024-05-10
+2a5cf36c-54b5-4ec8-ab4c-30b32f80cf70,"Demo Physics Section 270",Physics,fbb2a14f-0122-430b-ba06-ad1a4c119bc0,DCL0270,"Synthetic class generated for school presentation data.",2024-05-12
+15726594-66c3-49a5-8ee7-f91d45c6e72a,"Demo Political Science Section 271","Political Science",fe53fa5d-e77e-4369-bd37-77c01ae3f5e8,DCL0271,"Synthetic class generated for school presentation data.",2024-05-14
+3470624e-67b2-4de5-a9f5-42b5092945fc,"Demo Psychology Section 272",Psychology,7f6c44fb-c625-4f6a-bf48-c473a780f390,DCL0272,"Synthetic class generated for school presentation data.",2024-05-16
+ba02332b-bc15-4086-b9b6-689549ade77a,"Demo Accounting Section 273",Accounting,2cd9d024-6210-437b-b173-e3de2b68ab2e,DCL0273,"Synthetic class generated for school presentation data.",2024-05-18
+3772dc82-ac20-49c8-b7c3-739368b66035,"Demo Biology Section 274",Biology,c5b1f721-5943-407d-afb9-daa6f555daad,DCL0274,"Synthetic class generated for school presentation data.",2024-05-20
+d4e11f42-8722-4581-a3cc-b380aa116313,"Demo Business Section 275",Business,ace12a2b-c261-41bc-84ed-6189c818c411,DCL0275,"Synthetic class generated for school presentation data.",2024-05-22
+92da3624-2840-4a56-8358-d094fe91d6d0,"Demo Chemistry Section 276",Chemistry,c21fa85a-0ba5-4422-9f8b-3e20654c303c,DCL0276,"Synthetic class generated for school presentation data.",2024-05-24
+906f301a-1e8e-4cb2-8866-18cb2c6bb4cb,"Demo Civil Engineering Section 277","Civil Engineering",e2367fba-a0b5-493b-9d1d-da6a239b08b6,DCL0277,"Synthetic class generated for school presentation data.",2024-05-26
+b918b1b7-238b-4f2b-be49-0511d81d963f,"Demo Computer Science Section 278","Computer Science",0fbac00f-c496-4bf3-85e1-53047452e437,DCL0278,"Synthetic class generated for school presentation data.",2024-05-28
+602cea62-a7d0-49ec-8ee4-61295d83fd6b,"Demo Economics Section 279",Economics,e86d48b6-5b31-4050-9200-1bc3d52b436c,DCL0279,"Synthetic class generated for school presentation data.",2024-05-30
+03163c0e-50f8-4de2-83d8-3b3de51cd8ae,"Demo Engineering Section 280",Engineering,43aff9d7-6bd2-4a8a-a093-25843e849b76,DCL0280,"Synthetic class generated for school presentation data.",2024-06-01
+5a610095-86b9-4006-86d7-339d446a0519,"Demo History Section 281",History,d6179457-9d8c-4235-83d5-035cbee9c39d,DCL0281,"Synthetic class generated for school presentation data.",2024-06-03
+d767fda1-31c6-488b-b4ce-82837ff9650b,"Demo Information Technology Section 282","Information Technology",45326f46-0bbc-4de8-8028-5bd509d785fe,DCL0282,"Synthetic class generated for school presentation data.",2024-06-05
+c5645b66-9115-4194-a7a7-6cf2febc0d5b,"Demo Literature Section 283",Literature,941679a2-e4db-48e8-8cda-cbb577e7fd08,DCL0283,"Synthetic class generated for school presentation data.",2024-06-07
+64d004f4-822e-41a0-905f-da185b470dee,"Demo Marketing Section 284",Marketing,42140cf5-3776-4604-9c71-aebbea8f7c38,DCL0284,"Synthetic class generated for school presentation data.",2024-06-09
+c3aad10c-2f9f-402a-a4e2-41728145e6a4,"Demo Mathematics Section 285",Mathematics,f6269e53-edd2-41c5-9962-ca6194a0f066,DCL0285,"Synthetic class generated for school presentation data.",2024-06-11
+4a0c3227-0cd2-4ab2-8172-22a43974fcb7,"Demo Mechanical Engineering Section 286","Mechanical Engineering",064abef9-fec2-4591-9b6c-41f3487fdcea,DCL0286,"Synthetic class generated for school presentation data.",2024-06-13
+82fe12e2-f10d-4f45-b897-3ac0c8d90746,"Demo Physics Section 287",Physics,1e23760c-c623-41ae-b9be-f302b4c1082f,DCL0287,"Synthetic class generated for school presentation data.",2024-06-15
+cd158100-0f2c-4f22-a42e-cb0cba558957,"Demo Political Science Section 288","Political Science",3388aaab-25ca-45ed-a8b3-a6b8e106f717,DCL0288,"Synthetic class generated for school presentation data.",2024-06-17
+c2bd2683-fc45-485b-9163-1740d095db58,"Demo Psychology Section 289",Psychology,1ac6232f-27ac-43a6-b0cf-520c76af4173,DCL0289,"Synthetic class generated for school presentation data.",2024-06-19
+b8352a07-0c75-42ef-8a9c-f1aa2953570a,"Demo Accounting Section 290",Accounting,bde39ab9-f73e-46f8-9165-0c5431edf951,DCL0290,"Synthetic class generated for school presentation data.",2024-06-21
+be3c7417-25c8-4159-89a2-d4c8127a92ec,"Demo Biology Section 291",Biology,08770fd2-9351-4adb-a357-9205dd6263bf,DCL0291,"Synthetic class generated for school presentation data.",2024-06-23
+17947662-3888-4b7f-b13d-5c2af5199a45,"Demo Business Section 292",Business,0d817e34-94ee-464e-bb59-032d47ff00e8,DCL0292,"Synthetic class generated for school presentation data.",2024-06-25
+0721f65e-7c2d-46e9-b1a8-293a0b5acf17,"Demo Chemistry Section 293",Chemistry,274ed1f6-fd27-426f-992a-371590292dea,DCL0293,"Synthetic class generated for school presentation data.",2024-06-27
+039083af-0caf-411a-8d8d-38cfaa8183e5,"Demo Civil Engineering Section 294","Civil Engineering",1b27014c-c356-48da-86db-86108248bf06,DCL0294,"Synthetic class generated for school presentation data.",2024-06-29
+820f910a-b06f-4c29-9479-8db7acdf2de6,"Demo Computer Science Section 295","Computer Science",62d91afb-21de-4c5d-b160-dce40033e19a,DCL0295,"Synthetic class generated for school presentation data.",2024-07-01
+8c877f5d-fa73-4a43-b427-1985fafae54d,"Demo Economics Section 296",Economics,9df7a259-9e64-427d-9a6a-52d4c51436c9,DCL0296,"Synthetic class generated for school presentation data.",2024-07-03
+ee911d9e-59cf-43df-b1e0-8a7ec612563a,"Demo Engineering Section 297",Engineering,ae83af65-d5a6-461c-8459-6b74617a9584,DCL0297,"Synthetic class generated for school presentation data.",2024-07-05
+48322962-543d-4c04-9fb9-bd7e48d8dc01,"Demo History Section 298",History,a8417d66-6d5f-497b-a7ad-0b771022f7a8,DCL0298,"Synthetic class generated for school presentation data.",2024-07-07
+2e2b47bd-ab12-46f7-9d1a-34155684ef56,"Demo Information Technology Section 299","Information Technology",2d494c7d-c3ea-4a6a-b6c0-0a14e9aabf98,DCL0299,"Synthetic class generated for school presentation data.",2024-07-09
+15c4d121-b825-4eb9-b99c-67a62cf0dc20,"Demo Literature Section 300",Literature,515b56da-737a-4e4b-b6b1-f309284c6822,DCL0300,"Synthetic class generated for school presentation data.",2024-07-11
+0f977ecc-fbec-412e-82d5-d8819230a7e9,"Demo Marketing Section 301",Marketing,341f77a1-b2a8-4f85-9066-79ffbe262481,DCL0301,"Synthetic class generated for school presentation data.",2024-07-13
+31c2f75a-52d9-47d2-8bc1-e55aa78f0316,"Demo Mathematics Section 302",Mathematics,2d6e67f3-642a-4fce-b682-48964f7b7320,DCL0302,"Synthetic class generated for school presentation data.",2024-07-15
+475ea394-053c-4bfe-b691-e2126f68b92a,"Demo Mechanical Engineering Section 303","Mechanical Engineering",8fedf8ad-a955-41ee-9573-df05fadfa503,DCL0303,"Synthetic class generated for school presentation data.",2024-07-17
+0eb60cc7-06e8-4de4-a462-9d2c865f7b45,"Demo Physics Section 304",Physics,24523668-8094-4cfd-a7da-2d5eabd90b19,DCL0304,"Synthetic class generated for school presentation data.",2024-07-19
+ba1e88b0-006e-45c8-a6fb-e936cf70a8b8,"Demo Political Science Section 305","Political Science",c22374ca-4ebb-47df-a6be-0d3d86edbb7d,DCL0305,"Synthetic class generated for school presentation data.",2024-07-21
+cf33ac0a-587e-4eb9-bcd7-ec4394b468fb,"Demo Psychology Section 306",Psychology,1ab07c72-bee1-4576-bed7-705e9c946e92,DCL0306,"Synthetic class generated for school presentation data.",2024-07-23
+00ca541f-91d8-436f-b2c4-cbe4e986d5ec,"Demo Accounting Section 307",Accounting,fef7cb01-ce35-456b-b6a0-1acd85128358,DCL0307,"Synthetic class generated for school presentation data.",2024-07-25
+15f8cbf9-bd90-4a6c-9350-999897a5a3da,"Demo Biology Section 308",Biology,3d9de84c-28e3-4b5b-944b-c355250c6ff3,DCL0308,"Synthetic class generated for school presentation data.",2024-07-27
+9d6b325f-de08-4af5-ba21-474ceb9cba0b,"Demo Business Section 309",Business,ebdb9522-b064-43e0-97cf-a100756c89df,DCL0309,"Synthetic class generated for school presentation data.",2024-07-29
+8a5c087a-3b06-4586-948d-204213ccb928,"Demo Chemistry Section 310",Chemistry,c38461e0-40de-4475-9fa9-6d0490a7ac65,DCL0310,"Synthetic class generated for school presentation data.",2024-07-31
+78c71fc3-3e00-4cfa-b515-8878c26def62,"Demo Civil Engineering Section 311","Civil Engineering",fae260b8-fcb2-4afc-b1cd-32d7f68194e3,DCL0311,"Synthetic class generated for school presentation data.",2024-08-02
+a9513632-f2b2-4cd6-b82b-59ba8ea1a94a,"Demo Computer Science Section 312","Computer Science",389cd678-7e6f-4e27-b700-4b575951afaa,DCL0312,"Synthetic class generated for school presentation data.",2024-08-04
+d1f210bd-f989-4286-aa13-0f16d2b201de,"Demo Economics Section 313",Economics,93dfcf9e-537c-4468-96c4-c886ba480a13,DCL0313,"Synthetic class generated for school presentation data.",2024-08-06
+b374a56a-f2c6-4081-a1d0-1c826003bdec,"Demo Engineering Section 314",Engineering,3584e58a-6ce8-40a3-a06d-0f23930d9261,DCL0314,"Synthetic class generated for school presentation data.",2024-08-08
+5312da12-80f6-4958-902c-3580cdf94a5d,"Demo History Section 315",History,1838a344-40a8-482e-a799-34e3507b1d09,DCL0315,"Synthetic class generated for school presentation data.",2024-08-10
+d81edeaf-7a07-440b-a1ff-87b895d6dc9f,"Demo Information Technology Section 316","Information Technology",9fd3263d-0ed8-4600-be8e-9b2cebabb63e,DCL0316,"Synthetic class generated for school presentation data.",2024-08-12
+a14125cd-d95f-49d0-9dbc-fc5c61296f40,"Demo Literature Section 317",Literature,2c421688-e3b1-4d9c-a938-864d5183b838,DCL0317,"Synthetic class generated for school presentation data.",2024-08-14
+2fd57aa3-472d-4365-9604-217375545b19,"Demo Marketing Section 318",Marketing,528254d7-a2fd-414b-9bac-34595b0d22be,DCL0318,"Synthetic class generated for school presentation data.",2024-08-16
+be747adb-675e-41d0-addc-f016d442c50c,"Demo Mathematics Section 319",Mathematics,92c13c75-89bb-456a-ac03-2ffb3847811f,DCL0319,"Synthetic class generated for school presentation data.",2024-08-18
+1fd99672-28be-4f91-9efa-131bc1968219,"Demo Mechanical Engineering Section 320","Mechanical Engineering",79b8efe8-6eeb-4973-8310-7f70ec8d51e9,DCL0320,"Synthetic class generated for school presentation data.",2024-08-20
+32449ce9-362e-41da-be14-4a0d47b69769,"Demo Physics Section 321",Physics,294e0033-9c57-41d7-893f-c784bb6b9e2e,DCL0321,"Synthetic class generated for school presentation data.",2024-08-22
+d867fc45-7c4f-492c-8bf3-cf5c13b9b456,"Demo Political Science Section 322","Political Science",7afa0206-ac1c-437a-885b-fd8b3b476b22,DCL0322,"Synthetic class generated for school presentation data.",2024-08-24
+1b1519e4-c57b-47ec-9871-8cea3ade188c,"Demo Psychology Section 323",Psychology,cd65d531-089b-4270-a4b2-058e5c1f6ea1,DCL0323,"Synthetic class generated for school presentation data.",2024-08-26
+ec38ee4c-9063-4561-935c-ca9559e8cedc,"Demo Accounting Section 324",Accounting,48c67ac2-24b0-4d06-bafa-f27fa88ef54e,DCL0324,"Synthetic class generated for school presentation data.",2024-08-28
+de308a41-0450-42d6-bedb-7bd019ec3599,"Demo Biology Section 325",Biology,8bf8ad05-22a7-40a2-8942-6c5dff1ddd91,DCL0325,"Synthetic class generated for school presentation data.",2024-08-30
+92696e28-446f-497a-91a5-e0fe8eaf715d,"Demo Business Section 326",Business,3caac71c-0209-4c72-b6e3-94196c23e9dc,DCL0326,"Synthetic class generated for school presentation data.",2024-09-01
+bcc152ae-c863-4d3d-94db-3c42a64611e1,"Demo Chemistry Section 327",Chemistry,465826c6-4117-4f85-9f30-bc9479bc5391,DCL0327,"Synthetic class generated for school presentation data.",2024-09-03
+f62fbb29-6074-417f-81bc-d5d38c3b60f9,"Demo Civil Engineering Section 328","Civil Engineering",36d3bc22-4055-4ee3-95b4-7cc023b13115,DCL0328,"Synthetic class generated for school presentation data.",2024-09-05
+e3a7a85b-b420-4b97-b3d0-e0f56dc7c025,"Demo Computer Science Section 329","Computer Science",613c69b8-ed18-457f-8543-cc09f412ed5c,DCL0329,"Synthetic class generated for school presentation data.",2024-09-07
+ee93c970-4179-468d-8e7f-1990141ed91a,"Demo Economics Section 330",Economics,b527e59a-91de-4b9a-ba18-ec308927faaf,DCL0330,"Synthetic class generated for school presentation data.",2024-09-09
+b02c4d47-f078-4728-9d41-9547a699a5e5,"Demo Engineering Section 331",Engineering,b64b2aa0-2e1f-43c1-84b2-fc48aad17805,DCL0331,"Synthetic class generated for school presentation data.",2024-09-11
+272746b1-0fed-448a-ac33-91eea1105394,"Demo History Section 332",History,664baa89-20ea-4f62-b406-3e1809e18811,DCL0332,"Synthetic class generated for school presentation data.",2024-09-13
+c220c6c6-70a2-43af-bb82-b9cf588cbf35,"Demo Information Technology Section 333","Information Technology",54e84d8d-e6f5-4ed9-afb3-4bac88ff45c6,DCL0333,"Synthetic class generated for school presentation data.",2024-09-15
+321e4357-abfc-49d6-8167-d8a27d5ee9c4,"Demo Literature Section 334",Literature,679fcd14-e1f0-4dcd-b4c7-252eabcd75fc,DCL0334,"Synthetic class generated for school presentation data.",2024-09-17
+610dc486-3ce6-45cc-a19a-b514900b4ced,"Demo Marketing Section 335",Marketing,b81b7fa2-88c1-4fc9-af06-203e3b318fcb,DCL0335,"Synthetic class generated for school presentation data.",2024-09-19
+a9ade05d-7608-4d32-8777-dac4539f87b3,"Demo Mathematics Section 336",Mathematics,d0f58a51-a814-4e66-b81b-a90cb4eefd05,DCL0336,"Synthetic class generated for school presentation data.",2024-09-21
+6dc5183b-b21e-4f73-a248-4a12631beeef,"Demo Mechanical Engineering Section 337","Mechanical Engineering",3f90a042-d365-44a0-9cf9-f48c9a329391,DCL0337,"Synthetic class generated for school presentation data.",2024-09-23
+1949f348-e3af-4085-aaae-bcea8929a195,"Demo Physics Section 338",Physics,b67632d3-f1c8-45c9-a222-6732b9a25133,DCL0338,"Synthetic class generated for school presentation data.",2024-09-25
+864b91b1-5b3b-4105-9fb0-1df4b894e9a0,"Demo Political Science Section 339","Political Science",4ee3078e-2aeb-4786-b860-3d9ef1089c0f,DCL0339,"Synthetic class generated for school presentation data.",2024-09-27
+0314e66e-0cff-4718-a33f-b81c6ece69f9,"Demo Psychology Section 340",Psychology,8555fd0d-db48-4006-8f07-44d62d2d0261,DCL0340,"Synthetic class generated for school presentation data.",2024-09-29
+30240cc5-c86c-45b7-b43a-7d932552ad59,"Demo Accounting Section 341",Accounting,b86481b2-f12d-4305-92d4-7d1e14246c8b,DCL0341,"Synthetic class generated for school presentation data.",2024-10-01
+d25a1ad1-f5e1-43b8-b97c-44cd88d07423,"Demo Biology Section 342",Biology,282050da-b7cf-422f-8ab7-aad01ed50e7f,DCL0342,"Synthetic class generated for school presentation data.",2024-10-03
+cb30d163-92fd-4f3f-a128-61f34e750b79,"Demo Business Section 343",Business,92473d3a-d2f3-4251-ab53-64806ee3565c,DCL0343,"Synthetic class generated for school presentation data.",2024-10-05
+2e4dc835-6210-4607-98fe-91fc2eb6ea9f,"Demo Chemistry Section 344",Chemistry,ac237443-9733-49aa-b170-17e349d04cb9,DCL0344,"Synthetic class generated for school presentation data.",2024-10-07
+e590e745-9cca-48d6-a7a7-3d29a0e0f416,"Demo Civil Engineering Section 345","Civil Engineering",463b2328-1463-4681-b2da-2758608d49eb,DCL0345,"Synthetic class generated for school presentation data.",2024-10-09
+b20e022d-c5e3-4437-a537-cc2a8d5e505b,"Demo Computer Science Section 346","Computer Science",d1f95ff8-662d-49db-85a8-63113ebc5476,DCL0346,"Synthetic class generated for school presentation data.",2024-10-11
+99b3e0b6-f33c-41a5-a0d6-a579d6713218,"Demo Economics Section 347",Economics,fcb3ca90-d6d7-473e-8710-734d966ad43f,DCL0347,"Synthetic class generated for school presentation data.",2024-10-13
+b77d7a26-37c7-4764-92ac-976d6502e847,"Demo Engineering Section 348",Engineering,f01f8676-df02-4e30-bacc-bc4949169438,DCL0348,"Synthetic class generated for school presentation data.",2024-10-15
+bf72f694-1a6a-4423-8d6e-161501dcd99a,"Demo History Section 349",History,fa740cfd-662d-4abe-a7f8-b2e4978352a7,DCL0349,"Synthetic class generated for school presentation data.",2024-10-17
+142ff92b-36d8-4089-8dc6-d8f1f90f8bd6,"Demo Information Technology Section 350","Information Technology",07fd63e8-1b8f-486d-8ffa-b17ab2db6be6,DCL0350,"Synthetic class generated for school presentation data.",2024-10-19
+7fdc3093-fddd-40f5-976e-7945e756064d,"Demo Literature Section 351",Literature,e8df3578-328c-4993-b0af-48d5acfa6386,DCL0351,"Synthetic class generated for school presentation data.",2024-10-21
+921d2126-0b30-49cd-b65d-78b2cbb693e2,"Demo Marketing Section 352",Marketing,cb54ed5a-2de3-4327-a8fe-8353b5aa7620,DCL0352,"Synthetic class generated for school presentation data.",2024-10-23
+8b1dc386-ec6e-42c9-a490-3c5bdc1b2a84,"Demo Mathematics Section 353",Mathematics,3fd39a13-659e-422b-bf9c-f7218afaf244,DCL0353,"Synthetic class generated for school presentation data.",2024-10-25
+7907f003-5f22-4448-8a30-e820052bfece,"Demo Mechanical Engineering Section 354","Mechanical Engineering",0c693813-52e5-4d73-93e5-85a7adb3912f,DCL0354,"Synthetic class generated for school presentation data.",2024-10-27
+a9b9dafa-502e-4ce2-b8a2-befb2b7cf4d5,"Demo Physics Section 355",Physics,a9381386-3ea9-427d-b832-6b40bf530116,DCL0355,"Synthetic class generated for school presentation data.",2024-10-29
+bcc89abb-5911-4cd1-84ca-ccb8c4ddc31a,"Demo Political Science Section 356","Political Science",bd22db83-30d3-4117-a002-cb17f827fc38,DCL0356,"Synthetic class generated for school presentation data.",2024-10-31
+ccc5d387-a20c-43cf-9c4f-1c5ee819aa5e,"Demo Psychology Section 357",Psychology,d56efe1a-f2b7-4ba0-b9f6-5f7a9d6ccd57,DCL0357,"Synthetic class generated for school presentation data.",2024-11-02
+a2def6e4-767b-4872-85da-f81ad07233de,"Demo Accounting Section 358",Accounting,0bc30fc9-0792-4ff7-a646-0d7967ac4fdd,DCL0358,"Synthetic class generated for school presentation data.",2024-11-04
+e6cc61e7-6753-49db-8c3d-4af7e30d6ac4,"Demo Biology Section 359",Biology,bb0f6fe1-0106-46a9-b3cc-4f7a2d4c9054,DCL0359,"Synthetic class generated for school presentation data.",2024-11-06
+f45c3ddd-c5b2-4eae-8f66-fe9f3001dcfe,"Demo Business Section 360",Business,f79b2fc9-ee28-47a3-81e8-3e267c598bf5,DCL0360,"Synthetic class generated for school presentation data.",2024-11-08
+5ff5f6d4-61a9-44ab-88a9-987915d0e5a5,"Demo Chemistry Section 361",Chemistry,1424f150-e7c2-4ffe-8e1f-c45ed52425d7,DCL0361,"Synthetic class generated for school presentation data.",2024-11-10
+e55eafca-9691-4ae3-8227-d38750149154,"Demo Civil Engineering Section 362","Civil Engineering",945a60fc-3c68-495a-90d2-ed0b6a783aaf,DCL0362,"Synthetic class generated for school presentation data.",2024-11-12
+d5c70b09-4e13-4fbf-bbe4-58c1d54b8a2c,"Demo Computer Science Section 363","Computer Science",7b893ccf-8eb8-46ae-8fa7-bdeaac77a976,DCL0363,"Synthetic class generated for school presentation data.",2024-11-14
+f9f28657-2c0b-4e77-ad32-e2bd7b6afeb5,"Demo Economics Section 364",Economics,2b71b54d-9595-4755-ad2a-16d78f097b7f,DCL0364,"Synthetic class generated for school presentation data.",2024-11-16
+4e41402f-56e5-4b18-ac1a-94d51c0e4b8f,"Demo Engineering Section 365",Engineering,82a88c04-6402-409f-a48a-5f61d3a29870,DCL0365,"Synthetic class generated for school presentation data.",2024-11-18
+dea68811-93d4-4445-b734-65a1cfea72bd,"Demo History Section 366",History,6fcd2ce8-5857-4477-9e2f-263efc5baec5,DCL0366,"Synthetic class generated for school presentation data.",2024-11-20
+6569894b-1d5a-4f56-8fc0-5ffb3026f7ec,"Demo Information Technology Section 367","Information Technology",6eef852d-1cb7-4ca0-9944-297103dad0e4,DCL0367,"Synthetic class generated for school presentation data.",2024-11-22
+ef8b6609-895f-4fed-89da-9802fc861f21,"Demo Literature Section 368",Literature,d9be276f-e873-4e40-a366-56bdd0a25f51,DCL0368,"Synthetic class generated for school presentation data.",2024-11-24
+d3f541d0-05ab-485c-80fb-8c10d9f8c935,"Demo Marketing Section 369",Marketing,d91aadc8-08c4-4f03-b6dd-35b10184e49b,DCL0369,"Synthetic class generated for school presentation data.",2024-11-26
+08cb629e-aae2-46d2-a1be-4b71998dd552,"Demo Mathematics Section 370",Mathematics,5d369d4f-2438-42cd-b775-a838d64f0c3f,DCL0370,"Synthetic class generated for school presentation data.",2024-11-28
+a420dbe9-dba5-4815-9ea1-f5860f517745,"Demo Mechanical Engineering Section 371","Mechanical Engineering",ad2c899f-fb3b-4d97-9f77-b0560d057050,DCL0371,"Synthetic class generated for school presentation data.",2024-11-30
+bb91556d-861f-45cb-beaa-883e0b094529,"Demo Physics Section 372",Physics,364eee40-3401-472d-885d-2c4f5656a3d8,DCL0372,"Synthetic class generated for school presentation data.",2024-12-02
+9e6efe52-aeeb-459f-ae8b-b20b55fe51d3,"Demo Political Science Section 373","Political Science",15273740-0b42-4bac-b787-066daf55225e,DCL0373,"Synthetic class generated for school presentation data.",2024-12-04
+95f48b9d-6421-4831-b0bc-e7475821dbd6,"Demo Psychology Section 374",Psychology,ff363deb-5a9b-4ce2-bdd7-8966980bacbf,DCL0374,"Synthetic class generated for school presentation data.",2024-12-06
+37fdab73-d5b6-4dc0-be29-51ab6ee13310,"Demo Accounting Section 375",Accounting,fd1a6a69-ca4c-4d1c-ade6-b9a5b3c3a040,DCL0375,"Synthetic class generated for school presentation data.",2024-12-08
+dee5ae84-2546-4b19-9d48-91c8d0b8c0b0,"Demo Biology Section 376",Biology,a3d2a05c-afb6-4514-a1d4-2f76f651d34a,DCL0376,"Synthetic class generated for school presentation data.",2024-12-10
+97ca9e1e-7d34-406e-b483-34e2f7c7763b,"Demo Business Section 377",Business,6978178f-e5f5-4936-8494-5285febb81d4,DCL0377,"Synthetic class generated for school presentation data.",2024-12-12
+5af71c02-09a4-421c-908d-8fb6ab655899,"Demo Chemistry Section 378",Chemistry,d4ed0bf0-e3e6-46cc-adf2-f564aff2c9d0,DCL0378,"Synthetic class generated for school presentation data.",2024-12-14
+8fc8e377-f370-40b9-bcee-89731d071b00,"Demo Civil Engineering Section 379","Civil Engineering",e434b5a6-f46c-449c-9c5b-2ecfb942f517,DCL0379,"Synthetic class generated for school presentation data.",2024-12-16
+8878e666-459c-4b31-a05b-4da07768971d,"Demo Computer Science Section 380","Computer Science",f0caa144-f95e-452a-a658-cb983b590fe0,DCL0380,"Synthetic class generated for school presentation data.",2024-12-18
+da9a9352-afae-48e4-83eb-b29e854207d4,"Demo Economics Section 381",Economics,fc34bef4-31a8-4e3d-b60b-26b79c1636b0,DCL0381,"Synthetic class generated for school presentation data.",2024-12-20
+8968df2d-f9c7-4a5d-a57e-cf7e7be9e1e5,"Demo Engineering Section 382",Engineering,26155d47-7d5f-4935-8e6e-ed7b7f004b22,DCL0382,"Synthetic class generated for school presentation data.",2024-12-22
+c9342616-be58-4b64-b6e5-d569a84c3f39,"Demo History Section 383",History,c189ed9c-2b45-44a9-900a-df4f2adf9e23,DCL0383,"Synthetic class generated for school presentation data.",2024-12-24
+98f870e8-6d91-4a28-8edd-47d369a10863,"Demo Information Technology Section 384","Information Technology",3be776df-cb6b-4274-8c2a-a0bfe75c4e87,DCL0384,"Synthetic class generated for school presentation data.",2024-12-26
+948e8753-fd83-44f3-8bc5-97650ad78358,"Demo Literature Section 385",Literature,277c3de3-4461-4c8b-bf74-3ac12a6b1718,DCL0385,"Synthetic class generated for school presentation data.",2024-12-28
+117907d0-2aab-4454-b412-78c6301f1331,"Demo Marketing Section 386",Marketing,13e65b7a-874a-4841-bfb9-5c8aff1581c3,DCL0386,"Synthetic class generated for school presentation data.",2024-12-30
+83b5da5d-e8ce-4cb1-b3dc-4b4e21fedfe2,"Demo Mathematics Section 387",Mathematics,6222df4a-da78-4a53-bf27-8df9ca460898,DCL0387,"Synthetic class generated for school presentation data.",2025-01-01
+77b04d7b-87d9-482f-9bda-0243720f96e9,"Demo Mechanical Engineering Section 388","Mechanical Engineering",5297fb5a-638b-4839-be45-adee8aaa9dd1,DCL0388,"Synthetic class generated for school presentation data.",2025-01-03
+88251968-10ae-4c08-a24f-253258c61953,"Demo Physics Section 389",Physics,5422d49e-8ca0-4eda-b707-8bc8d3ac7637,DCL0389,"Synthetic class generated for school presentation data.",2025-01-05
+78f335a4-f6a4-46d9-8867-8c9d51755790,"Demo Political Science Section 390","Political Science",1123ff8c-6911-46e0-af5d-108fb4bf63d8,DCL0390,"Synthetic class generated for school presentation data.",2025-01-07
+5e954ae2-0d10-4044-b4fb-0237aa8c8e5b,"Demo Psychology Section 391",Psychology,451b4805-e2c6-45ee-8a65-ca1fdbdcc770,DCL0391,"Synthetic class generated for school presentation data.",2025-01-09
+cd3c8134-cf7f-4bde-9bfe-bf4c6e10bb51,"Demo Accounting Section 392",Accounting,c25537bd-8ba3-4ac7-ab06-0b3ab47a54e8,DCL0392,"Synthetic class generated for school presentation data.",2025-01-11
+ddc90f05-2f7e-44cb-ba10-16fc47340200,"Demo Biology Section 393",Biology,86f21ce9-488a-4cf8-91e4-be4ae2efbf91,DCL0393,"Synthetic class generated for school presentation data.",2025-01-13
+cf5018c9-e290-4f42-b2c0-6b3871780f1d,"Demo Business Section 394",Business,f4cf28b5-62fe-44c6-8830-04fd5b8ae864,DCL0394,"Synthetic class generated for school presentation data.",2025-01-15
+a5c30043-3df3-460a-984d-a79faa592323,"Demo Chemistry Section 395",Chemistry,d2810425-6682-4d05-a9b5-098a7f762a48,DCL0395,"Synthetic class generated for school presentation data.",2025-01-17
+33d591cc-a5ea-4413-b364-4c3fd7b60fec,"Demo Civil Engineering Section 396","Civil Engineering",38b08da4-8ca8-420d-b91d-5f564ead70e1,DCL0396,"Synthetic class generated for school presentation data.",2025-01-19
+a8c73dca-bda6-4e8a-8bc3-0dacc51e66e6,"Demo Computer Science Section 397","Computer Science",008bc86b-d7d8-40ed-a4dd-4f977891a6c1,DCL0397,"Synthetic class generated for school presentation data.",2025-01-21
+158867af-b9c0-43bb-8697-1188e365fa69,"Demo Economics Section 398",Economics,2bb29813-4d28-4f07-93d7-93378319e351,DCL0398,"Synthetic class generated for school presentation data.",2025-01-23
+3a619aad-afa7-4a24-84ad-f08a3325222f,"Demo Engineering Section 399",Engineering,b93bf12d-ceca-4480-a633-1ff1eba940c5,DCL0399,"Synthetic class generated for school presentation data.",2025-01-25
+84ad7ef1-8cf1-49b5-8a06-a80289c15a7f,"Demo History Section 400",History,58e322a9-44b7-42b4-a350-967bfcf1e909,DCL0400,"Synthetic class generated for school presentation data.",2025-01-27
+dc5962d3-6680-4977-96de-a59f6235f332,"Demo Information Technology Section 401","Information Technology",1d91172c-9c0d-4afe-b2cd-7546c994dc2b,DCL0401,"Synthetic class generated for school presentation data.",2025-01-29
+d077faf8-1bdc-435a-a410-c44f39c7dfeb,"Demo Literature Section 402",Literature,14add0cc-64f2-433a-ba4a-336a22523df5,DCL0402,"Synthetic class generated for school presentation data.",2025-01-31
+68bb15d9-b00e-4498-9478-e7dfdaccb065,"Demo Marketing Section 403",Marketing,d3d4f7e5-c063-44f1-9f8c-d9d7384e5f8f,DCL0403,"Synthetic class generated for school presentation data.",2025-02-02
+c7cfee05-32c3-4a6f-a19e-64f96dea8533,"Demo Mathematics Section 404",Mathematics,14dc5e3c-bfbf-4c4a-9b36-dfc6a19eb490,DCL0404,"Synthetic class generated for school presentation data.",2025-02-04
+f4931d08-be84-4581-b3f6-25b2d9c0af48,"Demo Mechanical Engineering Section 405","Mechanical Engineering",5e3d634c-6240-46b0-9889-e1a49d66ba56,DCL0405,"Synthetic class generated for school presentation data.",2025-02-06
+f20838b8-1434-4beb-8740-882053cdf440,"Demo Physics Section 406",Physics,8cf91001-5404-436d-98c3-4be6f30a6bd4,DCL0406,"Synthetic class generated for school presentation data.",2025-02-08
+1398a708-c643-4a4c-bc77-03ed4bf0ae65,"Demo Political Science Section 407","Political Science",2c6a91d7-9eb6-4658-a26a-10f0b47c6260,DCL0407,"Synthetic class generated for school presentation data.",2025-02-10
+13bb05c4-4b3a-44f3-804f-886e2657d3a2,"Demo Psychology Section 408",Psychology,69ddae6a-5404-4dac-81b4-84c16e51e910,DCL0408,"Synthetic class generated for school presentation data.",2025-02-12
+4b2d25ca-6405-4f00-a6bb-359610972b1e,"Demo Accounting Section 409",Accounting,d120f453-59a0-4a7e-8e46-417d4231734a,DCL0409,"Synthetic class generated for school presentation data.",2025-02-14
+586e3b02-6a6e-48ef-a663-cec758bd70a7,"Demo Biology Section 410",Biology,52a7109e-f6a8-4880-b14a-2979a52b4dd5,DCL0410,"Synthetic class generated for school presentation data.",2025-02-16
+c2b311fb-d969-4dbb-84ec-adce1d4b93a0,"Demo Business Section 411",Business,664317a4-07f7-4519-a37b-0c30ceadbdac,DCL0411,"Synthetic class generated for school presentation data.",2025-02-18
+b65f637e-ec3c-4664-be4f-61dcdd925b31,"Demo Chemistry Section 412",Chemistry,66a2f0e3-fdde-4b29-bdbd-262a2e622cf7,DCL0412,"Synthetic class generated for school presentation data.",2025-02-20
+7d0688cc-a66b-49ae-8602-75f42f7883a3,"Demo Civil Engineering Section 413","Civil Engineering",4aff20b6-e5a6-43a8-ac5e-90b12926fac6,DCL0413,"Synthetic class generated for school presentation data.",2025-02-22
+17533cdc-7652-4b4d-94fa-4b4c4ec99e6c,"Demo Computer Science Section 414","Computer Science",a99ac5d2-2bc5-4a33-91d5-3c58f11116fc,DCL0414,"Synthetic class generated for school presentation data.",2025-02-24
+1273d6fb-76f5-4605-87af-9078d9db3657,"Demo Economics Section 415",Economics,9513cc65-d494-4ed4-9202-72edb5c947b2,DCL0415,"Synthetic class generated for school presentation data.",2025-02-26
+bd27eb8e-08b8-4911-9bf3-015cb3ee8956,"Demo Engineering Section 416",Engineering,5f85c31d-87cf-415f-bec3-84653269cc5d,DCL0416,"Synthetic class generated for school presentation data.",2025-02-28
+6fbc5cbe-5be7-40bf-889c-fc4a92cc8c90,"Demo History Section 417",History,aaa34120-093e-4327-9895-d06289183180,DCL0417,"Synthetic class generated for school presentation data.",2025-03-02
+2ae2ead1-df1c-47a6-bc65-c97ada31ff82,"Demo Information Technology Section 418","Information Technology",b3555497-8e60-4b8c-8b12-b35d498aafe9,DCL0418,"Synthetic class generated for school presentation data.",2025-03-04
+ae8d3093-189e-4191-8a54-e3aded2602ad,"Demo Literature Section 419",Literature,0c789802-fbe5-4df3-a0fd-11eaa023f645,DCL0419,"Synthetic class generated for school presentation data.",2025-03-06
+abd6d8ef-d87e-4853-8453-e84ff83552be,"Demo Marketing Section 420",Marketing,c9024398-0ce7-475e-82ab-0fd465b028ae,DCL0420,"Synthetic class generated for school presentation data.",2025-03-08
+27219cca-0fe0-49c2-a77e-14cc7302a319,"Demo Mathematics Section 421",Mathematics,9aa041aa-2bdd-4441-8af5-37ed8875803c,DCL0421,"Synthetic class generated for school presentation data.",2024-01-15
+5fb68b67-2c5f-455b-b232-cfb0bf4caa23,"Demo Mechanical Engineering Section 422","Mechanical Engineering",28d690a5-3acc-428a-9765-321234f024d2,DCL0422,"Synthetic class generated for school presentation data.",2024-01-17
+b80e5e66-5908-465e-be20-79dcbf236b1e,"Demo Physics Section 423",Physics,ea912bd6-f3e8-4f71-9438-8ae261989de6,DCL0423,"Synthetic class generated for school presentation data.",2024-01-19
+c471bd83-7646-42ec-abb5-138e173aed49,"Demo Political Science Section 424","Political Science",7a58accc-58a3-44e8-9e9b-3d2cee050cbf,DCL0424,"Synthetic class generated for school presentation data.",2024-01-21
+fc979b4f-e7a7-4d1c-a2ae-89bda422f04e,"Demo Psychology Section 425",Psychology,b8e1bd44-f749-4ca8-9f31-bdc0fdecfa8c,DCL0425,"Synthetic class generated for school presentation data.",2024-01-23
+bc3735bb-e339-4ec6-94f7-e2b7d28ebd2c,"Demo Accounting Section 426",Accounting,ac2f8bc8-7077-488e-b799-b5413d5c8e4e,DCL0426,"Synthetic class generated for school presentation data.",2024-01-25
+6cd60e27-cf4f-4cf6-8cba-c70296f08837,"Demo Biology Section 427",Biology,cade3c1f-3599-4e78-a214-786c2bc74470,DCL0427,"Synthetic class generated for school presentation data.",2024-01-27
+a2488074-dd4a-4b98-8e07-564fb37e3c8d,"Demo Business Section 428",Business,ad7042a6-8c42-46b5-afab-4571698b8068,DCL0428,"Synthetic class generated for school presentation data.",2024-01-29
+05683e32-d701-4dc3-a34d-555fcb363243,"Demo Chemistry Section 429",Chemistry,5944e476-74dc-477f-8419-c6bf06b4fba7,DCL0429,"Synthetic class generated for school presentation data.",2024-01-31
+24031a7f-6d95-4dec-89a8-3688e9d7450a,"Demo Civil Engineering Section 430","Civil Engineering",e66f4855-da27-47c8-ac20-fd29fd4e2fd3,DCL0430,"Synthetic class generated for school presentation data.",2024-02-02
+8cff3ed8-fcef-4505-9e63-9af4febde0b7,"Demo Computer Science Section 431","Computer Science",6e419d3f-bbc2-4371-a8f6-1c6d7c84bb69,DCL0431,"Synthetic class generated for school presentation data.",2024-02-04
+3c8b31e1-dc41-4ec7-a7cc-e45688df5812,"Demo Economics Section 432",Economics,9c19fb11-49ab-4145-a91e-8aa190045db4,DCL0432,"Synthetic class generated for school presentation data.",2024-02-06
+934324d5-45b5-4b79-ac9b-1f6c4019a3c9,"Demo Engineering Section 433",Engineering,ea724c72-296d-4493-8276-a1ee2a1afa67,DCL0433,"Synthetic class generated for school presentation data.",2024-02-08
+c8a2f964-55e2-4c06-b452-06dfd4187843,"Demo History Section 434",History,3870fc30-faf8-4ab2-befc-279a5fe5b2d0,DCL0434,"Synthetic class generated for school presentation data.",2024-02-10
+8cca3a1d-604a-4b3f-ab98-a2eb133de278,"Demo Information Technology Section 435","Information Technology",973e2edf-744d-49b9-8c17-397705d37fcd,DCL0435,"Synthetic class generated for school presentation data.",2024-02-12
+80e6128a-80fb-4916-a0ea-a763747eee9c,"Demo Literature Section 436",Literature,2d66b9ec-a523-4964-845c-e718c0c4d0ef,DCL0436,"Synthetic class generated for school presentation data.",2024-02-14
+0595ca2f-5f7a-437f-94b0-b89ad7fd0c01,"Demo Marketing Section 437",Marketing,4a06b5c5-5ad6-4142-8499-6fa4e5a11be3,DCL0437,"Synthetic class generated for school presentation data.",2024-02-16
+de34083b-df41-4ff9-bc80-a25ad3a46258,"Demo Mathematics Section 438",Mathematics,1edaf433-5a46-4956-87ec-9f15ae8875a7,DCL0438,"Synthetic class generated for school presentation data.",2024-02-18
+54e50d1d-d6f2-4367-86f8-e06db73b7672,"Demo Mechanical Engineering Section 439","Mechanical Engineering",fd315d6e-9a46-439e-bda4-a9b64cefd6c7,DCL0439,"Synthetic class generated for school presentation data.",2024-02-20
+ea2c8cae-fd31-4ae8-a8be-1ee5a426ddb4,"Demo Physics Section 440",Physics,3b9e26c4-fb1e-43be-9e25-0acd6782913c,DCL0440,"Synthetic class generated for school presentation data.",2024-02-22
+eb53936e-9c52-4c85-8b71-1dae8fd74629,"Demo Political Science Section 441","Political Science",9d954dea-98d5-481a-a825-453d21fd39b7,DCL0441,"Synthetic class generated for school presentation data.",2024-02-24
+31c73a60-6b26-4098-90be-3aecfdbfcd2b,"Demo Psychology Section 442",Psychology,08de9a38-f9cc-42f5-99ec-215819e9a752,DCL0442,"Synthetic class generated for school presentation data.",2024-02-26
+d5821d5e-dc77-4102-81f0-465558826a06,"Demo Accounting Section 443",Accounting,f88f3a6f-1290-4bc0-9039-52e09f09fdfc,DCL0443,"Synthetic class generated for school presentation data.",2024-02-28
+e3a84c29-be77-4542-853f-d0f398574f51,"Demo Biology Section 444",Biology,38660daf-cf87-4e87-96cd-80913a6c0331,DCL0444,"Synthetic class generated for school presentation data.",2024-03-01
+3e5c04a9-4fe5-4550-8012-5fd839742286,"Demo Business Section 445",Business,f111957a-269e-41a5-b6a6-612b4f6854a6,DCL0445,"Synthetic class generated for school presentation data.",2024-03-03
+ad37664e-8130-45ce-8424-2c1772fd526d,"Demo Chemistry Section 446",Chemistry,46a9d39c-6475-460d-baab-8d0cffe974b7,DCL0446,"Synthetic class generated for school presentation data.",2024-03-05
+5dd137b8-9845-4253-92df-f92089266387,"Demo Civil Engineering Section 447","Civil Engineering",d080ce6a-7bfd-4c25-a41b-a5cf2bfbc45b,DCL0447,"Synthetic class generated for school presentation data.",2024-03-07
+b965b779-a971-49ed-9296-bfdc36a11aed,"Demo Computer Science Section 448","Computer Science",35620724-7027-4657-afeb-faab19252ac1,DCL0448,"Synthetic class generated for school presentation data.",2024-03-09
+6a5b06cd-4556-4631-ac25-f7f4d1a5f677,"Demo Economics Section 449",Economics,3b60c711-3063-4436-8727-96264c6ebe3a,DCL0449,"Synthetic class generated for school presentation data.",2024-03-11
+6e51fa1b-b047-4176-a023-ad31e9493735,"Demo Engineering Section 450",Engineering,751eab86-d334-4907-aa8b-88f316af07b8,DCL0450,"Synthetic class generated for school presentation data.",2024-03-13
+a080b360-e13d-4055-a076-45bb389d502a,"Demo History Section 451",History,a7812b90-c27c-4be7-8cd0-86c2c50df3cf,DCL0451,"Synthetic class generated for school presentation data.",2024-03-15
+d9e09adf-c630-4875-a439-21ea342676e2,"Demo Information Technology Section 452","Information Technology",2aff1150-859b-4f6e-a800-22d2d8b1a8c3,DCL0452,"Synthetic class generated for school presentation data.",2024-03-17
+e19b2468-3dcb-4f63-aab1-5dea8f45d310,"Demo Literature Section 453",Literature,b058d246-ffdf-4f13-97c3-659bf02cc108,DCL0453,"Synthetic class generated for school presentation data.",2024-03-19
+c628ea8c-9101-4f24-82d1-33c070fa90fd,"Demo Marketing Section 454",Marketing,905e14dd-eb3c-4414-83c7-0db3c1afa49d,DCL0454,"Synthetic class generated for school presentation data.",2024-03-21
+db3239ff-388b-498a-95c8-82b2e910e26b,"Demo Mathematics Section 455",Mathematics,218be404-c97c-4a8a-b741-5370d21455cc,DCL0455,"Synthetic class generated for school presentation data.",2024-03-23
+711f6188-e680-4bc9-a562-a8d906a9c542,"Demo Mechanical Engineering Section 456","Mechanical Engineering",bee88a37-fda5-4b6b-9ca4-f5ddefb8d2fa,DCL0456,"Synthetic class generated for school presentation data.",2024-03-25
+f46a1ea9-e82b-4c41-9341-476734a52913,"Demo Physics Section 457",Physics,d36886f3-10b2-4977-ab6b-2d9651e046e5,DCL0457,"Synthetic class generated for school presentation data.",2024-03-27
+c9875af5-edc4-4243-81c3-17245aef066c,"Demo Political Science Section 458","Political Science",3fc6922b-07a1-4552-98af-4b697aef77e6,DCL0458,"Synthetic class generated for school presentation data.",2024-03-29
+c2c4be7f-1ca5-4b3f-9656-4137e6aeaa8e,"Demo Psychology Section 459",Psychology,e137c7f9-d659-414c-9253-911155702bae,DCL0459,"Synthetic class generated for school presentation data.",2024-03-31
+4f2f7835-cb83-4365-ac4b-352c2318d288,"Demo Accounting Section 460",Accounting,04eb19a3-9791-44a0-b532-5b02036ed40d,DCL0460,"Synthetic class generated for school presentation data.",2024-04-02
+09aff214-6a6e-496e-a714-beba347c71cc,"Demo Biology Section 461",Biology,68a1123f-47ea-4ba8-9f4b-210c52d27fd0,DCL0461,"Synthetic class generated for school presentation data.",2024-04-04
+c1ffc31c-0637-4169-9710-a805a7bd0bbf,"Demo Business Section 462",Business,2cf90364-6aba-49bd-8167-e17368277eb7,DCL0462,"Synthetic class generated for school presentation data.",2024-04-06
+88750bd6-6432-454f-a54c-4f266b1fba85,"Demo Chemistry Section 463",Chemistry,96cab70f-d033-4fca-82c4-0e5395cb6186,DCL0463,"Synthetic class generated for school presentation data.",2024-04-08
+c58cb1b7-5f80-456c-a7ee-11add671cb14,"Demo Civil Engineering Section 464","Civil Engineering",94bfa81a-3404-4482-9ad5-42d4ad1eec3e,DCL0464,"Synthetic class generated for school presentation data.",2024-04-10
+ceefa6f6-41f9-467a-bba0-37b911f37a10,"Demo Computer Science Section 465","Computer Science",e581e94e-3090-4179-90c9-22d0088b66aa,DCL0465,"Synthetic class generated for school presentation data.",2024-04-12
+5a472439-81d8-483f-9514-689a31a89b07,"Demo Economics Section 466",Economics,2f356b8c-6c88-4551-b57c-4a818304e333,DCL0466,"Synthetic class generated for school presentation data.",2024-04-14
+723377ad-9944-4720-b43e-d334c29ad6c7,"Demo Engineering Section 467",Engineering,4e446244-efb3-4289-818d-dc402386feaa,DCL0467,"Synthetic class generated for school presentation data.",2024-04-16
+9ae82616-42aa-48e3-bd5e-5ef2d20cf43b,"Demo History Section 468",History,a4b3986e-97cd-4b57-8d92-dc6cdf1285d8,DCL0468,"Synthetic class generated for school presentation data.",2024-04-18
+13100644-b1df-4b4f-b80d-95d1068f34cf,"Demo Information Technology Section 469","Information Technology",78ebf395-c3ec-4ce3-961c-b8f21705216a,DCL0469,"Synthetic class generated for school presentation data.",2024-04-20
+5a5da467-a2e9-4089-ac10-45a51487ead6,"Demo Literature Section 470",Literature,500f75d9-917b-4ff8-b7ed-1c06de7179e8,DCL0470,"Synthetic class generated for school presentation data.",2024-04-22
+f034992c-0285-4a4a-a7b2-d34aa1e8359b,"Demo Marketing Section 471",Marketing,12e43907-caa4-4235-9299-4599f0c35cb0,DCL0471,"Synthetic class generated for school presentation data.",2024-04-24
+ebf95438-776f-4736-aa52-b6b745e229a0,"Demo Mathematics Section 472",Mathematics,079e2141-c634-4845-821e-ad9d549cca9a,DCL0472,"Synthetic class generated for school presentation data.",2024-04-26
+789f7145-63d9-402a-a39a-6d7eb66cd977,"Demo Mechanical Engineering Section 473","Mechanical Engineering",90e14fab-b408-49fc-a857-134499ca3146,DCL0473,"Synthetic class generated for school presentation data.",2024-04-28
+4cd5d264-f3bb-4d26-9c1b-782446919121,"Demo Physics Section 474",Physics,11ac14d8-9376-4ab8-983e-7e365648ed82,DCL0474,"Synthetic class generated for school presentation data.",2024-04-30
+9481fe18-9f6a-4c2d-9313-b36a2df49020,"Demo Political Science Section 475","Political Science",090595ca-9ee6-4225-9187-8de668b759bd,DCL0475,"Synthetic class generated for school presentation data.",2024-05-02
+09c08468-361e-4d5a-bb10-c0c7f022e9f4,"Demo Psychology Section 476",Psychology,15061739-fdae-4d1f-a5e7-bc66306e59ef,DCL0476,"Synthetic class generated for school presentation data.",2024-05-04
+88d75e61-9295-48e0-8402-5f992d036c61,"Demo Accounting Section 477",Accounting,8d7276f0-ef95-46ac-bdae-8e62a711336b,DCL0477,"Synthetic class generated for school presentation data.",2024-05-06
+d302fb55-f327-4a2b-88cd-fd6e57c9982c,"Demo Biology Section 478",Biology,6a5daf8c-78c0-4eac-b448-0db6be6b1889,DCL0478,"Synthetic class generated for school presentation data.",2024-05-08
+44c5fe8b-e715-4ddc-b0cd-c7a388b9aca6,"Demo Business Section 479",Business,dab9636f-31dc-49c5-8a61-3580b7f20fbf,DCL0479,"Synthetic class generated for school presentation data.",2024-05-10
+193e26e4-9312-47db-b890-2caa29a95c77,"Demo Chemistry Section 480",Chemistry,dcbc9c04-4d3b-410f-9169-f671de827bec,DCL0480,"Synthetic class generated for school presentation data.",2024-05-12
+35beb6a8-5ed0-44e3-a1bd-665916b4217f,"Demo Civil Engineering Section 481","Civil Engineering",8f288020-84b5-4ab5-8612-b2f41f937deb,DCL0481,"Synthetic class generated for school presentation data.",2024-05-14
+3de84971-e484-48b0-af11-19b54c5756d1,"Demo Computer Science Section 482","Computer Science",4c44ac16-d278-4934-bff0-08c3b436d005,DCL0482,"Synthetic class generated for school presentation data.",2024-05-16
+6ca75b60-07a2-447a-b1e0-f7587342d29b,"Demo Economics Section 483",Economics,72a68af1-ab6c-482c-8a93-b2f012cad691,DCL0483,"Synthetic class generated for school presentation data.",2024-05-18
+635b6bc5-5932-47d8-9316-da784614add4,"Demo Engineering Section 484",Engineering,9514dca2-e4aa-44df-82f0-4dd0ae4b90bc,DCL0484,"Synthetic class generated for school presentation data.",2024-05-20
+74c1fcbd-b0b3-4ea5-bfb0-1194960a0fab,"Demo History Section 485",History,c3368488-cb09-4ddd-834b-4cc70db0c6b6,DCL0485,"Synthetic class generated for school presentation data.",2024-05-22
+4db82157-8beb-4847-abf4-771944252493,"Demo Information Technology Section 486","Information Technology",dcdb19cf-4d62-4c9d-85ba-a52737d557a7,DCL0486,"Synthetic class generated for school presentation data.",2024-05-24
+d84916cf-be97-449e-a383-ad4e46c4c6e5,"Demo Literature Section 487",Literature,6502c8c8-7a6e-4419-aa03-a938712cac1c,DCL0487,"Synthetic class generated for school presentation data.",2024-05-26
+4dfce4f6-509b-4a5f-8b89-f691d3f4c5e5,"Demo Marketing Section 488",Marketing,53ed5075-5193-4f0f-8d9e-465de9b34160,DCL0488,"Synthetic class generated for school presentation data.",2024-05-28
+7a2d345f-0f59-4df1-8600-79ea4ef335b0,"Demo Mathematics Section 489",Mathematics,4bdec1f5-0761-4af7-84dd-be4f693d3e2e,DCL0489,"Synthetic class generated for school presentation data.",2024-05-30
+df362e8d-2466-46cb-bf5c-71ea1e5b0eb2,"Demo Mechanical Engineering Section 490","Mechanical Engineering",f568ee94-92d9-4047-8700-1fc1fec0fd11,DCL0490,"Synthetic class generated for school presentation data.",2024-06-01
+c8965bc8-17ba-47bb-9aef-ae3b2c927a7b,"Demo Physics Section 491",Physics,f911a8d8-6078-49b3-8a99-8a8751393da8,DCL0491,"Synthetic class generated for school presentation data.",2024-06-03
+bb164e86-25e2-4cda-85a1-afdf2d022bf3,"Demo Political Science Section 492","Political Science",6dd3edf1-e61c-4267-a00b-bc8a2fc9c8ba,DCL0492,"Synthetic class generated for school presentation data.",2024-06-05
+42369c19-105d-4324-af70-7ea0d2721695,"Demo Psychology Section 493",Psychology,cd235096-0ffc-4723-9877-22ad32c6ded7,DCL0493,"Synthetic class generated for school presentation data.",2024-06-07
+b876d852-e463-4e12-9955-eb2c9c303a7a,"Demo Accounting Section 494",Accounting,bc02c58d-adcb-4834-aacb-a75b04eadbdd,DCL0494,"Synthetic class generated for school presentation data.",2024-06-09
+6f23027d-bb56-499c-9cb6-a195a7cacab7,"Demo Biology Section 495",Biology,751f813b-8b92-411f-9156-9892bb693abd,DCL0495,"Synthetic class generated for school presentation data.",2024-06-11
+4a3f5aca-7c8d-4f9f-b532-136572ace477,"Demo Business Section 496",Business,7e2d729b-94f8-44a5-a0ba-880c1a1ce6fe,DCL0496,"Synthetic class generated for school presentation data.",2024-06-13
+2ccf93f2-0e60-475c-b2ca-0b0ad9cc0987,"Demo Chemistry Section 497",Chemistry,6a4d7026-8934-4020-9f80-71d62ef5bd7d,DCL0497,"Synthetic class generated for school presentation data.",2024-06-15
+40dad19b-334b-4c63-a980-9b4267ca94f4,"Demo Civil Engineering Section 498","Civil Engineering",e3342191-d2a3-4d70-9f17-536344f70536,DCL0498,"Synthetic class generated for school presentation data.",2024-06-17
+0200e78c-da1d-4cac-aa95-43cf7983fc85,"Demo Computer Science Section 499","Computer Science",a7f7deae-1544-486b-9df4-60693138e332,DCL0499,"Synthetic class generated for school presentation data.",2024-06-19
+e210766c-a314-467b-b9b2-27e5c92dad8c,"Demo Economics Section 500",Economics,dcb798b9-1fc3-4615-b000-2fe99bed8a85,DCL0500,"Synthetic class generated for school presentation data.",2024-06-21
+810441a8-a697-4919-bd2b-69a64c12f127,"Demo Engineering Section 501",Engineering,53ee9b85-78a8-4fdf-87c2-ced275cce37b,DCL0501,"Synthetic class generated for school presentation data.",2024-06-23
+0b880f20-7c4a-4db8-9c03-7ebc09006c91,"Demo History Section 502",History,76937f13-84b9-4516-9136-5caf862de22a,DCL0502,"Synthetic class generated for school presentation data.",2024-06-25
+d3a30927-8d3e-42d0-9056-1e8f51be31a8,"Demo Information Technology Section 503","Information Technology",4114b9a4-ea70-4059-9ebd-bd7bd64741ad,DCL0503,"Synthetic class generated for school presentation data.",2024-06-27
+235cfade-b779-4e73-bb62-37e47cd77d48,"Demo Literature Section 504",Literature,725afb4f-8349-425a-80fe-dc93344b36a9,DCL0504,"Synthetic class generated for school presentation data.",2024-06-29
+e5f36914-30e4-4256-bc06-3527c09b549c,"Demo Marketing Section 505",Marketing,9a52731e-504f-40cd-8f25-1c8aa910210a,DCL0505,"Synthetic class generated for school presentation data.",2024-07-01
+68bbf571-f5bb-4c33-8afb-79c423de75f0,"Demo Mathematics Section 506",Mathematics,bed9aba5-5a1a-46e8-bcb2-e9675f4aba4a,DCL0506,"Synthetic class generated for school presentation data.",2024-07-03
+c7f9c1f4-0809-4257-8531-c775a72bcdf6,"Demo Mechanical Engineering Section 507","Mechanical Engineering",5fde69ca-8e21-4f4c-9d08-907464cf2175,DCL0507,"Synthetic class generated for school presentation data.",2024-07-05
+f219fe8f-81e2-4fba-b4d5-67c22a0c65fb,"Demo Physics Section 508",Physics,9a82c4f2-465d-436d-a938-6099b3abff44,DCL0508,"Synthetic class generated for school presentation data.",2024-07-07
+6296839d-42f7-431d-b010-741cd48f4382,"Demo Political Science Section 509","Political Science",ddb38983-3f63-4242-a02d-e52204ad34fd,DCL0509,"Synthetic class generated for school presentation data.",2024-07-09
+8d4bda6c-e17f-4839-82dc-e3b7c0fb96ca,"Demo Psychology Section 510",Psychology,595e340f-7a37-4fca-855c-3bb967ac8e46,DCL0510,"Synthetic class generated for school presentation data.",2024-07-11
+39ec74bf-fbe5-46ff-a6af-503184280577,"Demo Accounting Section 511",Accounting,3ad5ae5d-6be2-426f-809f-1150ff08aaa7,DCL0511,"Synthetic class generated for school presentation data.",2024-07-13
+7223076a-de16-4806-85ff-ff9bc9a3f242,"Demo Biology Section 512",Biology,c0215cce-ee68-4f82-88de-936e54683e50,DCL0512,"Synthetic class generated for school presentation data.",2024-07-15
+03d4f430-fd10-442f-85ab-579bed17ae81,"Demo Business Section 513",Business,0c3076bc-d1a2-47f3-8ef1-8dcba12670ae,DCL0513,"Synthetic class generated for school presentation data.",2024-07-17
+ab045709-80bc-4f50-965b-7d0df66604eb,"Demo Chemistry Section 514",Chemistry,12583f2c-1cd4-4173-a3d2-c1a05252c056,DCL0514,"Synthetic class generated for school presentation data.",2024-07-19
+161f400f-25b2-4f29-bb03-7a34cc1f43ac,"Demo Civil Engineering Section 515","Civil Engineering",c2cf6647-9661-415d-b7c6-b88151d84eb3,DCL0515,"Synthetic class generated for school presentation data.",2024-07-21
+16418a79-cbf5-40d2-a060-154c2e6242ff,"Demo Computer Science Section 516","Computer Science",427a3c7e-a67b-4256-b95d-609f72186ad5,DCL0516,"Synthetic class generated for school presentation data.",2024-07-23
+897ee7c1-d8b3-4219-b8e4-d05067cba259,"Demo Economics Section 517",Economics,dff61441-3bd1-4936-92d8-6001635337b4,DCL0517,"Synthetic class generated for school presentation data.",2024-07-25
+196525e0-c576-41d3-8509-e7e2385a1828,"Demo Engineering Section 518",Engineering,0021a9b3-92fb-41a4-9a35-9c14ed5ea3b2,DCL0518,"Synthetic class generated for school presentation data.",2024-07-27
+11be79c6-d454-4bb0-869d-ee53309433f3,"Demo History Section 519",History,941f5d21-88b6-4edb-b45c-ded54d82672b,DCL0519,"Synthetic class generated for school presentation data.",2024-07-29
+bd77afaa-eb28-4a7a-b235-d5e406a161e5,"Demo Information Technology Section 520","Information Technology",cce8296d-910a-4fd5-aac2-3f4e9b8ff7b7,DCL0520,"Synthetic class generated for school presentation data.",2024-07-31
+a472b74d-8047-4680-a888-52d458a6de98,"Demo Literature Section 521",Literature,ad3dc058-0e38-4742-ba4e-fde6644e1edc,DCL0521,"Synthetic class generated for school presentation data.",2024-08-02
+7b201181-f5f9-4a7e-b258-da51f2c8becd,"Demo Marketing Section 522",Marketing,2e0896be-8667-48aa-8308-821127fb304d,DCL0522,"Synthetic class generated for school presentation data.",2024-08-04
+ff5e19e6-0cc1-400e-9bb6-98ab03fb26c5,"Demo Mathematics Section 523",Mathematics,3e56ec6f-ccc2-4265-926c-3aadeb5a89df,DCL0523,"Synthetic class generated for school presentation data.",2024-08-06
+0dd7a377-da37-4a33-84c3-29e28c58095f,"Demo Mechanical Engineering Section 524","Mechanical Engineering",2dd83db1-15b6-4e5d-b899-72b08fac0bdc,DCL0524,"Synthetic class generated for school presentation data.",2024-08-08
+ef214602-e335-48cc-8062-339fbea1f9e5,"Demo Physics Section 525",Physics,569e8a32-ac1e-4829-8b1b-6d2e12f5c690,DCL0525,"Synthetic class generated for school presentation data.",2024-08-10
+9c248525-b19e-4116-bb63-6dcc757fcd48,"Demo Political Science Section 526","Political Science",0bdd48dd-ef8d-4e5f-853a-1eb09c2f19af,DCL0526,"Synthetic class generated for school presentation data.",2024-08-12
+7405b050-c250-4625-8faa-848cabc32a73,"Demo Psychology Section 527",Psychology,9a3d6b1e-ea0d-41e9-afd7-e6e0f0428be4,DCL0527,"Synthetic class generated for school presentation data.",2024-08-14
+1fecbbdd-1dda-4070-99c8-29272cdab087,"Demo Accounting Section 528",Accounting,e5f35766-847a-430f-bbe9-16667362c149,DCL0528,"Synthetic class generated for school presentation data.",2024-08-16
+bc37ba99-d0d5-43ab-be32-65ec81158602,"Demo Biology Section 529",Biology,2b879564-3115-4a35-8757-cf6ada2dc75a,DCL0529,"Synthetic class generated for school presentation data.",2024-08-18
+2cc245fd-2a89-4197-b820-2895a8fe357a,"Demo Business Section 530",Business,b5a0d994-400c-4b85-bc77-eb176560f805,DCL0530,"Synthetic class generated for school presentation data.",2024-08-20
+3ebb990a-e76a-4f12-8a3a-47c8450cf4d1,"Demo Chemistry Section 531",Chemistry,797c4d35-87e6-476d-8bdc-3e3e71d0d039,DCL0531,"Synthetic class generated for school presentation data.",2024-08-22
+ef1cdb74-4776-47d1-950f-31b5b98777a4,"Demo Civil Engineering Section 532","Civil Engineering",2c170801-ef8e-47b0-9f75-cc955bb6d76a,DCL0532,"Synthetic class generated for school presentation data.",2024-08-24
+2a3e064f-842d-4cd6-9378-fc7e96e0d89d,"Demo Computer Science Section 533","Computer Science",6ccf1efe-33cc-4b16-83c9-ca1767b080fc,DCL0533,"Synthetic class generated for school presentation data.",2024-08-26
+e123f596-659f-4348-95d2-f66494cd5a78,"Demo Economics Section 534",Economics,17444177-c4ae-4f69-af57-a78b7eacae78,DCL0534,"Synthetic class generated for school presentation data.",2024-08-28
+a71e3a9e-9e38-4f2e-a614-cda4e7392ad2,"Demo Engineering Section 535",Engineering,f5b59b19-a850-4729-bd5e-fae48d817646,DCL0535,"Synthetic class generated for school presentation data.",2024-08-30
+60d7e4fd-51c6-41ed-a5de-a7fa5e88c6c6,"Demo History Section 536",History,cd8fb403-e1f5-4681-989b-d90c1fe1a3cd,DCL0536,"Synthetic class generated for school presentation data.",2024-09-01
+688584f0-51c0-490e-b252-bac51f087460,"Demo Information Technology Section 537","Information Technology",347dda36-f2fa-4603-b1a8-043465b89b6e,DCL0537,"Synthetic class generated for school presentation data.",2024-09-03
+ccbfac7e-2e82-44fb-9c09-3d0f17ee06f0,"Demo Literature Section 538",Literature,0f1452f5-72d6-4bd9-8454-8a4b1b33ff8b,DCL0538,"Synthetic class generated for school presentation data.",2024-09-05
+720b7015-32f4-40aa-9238-6bc31f622521,"Demo Marketing Section 539",Marketing,65730975-e87e-4afa-9c0f-a710ebb82f75,DCL0539,"Synthetic class generated for school presentation data.",2024-09-07
+026f96e0-fb73-48b1-832d-bbbd9b660b12,"Demo Mathematics Section 540",Mathematics,a1255d23-c722-4dae-9b2c-2d3b4633951c,DCL0540,"Synthetic class generated for school presentation data.",2024-09-09
+9a00e285-707a-4882-9a13-e094c04f09a1,"Demo Mechanical Engineering Section 541","Mechanical Engineering",09690f7f-aeb9-45d4-829d-fa314d5250be,DCL0541,"Synthetic class generated for school presentation data.",2024-09-11
+ed95cbae-20e5-4519-8653-7ae5cd4023ff,"Demo Physics Section 542",Physics,c2dbcc09-6f80-4947-8573-cebe548056b4,DCL0542,"Synthetic class generated for school presentation data.",2024-09-13
+8e6314f5-5df8-4b30-b8ae-d784839909fb,"Demo Political Science Section 543","Political Science",ebdcdb2d-f859-4b6b-80be-40f2db2f66a9,DCL0543,"Synthetic class generated for school presentation data.",2024-09-15
+763643eb-9edd-4916-a5b9-a739c1407a03,"Demo Psychology Section 544",Psychology,2544a02e-ddb3-4bda-8d9d-f04e1e23ce37,DCL0544,"Synthetic class generated for school presentation data.",2024-09-17
+965620c8-eca6-4e76-b390-c7bde5d2e614,"Demo Accounting Section 545",Accounting,3ad43095-bef9-40a8-8a94-f55d754dcf9b,DCL0545,"Synthetic class generated for school presentation data.",2024-09-19
+10272417-d1a7-490e-9e72-176f9c79d3dd,"Demo Biology Section 546",Biology,3be9e491-cd1e-4380-bdf7-88cbc198ef59,DCL0546,"Synthetic class generated for school presentation data.",2024-09-21
+427a66e5-fff9-4eed-b6a9-429773ebf477,"Demo Business Section 547",Business,4dfad93c-955c-4635-ba03-bbf6791e54d4,DCL0547,"Synthetic class generated for school presentation data.",2024-09-23
+89f62182-9cd2-401e-bdde-8aa0074724e9,"Demo Chemistry Section 548",Chemistry,0d1db276-f9a8-4629-b312-6ff5df54ef9c,DCL0548,"Synthetic class generated for school presentation data.",2024-09-25
+b6b63a23-556a-4b7c-b71b-9420c6a7dd2d,"Demo Civil Engineering Section 549","Civil Engineering",5b9d97b6-aa64-4032-8720-e4f5e2a560eb,DCL0549,"Synthetic class generated for school presentation data.",2024-09-27
+cd33092d-5705-4bde-979c-6f1484dcb56b,"Demo Computer Science Section 550","Computer Science",51d39c6a-614f-47e7-8fb9-0c7ce6dd0c78,DCL0550,"Synthetic class generated for school presentation data.",2024-09-29
+821c9812-8dbe-4635-8645-29368283346f,"Demo Economics Section 551",Economics,183cbf94-a817-4b82-a590-ea88d724dc3c,DCL0551,"Synthetic class generated for school presentation data.",2024-10-01
+3e7aa248-b5a2-47b8-b3cf-4df5de2d8170,"Demo Engineering Section 552",Engineering,4b0676a3-b2aa-4f45-96ef-86cb2ab5fd90,DCL0552,"Synthetic class generated for school presentation data.",2024-10-03
+857d61fc-1f08-4fab-b6e0-ebcda56cb9bd,"Demo History Section 553",History,fb5a45ec-e29d-4fe4-b9ec-fb67743aef7a,DCL0553,"Synthetic class generated for school presentation data.",2024-10-05
+44ee47f4-a1b0-47f0-a83e-ce9b8da3fcf7,"Demo Information Technology Section 554","Information Technology",0ab1085f-1aa9-42d0-a746-61d190693b91,DCL0554,"Synthetic class generated for school presentation data.",2024-10-07
+35e80598-e8f2-48cf-bcee-78a0a693021b,"Demo Literature Section 555",Literature,a09206e0-b8da-4645-b0ec-90557586827f,DCL0555,"Synthetic class generated for school presentation data.",2024-10-09
+bb2b9497-dc4c-431d-b4f6-7d59c4d340e6,"Demo Marketing Section 556",Marketing,73d372c3-fcd3-4a48-9e0a-a79ee3fecd38,DCL0556,"Synthetic class generated for school presentation data.",2024-10-11
+e0d4d2d1-ec8a-49c2-b6d1-cadb5597f97c,"Demo Mathematics Section 557",Mathematics,8ecb3da4-50ac-476e-82ec-9d4fe9a4e2e1,DCL0557,"Synthetic class generated for school presentation data.",2024-10-13
+af155156-d05d-479d-bba1-706732f288dc,"Demo Mechanical Engineering Section 558","Mechanical Engineering",55bcfff3-106f-48f2-b0b3-c4a74957523b,DCL0558,"Synthetic class generated for school presentation data.",2024-10-15
+206208b3-0778-4261-9263-18c8018f0570,"Demo Physics Section 559",Physics,31aa9f9b-c54b-4882-be4e-8b5630c608d2,DCL0559,"Synthetic class generated for school presentation data.",2024-10-17
+dc86cbdf-3311-4213-bd0a-2a4c4f07994c,"Demo Political Science Section 560","Political Science",94e67178-6c77-4cfa-8385-ee7ff2b9d325,DCL0560,"Synthetic class generated for school presentation data.",2024-10-19
+ede9c76e-1790-4bbf-b53e-7ae334df1c9f,"Demo Psychology Section 561",Psychology,53e696a1-b9ac-4196-af8e-1a1044ef6f8b,DCL0561,"Synthetic class generated for school presentation data.",2024-10-21
+674cd24d-23f4-4a4b-957c-779d66fa0544,"Demo Accounting Section 562",Accounting,4a8e7ccc-4b78-4ad0-8917-844a7326b39d,DCL0562,"Synthetic class generated for school presentation data.",2024-10-23
+604abcdb-492e-40b9-96f4-4461088a0751,"Demo Biology Section 563",Biology,4e4ebefe-275b-4f08-8064-d6b7f15d11e8,DCL0563,"Synthetic class generated for school presentation data.",2024-10-25
+a1682f15-2f7c-475d-a11a-2ce2f062215e,"Demo Business Section 564",Business,6d8d84d7-6fb7-42af-baea-88ee82229f08,DCL0564,"Synthetic class generated for school presentation data.",2024-10-27
+833934f9-eca9-4576-8350-a6aa33b6e1c5,"Demo Chemistry Section 565",Chemistry,4fa32b46-1c11-471f-8b21-812cf541f9a1,DCL0565,"Synthetic class generated for school presentation data.",2024-10-29
+95c136d6-f565-4024-a143-648509d73c85,"Demo Civil Engineering Section 566","Civil Engineering",5d2b547f-e20f-4989-8818-66a7e6dd8489,DCL0566,"Synthetic class generated for school presentation data.",2024-10-31
+7a65ee1d-6bd1-4efc-8fb6-81597eb837d7,"Demo Computer Science Section 567","Computer Science",8ed3ee58-8bcc-4a99-b5fc-8a0d6c648b0f,DCL0567,"Synthetic class generated for school presentation data.",2024-11-02
+ac6edb0b-cce6-45d9-ae1d-241b6d77477e,"Demo Economics Section 568",Economics,90d73e1d-c093-409f-bce2-18d12b42ad23,DCL0568,"Synthetic class generated for school presentation data.",2024-11-04
+3a3ffafb-182e-4d95-9c20-cf92a9ff783b,"Demo Engineering Section 569",Engineering,9b2119a4-5389-4f7d-8d2c-9fd7b7606ca8,DCL0569,"Synthetic class generated for school presentation data.",2024-11-06
+cfe46b85-2047-4acd-8075-c7cdddb6eb84,"Demo History Section 570",History,cc0fe545-82f3-4eb7-af5f-740b035c367a,DCL0570,"Synthetic class generated for school presentation data.",2024-11-08
+8bb2b9a0-272a-40ba-8e16-8566420d5cae,"Demo Information Technology Section 571","Information Technology",a49a668f-fdf1-4a73-9af4-5b1b56372a99,DCL0571,"Synthetic class generated for school presentation data.",2024-11-10
+f599abc6-adde-491d-8b04-ebaa2a7fcdbb,"Demo Literature Section 572",Literature,2d8524a5-2de8-4344-95ce-d7f5f68a040f,DCL0572,"Synthetic class generated for school presentation data.",2024-11-12
+d31c2a05-add6-4587-b63c-767303dd1eb8,"Demo Marketing Section 573",Marketing,f6d30483-8c23-4e44-98d0-1ee1c77ff1a8,DCL0573,"Synthetic class generated for school presentation data.",2024-11-14
+551e153f-bd15-4953-89ba-a6bada012a0d,"Demo Mathematics Section 574",Mathematics,dcfca71b-23f4-4769-a866-b17f525dc0f6,DCL0574,"Synthetic class generated for school presentation data.",2024-11-16
+b662abd3-e337-43e2-a589-5d42a8892764,"Demo Mechanical Engineering Section 575","Mechanical Engineering",161d9cc3-0f0d-4dc9-88e8-04cf69b15dea,DCL0575,"Synthetic class generated for school presentation data.",2024-11-18
+64100a24-0e9e-4fe8-ad10-1763270dd554,"Demo Physics Section 576",Physics,fc2b0198-3d14-4822-b40e-06d82096b019,DCL0576,"Synthetic class generated for school presentation data.",2024-11-20
+a98447ab-97d8-48d0-9781-b72ca033ea4e,"Demo Political Science Section 577","Political Science",6aa2b22b-9610-4ab4-82c1-613a3d349604,DCL0577,"Synthetic class generated for school presentation data.",2024-11-22
+12448170-e221-47df-b2d0-0c3a7b7f20e1,"Demo Psychology Section 578",Psychology,a381c363-e75b-4df8-a2fe-2105446f57d2,DCL0578,"Synthetic class generated for school presentation data.",2024-11-24
+ceeee924-2a3e-4875-a08f-293fe6147cc6,"Demo Accounting Section 579",Accounting,c21a0e9c-65e4-4d91-b6b7-518fc7b7aa2b,DCL0579,"Synthetic class generated for school presentation data.",2024-11-26
+49a5bdf5-76b2-4b56-a2c6-808bbd368e42,"Demo Biology Section 580",Biology,dd332f6c-212d-4251-a39c-a1e71c8f5647,DCL0580,"Synthetic class generated for school presentation data.",2024-11-28
+ad294d84-480b-4b39-8721-777f0b9182f4,"Demo Business Section 581",Business,55b17f99-d7b6-4f18-a481-7e82d4a826bf,DCL0581,"Synthetic class generated for school presentation data.",2024-11-30
+07f5d9c2-cb2b-4337-800c-12b0aaa06b62,"Demo Chemistry Section 582",Chemistry,672dbf2c-ad30-4a6e-8aed-2deeb3a8a22e,DCL0582,"Synthetic class generated for school presentation data.",2024-12-02
+f3c8b5a7-79ac-4b53-b75a-28d99a8e7183,"Demo Civil Engineering Section 583","Civil Engineering",42385714-b965-4369-85a0-ad64b530e9a9,DCL0583,"Synthetic class generated for school presentation data.",2024-12-04
+714180f4-3efb-4dc3-8850-0f41683db5ec,"Demo Computer Science Section 584","Computer Science",65ec61cb-9d95-4235-a654-144820223436,DCL0584,"Synthetic class generated for school presentation data.",2024-12-06
+cc60fa99-da1a-4ce3-95be-ab44748d7c08,"Demo Economics Section 585",Economics,9503489c-9bd4-4e9e-83fd-e07db9ecb856,DCL0585,"Synthetic class generated for school presentation data.",2024-12-08
+d1802672-02d7-4975-b490-5f116b1d6c0d,"Demo Engineering Section 586",Engineering,8e5e0202-7710-4472-b207-9cdc798ae11a,DCL0586,"Synthetic class generated for school presentation data.",2024-12-10
+6824f549-2742-40ea-a17e-482b9e13bac3,"Demo History Section 587",History,3b933421-d6d3-412c-b34c-22dd43a6b36f,DCL0587,"Synthetic class generated for school presentation data.",2024-12-12
+72190bb5-b838-45e6-909d-a92fcaa6fb58,"Demo Information Technology Section 588","Information Technology",369d3256-9d40-4b6e-9a4b-b6a0a7bbeeab,DCL0588,"Synthetic class generated for school presentation data.",2024-12-14
+309b5dea-f6a7-49ec-8663-85f11a64091c,"Demo Literature Section 589",Literature,e126e67e-57e1-4bd9-85a2-d18f7b3721c8,DCL0589,"Synthetic class generated for school presentation data.",2024-12-16
+007b2892-d1b3-4499-8cb0-d75ef9550433,"Demo Marketing Section 590",Marketing,54f2921b-a759-470e-9c88-398eebdb8238,DCL0590,"Synthetic class generated for school presentation data.",2024-12-18
+c60dd107-492c-4fcd-b369-2bb11c2287ee,"Demo Mathematics Section 591",Mathematics,96e76648-9b6a-4d14-9c8d-856f5b5b4c5f,DCL0591,"Synthetic class generated for school presentation data.",2024-12-20
+3eeadd93-65ce-4e40-85c0-874d5d87651a,"Demo Mechanical Engineering Section 592","Mechanical Engineering",ed8ac532-b91b-4b7b-8c5f-706a6d62235e,DCL0592,"Synthetic class generated for school presentation data.",2024-12-22
+de8d7836-69fe-4114-8300-69ce14e8cf51,"Demo Physics Section 593",Physics,5162c77a-649a-46bc-ad9e-cf6ff87b1b56,DCL0593,"Synthetic class generated for school presentation data.",2024-12-24
+b5a90f47-f775-44cd-b6ad-957a89f9183b,"Demo Political Science Section 594","Political Science",4a45ac63-2959-4b29-b5c4-07a92fd91bbd,DCL0594,"Synthetic class generated for school presentation data.",2024-12-26
+ad188ffb-3807-420c-9b9b-150c8c0db8c6,"Demo Psychology Section 595",Psychology,8a0894db-3a75-43b7-a6ef-15c200881dfa,DCL0595,"Synthetic class generated for school presentation data.",2024-12-28
+e217512b-47a5-4b4b-afc7-c76dd35bcdba,"Demo Accounting Section 596",Accounting,33614686-49b4-4c74-a23d-145b0cff55f9,DCL0596,"Synthetic class generated for school presentation data.",2024-12-30
+462eda94-b0d7-42cf-9b28-c41495f0257e,"Demo Biology Section 597",Biology,a02e8ce9-4d19-4204-8423-b3afe4bb4c63,DCL0597,"Synthetic class generated for school presentation data.",2025-01-01
+20129e8d-3db7-4baa-b9c0-4cd46dd94d3f,"Demo Business Section 598",Business,6a278e92-7b18-440f-a938-636c09654cd2,DCL0598,"Synthetic class generated for school presentation data.",2025-01-03
+d518d71b-2528-46f1-8deb-c38237a0f5e5,"Demo Chemistry Section 599",Chemistry,db82f339-6d97-49cc-b1b1-e209d7f6a050,DCL0599,"Synthetic class generated for school presentation data.",2025-01-05
+8a5d324e-2b75-4acf-b790-31e4caca344b,"Demo Civil Engineering Section 600","Civil Engineering",51bab3d0-763b-4466-a912-63bb584ac491,DCL0600,"Synthetic class generated for school presentation data.",2025-01-07
+0357bd9a-f538-4268-a380-3e9017ca0d24,"Demo Computer Science Section 601","Computer Science",efcb5013-ec1a-4d8a-b503-ab456ac4fc96,DCL0601,"Synthetic class generated for school presentation data.",2025-01-09
+c389526a-0043-47d1-a7e8-41d7806cfb7a,"Demo Economics Section 602",Economics,5e9ab033-8547-4818-9606-a09a14d2d719,DCL0602,"Synthetic class generated for school presentation data.",2025-01-11
+5539b2f4-2e22-45d2-a065-72559caa84d4,"Demo Engineering Section 603",Engineering,fd820e26-8eac-4248-b035-5ebc513b7c28,DCL0603,"Synthetic class generated for school presentation data.",2025-01-13
+18c2b6d3-ff52-42e7-9153-cb16d2731606,"Demo History Section 604",History,0515e3b6-684e-4a01-a5ed-9de598397686,DCL0604,"Synthetic class generated for school presentation data.",2025-01-15
+ed66af2f-83a9-43ed-a323-fd080c83f5bf,"Demo Information Technology Section 605","Information Technology",4f38eb27-09d5-47db-ab4a-c1e61b45d67e,DCL0605,"Synthetic class generated for school presentation data.",2025-01-17
+1b390645-2630-418a-a597-7a2469478f33,"Demo Literature Section 606",Literature,b4803004-e688-4d21-af35-0ffb1dae4cc7,DCL0606,"Synthetic class generated for school presentation data.",2025-01-19
+1a9baa9b-969c-4a79-b488-7b5f0e88cad0,"Demo Marketing Section 607",Marketing,12c8c528-4187-4585-8c66-a61a5df06867,DCL0607,"Synthetic class generated for school presentation data.",2025-01-21
+e4960182-fdcb-4f54-bcb7-9cbb1e59f825,"Demo Mathematics Section 608",Mathematics,0c1d5815-990f-4795-89f4-4b3fcd16a9a5,DCL0608,"Synthetic class generated for school presentation data.",2025-01-23
+64eaaf68-a6ea-4624-9858-08954adbdb86,"Demo Mechanical Engineering Section 609","Mechanical Engineering",c28fd9d0-3caf-4381-829e-f93728a6cf41,DCL0609,"Synthetic class generated for school presentation data.",2025-01-25
+519586ee-7d61-43e8-89f1-7027434b27e7,"Demo Physics Section 610",Physics,5037e047-f338-4ba0-9e4b-586f7b21c1d9,DCL0610,"Synthetic class generated for school presentation data.",2025-01-27
+4ff3ace3-d2c7-4203-a3cc-b4c40727322b,"Demo Political Science Section 611","Political Science",1ca2154a-7361-4c19-8e5c-cd27a87e9b35,DCL0611,"Synthetic class generated for school presentation data.",2025-01-29
+8c8e4773-8ce1-460c-a092-6b230ebfb385,"Demo Psychology Section 612",Psychology,38f0fc7d-8e5e-4aa7-b128-3530d91542e9,DCL0612,"Synthetic class generated for school presentation data.",2025-01-31
+704fc42c-3a6e-42e7-8b60-2704f2510e24,"Demo Accounting Section 613",Accounting,db3c4169-baa3-47b0-be3d-60de44543cea,DCL0613,"Synthetic class generated for school presentation data.",2025-02-02
+0b86f7bd-b368-413f-9683-1fa82f6bd66b,"Demo Biology Section 614",Biology,dfd59182-fe80-4886-a06f-646ead1f3369,DCL0614,"Synthetic class generated for school presentation data.",2025-02-04
+70bc34b8-52cc-4555-a573-29b23e7ee3c7,"Demo Business Section 615",Business,375b8d52-e4ce-4821-b98a-9625e376f160,DCL0615,"Synthetic class generated for school presentation data.",2025-02-06
+016350ee-46e5-414f-afe2-115178c39d46,"Demo Chemistry Section 616",Chemistry,7499a243-c2bc-4f0d-bdb9-fb203a0b8544,DCL0616,"Synthetic class generated for school presentation data.",2025-02-08
+8178d969-a136-4312-9f84-4cc11f055f82,"Demo Civil Engineering Section 617","Civil Engineering",40bcbc8c-ef6a-47b3-b414-b0f8d072f76c,DCL0617,"Synthetic class generated for school presentation data.",2025-02-10
+b9cd67cf-b567-4f24-acb4-a67e8f5c14f0,"Demo Computer Science Section 618","Computer Science",7e11aee1-a5d6-4766-af8a-e2d6788ca91d,DCL0618,"Synthetic class generated for school presentation data.",2025-02-12
+1b2f60c0-04a7-4e53-acab-eb60dd0e3f92,"Demo Economics Section 619",Economics,1f203b71-96a9-48d9-8380-45cc4d47e2b9,DCL0619,"Synthetic class generated for school presentation data.",2025-02-14
+b3221595-0236-41c1-a869-36dd6f5c033d,"Demo Engineering Section 620",Engineering,743072ec-5eac-4c51-8c21-abf0278959b3,DCL0620,"Synthetic class generated for school presentation data.",2025-02-16
+98d36038-73d0-4118-bf0c-4db7279a7244,"Demo History Section 621",History,530ab287-107c-4c3f-bd73-29f6b130a9b6,DCL0621,"Synthetic class generated for school presentation data.",2025-02-18
+16bc6202-bae5-4ec9-8769-4a52f0c89563,"Demo Information Technology Section 622","Information Technology",702b9e5c-3c42-4d60-bdfa-0e563be25a63,DCL0622,"Synthetic class generated for school presentation data.",2025-02-20
+ea797c5d-cb9c-4ed6-a032-13d92023473f,"Demo Literature Section 623",Literature,43901fd2-8b27-4816-a68a-846b62aa03fd,DCL0623,"Synthetic class generated for school presentation data.",2025-02-22
+cf99be52-2bfc-4071-a740-ae8a47dfb4fd,"Demo Marketing Section 624",Marketing,b479a952-07c1-42a0-9eb4-e360a05999b3,DCL0624,"Synthetic class generated for school presentation data.",2025-02-24
+dbe06a17-1b9d-4013-bac5-8331b7b36afb,"Demo Mathematics Section 625",Mathematics,25a054ca-87cd-456e-820c-f67bf7623ed2,DCL0625,"Synthetic class generated for school presentation data.",2025-02-26
+39f96157-981c-4b03-a3d0-bd53e25b2c6c,"Demo Mechanical Engineering Section 626","Mechanical Engineering",ef13514a-1d4c-4982-9d39-4381e46325b0,DCL0626,"Synthetic class generated for school presentation data.",2025-02-28
+504f574a-7ee6-470b-8187-4ff68b8786fa,"Demo Physics Section 627",Physics,23e4143f-a256-4d1e-b21c-e4011046897e,DCL0627,"Synthetic class generated for school presentation data.",2025-03-02
+2b5db7b4-883a-4ded-8d6a-296bc3f5bc32,"Demo Political Science Section 628","Political Science",94446038-d6bf-48e4-a490-cf6b9e7c3c24,DCL0628,"Synthetic class generated for school presentation data.",2025-03-04
+c101d0c8-8636-4866-b6f2-d7c9ed62e169,"Demo Psychology Section 629",Psychology,2289fc83-5cb6-438a-8845-44291aba29fb,DCL0629,"Synthetic class generated for school presentation data.",2025-03-06
+7855985d-ff3d-4671-8e6c-bbedf0ef5702,"Demo Accounting Section 630",Accounting,b8f65cf2-f32e-463a-b3d0-cf77c7192942,DCL0630,"Synthetic class generated for school presentation data.",2025-03-08
+96485ab8-636a-4be4-8272-e5e91e97f80c,"Demo Biology Section 631",Biology,a4ab0229-2fd2-40cd-ad1f-05e8c3e6c724,DCL0631,"Synthetic class generated for school presentation data.",2024-01-15
+c6326766-1fe9-4e14-84fc-88635354589e,"Demo Business Section 632",Business,520933ec-cefd-4423-a597-541666749112,DCL0632,"Synthetic class generated for school presentation data.",2024-01-17
+464fe1e0-d941-4edf-9df4-8adf5b199077,"Demo Chemistry Section 633",Chemistry,7ecfb952-ab6d-45f7-8030-c34a0e2c7e5b,DCL0633,"Synthetic class generated for school presentation data.",2024-01-19
+0e5a1f0c-1ca0-4797-859f-cee414444a73,"Demo Civil Engineering Section 634","Civil Engineering",6a9a5cad-acf4-443e-b5cb-2434a5ed91b1,DCL0634,"Synthetic class generated for school presentation data.",2024-01-21
+f13462eb-07a2-45d4-8423-007eed16f068,"Demo Computer Science Section 635","Computer Science",a1a6f6c9-fb22-4840-b427-63c20ee9928b,DCL0635,"Synthetic class generated for school presentation data.",2024-01-23
+96bae99d-5d90-445c-b8e7-15e1871e5d12,"Demo Economics Section 636",Economics,e7626e85-a876-41e8-9167-abc500916dd9,DCL0636,"Synthetic class generated for school presentation data.",2024-01-25
+b6531b92-b0ec-4814-861b-a4d92e65a854,"Demo Engineering Section 637",Engineering,ce1b2a9d-c195-4d5b-b7b0-20e55a4f0d57,DCL0637,"Synthetic class generated for school presentation data.",2024-01-27
+035a398c-c5fe-43b2-9c52-937d057b168f,"Demo History Section 638",History,5bb3cca4-2db7-4c37-9757-7bf6dabfffda,DCL0638,"Synthetic class generated for school presentation data.",2024-01-29
+6172d746-028c-47ec-a498-a87d7ccef170,"Demo Information Technology Section 639","Information Technology",5ea3f6b9-2565-44ac-afe5-c8e5d3140342,DCL0639,"Synthetic class generated for school presentation data.",2024-01-31
+971437e7-a143-4f7c-858c-8dcc227864ba,"Demo Literature Section 640",Literature,56f50aa5-6d6c-4c55-b62b-147aa026b89f,DCL0640,"Synthetic class generated for school presentation data.",2024-02-02
+b484dbea-a7dc-4c35-9604-ea5e06089f56,"Demo Marketing Section 641",Marketing,a355670b-89cb-4338-ae84-178d49ed93d9,DCL0641,"Synthetic class generated for school presentation data.",2024-02-04
+bfea0413-2f65-47ec-9f8f-dc30ba22868c,"Demo Mathematics Section 642",Mathematics,c421f561-8140-40bf-8e7f-82c634cf3b28,DCL0642,"Synthetic class generated for school presentation data.",2024-02-06
+ee3ae7f6-e915-471a-9f05-26216281f441,"Demo Mechanical Engineering Section 643","Mechanical Engineering",0d2e585b-527b-4d7c-a018-3d7baf12970a,DCL0643,"Synthetic class generated for school presentation data.",2024-02-08
+31175710-c7d3-4f68-9644-e801994eb240,"Demo Physics Section 644",Physics,a7f9f20e-4a45-48a5-9aa3-6906fbb68cb4,DCL0644,"Synthetic class generated for school presentation data.",2024-02-10
+74b29b45-9cbe-42ed-8fb2-57566143523e,"Demo Political Science Section 645","Political Science",8917ad74-0baa-43cf-b240-8e714edd9eee,DCL0645,"Synthetic class generated for school presentation data.",2024-02-12
+435e4014-c142-4949-908d-aedd6032d01d,"Demo Psychology Section 646",Psychology,9fb4b353-1300-4f6c-a9de-9dac96162ee7,DCL0646,"Synthetic class generated for school presentation data.",2024-02-14
+e7b6a00a-15fe-4c10-9c69-d4f06136b31d,"Demo Accounting Section 647",Accounting,fa48ac08-81c2-499e-a0bd-fb5df2ff5983,DCL0647,"Synthetic class generated for school presentation data.",2024-02-16
+984437ce-3fb1-4b10-a54f-157d853e1309,"Demo Biology Section 648",Biology,e691767b-73b2-43bc-8caa-5dcbeded347f,DCL0648,"Synthetic class generated for school presentation data.",2024-02-18
+85808f6b-2892-40e1-9a2d-18b6862cc8a1,"Demo Business Section 649",Business,05c8512d-6bdf-418e-bb51-80719e880b94,DCL0649,"Synthetic class generated for school presentation data.",2024-02-20
+87a2d69f-a134-4c4f-ac0d-547a22be8766,"Demo Chemistry Section 650",Chemistry,e0ebec5b-3aa1-48dd-b6ff-78e64d97e0e5,DCL0650,"Synthetic class generated for school presentation data.",2024-02-22
+630e78e6-73b0-4acf-9ce1-dcf7eb154a0b,"Demo Civil Engineering Section 651","Civil Engineering",2edc2cff-473a-4de1-8d30-402fd6788156,DCL0651,"Synthetic class generated for school presentation data.",2024-02-24
+c80853f5-7d27-4531-bd06-113ccead664d,"Demo Computer Science Section 652","Computer Science",e11c53cc-0b81-4890-a543-fddb62e53492,DCL0652,"Synthetic class generated for school presentation data.",2024-02-26
+2dad9723-4ac9-4b53-b1d4-6b7ed7b35d54,"Demo Economics Section 653",Economics,2a884b97-78ac-42e0-a386-e10692bf93f2,DCL0653,"Synthetic class generated for school presentation data.",2024-02-28
+f24b5776-c6ee-4ad8-acbb-af07cf4f08b1,"Demo Engineering Section 654",Engineering,58138e7c-279b-4d97-8f96-dd4a05275d65,DCL0654,"Synthetic class generated for school presentation data.",2024-03-01
+262adb13-3afa-4bf5-9d3e-493a8ae2eff4,"Demo History Section 655",History,2eb21222-98bd-4f79-bd79-f0ac44b646b2,DCL0655,"Synthetic class generated for school presentation data.",2024-03-03
+cfb7c631-5e02-4ee9-ba48-79a27251f1ed,"Demo Information Technology Section 656","Information Technology",b7618f78-9a96-4677-a628-c81be5ad485b,DCL0656,"Synthetic class generated for school presentation data.",2024-03-05
+959a1bc7-e078-45e6-9a4a-b97f56815566,"Demo Literature Section 657",Literature,d899bf6e-5e7c-47f6-b3a0-38b3ed0c8dce,DCL0657,"Synthetic class generated for school presentation data.",2024-03-07
+1af41536-a29a-4e79-a549-0b33bda394d0,"Demo Marketing Section 658",Marketing,3b5d2e12-d586-4bf8-b807-57229960c702,DCL0658,"Synthetic class generated for school presentation data.",2024-03-09
+64988fcf-b705-471d-80cf-ad8304fc373e,"Demo Mathematics Section 659",Mathematics,6b101554-c3d2-470d-a860-6660fdbe98c3,DCL0659,"Synthetic class generated for school presentation data.",2024-03-11
+a9563421-18fc-4960-bcff-3e264a15978b,"Demo Mechanical Engineering Section 660","Mechanical Engineering",d2c79a71-12b1-447a-a6ab-420759419642,DCL0660,"Synthetic class generated for school presentation data.",2024-03-13
+02ee1931-5345-4855-b47a-ba094f3f8a90,"Demo Physics Section 661",Physics,3d6bfd49-ff71-4dcd-b3d0-1d026d87a6fb,DCL0661,"Synthetic class generated for school presentation data.",2024-03-15
+2a07a2a4-6ece-473c-a3b4-041beae71b1a,"Demo Political Science Section 662","Political Science",67366b5f-d737-4df2-849e-ae874cd0a868,DCL0662,"Synthetic class generated for school presentation data.",2024-03-17
+fd726b05-88e8-44ca-af6e-e3a5c3587248,"Demo Psychology Section 663",Psychology,ab903c3f-4c0f-4c0b-8921-8f6906abc2b1,DCL0663,"Synthetic class generated for school presentation data.",2024-03-19
+dc7a6533-2927-413e-91ff-18bb0b237312,"Demo Accounting Section 664",Accounting,184cc64f-51f5-491d-9cf5-5dea362afe5c,DCL0664,"Synthetic class generated for school presentation data.",2024-03-21
+e6676053-f29c-4111-bb3e-eea66086d7b6,"Demo Biology Section 665",Biology,9c6ecf6b-c718-4d74-9216-c3defba87a9a,DCL0665,"Synthetic class generated for school presentation data.",2024-03-23
+c8c439a0-9fec-4e27-bf2f-813b09130788,"Demo Business Section 666",Business,8db00d53-6754-4b28-97c6-e6ca8fc9b45a,DCL0666,"Synthetic class generated for school presentation data.",2024-03-25
+afea9ae1-8ab1-4f1e-a744-a4136e56d323,"Demo Chemistry Section 667",Chemistry,712e15fe-4f51-44fd-be96-9fea6da4cfff,DCL0667,"Synthetic class generated for school presentation data.",2024-03-27
+9d04ab28-f555-4b95-9a96-2949ce1d4874,"Demo Civil Engineering Section 668","Civil Engineering",016124eb-000c-48d6-bcb5-e9fe09efe246,DCL0668,"Synthetic class generated for school presentation data.",2024-03-29
+7acb34a0-d49b-4c64-8bf5-6e325d1969b6,"Demo Computer Science Section 669","Computer Science",02a93bfc-53de-4cce-ad38-6dd8de8c7bee,DCL0669,"Synthetic class generated for school presentation data.",2024-03-31
+544f499d-c160-4f62-83d7-0a5a6f2cae4c,"Demo Economics Section 670",Economics,dc7fc7e1-e785-4ac9-b055-a3185a59a49b,DCL0670,"Synthetic class generated for school presentation data.",2024-04-02
+109affef-5b8e-4c0d-942d-743f7e7800b0,"Demo Engineering Section 671",Engineering,55bac8b8-b7ef-4c0e-a25b-6ff0250fd7a4,DCL0671,"Synthetic class generated for school presentation data.",2024-04-04
+d123c03d-4ebb-40cf-a8a7-1003d92411b4,"Demo History Section 672",History,04fb7ed1-f2ce-41a0-af7c-9f32d226ac87,DCL0672,"Synthetic class generated for school presentation data.",2024-04-06
+3b70461b-af99-4209-a8ab-b601fd52a956,"Demo Information Technology Section 673","Information Technology",539f181f-65a3-415c-9d1b-38e84ed086eb,DCL0673,"Synthetic class generated for school presentation data.",2024-04-08
+02778960-d4dd-4b41-adc0-84cd835aee88,"Demo Literature Section 674",Literature,b343edf3-8075-4d89-a622-8458191e80a2,DCL0674,"Synthetic class generated for school presentation data.",2024-04-10
+cb3fe76e-1092-4b94-b292-caaa70a096af,"Demo Marketing Section 675",Marketing,4e89db8c-2988-4372-9e18-922801c06560,DCL0675,"Synthetic class generated for school presentation data.",2024-04-12
+28ebe885-cd29-4b15-8def-74d01822c672,"Demo Mathematics Section 676",Mathematics,08efa16f-ba9a-4424-b812-e896f7b90401,DCL0676,"Synthetic class generated for school presentation data.",2024-04-14
+f952fc65-e13d-4dbd-80ff-e7245c43537c,"Demo Mechanical Engineering Section 677","Mechanical Engineering",e273ce94-ab3a-4a31-aa3a-db81cbaac4cc,DCL0677,"Synthetic class generated for school presentation data.",2024-04-16
+e842c903-c998-4fb6-940f-a3e75914e302,"Demo Physics Section 678",Physics,d887c3df-1a31-4bb6-80e3-c36d64b5b684,DCL0678,"Synthetic class generated for school presentation data.",2024-04-18
+67e45f6c-458d-4342-b810-7c37255a61c4,"Demo Political Science Section 679","Political Science",39f8dfda-98ee-40c9-9331-37557c3c6dc1,DCL0679,"Synthetic class generated for school presentation data.",2024-04-20
+8a5c8a4d-9e21-4daa-97cb-e1c509a11fc4,"Demo Psychology Section 680",Psychology,7653f27f-d10e-4cd4-aaab-bef12f65fdaf,DCL0680,"Synthetic class generated for school presentation data.",2024-04-22
+df7d0fd7-efbe-4aa5-9408-c45d3fc2ec44,"Demo Accounting Section 681",Accounting,b9f6bb55-9d61-4f51-9bc3-0be891901933,DCL0681,"Synthetic class generated for school presentation data.",2024-04-24
+7c938abb-2e45-4dcd-a089-0ec1c82f3b0e,"Demo Biology Section 682",Biology,3abd2c48-c877-4ab6-9ae2-fa1ef0aa68ba,DCL0682,"Synthetic class generated for school presentation data.",2024-04-26
+fe08e82e-54b3-487d-9c12-f8256756f4fa,"Demo Business Section 683",Business,22fc3f4e-02e3-4dde-8b7f-8a188d3b0e52,DCL0683,"Synthetic class generated for school presentation data.",2024-04-28
+a13dd27b-9d8e-4a69-aee1-63ea96e42bb4,"Demo Chemistry Section 684",Chemistry,7b9d88d2-e672-47a0-9500-88cee25125f4,DCL0684,"Synthetic class generated for school presentation data.",2024-04-30
+daf24b56-bbe8-494b-9863-25f7b293cc3b,"Demo Civil Engineering Section 685","Civil Engineering",5d2cdd26-4547-415b-85dc-29b42d576507,DCL0685,"Synthetic class generated for school presentation data.",2024-05-02
+28355550-12b1-41cf-892c-7d3269c10e63,"Demo Computer Science Section 686","Computer Science",569101b3-9551-48a3-a033-eee2e6a4b910,DCL0686,"Synthetic class generated for school presentation data.",2024-05-04
+fca97656-81d4-4ded-813b-792d49b94705,"Demo Economics Section 687",Economics,c95d0988-b545-4fed-bd6b-7bdee448a47b,DCL0687,"Synthetic class generated for school presentation data.",2024-05-06
+2537a0c7-115c-45df-8d72-591757780e9b,"Demo Engineering Section 688",Engineering,dec8614e-5f89-4751-af57-42f9d8566518,DCL0688,"Synthetic class generated for school presentation data.",2024-05-08
+e45a4b4a-c8c9-4c6f-b941-96baa078d01c,"Demo History Section 689",History,1971694f-0b22-479a-8805-61eb39f96bc5,DCL0689,"Synthetic class generated for school presentation data.",2024-05-10
+7e0d84f3-c34f-404f-afaa-1f1ce136cdd3,"Demo Information Technology Section 690","Information Technology",f3dc32d0-20cf-4770-8c48-ad66268e99f2,DCL0690,"Synthetic class generated for school presentation data.",2024-05-12
+3bd436c4-c785-4fab-8b94-3e82215d0b30,"Demo Literature Section 691",Literature,f7008cfa-fa78-4ce2-8733-8a96b5d1005b,DCL0691,"Synthetic class generated for school presentation data.",2024-05-14
+5965b25c-8384-4cf3-bedc-f6b6253f325a,"Demo Marketing Section 692",Marketing,8690727d-d8b8-4ab2-9e0b-31d6aa2657c6,DCL0692,"Synthetic class generated for school presentation data.",2024-05-16
+5047964c-b5b0-41f9-94be-ea06a21ba413,"Demo Mathematics Section 693",Mathematics,369fd30b-4d8a-4531-be36-e9651e39a6d3,DCL0693,"Synthetic class generated for school presentation data.",2024-05-18
+cdc5f305-d360-479a-b261-d9faa50430f1,"Demo Mechanical Engineering Section 694","Mechanical Engineering",7ddf9799-3bc6-47b5-afe8-bbf04f58fcef,DCL0694,"Synthetic class generated for school presentation data.",2024-05-20
+21a7fa60-68dd-4de0-8cd6-a5e83e544c3c,"Demo Physics Section 695",Physics,a7b84cf7-5000-4128-9097-b046c3d7bb5d,DCL0695,"Synthetic class generated for school presentation data.",2024-05-22
+01ce3c23-621d-4a98-ad1a-cec9622c3948,"Demo Political Science Section 696","Political Science",05929a13-479b-4448-9bc2-f59faf19a350,DCL0696,"Synthetic class generated for school presentation data.",2024-05-24
+961478ef-4ccc-4053-b363-61b9f1cabf15,"Demo Psychology Section 697",Psychology,3114c192-a7b8-41a4-89bc-eefda21e82df,DCL0697,"Synthetic class generated for school presentation data.",2024-05-26
+05990127-4e3b-43ca-9fb8-e5f38c245df1,"Demo Accounting Section 698",Accounting,b0fecb7c-6fe4-45bb-9c6e-ff5b04828bad,DCL0698,"Synthetic class generated for school presentation data.",2024-05-28
+6a04263b-3e68-4880-97bc-6577aebf1a14,"Demo Biology Section 699",Biology,4ac27712-3309-4978-b27a-f9cdae1dd592,DCL0699,"Synthetic class generated for school presentation data.",2024-05-30
+71910def-047a-4e1f-9841-40a3041647b9,"Demo Business Section 700",Business,495726c0-b09c-463d-8893-4e8db325ec56,DCL0700,"Synthetic class generated for school presentation data.",2024-06-01

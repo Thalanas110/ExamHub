@@ -58,6 +58,7 @@ CREATE PROCEDURE sp_data_for_user(
     IN p_user_id CHAR(36)
 )
 BEGIN
+    SET SESSION group_concat_max_len = 16777216;
     IF p_role = 'admin' THEN
         SELECT
             u.id, u.name, u.email, u.role,
@@ -97,17 +98,21 @@ BEGIN
             c.teacher_id AS teacherId,
             c.code, c.description,
             DATE_FORMAT(c.created_at, '%Y-%m-%d') AS createdAt,
-            COALESCE(
-                (
-                    SELECT JSON_ARRAYAGG(ordered.student_id)
-                    FROM (
-                        SELECT cs.student_id
+            CONCAT(
+                '[',
+                COALESCE(
+                    (
+                        SELECT GROUP_CONCAT(
+                            JSON_QUOTE(cs.student_id)
+                            ORDER BY cs.joined_ts, cs.student_id
+                            SEPARATOR ','
+                        )
                         FROM class_students cs
                         WHERE cs.class_id = c.id
-                        ORDER BY cs.joined_ts, cs.student_id
-                    ) AS ordered
+                    ),
+                    ''
                 ),
-                JSON_ARRAY()
+                ']'
             ) AS studentIds
         FROM classes c
         ORDER BY c.created_ts DESC;
@@ -176,17 +181,21 @@ BEGIN
             c.teacher_id AS teacherId,
             c.code, c.description,
             DATE_FORMAT(c.created_at, '%Y-%m-%d') AS createdAt,
-            COALESCE(
-                (
-                    SELECT JSON_ARRAYAGG(ordered.student_id)
-                    FROM (
-                        SELECT cs.student_id
+            CONCAT(
+                '[',
+                COALESCE(
+                    (
+                        SELECT GROUP_CONCAT(
+                            JSON_QUOTE(cs.student_id)
+                            ORDER BY cs.joined_ts, cs.student_id
+                            SEPARATOR ','
+                        )
                         FROM class_students cs
                         WHERE cs.class_id = c.id
-                        ORDER BY cs.joined_ts, cs.student_id
-                    ) AS ordered
+                    ),
+                    ''
                 ),
-                JSON_ARRAY()
+                ']'
             ) AS studentIds
         FROM classes c
         WHERE c.teacher_id = p_user_id
@@ -274,17 +283,21 @@ BEGIN
             c.teacher_id AS teacherId,
             c.code, c.description,
             DATE_FORMAT(c.created_at, '%Y-%m-%d') AS createdAt,
-            COALESCE(
-                (
-                    SELECT JSON_ARRAYAGG(ordered.student_id)
-                    FROM (
-                        SELECT cs.student_id
+            CONCAT(
+                '[',
+                COALESCE(
+                    (
+                        SELECT GROUP_CONCAT(
+                            JSON_QUOTE(cs.student_id)
+                            ORDER BY cs.joined_ts, cs.student_id
+                            SEPARATOR ','
+                        )
                         FROM class_students cs
                         WHERE cs.class_id = c.id
-                        ORDER BY cs.joined_ts, cs.student_id
-                    ) AS ordered
+                    ),
+                    ''
                 ),
-                JSON_ARRAY()
+                ']'
             ) AS studentIds
         FROM classes c
         WHERE EXISTS (

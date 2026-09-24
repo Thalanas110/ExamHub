@@ -8,7 +8,7 @@ import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 export function TeacherDashboard() {
-  const { currentUser, classes, exams, submissions, getUserById } = useApp();
+  const { currentUser, classes, exams, submissions, summary, getUserById } = useApp();
   const navigate = useNavigate();
 
   if (!currentUser) return null;
@@ -19,6 +19,10 @@ export function TeacherDashboard() {
   const allSubs = submissions.filter(s => myExamIds.has(s.examId));
   const pendingGrades = allSubs.filter(s => s.status === 'submitted').length;
   const totalStudents = new Set(myClasses.flatMap(c => c.studentIds)).size;
+  const dashboardClasses = summary?.classes.total ?? myClasses.length;
+  const dashboardStudents = summary?.users.students ?? totalStudents;
+  const dashboardExams = summary?.exams.total ?? myExams.length;
+  const dashboardPending = summary?.submissions.pending ?? pendingGrades;
 
   const classChartData = myClasses.map(cls => {
     const classExams = myExams.filter(e => e.classId === cls.id);
@@ -45,11 +49,11 @@ export function TeacherDashboard() {
       </div>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <StatCard title="My Classes" value={myClasses.length} icon={Users} />
-        <StatCard title="Total Students" value={totalStudents} icon={Users} />
-        <StatCard title="My Exams" value={myExams.length} icon={FileText} />
-        <StatCard title="Pending Grades" value={pendingGrades} icon={Clock}
-          subtitle={pendingGrades > 0 ? 'Needs attention' : 'All caught up'} />
+        <StatCard title="My Classes" value={dashboardClasses} icon={Users} />
+        <StatCard title="Total Students" value={dashboardStudents} icon={Users} />
+        <StatCard title="My Exams" value={dashboardExams} icon={FileText} />
+        <StatCard title="Pending Grades" value={dashboardPending} icon={Clock}
+          subtitle={dashboardPending > 0 ? 'Needs attention' : 'All caught up'} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">

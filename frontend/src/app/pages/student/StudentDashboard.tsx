@@ -8,7 +8,7 @@ import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 export function StudentDashboard() {
-  const { currentUser, classes, exams, getSubmissionsByStudent, getStudentSubmission } = useApp();
+  const { currentUser, classes, exams, summary, getSubmissionsByStudent, getStudentSubmission } = useApp();
   const navigate = useNavigate();
 
   if (!currentUser) return null;
@@ -22,6 +22,10 @@ export function StudentDashboard() {
 
   const availableExams = myExams.filter(e => e.status === 'published' && !getStudentSubmission(e.id, currentUser.id));
   const completedExams = myExams.filter(e => getStudentSubmission(e.id, currentUser.id));
+  const dashboardClasses = summary?.classes.total ?? myClasses.length;
+  const dashboardAvailableExams = summary?.exams.published ?? availableExams.length;
+  const dashboardCompletedExams = summary?.submissions.total ?? completedExams.length;
+  const dashboardAvgScore = summary?.submissions.averageScore ?? avgScore;
 
   const chartData = gradedSubs.slice(-6).map(s => {
     const exam = myExams.find(e => e.id === s.examId);
@@ -44,10 +48,10 @@ export function StudentDashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <StatCard title="Enrolled Classes" value={myClasses.length} icon={Users} />
-        <StatCard title="Available Exams" value={availableExams.length} icon={BookOpen} />
-        <StatCard title="Completed" value={completedExams.length} icon={CheckCircle} />
-        <StatCard title="Average Score" value={avgScore > 0 ? `${avgScore}%` : '—'} icon={TrendingUp} />
+        <StatCard title="Enrolled Classes" value={dashboardClasses} icon={Users} />
+        <StatCard title="Available Exams" value={dashboardAvailableExams} icon={BookOpen} />
+        <StatCard title="Completed" value={dashboardCompletedExams} icon={CheckCircle} />
+        <StatCard title="Average Score" value={dashboardAvgScore > 0 ? `${dashboardAvgScore}%` : '—'} icon={TrendingUp} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

@@ -25,6 +25,50 @@ final class RoutineGateway
     }
 
     /**
+     * Execute a multi-rowset routine while mapping rows as they are fetched.
+     * This avoids retaining the complete raw database payload and its mapped
+     * copy at the same time for large read responses.
+     *
+     * @param array<int, mixed> $params
+     * @param array<int, callable(array<string, mixed>): array<string, mixed>> $rowsetMappers
+     * @return array<int, array<int, array<string, mixed>>>
+     */
+    public function callMultiMapped(string $procedure, array $params, array $rowsetMappers): array
+    {
+        if (!preg_match('/^[a-zA-Z0-9_]+$/', $procedure)) {
+            throw new RuntimeException('Invalid procedure name.');
+        }
+
+        $placeholders = implode(', ', array_fill(0, count($params), '?'));
+        $sql = sprintf('CALL %s(%s)', $procedure, $placeholders);
+
+        $stmt = $this->pdo->prepare($sql);
+        foreach (array_values($params) as $index => $value) {
+            $stmt->bindValue($index + 1, $value);
+        }
+
+        $stmt->execute();
+
+        $results = [];
+        $rowsetIndex = 0;
+        do {
+            $mapper = $rowsetMappers[$rowsetIndex] ?? null;
+            $rows = [];
+
+            while (($row = $stmt->fetch(PDO::FETCH_ASSOC)) !== false) {
+                $rows[] = $mapper === null ? $row : $mapper($row);
+            }
+
+            $results[] = $rows;
+            $rowsetIndex++;
+        } while ($stmt->nextRowset());
+
+        $stmt->closeCursor();
+
+        return $results;
+    }
+
+    /**
      * @param array<int, mixed> $params
      * @return array<int, array<int, array<string, mixed>>>
      */

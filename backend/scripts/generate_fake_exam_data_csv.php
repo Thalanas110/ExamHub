@@ -92,6 +92,10 @@ function main(array $argv): void
 
     $subjects = collectSubjectPool($teachers, $students);
     $baseCreatedDate = new DateTimeImmutable('2024-01-15');
+    // Violation events are operational logs and must remain inside the default
+    // 90-day retention window so the local presentation seed is visible.
+    $violationReferenceDate = new DateTimeImmutable('today', new DateTimeZone('UTC'))
+        ->modify('-30 days');
 
     foreach ($teachers as $teacherIndex => $teacher) {
         $classId = deterministicUuid('fake-class-' . $teacher['id']);
@@ -185,7 +189,9 @@ function main(array $argv): void
 
                 for ($eventNo = 1; $eventNo <= $eventCount; $eventNo++) {
                     $violationType = VIOLATION_TYPES[($examGlobalIndex + $pairIndex + $eventNo) % count(VIOLATION_TYPES)];
-                    $occurredAt = $startAt->modify('+' . (($pairIndex * 4) + ($eventNo * 3)) . ' minutes');
+                    $occurredAt = $violationReferenceDate
+                        ->modify('+' . (($examGlobalIndex + $pairIndex) % 25) . ' days')
+                        ->setTime(10 + ($pairIndex % 7), ($eventNo * 7) % 60, 0);
                     $examViolations[] = [
                         'exam_id' => $examId,
                         'student_id' => $studentId,
@@ -419,14 +425,14 @@ function readUsersCsv(string $csvPath): array
     }
 
     try {
-        $header = fgetcsv($handle);
+        $header = fgetcsv($handle, 0, ',', '"', '\\');
         if ($header === false) {
             throw new RuntimeException('Users CSV is empty: ' . $csvPath);
         }
         $header = normalizeHeader($header);
 
         $rows = [];
-        while (($row = fgetcsv($handle)) !== false) {
+        while (($row = fgetcsv($handle, 0, ',', '"', '\\')) !== false) {
             if (isBlankRow($row)) {
                 continue;
             }
@@ -894,13 +900,13 @@ function writeCsv(string $path, array $header, array $rows): void
     }
 
     try {
-        fputcsv($handle, $header);
+        fputcsv($handle, $header, ',', '"', '\\');
         foreach ($rows as $row) {
             $line = [];
             foreach ($header as $column) {
                 $line[] = $row[$column] ?? '';
             }
-            fputcsv($handle, $line);
+            fputcsv($handle, $line, ',', '"', '\\');
         }
     } finally {
         fclose($handle);

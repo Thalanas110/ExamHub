@@ -134,7 +134,7 @@ function main(array $argv): void
     }
 
     $header = ['id', 'name', 'email', 'role', 'password', 'department', 'phone', 'bio', 'joined_at'];
-    fputcsv($handle, $header);
+    fputcsv($handle, $header, ',', '"', '\\');
 
     $rowCount = 0;
 
@@ -149,7 +149,7 @@ function main(array $argv): void
         'Presentation-only administrator account.',
         deterministicJoinDate(1),
     ];
-    fputcsv($handle, $adminRow);
+    fputcsv($handle, $adminRow, ',', '"', '\\');
     $rowCount++;
 
     for ($index = 1; $index <= $teacherCount; $index++) {
@@ -166,7 +166,7 @@ function main(array $argv): void
             'Synthetic professor profile for presentation demos.',
             deterministicJoinDate($index + 1000),
         ];
-        fputcsv($handle, $row);
+        fputcsv($handle, $row, ',', '"', '\\');
         $rowCount++;
     }
 
@@ -184,7 +184,7 @@ function main(array $argv): void
             'Synthetic student profile for presentation demos.',
             deterministicJoinDate($index + 5000),
         ];
-        fputcsv($handle, $row);
+        fputcsv($handle, $row, ',', '"', '\\');
         $rowCount++;
     }
 

@@ -1,6 +1,6 @@
 const envPhpBaseUrl = (import.meta.env.VITE_PHP_BASE_URL as string | undefined)?.trim();
 
-const FRONTEND_DEV_PORTS = new Set(['3000', '4173', '5173', '8080']);
+const FRONTEND_DEV_PORTS = new Set(['9000']);
 
 function stripTrailingSlashes(value: string): string {
   return value.replace(/\/+$/, '');

@@ -11,6 +11,7 @@ final class DataRoutes
 {
     public static function register(Router $router, DataController $controller): void
     {
+        $router->add('GET', '/data/summary', static fn (Request $request, array $params, ?array $authUser): array => $controller->getSummary($authUser ?? []), true);
         $router->add('GET', '/data/all', static fn (Request $request, array $params, ?array $authUser): array => $controller->getAllData($authUser ?? []), true);
         $router->add('POST', '/data/reseed', static fn (Request $request, array $params, ?array $authUser): array => $controller->reseedData($request), true, ['admin']);
     }

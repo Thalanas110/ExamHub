@@ -54,11 +54,11 @@ foreach (['sp_data_for_user', 'sp_submission_question_metrics_get_for_user', 'p_
     }
 }
 
-if (str_contains($migration, 'GROUP_CONCAT')) {
-    throw new RuntimeException('The optimized data read path must not reintroduce GROUP_CONCAT aggregation.');
+if (str_contains($migration, 'JSON_ARRAYAGG') || !str_contains($migration, 'SET SESSION group_concat_max_len')) {
+    throw new RuntimeException('The optimized data read path must use the MariaDB-compatible bounded JSON aggregation.');
 }
 
-if (!str_contains($dataService, "callMulti('sp_data_for_user'")) {
+if (!str_contains($dataService, "callMultiMapped(") || !str_contains($dataService, "'sp_data_for_user'")) {
     throw new RuntimeException('DataService must call the scoped data routine.');
 }
 

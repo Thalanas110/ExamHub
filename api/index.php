@@ -10,7 +10,6 @@ use App\Shared\Database\RoutineGateway;
 use App\Shared\Http\CorsPolicy;
 use App\Shared\Http\Request;
 use App\Shared\Http\Response;
-use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
 
@@ -18,45 +17,6 @@ require_once __DIR__ . '/../backend/bootstrap/autoload.php';
 
 $env = new Env(__DIR__ . '/../backend/.env');
 $config = AppConfig::fromEnv($env);
-$transportCrypto = new AesGcmCrypto($config->encryptionKey);
-
-$requestHeaders = function_exists('getallheaders') ? getallheaders() : [];
-if (!is_array($requestHeaders)) {
-    $requestHeaders = [];
-}
-if ($requestHeaders === []) {
-    foreach ($_SERVER as $key => $value) {
-        if (!str_starts_with((string) $key, 'HTTP_')) {
-            continue;
-        }
-
-        $headerName = str_replace('_', '-', strtolower(substr((string) $key, 5)));
-        $requestHeaders[$headerName] = (string) $value;
-    }
-}
-
-$normalizedRequestHeaders = [];
-foreach ($requestHeaders as $key => $value) {
-    $normalizedRequestHeaders[strtolower((string) $key)] = (string) $value;
-}
-
-$usePlaintextTransport = false;
-if ($config->transportAllowPlaintextRequests) {
-    $transportMode = strtolower(trim((string) ($normalizedRequestHeaders['x-transport-mode'] ?? '')));
-    $providedBypassKey = trim((string) ($normalizedRequestHeaders['x-transport-bypass-key'] ?? ''));
-    $expectedBypassKey = (string) ($config->transportPlaintextBypassKey ?? '');
-
-    if (
-        $transportMode === 'plain'
-        && $expectedBypassKey !== ''
-        && hash_equals($expectedBypassKey, $providedBypassKey)
-    ) {
-        $usePlaintextTransport = true;
-    }
-}
-
-$responseTransportCrypto = $usePlaintextTransport ? null : $transportCrypto;
-
 $corsAllowed = CorsPolicy::apply($config);
 
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') {
@@ -65,7 +25,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'OPTIONS') {
 }
 
 if (!$corsAllowed) {
-    Response::json(['error' => 'Origin not allowed by CORS policy.'], 403, $responseTransportCrypto);
+    Response::json(['error' => 'Origin not allowed by CORS policy.'], 403);
     exit;
 }
 
@@ -80,7 +40,7 @@ try {
 
     $scriptName = str_replace('\\', '/', (string) ($_SERVER['SCRIPT_NAME'] ?? ''));
     $basePath = rtrim(str_replace('/index.php', '', $scriptName), '/');
-    $request = Request::fromGlobals($basePath === '' ? '/api' : $basePath, $responseTransportCrypto);
+    $request = Request::fromGlobals($basePath === '' ? '/api' : $basePath);
     $requestId = Helpers::uuidV4();
     header('X-Request-Id: ' . $requestId);
     $startedAt = microtime(true);
@@ -145,9 +105,9 @@ try {
         actorRole: is_array($authUser) && isset($authUser['role']) ? (string) $authUser['role'] : null,
     );
 
-    Response::json($result['data'], $result['status'], $responseTransportCrypto);
+    Response::json($result['data'], $result['status']);
 } catch (ApiException $apiException) {
-    Response::json(['error' => $apiException->getMessage()], $apiException->status, $responseTransportCrypto);
+    Response::json(['error' => $apiException->getMessage()], $apiException->status);
 } catch (Throwable $throwable) {
-    Response::json(['error' => 'Backend bootstrap failed.'], 500, $responseTransportCrypto);
+    Response::json(['error' => 'Backend bootstrap failed.'], 500);
 }

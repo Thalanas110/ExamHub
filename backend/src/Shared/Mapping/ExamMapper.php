@@ -7,6 +7,7 @@ namespace App\Shared\Mapping;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
+use App\Shared\Support\ValueNormalizer;
 
 final class ExamMapper
 {

@@ -8,7 +8,7 @@ import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
 export function AdminDashboard() {
-  const { users, exams, submissions, classes, getUserById } = useApp();
+  const { users, exams, submissions, classes, summary, getUserById } = useApp();
   const navigate = useNavigate();
 
   const students = users.filter(u => u.role === 'student');
@@ -25,17 +25,27 @@ export function AdminDashboard() {
     ? Math.round(gradedSubs.reduce((sum, s) => sum + (s.percentage || 0), 0) / gradedSubs.length)
     : 0;
 
+  const totalUsers = summary?.users.total ?? users.length;
+  const totalStudents = summary?.users.students ?? students.length;
+  const totalTeachers = summary?.users.teachers ?? teachers.length;
+  const totalExams = summary?.exams.total ?? exams.length;
+  const publishedExams = summary?.exams.published ?? exams.filter(e => e.status === 'published').length;
+  const totalSubmissions = summary?.submissions.total ?? submissions.length;
+  const pendingSubmissions = summary?.submissions.pending ?? submissions.filter(s => s.status === 'submitted').length;
+  const dashboardPassRate = summary?.submissions.passRate ?? passRate;
+  const dashboardAvgScore = summary?.submissions.averageScore ?? avgScore;
+
   const userDistData = [
-    { name: 'Students', value: students.length },
-    { name: 'Teachers', value: teachers.length },
-    { name: 'Admins', value: users.filter(u => u.role === 'admin').length },
+    { name: 'Students', value: summary?.users.students ?? students.length },
+    { name: 'Teachers', value: summary?.users.teachers ?? teachers.length },
+    { name: 'Admins', value: summary?.users.admins ?? users.filter(u => u.role === 'admin').length },
   ];
   const PIE_COLORS = ['#111827', '#6B7280', '#D1D5DB'];
 
   const examStatusData = [
-    { name: 'Draft', count: exams.filter(e => e.status === 'draft').length },
-    { name: 'Published', count: exams.filter(e => e.status === 'published').length },
-    { name: 'Completed', count: exams.filter(e => e.status === 'completed').length },
+    { name: 'Draft', count: summary?.exams.draft ?? exams.filter(e => e.status === 'draft').length },
+    { name: 'Published', count: summary?.exams.published ?? exams.filter(e => e.status === 'published').length },
+    { name: 'Completed', count: summary?.exams.completed ?? exams.filter(e => e.status === 'completed').length },
   ];
 
   const classSizes = classes.map(c => c.studentIds.length);
@@ -62,8 +72,9 @@ export function AdminDashboard() {
       count: classSizes.filter(size => size >= 31).length,
     },
   ];
-  const emptyClasses = classSizeDistribution[0].count;
-  const populatedClasses = classes.length - emptyClasses;
+  const emptyClasses = summary?.classes.empty ?? classSizeDistribution[0].count;
+  const populatedClasses = summary?.classes.populated ?? classes.length - emptyClasses;
+  const totalClasses = summary?.classes.total ?? classes.length;
 
   const recentSubs = submissions.slice().reverse();
 
@@ -76,14 +87,14 @@ export function AdminDashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <StatCard title="Total Users" value={users.length} icon={Users}
-          subtitle={`${students.length} students | ${teachers.length} teachers`} />
-        <StatCard title="Total Exams" value={exams.length} icon={FileText}
-          subtitle={`${exams.filter(e => e.status === 'published').length} published`} />
-        <StatCard title="Submissions" value={submissions.length} icon={Clipboard}
-          subtitle={`${submissions.filter(s => s.status === 'submitted').length} pending`} />
-        <StatCard title="Pass Rate" value={`${passRate}%`} icon={TrendingUp}
-          subtitle={`Avg score: ${avgScore}%`} />
+        <StatCard title="Total Users" value={totalUsers} icon={Users}
+          subtitle={`${totalStudents} students | ${totalTeachers} teachers`} />
+        <StatCard title="Total Exams" value={totalExams} icon={FileText}
+          subtitle={`${publishedExams} published`} />
+        <StatCard title="Submissions" value={totalSubmissions} icon={Clipboard}
+          subtitle={`${pendingSubmissions} pending`} />
+        <StatCard title="Pass Rate" value={`${dashboardPassRate}%`} icon={TrendingUp}
+          subtitle={`Avg score: ${dashboardAvgScore}%`} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
@@ -133,7 +144,7 @@ export function AdminDashboard() {
           </ResponsiveContainer>
           <div className="mt-3 grid grid-cols-3 gap-2">
             <div className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-2 text-center">
-              <div className="text-sm font-semibold text-gray-900">{classes.length}</div>
+              <div className="text-sm font-semibold text-gray-900">{totalClasses}</div>
               <div className="text-[11px] text-gray-500">Total classes</div>
             </div>
             <div className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-2 text-center">

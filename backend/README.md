@@ -71,6 +71,13 @@ Decryption is centralized in `App\Services\Support\ExamMapper` before JSON is re
 - Invalid keys fail fast during bootstrap
 - The key is loaded from configuration, not hardcoded in controllers or services
 
+### HTTP Transport Security
+
+The browser API uses ordinary JSON over HTTPS. `APP_ENCRYPTION_KEY` is a backend-only
+storage-encryption key and must never be copied into a frontend `VITE_*` variable or
+browser JavaScript bundle. Configure TLS at the web server or hosting provider and
+restrict `CORS_ALLOWED_ORIGINS` to the deployed frontend origins.
+
 ## Database Files
 
 - App base schema and routines: `backend/database/app_001_schema_routines.sql`
@@ -80,6 +87,7 @@ Decryption is centralized in `App\Services\Support\ExamMapper` before JSON is re
 - App submission attempts migration: `backend/database/app_005_migrate_enable_submission_attempts.sql`
 - App class aggregation migration: `backend/database/app_006_migrate_fix_class_student_json_aggregation.sql`
 - App read-path optimization migration: `backend/database/app_007_migrate_optimize_read_paths.sql`
+- App dashboard summary migration: `backend/database/app_008_migrate_add_data_summary.sql`
 - Logs schema and routines: `backend/database/logs_001_logging_routines.sql`
 - Logs exam violations migration: `backend/database/logs_002_migrate_add_exam_violations.sql`
 - Logs violation cases migration: `backend/database/logs_003_migrate_add_violation_cases.sql`
@@ -100,6 +108,7 @@ Decryption is centralized in `App\Services\Support\ExamMapper` before JSON is re
    - `app_005_migrate_enable_submission_attempts.sql`
    - `app_006_migrate_fix_class_student_json_aggregation.sql`
    - `app_007_migrate_optimize_read_paths.sql`
+   - `app_008_migrate_add_data_summary.sql`
    - `logs_001_logging_routines.sql`
    - `logs_002_migrate_add_exam_violations.sql`
    - `logs_003_migrate_add_violation_cases.sql`

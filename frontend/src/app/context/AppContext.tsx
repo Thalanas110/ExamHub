@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, useMemo, useRef, type ReactNode } from 'react';
 import type { Class, Exam, Submission, User } from '../data/types';
+import type { DataSummary } from '../services/data.service';
 import {
   getClassById,
   getExamById,
@@ -25,6 +26,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [classes, setClasses] = useState<Class[]>([]);
   const [exams, setExams] = useState<Exam[]>([]);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
+  const [summary, setSummary] = useState<DataSummary | null>(null);
 
   const setters = useMemo(() => ({
     setCurrentUser,
@@ -33,6 +35,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setClasses,
     setExams,
     setSubmissions,
+    setSummary,
   }), []);
 
   useEffect(() => {
@@ -80,6 +83,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     classes,
     exams,
     submissions,
+    summary,
     addUser: userDomain.addUser,
     updateUser: userDomain.updateUser,
     deleteUser: userDomain.deleteUser,

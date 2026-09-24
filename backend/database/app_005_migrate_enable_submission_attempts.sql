@@ -33,7 +33,7 @@ SET @add_new_submission_unique := (
         AND table_name = 'submissions'
         AND index_name = 'uq_submissions_exam_student_attempt'
     ),
-    'SELECT 1',
+    'DO 0',
     'ALTER TABLE submissions ADD UNIQUE KEY uq_submissions_exam_student_attempt (exam_id, student_id, attempt_no)'
   )
 );
@@ -51,7 +51,7 @@ SET @drop_old_submission_unique := (
         AND index_name = 'uq_submissions_exam_student'
     ),
     'ALTER TABLE submissions DROP INDEX uq_submissions_exam_student',
-    'SELECT 1'
+    'DO 0'
   )
 );
 PREPARE stmt FROM @drop_old_submission_unique;
@@ -67,7 +67,7 @@ SET @add_submission_status_index := (
         AND table_name = 'submissions'
         AND index_name = 'idx_submissions_exam_student_status'
     ),
-    'SELECT 1',
+    'DO 0',
     'ALTER TABLE submissions ADD KEY idx_submissions_exam_student_status (exam_id, student_id, status)'
   )
 );

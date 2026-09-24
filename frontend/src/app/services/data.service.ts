@@ -10,7 +10,36 @@ export interface AllData {
   submissions: ResultResponse[];
 }
 
+export interface DataSummary {
+  role: string;
+  users: {
+    total: number;
+    students: number;
+    teachers: number;
+    admins: number;
+  };
+  exams: {
+    total: number;
+    draft: number;
+    published: number;
+    completed: number;
+  };
+  classes: {
+    total: number;
+    populated: number;
+    empty: number;
+  };
+  submissions: {
+    total: number;
+    pending: number;
+    graded: number;
+    averageScore: number;
+    passRate: number;
+  };
+}
+
 export const dataApi = {
+  getSummary: () => request<DataSummary>('GET', '/data/summary', undefined, true),
   getAll: () => request<AllData>('GET', '/data/all', undefined, true),
 
   reseed: (confirmationText: string) =>

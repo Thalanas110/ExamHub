@@ -113,19 +113,32 @@ final class Request
     private static function readHeaders(): array
     {
         $headers = [];
-        $rawHeaders = function_exists('getallheaders') ? getallheaders() : [];
-        if (!is_array($rawHeaders)) {
-            $rawHeaders = [];
+        $rawHeaders = [];
+
+        if (function_exists('getallheaders')) {
+            $serverHeaders = getallheaders();
+            if (is_array($serverHeaders)) {
+                $rawHeaders = $serverHeaders;
+            }
         }
 
-        if ($rawHeaders === []) {
-            foreach ($_SERVER as $key => $value) {
-                if (!str_starts_with($key, 'HTTP_')) {
-                    continue;
-                }
+        foreach ($_SERVER as $key => $value) {
+            if (!str_starts_with($key, 'HTTP_')) {
+                continue;
+            }
 
-                $headerName = str_replace('_', '-', strtolower(substr($key, 5)));
-                $rawHeaders[$headerName] = (string) $value;
+            $headerName = str_replace('_', '-', strtolower(substr($key, 5)));
+            $rawHeaders[$headerName] ??= (string) $value;
+        }
+
+        // Apache may expose Authorization as REDIRECT_HTTP_AUTHORIZATION
+        // when the request passed through a rewrite or CGI boundary. It can
+        // also omit it from getallheaders() while returning other headers.
+        foreach (['HTTP_AUTHORIZATION', 'REDIRECT_HTTP_AUTHORIZATION'] as $key) {
+            $value = $_SERVER[$key] ?? null;
+            if (is_string($value) && trim($value) !== '') {
+                $rawHeaders['authorization'] = $value;
+                break;
             }
         }
 

@@ -33,6 +33,15 @@ final class DataController
     }
 
     /**
+     * @param array<string, mixed> $authUser
+     * @return array{status: int, data: array<string, mixed>}
+     */
+    public function getSummary(array $authUser): array
+    {
+        return ['status' => 200, 'data' => $this->dataService->getSummary($authUser)];
+    }
+
+    /**
      * @return array{status: int, data: array<string, mixed>|array<int, mixed>}
      */
     public function reseedData(Request $request): array

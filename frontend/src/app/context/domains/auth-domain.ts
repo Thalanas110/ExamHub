@@ -9,6 +9,26 @@ import type { AppStateSetters } from '../app-context.types';
 
 type AuthDomainDeps = AppStateSetters;
 
+async function hydrateData(setters: AuthDomainDeps): Promise<void> {
+  try {
+    const snapshot = await dataApi.getAll();
+    applyApiSnapshot(setters, snapshot);
+  } catch (error) {
+    console.error('Failed to hydrate full API data:', error);
+  }
+}
+
+async function hydrateSummaryAndData(setters: AuthDomainDeps): Promise<void> {
+  try {
+    const summary = await dataApi.getSummary();
+    setters.setSummary(summary);
+  } catch (error) {
+    console.error('Failed to load dashboard summary:', error);
+  }
+
+  await hydrateData(setters);
+}
+
 function applyApiSnapshot(
   setters: Pick<AuthDomainDeps, 'setUsers' | 'setClasses' | 'setExams' | 'setSubmissions'>,
   snapshot: Awaited<ReturnType<typeof dataApi.getAll>>,
@@ -25,6 +45,7 @@ function clearAppState(setters: AuthDomainDeps) {
   setters.setExams([]);
   setters.setClasses([]);
   setters.setSubmissions([]);
+  setters.setSummary(null);
 }
 
 export function createAuthDomain(setters: AuthDomainDeps) {
@@ -35,12 +56,14 @@ export function createAuthDomain(setters: AuthDomainDeps) {
 
       try {
         setters.setApiLoading(true);
-        const snapshot = await dataApi.getAll();
-        applyApiSnapshot(setters, snapshot);
+        const summary = await dataApi.getSummary();
+        setters.setSummary(summary);
+        setters.setApiLoading(false);
+        void hydrateData(setters);
       } catch (error) {
         console.error('Failed to load data from API on mount:', error);
-      } finally {
         setters.setApiLoading(false);
+        void hydrateData(setters);
       }
     },
 
@@ -51,8 +74,8 @@ export function createAuthDomain(setters: AuthDomainDeps) {
         writeStoredToken(result.token);
         setters.setCurrentUser(result.user as User);
 
-        const snapshot = await dataApi.getAll();
-        applyApiSnapshot(setters, snapshot);
+        setters.setApiLoading(false);
+        void hydrateSummaryAndData(setters);
 
         return { success: true };
       } catch (apiError) {
@@ -94,8 +117,8 @@ export function createAuthDomain(setters: AuthDomainDeps) {
         writeStoredToken(result.token);
         setters.setCurrentUser(result.user as User);
 
-        const snapshot = await dataApi.getAll();
-        applyApiSnapshot(setters, snapshot);
+        setters.setApiLoading(false);
+        void hydrateSummaryAndData(setters);
 
         return { success: true };
       } catch (apiError) {

@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from 'react';
 import type { Answer, Class, Exam, Submission, User } from '../data/types';
+import type { DataSummary } from '../services/data.service';
 
 export interface AppContextType {
   currentUser: User | null;
@@ -11,6 +12,7 @@ export interface AppContextType {
   classes: Class[];
   exams: Exam[];
   submissions: Submission[];
+  summary: DataSummary | null;
   addUser: (user: Omit<User, 'id'>) => Promise<User>;
   updateUser: (id: string, data: Partial<User>) => void;
   deleteUser: (id: string) => void;
@@ -41,6 +43,7 @@ export interface AppStateSetters {
   setClasses: Dispatch<SetStateAction<Class[]>>;
   setExams: Dispatch<SetStateAction<Exam[]>>;
   setSubmissions: Dispatch<SetStateAction<Submission[]>>;
+  setSummary: Dispatch<SetStateAction<DataSummary | null>>;
 }
 
 export interface AppDomainState {

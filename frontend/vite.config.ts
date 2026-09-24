@@ -30,6 +30,7 @@ export default defineConfig({
     },
   },
   server: {
+    port: 9000,
     proxy: {
       '/api': {
         target: devPhpProxyTarget,
