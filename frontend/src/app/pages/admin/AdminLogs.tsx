@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Activity, AlertTriangle, Clock3, RefreshCw, ScrollText, ShieldCheck, Users } from 'lucide-react';
 import { toast } from 'sonner';
 import { adminApi, type AdminLogsResponse } from '../../services/api';
-import { Badge } from '@/widgets/layouts/Badge';
+import { Badge } from '@/shared/ui/Badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
-import { StatCard } from '@/widgets/layouts/StatCard';
+import { StatCard } from '@/shared/ui/StatCard';
 
 type LogTab = 'requests' | 'audit';
 

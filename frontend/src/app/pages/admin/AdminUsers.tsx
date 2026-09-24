@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Edit2, Trash2, Search, Users, GraduationCap, BookOpen, Shield } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { Badge } from '@/widgets/layouts/Badge';
+import { Badge } from '@/shared/ui/Badge';
 import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { User, UserRole } from '../../data/types';

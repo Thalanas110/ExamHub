@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { Badge, getGradeBadge } from '@/widgets/layouts/Badge';
+import { Badge, getGradeBadge } from '@/shared/ui/Badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 

@@ -12,8 +12,8 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { Badge, getGradeBadge, getStatusBadge } from '@/widgets/layouts/Badge';
-import { StatCard } from '@/widgets/layouts/StatCard';
+import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/Badge';
+import { StatCard } from '@/shared/ui/StatCard';
 import { useApp } from '@/app/providers/AppProvider';
 import type { Class, Exam, ExamStatus, Question, QuestionType, Submission, User } from '../../data/types';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

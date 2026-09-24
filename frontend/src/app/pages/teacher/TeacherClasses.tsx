@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Plus, Users, Trash2, UserPlus, UserMinus, Search, Copy, BookOpen, Hash, Pencil } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
 import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
-import { Badge } from '@/widgets/layouts/Badge';
+import { Badge } from '@/shared/ui/Badge';
 import { toast } from 'sonner';
 import { Class } from '../../data/types';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';

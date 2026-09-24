@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router';
 import { LucideIcon, BookOpen, LogOut, Menu, X, ChevronRight } from 'lucide-react';
-import { ConfirmDialog } from './Modal';
+import { ConfirmDialog } from '@/shared/ui/Modal';
 
 export interface NavItem {
   path: string;
