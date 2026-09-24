@@ -3,7 +3,7 @@ import { BookOpen, Hash, Pencil, Search, Trash2, Users } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
 import { ConfirmDialog, Modal } from '@/shared/ui/Modal';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
-import { Class } from '../../data/types';
+import type { Class } from '@/entities/class';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 

@@ -4,7 +4,7 @@ import { useApp } from '@/app/providers/AppProvider';
 import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
 import { Badge } from '@/shared/ui/status-badge';
 import { toast } from 'sonner';
-import { Class } from '../../data/types';
+import type { Class } from '@/entities/class';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function TeacherClasses() {

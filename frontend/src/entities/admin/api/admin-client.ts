@@ -1,7 +1,7 @@
 import { request } from '@/shared/api/request';
-import type { ExamResponse } from './exam.service';
-import type { ResultResponse } from './result.service';
-import type { ViolationCaseOutcome, ViolationCaseSeverity, ViolationType } from './violation.service';
+import type { ExamResponse } from '@/entities/exam';
+import type { ResultResponse } from '@/entities/submission';
+import type { ViolationCaseOutcome, ViolationCaseSeverity, ViolationType } from '@/entities/violation';
 
 export interface AdminRequestLog {
   id: number;

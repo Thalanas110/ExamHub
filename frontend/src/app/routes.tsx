@@ -2,39 +2,39 @@ import { createBrowserRouter, Navigate } from 'react-router';
 import { lazy, Suspense } from 'react';
 import { RouterErrorPage } from '@/widgets/layouts/RouterErrorPage';
 
-const Landing = lazy(() => import('./pages/public/Landing').then(m => ({ default: m.Landing })));
+const Landing = lazy(() => import('@/app/providers/route-pages/public/Landing').then(m => ({ default: m.Landing })));
 const Login = lazy(() => import('@/features/auth/ui/Login').then(m => ({ default: m.Login })));
 const Register = lazy(() => import('@/features/auth/ui/Register').then(m => ({ default: m.Register })));
-const ExamTakingPreview = lazy(() => import('./pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
+const ExamTakingPreview = lazy(() => import('@/pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
 
 const StudentLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.StudentLayout })));
 const StudentDashboard = lazy(() => import('@/app/providers/student-dashboard-page').then(m => ({ default: m.StudentDashboardPage })));
-const StudentExams = lazy(() => import('./pages/student/StudentExams').then(m => ({ default: m.StudentExams })));
-const StudentResults = lazy(() => import('./pages/student/StudentResults').then(m => ({ default: m.StudentResults })));
-const StudentClasses = lazy(() => import('./pages/student/StudentClasses').then(m => ({ default: m.StudentClasses })));
-const StudentProfile = lazy(() => import('./pages/student/StudentProfile').then(m => ({ default: m.StudentProfile })));
-const TakeExam = lazy(() => import('./pages/student/TakeExam').then(m => ({ default: m.TakeExam })));
+const StudentExams = lazy(() => import('@/app/providers/route-pages/student/StudentExams').then(m => ({ default: m.StudentExams })));
+const StudentResults = lazy(() => import('@/app/providers/route-pages/student/StudentResults').then(m => ({ default: m.StudentResults })));
+const StudentClasses = lazy(() => import('@/app/providers/route-pages/student/StudentClasses').then(m => ({ default: m.StudentClasses })));
+const StudentProfile = lazy(() => import('@/app/providers/route-pages/student/StudentProfile').then(m => ({ default: m.StudentProfile })));
+const TakeExam = lazy(() => import('@/app/providers/route-pages/student/TakeExam').then(m => ({ default: m.TakeExam })));
 
 const TeacherLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.TeacherLayout })));
 const TeacherDashboard = lazy(() => import('@/app/providers/teacher-dashboard-page').then(m => ({ default: m.TeacherDashboardPage })));
-const TeacherExams = lazy(() => import('./pages/teacher/TeacherExams').then(m => ({ default: m.TeacherExams })));
-const TeacherClasses = lazy(() => import('./pages/teacher/TeacherClasses').then(m => ({ default: m.TeacherClasses })));
-const TeacherGrade = lazy(() => import('./pages/teacher/TeacherGrade').then(m => ({ default: m.TeacherGrade })));
-const TeacherProfile = lazy(() => import('./pages/teacher/TeacherProfile').then(m => ({ default: m.TeacherProfile })));
-const TeacherViolationCases = lazy(() => import('./pages/teacher/TeacherViolationCases').then(m => ({ default: m.TeacherViolationCases })));
-const TeacherTools = lazy(() => import('./pages/teacher/TeacherTools').then(m => ({ default: m.TeacherTools })));
+const TeacherExams = lazy(() => import('@/app/providers/route-pages/teacher/TeacherExams').then(m => ({ default: m.TeacherExams })));
+const TeacherClasses = lazy(() => import('@/app/providers/route-pages/teacher/TeacherClasses').then(m => ({ default: m.TeacherClasses })));
+const TeacherGrade = lazy(() => import('@/app/providers/route-pages/teacher/TeacherGrade').then(m => ({ default: m.TeacherGrade })));
+const TeacherProfile = lazy(() => import('@/app/providers/route-pages/teacher/TeacherProfile').then(m => ({ default: m.TeacherProfile })));
+const TeacherViolationCases = lazy(() => import('@/app/providers/route-pages/teacher/TeacherViolationCases').then(m => ({ default: m.TeacherViolationCases })));
+const TeacherTools = lazy(() => import('@/pages/teacher/TeacherTools').then(m => ({ default: m.TeacherTools })));
 
 const AdminLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.AdminLayout })));
 const AdminDashboard = lazy(() => import('@/widgets/admin-dashboard/AdminDashboard').then(m => ({ default: m.AdminDashboard })));
-const AdminExams = lazy(() => import('./pages/admin/AdminExams').then(m => ({ default: m.AdminExams })));
-const AdminResults = lazy(() => import('./pages/admin/AdminResults').then(m => ({ default: m.AdminResults })));
-const AdminReports = lazy(() => import('./pages/admin/AdminReports').then(m => ({ default: m.AdminReports })));
-const AdminUsers = lazy(() => import('./pages/admin/AdminUsers').then(m => ({ default: m.AdminUsers })));
-const AdminClasses = lazy(() => import('./pages/admin/AdminClasses').then(m => ({ default: m.AdminClasses })));
-const AdminViolations = lazy(() => import('./pages/admin/AdminViolations').then(m => ({ default: m.AdminViolations })));
-const AdminProfile = lazy(() => import('./pages/admin/AdminProfile').then(m => ({ default: m.AdminProfile })));
-const AdminApiReference = lazy(() => import('./pages/admin/AdminApiReference').then(m => ({ default: m.AdminApiReference })));
-const AdminTools = lazy(() => import('./pages/admin/AdminTools').then(m => ({ default: m.AdminTools })));
+const AdminExams = lazy(() => import('@/app/providers/route-pages/admin/AdminExams').then(m => ({ default: m.AdminExams })));
+const AdminResults = lazy(() => import('@/app/providers/route-pages/admin/AdminResults').then(m => ({ default: m.AdminResults })));
+const AdminReports = lazy(() => import('@/app/providers/route-pages/admin/AdminReports').then(m => ({ default: m.AdminReports })));
+const AdminUsers = lazy(() => import('@/app/providers/route-pages/admin/AdminUsers').then(m => ({ default: m.AdminUsers })));
+const AdminClasses = lazy(() => import('@/app/providers/route-pages/admin/AdminClasses').then(m => ({ default: m.AdminClasses })));
+const AdminViolations = lazy(() => import('@/pages/admin/AdminViolations').then(m => ({ default: m.AdminViolations })));
+const AdminProfile = lazy(() => import('@/app/providers/route-pages/admin/AdminProfile').then(m => ({ default: m.AdminProfile })));
+const AdminApiReference = lazy(() => import('@/pages/admin/AdminApiReference').then(m => ({ default: m.AdminApiReference })));
+const AdminTools = lazy(() => import('@/pages/admin/AdminTools').then(m => ({ default: m.AdminTools })));
 
 function Loading() {
   return null;

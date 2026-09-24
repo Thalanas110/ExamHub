@@ -4,7 +4,7 @@ import { useApp } from '@/app/providers/AppProvider';
 import { Badge, getStatusBadge } from '@/shared/ui/status-badge';
 import { ConfirmDialog, Modal } from '@/shared/ui/Modal';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
-import { ExamStatus } from '../../data/types';
+import type { ExamStatus } from '@/entities/exam';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 

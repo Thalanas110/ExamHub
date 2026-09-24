@@ -3,14 +3,16 @@ import { AlertTriangle, CheckCircle2, RefreshCw, Search, ShieldAlert, Users } fr
 import { toast } from 'sonner';
 import {
   adminApi,
-  violationApi,
   type AdminViolationDashboardResponse,
   type AdminViolationDashboardRow,
+} from '@/entities/admin';
+import {
+  violationApi,
   type ViolationCase,
   type ViolationCaseOutcome,
   type ViolationCaseSeverity,
   type ViolationRecord,
-} from '../../services/api';
+} from '@/entities/violation';
 import { Badge } from '@/shared/ui/status-badge';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { StatCard } from '@/shared/ui/StatCard';

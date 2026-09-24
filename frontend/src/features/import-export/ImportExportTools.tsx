@@ -15,7 +15,10 @@ import { toast } from 'sonner';
 import { Badge, getGradeBadge, getStatusBadge } from '@/shared/ui/status-badge';
 import { StatCard } from '@/shared/ui/StatCard';
 import { useApp } from '@/app/providers/AppProvider';
-import type { Class, Exam, ExamStatus, Question, QuestionType, Submission, User } from '../../data/types';
+import type { Class } from '@/entities/class';
+import type { Exam, ExamStatus, Question, QuestionType } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import {
   csvRowsToRecords,

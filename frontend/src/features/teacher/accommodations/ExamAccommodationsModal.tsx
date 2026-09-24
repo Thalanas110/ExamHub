@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit2, X, Clock, RotateCcw, Save, Users } from 'lucide-react';
 import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
-import { accommodationApi, AccommodationRecord, AccommodationPayload } from '../../services/api';
-import { Exam, Class, User } from '../../data/types';
+import { accommodationApi, type AccommodationRecord, type AccommodationPayload } from '@/entities/accommodation';
+import type { Exam } from '@/entities/exam';
+import type { Class } from '@/entities/class';
+import type { User } from '@/entities/user';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import { DateTimePicker } from '@/shared/ui/date-time-picker';

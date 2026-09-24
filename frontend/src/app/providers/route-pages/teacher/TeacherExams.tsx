@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Search } from 'lucide-react';
-import { ExamAccommodationsModal } from '../../components/shared/ExamAccommodationsModal';
+import { ExamAccommodationsModal } from '@/features/teacher/accommodations/ExamAccommodationsModal';
 import { ConfirmDialog } from '@/shared/ui/Modal';
 import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';

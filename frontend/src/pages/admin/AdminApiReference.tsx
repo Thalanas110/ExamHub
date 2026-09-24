@@ -22,8 +22,8 @@ import { GroupSection } from '@/features/admin/api-reference/components/Endpoint
 import { PhpBackendPanel } from '@/features/admin/api-reference/components/PhpBackendPanel';
 import { VerificationPanel } from '@/features/admin/api-reference/components/VerificationPanel';
 import { Modal } from '@/shared/ui/Modal';
-import templateFooterUrl from '../../assets/api-docs-template-contact-footer.jpg';
-import templateHeaderUrl from '../../assets/api-docs-template-header.jpg';
+import templateFooterUrl from '@/shared/assets/api-docs-template-contact-footer.jpg';
+import templateHeaderUrl from '@/shared/assets/api-docs-template-header.jpg';
 
 type VerifyState = 'idle' | 'loading' | 'verified' | 'error';
 

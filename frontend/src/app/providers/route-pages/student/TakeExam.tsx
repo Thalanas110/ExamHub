@@ -15,10 +15,10 @@ import {
   UserCog,
 } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { Answer, QuestionTelemetry } from '../../data/types';
+import type { Answer, QuestionTelemetry } from '@/entities/submission';
 import { ConfirmDialog } from '@/shared/ui/Modal';
 import { toast } from 'sonner';
-import { violationApi, ViolationType } from '../../services/api';
+import { violationApi, type ViolationType } from '@/entities/violation';
 import {
   createExamFocusViolationState as CreateExamFocusViolationState,
   resolveExamFocusViolation as ResolveExamFocusViolation,
