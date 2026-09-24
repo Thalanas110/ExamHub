@@ -43,7 +43,7 @@ use App\Modules\Results\Infrastructure\RoutineResultRepository;
 use App\Modules\Data\Application\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;
-use App\Services\ViolationCaseService;
+use App\Modules\Violations\Application\ViolationCaseService;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\QuestionAnalyticsBuilder;

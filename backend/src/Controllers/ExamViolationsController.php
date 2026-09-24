@@ -6,7 +6,7 @@ namespace App\Controllers;
 
 use App\Shared\Http\Request;
 use App\Logging\ExamViolationService;
-use App\Services\ViolationCaseService;
+use App\Modules\Violations\Application\ViolationCaseService;
 use App\Shared\Support\ApiException;
 
 final class ExamViolationsController
