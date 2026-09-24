@@ -1,7 +1,3 @@
-export {
-  violationApi,
-  violationCaseApi,
-} from '@/entities/violation';
 export type {
   ViolationCase,
   ViolationCaseOutcome,
@@ -9,4 +5,5 @@ export type {
   ViolationCaseSeverity,
   ViolationRecord,
   ViolationType,
-} from '@/entities/violation';
+} from './model/types';
+export { violationApi, violationCaseApi } from './api/violation-client';
