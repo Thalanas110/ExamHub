@@ -1,5 +1,6 @@
 import { AlertTriangle, CheckCircle2 } from 'lucide-react';
-import type { Exam, Submission } from '../../../../data/types';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
 
 interface SubmittedExamStateProps {
   exam: Exam;

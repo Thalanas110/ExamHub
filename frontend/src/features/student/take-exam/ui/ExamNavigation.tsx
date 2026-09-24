@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight, Save, Send } from 'lucide-react';
-import type { Exam } from '../../../../data/types';
+import type { Exam } from '@/entities/exam';
 
 interface ExamNavigationProps {
   currentQ: number;

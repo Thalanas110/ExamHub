@@ -1,6 +1,6 @@
 import { AlertTriangle, ShieldAlert, UserCog } from 'lucide-react';
-import type { Exam } from '../../../../data/types';
-import { MAX_TAB_SWITCHES } from '../constants';
+import type { Exam } from '@/entities/exam';
+import { MAX_TAB_SWITCHES } from '../model/constants';
 
 interface ExamStartScreenProps {
   exam: Exam;

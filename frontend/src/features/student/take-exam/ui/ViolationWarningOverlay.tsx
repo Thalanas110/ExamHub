@@ -1,5 +1,5 @@
 import { ShieldAlert } from 'lucide-react';
-import { MAX_TAB_SWITCHES } from '../constants';
+import { MAX_TAB_SWITCHES } from '../model/constants';
 
 interface ViolationWarningOverlayProps {
   isOpen: boolean;

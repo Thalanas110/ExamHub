@@ -1,5 +1,5 @@
 import { Clock, Save, Send, ShieldAlert } from 'lucide-react';
-import { MAX_TAB_SWITCHES } from '../constants';
+import { MAX_TAB_SWITCHES } from '../model/constants';
 import { formatCountdown } from '../lib/session';
 
 interface ExamHeaderProps {

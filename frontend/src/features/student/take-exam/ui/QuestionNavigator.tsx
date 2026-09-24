@@ -1,5 +1,5 @@
 import { BarChart2, BookOpen } from 'lucide-react';
-import type { Exam } from '../../../../data/types';
+import type { Exam } from '@/entities/exam';
 import { getQuestionButtonClassName } from '../lib/session';
 
 interface QuestionNavigatorProps {

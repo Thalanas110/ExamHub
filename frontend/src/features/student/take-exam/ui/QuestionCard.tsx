@@ -1,6 +1,6 @@
 import { CheckCircle2, Flag } from 'lucide-react';
-import type { Question } from '../../../../data/types';
-import { OPTION_LETTERS } from '../constants';
+import type { Question } from '@/entities/exam';
+import { OPTION_LETTERS } from '../model/constants';
 
 interface QuestionCardProps {
   question: Question;
