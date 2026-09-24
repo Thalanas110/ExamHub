@@ -106,8 +106,7 @@ final class ApiDocsVerificationService
      */
     private function routeFiles(): array
     {
-        $directory = dirname(__DIR__, 3) . '/Routing/Routes';
-        $files = glob($directory . '/*Routes.php');
+        $files = glob(dirname(__DIR__, 3) . '/Modules/*/Presentation/*Routes.php');
         if (!is_array($files)) {
             return [];
         }
