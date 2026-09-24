@@ -42,7 +42,7 @@ use App\Services\SeedService;
 use App\Services\StudentExamAccommodationService;
 use App\Services\ViolationCaseService;
 use App\Services\Support\ExamMapper;
-use App\Services\Support\ExamPayloadValidator;
+use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\QuestionAnalyticsBuilder;
 use App\Services\Support\ValueNormalizer;
 use App\Modules\Users\Application\UserService;

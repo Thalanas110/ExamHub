@@ -15,7 +15,7 @@ use App\Services\ResultService;
 use App\Services\SeedService;
 use App\Services\StudentExamAccommodationService;
 use App\Services\Support\ExamMapper;
-use App\Services\Support\ExamPayloadValidator;
+use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 

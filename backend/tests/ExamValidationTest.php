@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Services\Support\ExamPayloadValidator;
+use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Shared\Support\ApiException;
 
 $validator = new ExamPayloadValidator();

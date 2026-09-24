@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Support;
+namespace App\Modules\Exams\Application;
 
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
