@@ -1,14 +1,37 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { BookOpen, Users, FileText, Clock, ArrowRight } from 'lucide-react';
-import { useApp } from '@/app/providers/AppProvider';
+import type { Class } from '@/entities/class';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
 import { StatCard } from '@/widgets/layouts/StatCard';
 import { Badge, getStatusBadge } from '@/widgets/layouts/Badge';
 import { PaginatedTable } from '@/widgets/layouts/PaginatedTable';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from 'recharts';
 
-export function TeacherDashboard() {
-  const { currentUser, classes, exams, submissions, summary, getUserById } = useApp();
+interface TeacherDashboardProps {
+  currentUser: User;
+  classes: Class[];
+  exams: Exam[];
+  submissions: Submission[];
+  summary: {
+    users: { students: number };
+    exams: { total: number };
+    classes: { total: number };
+    submissions: { pending: number };
+  } | null;
+  getUserById: (id: string) => User | undefined;
+}
+
+export function TeacherDashboard({
+  currentUser,
+  classes,
+  exams,
+  submissions,
+  summary,
+  getUserById,
+}: TeacherDashboardProps) {
   const navigate = useNavigate();
 
   if (!currentUser) return null;

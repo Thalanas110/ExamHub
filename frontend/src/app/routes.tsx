@@ -16,7 +16,7 @@ const StudentProfile = lazy(() => import('./pages/student/StudentProfile').then(
 const TakeExam = lazy(() => import('./pages/student/TakeExam').then(m => ({ default: m.TakeExam })));
 
 const TeacherLayout = lazy(() => import('@/app/providers/role-layouts').then(m => ({ default: m.TeacherLayout })));
-const TeacherDashboard = lazy(() => import('@/widgets/teacher-dashboard/TeacherDashboard').then(m => ({ default: m.TeacherDashboard })));
+const TeacherDashboard = lazy(() => import('@/app/providers/teacher-dashboard-page').then(m => ({ default: m.TeacherDashboardPage })));
 const TeacherExams = lazy(() => import('./pages/teacher/TeacherExams').then(m => ({ default: m.TeacherExams })));
 const TeacherClasses = lazy(() => import('./pages/teacher/TeacherClasses').then(m => ({ default: m.TeacherClasses })));
 const TeacherGrade = lazy(() => import('./pages/teacher/TeacherGrade').then(m => ({ default: m.TeacherGrade })));
