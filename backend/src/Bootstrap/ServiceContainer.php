@@ -31,7 +31,8 @@ use App\Modules\Auth\Application\AuthService;
 use App\Modules\Auth\Infrastructure\RoutineAuthRepository;
 use App\Modules\Users\Infrastructure\RoutineUserRepository;
 use App\Services\ApiDocsVerificationService;
-use App\Services\ClassService;
+use App\Modules\Classes\Application\ClassService;
+use App\Modules\Classes\Application\ClassMapper;
 use App\Services\DataService;
 use App\Services\ExamService;
 use App\Services\ReportService;
@@ -99,7 +100,7 @@ final class ServiceContainer
 
         $classService = new ClassService(
             gateway: $gateway,
-            mapper: $mapper,
+            mapper: new ClassMapper($normalizer),
             normalizer: $normalizer,
         );
 

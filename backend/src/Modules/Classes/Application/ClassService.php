@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Classes\Application;
 
 use App\Shared\Database\RoutineGateway;
-use App\Services\Support\ExamMapper;
+use App\Modules\Classes\Application\ClassMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
@@ -14,7 +14,7 @@ final class ClassService
 {
     public function __construct(
         private RoutineGateway $gateway,
-        private ExamMapper $mapper,
+        private ClassMapper $mapper,
         private ValueNormalizer $normalizer,
     ) {
     }
@@ -25,7 +25,7 @@ final class ClassService
     public function getClasses(): array
     {
         $rows = $this->gateway->call('sp_classes_get_all');
-        return array_map(fn (array $row): array => $this->mapper->mapClassRow($row), $rows);
+        return array_map(fn (array $row): array => $this->mapper->mapRow($row), $rows);
     }
 
     /**
@@ -156,7 +156,7 @@ final class ClassService
             throw new ApiException(404, 'Class not found. Check the code and try again.');
         }
 
-        $class = $this->mapper->mapClassRow($row);
+        $class = $this->mapper->mapRow($row);
         if (in_array($studentId, $class['studentIds'], true)) {
             throw new ApiException(409, 'You are already enrolled in this class.');
         }
@@ -221,6 +221,6 @@ final class ClassService
             throw new ApiException(404, 'Class not found.');
         }
 
-        return $this->mapper->mapClassRow($row);
+        return $this->mapper->mapRow($row);
     }
 }
