@@ -1,6 +1,6 @@
 import React from 'react';
 import { BadgeCheck, CircleDashed, ShieldAlert } from 'lucide-react';
-import type { ApiDocsVerifyCheck } from '../../../../services/api';
+import type { ApiDocsVerifyCheck } from '@/entities/api-docs';
 
 export function VerificationBadge({ check }: { check?: ApiDocsVerifyCheck }) {
   if (!check) {

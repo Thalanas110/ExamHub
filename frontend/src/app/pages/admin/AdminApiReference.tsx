@@ -12,14 +12,15 @@ import {
   type ApiDocsVerifyCheck,
   type ApiDocsVerifyResult,
   type HttpMethod,
-} from '../../services/api';
+} from '@/entities/api-docs';
+import { PHP_BASE_URL } from '@/shared/api';
 import { toast } from 'sonner';
-import { endpointKey, GROUP_ORDER } from '../../features/admin/api-reference/lib/api-reference';
-import { ENDPOINT_CODE_MAP } from '../../features/admin/api-reference/lib/endpoint-code-map';
-import { CopyButton } from '../../features/admin/api-reference/components/CopyButton';
-import { GroupSection } from '../../features/admin/api-reference/components/EndpointCard';
-import { PhpBackendPanel } from '../../features/admin/api-reference/components/PhpBackendPanel';
-import { VerificationPanel } from '../../features/admin/api-reference/components/VerificationPanel';
+import { endpointKey, GROUP_ORDER } from '@/features/admin/api-reference/lib/api-reference';
+import { ENDPOINT_CODE_MAP } from '@/features/admin/api-reference/lib/endpoint-code-map';
+import { CopyButton } from '@/features/admin/api-reference/components/CopyButton';
+import { GroupSection } from '@/features/admin/api-reference/components/EndpointCard';
+import { PhpBackendPanel } from '@/features/admin/api-reference/components/PhpBackendPanel';
+import { VerificationPanel } from '@/features/admin/api-reference/components/VerificationPanel';
 import { Modal } from '@/shared/ui/Modal';
 import templateFooterUrl from '../../assets/api-docs-template-contact-footer.jpg';
 import templateHeaderUrl from '../../assets/api-docs-template-header.jpg';

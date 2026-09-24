@@ -1,6 +1,6 @@
 import React from 'react';
 import { Download, ShieldCheck, Sparkles } from 'lucide-react';
-import type { ApiDocsVerifyResult } from '../../../../services/api';
+import type { ApiDocsVerifyResult } from '@/entities/api-docs';
 
 type VerifyState = 'idle' | 'loading' | 'verified' | 'error';
 

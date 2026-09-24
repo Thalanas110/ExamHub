@@ -23,3 +23,8 @@ export interface ApiDocsVerifyResult {
 export const docsApi = {
   verify: () => request<ApiDocsVerifyResult>('GET', '/docs/verify', undefined, true),
 };
+
+export const dataApi = {
+  reseed: (confirmationText: string) =>
+    request<{ success: boolean; message: string }>('POST', '/data/reseed', { confirmationText }, true),
+};

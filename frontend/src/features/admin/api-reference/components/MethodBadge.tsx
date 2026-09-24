@@ -1,5 +1,5 @@
 import React from 'react';
-import type { HttpMethod } from '../../../../services/api';
+import type { HttpMethod } from '@/entities/api-docs';
 import { METHOD_STYLES } from '../lib/api-reference';
 
 export function MethodBadge({ method }: { method: HttpMethod }) {

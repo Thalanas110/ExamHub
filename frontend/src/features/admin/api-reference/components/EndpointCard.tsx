@@ -10,7 +10,8 @@ import {
   type ApiDocsVerifyCheck,
   type EndpointDoc,
   PHP_BASE_URL,
-} from '../../../../services/api';
+} from '@/entities/api-docs';
+import { PHP_BASE_URL } from '@/shared/api';
 import { endpointKey, METHOD_STYLES } from '../lib/api-reference';
 import { ENDPOINT_CODE_MAP } from '../lib/endpoint-code-map';
 import { CopyButton } from './CopyButton';

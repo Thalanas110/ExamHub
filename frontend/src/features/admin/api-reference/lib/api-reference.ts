@@ -1,4 +1,4 @@
-import type { HttpMethod } from '../../../../services/api';
+import type { HttpMethod } from '@/entities/api-docs';
 
 export const METHOD_STYLES: Record<HttpMethod, { pill: string; panel: string }> = {
   GET: {

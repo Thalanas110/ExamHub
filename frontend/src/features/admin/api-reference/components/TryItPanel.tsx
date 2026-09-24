@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Send, ChevronDown, ChevronUp } from 'lucide-react';
-import { PHP_BASE_URL, type EndpointDoc } from '../../../../services/api';
+import type { EndpointDoc } from '@/entities/api-docs';
+import { PHP_BASE_URL } from '@/shared/api';
 
 function buildDefaultBody(requestBody: EndpointDoc['requestBody']): string {
   if (!requestBody) return '';
