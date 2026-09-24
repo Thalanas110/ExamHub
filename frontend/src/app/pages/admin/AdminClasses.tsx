@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BookOpen, Hash, Pencil, Search, Trash2, Users } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { ConfirmDialog, Modal } from '@/widgets/layouts/Modal';
+import { ConfirmDialog, Modal } from '@/shared/ui/Modal';
 import { PaginatedTable } from '@/shared/ui/PaginatedTable';
 import { Class } from '../../data/types';
 import { toast } from 'sonner';

@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
 import { Answer, QuestionTelemetry } from '../../data/types';
-import { ConfirmDialog } from '@/widgets/layouts/Modal';
+import { ConfirmDialog } from '@/shared/ui/Modal';
 import { toast } from 'sonner';
 import { violationApi, ViolationType } from '../../services/api';
 import {

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { AlertTriangle, CheckCircle2, RefreshCw, Server, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
-import { Modal } from '@/widgets/layouts/Modal';
+import { Modal } from '@/shared/ui/Modal';
 import { dataApi, PHP_BASE_URL } from '../../../../services/api';
 import { CopyButton } from './CopyButton';
 

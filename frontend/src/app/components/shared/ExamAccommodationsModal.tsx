@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit2, X, Clock, RotateCcw, Save, Users } from 'lucide-react';
-import { Modal, ConfirmDialog } from '@/widgets/layouts/Modal';
+import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
 import { accommodationApi, AccommodationRecord, AccommodationPayload } from '../../services/api';
 import { Exam, Class, User } from '../../data/types';
 import { toast } from 'sonner';

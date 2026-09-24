@@ -1,4 +1,4 @@
-import { Modal } from '@/widgets/layouts/Modal';
+import { Modal } from '@/shared/ui/Modal';
 import type { Exam } from '@/entities/exam';
 import type { ViolationRecord } from '@/entities/violation';
 import { getViolationBadgeClassName } from '../constants';

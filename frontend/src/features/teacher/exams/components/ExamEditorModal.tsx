@@ -1,6 +1,6 @@
 import { PlusCircle } from 'lucide-react';
 import { DateTimePicker } from '@/shared/ui/date-time-picker';
-import { Modal } from '@/widgets/layouts/Modal';
+import { Modal } from '@/shared/ui/Modal';
 import type { Class } from '@/entities/class';
 import type { Exam, ExamStatus, Question } from '@/entities/exam';
 import type { ExamFormData } from '../lib/exam-form';

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Search } from 'lucide-react';
 import { ExamAccommodationsModal } from '../../components/shared/ExamAccommodationsModal';
-import { ConfirmDialog } from '@/widgets/layouts/Modal';
+import { ConfirmDialog } from '@/shared/ui/Modal';
 import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
 import type { Exam, ExamStatus, Question } from '@/entities/exam';

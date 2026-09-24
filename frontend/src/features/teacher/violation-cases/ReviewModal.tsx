@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Save } from 'lucide-react';
 import { toast } from 'sonner';
-import { Modal } from '@/widgets/layouts/Modal';
+import { Modal } from '@/shared/ui/Modal';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import {
   violationCaseApi,

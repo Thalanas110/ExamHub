@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Users, Trash2, UserPlus, UserMinus, Search, Copy, BookOpen, Hash, Pencil } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
-import { Modal, ConfirmDialog } from '@/widgets/layouts/Modal';
+import { Modal, ConfirmDialog } from '@/shared/ui/Modal';
 import { Badge } from '@/widgets/layouts/Badge';
 import { toast } from 'sonner';
 import { Class } from '../../data/types';
