@@ -5,7 +5,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
 use App\Shared\Security\AesGcmCrypto;
-use App\Services\Support\LegacyEncryptedDataRepair;
+use App\Shared\Security\LegacyEncryptedDataRepair;
 
 $failures = [];
 

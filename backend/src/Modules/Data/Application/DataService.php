@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Data\Application;
 
 use App\Shared\Database\RoutineGateway;
-use App\Services\Support\ExamMapper;
+use App\Shared\Mapping\ExamMapper;
 
 final class DataService
 {

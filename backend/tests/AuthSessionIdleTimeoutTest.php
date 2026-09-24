@@ -13,7 +13,7 @@ use App\Shared\Security\JwtService;
 use App\Shared\Security\PasswordHasher;
 use App\Modules\Auth\Application\AuthService;
 use App\Modules\Data\Application\SeedService;
-use App\Services\Support\ExamMapper;
+use App\Shared\Mapping\ExamMapper;
 use App\Shared\Support\ValueNormalizer;
 
 $failures = [];

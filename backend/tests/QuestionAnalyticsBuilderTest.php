@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 
-use App\Services\Support\QuestionAnalyticsBuilder;
+use App\Modules\Reports\Application\QuestionAnalyticsBuilder;
 
 $builder = new QuestionAnalyticsBuilder();
 $failures = [];

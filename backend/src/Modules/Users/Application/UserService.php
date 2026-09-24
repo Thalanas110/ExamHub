@@ -7,7 +7,7 @@ namespace App\Modules\Users\Application;
 use App\Modules\Users\Domain\UserRepository;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
-use App\Services\Support\ExamMapper;
+use App\Shared\Mapping\ExamMapper;
 use App\Shared\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;

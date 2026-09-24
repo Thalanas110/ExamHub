@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services\Support;
+namespace App\Shared\Security;
 
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Support\Helpers;

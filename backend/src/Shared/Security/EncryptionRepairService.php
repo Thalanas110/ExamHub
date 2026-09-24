@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Shared\Security;
 
 use App\Shared\Database\RoutineGateway;
-use App\Services\Support\LegacyEncryptedDataRepair;
+use App\Shared\Security\LegacyEncryptedDataRepair;
 
 final class EncryptionRepairService
 {

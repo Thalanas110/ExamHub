@@ -9,8 +9,8 @@ use App\Shared\Database\MysqlPdoFactory;
 use App\Shared\Database\RoutineGateway;
 use App\Shared\Database\SqlScriptRunner;
 use App\Shared\Security\AesGcmCrypto;
-use App\Services\EncryptionRepairService;
-use App\Services\Support\LegacyEncryptedDataRepair;
+use App\Shared\Security\EncryptionRepairService;
+use App\Shared\Security\LegacyEncryptedDataRepair;
 
 require_once __DIR__ . '/../bootstrap/autoload.php';
 

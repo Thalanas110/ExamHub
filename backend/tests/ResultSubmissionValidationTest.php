@@ -14,7 +14,7 @@ use App\Modules\Data\Application\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Results\Application\ResultMapper;
 use App\Modules\Results\Infrastructure\RoutineResultRepository;
-use App\Services\Support\ExamMapper;
+use App\Shared\Mapping\ExamMapper;
 use App\Shared\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 

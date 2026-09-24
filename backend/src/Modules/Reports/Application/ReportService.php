@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Modules\Reports\Application;
 
 use App\Shared\Database\RoutineGateway;
-use App\Services\Support\QuestionAnalyticsBuilder;
-use App\Services\Support\ExamMapper;
+use App\Modules\Reports\Application\QuestionAnalyticsBuilder;
+use App\Shared\Mapping\ExamMapper;
 use App\Modules\Data\Application\DataService;
 
 final class ReportService
