@@ -6,7 +6,7 @@ import { Modal, ConfirmDialog } from '../../components/shared/Modal';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { User, UserRole } from '../../data/types';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 const roleConfig = {
   student: { label: 'Student', variant: 'gray' as const, icon: GraduationCap, bg: 'bg-gray-100', color: 'text-gray-600' },

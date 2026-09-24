@@ -4,7 +4,7 @@ import { Modal } from '../../../../components/shared/Modal';
 import type { Class, Exam, ExamStatus, Question } from '../../../../data/types';
 import type { ExamFormData } from '../lib/exam-form';
 import { QuestionEditorCard } from './QuestionEditorCard';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 interface ExamEditorModalProps {
   isOpen: boolean;

@@ -5,7 +5,7 @@ import { ReviewModal } from '../../features/teacher/violation-cases/ReviewModal'
 import { useViolationCases } from '../../features/teacher/violation-cases/useViolationCases';
 import { ViolationCasesTable } from '../../features/teacher/violation-cases/ViolationCasesTable';
 import { VIOLATION_REVIEW_MODE_OPTIONS } from '../../features/teacher/violation-cases/case-meta';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function TeacherViolationCases() {
   const { currentUser, exams, classes, users } = useApp();

@@ -3,7 +3,7 @@ import { Search } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { Badge, getGradeBadge } from '../../components/shared/Badge';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function AdminResults() {
   const { submissions, exams, users, classes, getUserById } = useApp();

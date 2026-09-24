@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { Clock, Search, CheckCircle2, AlertCircle, BookOpen, Calendar, UserCog } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { Badge, getStatusBadge } from '../../components/shared/Badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 type ExamFilter = 'all' | 'available' | 'submitted' | 'graded';
 

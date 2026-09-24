@@ -4,7 +4,7 @@ import { Modal, ConfirmDialog } from './Modal';
 import { accommodationApi, AccommodationRecord, AccommodationPayload } from '../../services/api';
 import { Exam, Class, User } from '../../data/types';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import { DateTimePicker } from '@/shared/ui/date-time-picker';
 
 interface Props {

@@ -5,7 +5,7 @@ import { Modal, ConfirmDialog } from '../../components/shared/Modal';
 import { Badge } from '../../components/shared/Badge';
 import { toast } from 'sonner';
 import { Class } from '../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function TeacherClasses() {
   const { currentUser, classes, exams, users, addClass, updateClass, deleteClass, enrollStudent, removeStudentFromClass, getUserById } = useApp();

@@ -1,6 +1,6 @@
 import { PlusCircle, X } from 'lucide-react';
 import type { Question } from '../../../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 interface QuestionEditorCardProps {
   index: number;

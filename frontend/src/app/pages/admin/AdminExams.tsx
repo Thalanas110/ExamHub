@@ -6,7 +6,7 @@ import { ConfirmDialog, Modal } from '../../components/shared/Modal';
 import { PaginatedTable } from '../../components/shared/PaginatedTable';
 import { ExamStatus } from '../../data/types';
 import { toast } from 'sonner';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 
 export function AdminExams() {
   const { exams, classes, users, submissions, deleteExam, updateExam, getSubmissionsByExam, getUserById } = useApp();

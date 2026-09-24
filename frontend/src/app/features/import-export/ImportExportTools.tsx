@@ -16,7 +16,7 @@ import { Badge, getGradeBadge, getStatusBadge } from '../../components/shared/Ba
 import { StatCard } from '../../components/shared/StatCard';
 import { useApp } from '../../context/AppContext';
 import type { Class, Exam, ExamStatus, Question, QuestionType, Submission, User } from '../../data/types';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/ui/select';
 import {
   csvRowsToRecords,
   downloadCsv,
