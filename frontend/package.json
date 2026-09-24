@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
+    "test:architecture": "node --test scripts/check-fsd-boundaries.test.mjs scripts/check-source-size.test.mjs && node scripts/check-fsd-boundaries.mjs --enforce && node scripts/check-source-size.mjs --enforce",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",
     "test:e2e:report": "playwright show-report"

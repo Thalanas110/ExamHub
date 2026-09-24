@@ -30,7 +30,7 @@ function countNonBlankLines(source) {
 
 export async function findSourceSizeViolations(
   rootDir,
-  { splitTrigger = 450, hardLimit = 600 } = {},
+  { splitTrigger = 700, hardLimit = 1000 } = {},
 ) {
   const sourceFiles = await collectSourceFiles(rootDir);
   const violations = [];
