@@ -2,13 +2,14 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
 import { useApp } from '@/app/providers/AppProvider';
 import { toast } from 'sonner';
-import type { Exam, Submission } from '../../data/types';
-import { ExamSelectionChips } from '../../features/teacher/grade/components/ExamSelectionChips';
-import { GradeFilterTabs, type GradeFilter } from '../../features/teacher/grade/components/GradeFilterTabs';
-import { GradeSubmissionView } from '../../features/teacher/grade/components/GradeSubmissionView';
-import { SubmissionViolationsModal } from '../../features/teacher/grade/components/SubmissionViolationsModal';
-import { SubmissionsTable } from '../../features/teacher/grade/components/SubmissionsTable';
-import { useSubmissionViolations } from '../../features/teacher/grade/hooks/useSubmissionViolations';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import { ExamSelectionChips } from '@/features/teacher/grade/components/ExamSelectionChips';
+import { GradeFilterTabs, type GradeFilter } from '@/features/teacher/grade/components/GradeFilterTabs';
+import { GradeSubmissionView } from '@/features/teacher/grade/components/GradeSubmissionView';
+import { SubmissionViolationsModal } from '@/features/teacher/grade/components/SubmissionViolationsModal';
+import { SubmissionsTable } from '@/features/teacher/grade/components/SubmissionsTable';
+import { useSubmissionViolations } from '@/features/teacher/grade/hooks/useSubmissionViolations';
 
 export function TeacherGrade() {
   const { currentUser, exams, submissions, classes, getUserById, gradeSubmission } = useApp();

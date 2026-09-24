@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import { violationApi, type ViolationRecord } from '../../../../services/api';
+import { violationApi, type ViolationRecord } from '@/entities/violation';
 
 type SubmissionViolationsModalState = {
   examId: string;

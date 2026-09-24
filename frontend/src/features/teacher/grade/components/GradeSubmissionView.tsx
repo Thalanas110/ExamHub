@@ -1,5 +1,7 @@
 import { ChevronRight, Send, ShieldAlert } from 'lucide-react';
-import type { Exam, Submission, User } from '../../../../data/types';
+import type { Exam } from '@/entities/exam';
+import type { Submission } from '@/entities/submission';
+import type { User } from '@/entities/user';
 
 interface GradeSubmissionViewProps {
   submission: Submission;
