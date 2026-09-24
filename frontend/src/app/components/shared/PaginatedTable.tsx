@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { cn } from '../ui/utils';
+import { cn } from '@/shared/ui/utils';
 
 interface PaginatedTableProps<T> {
   items: T[];

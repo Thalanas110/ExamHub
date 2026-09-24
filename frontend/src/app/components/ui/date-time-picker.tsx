@@ -3,7 +3,7 @@ import { format, parse, isValid } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import { Calendar } from './calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './popover';
-import { cn } from './utils';
+import { cn } from '@/shared/ui/utils';
 
 interface DateTimePickerProps {
   /** Value in "YYYY-MM-DDTHH:mm" format (same as datetime-local input) */
