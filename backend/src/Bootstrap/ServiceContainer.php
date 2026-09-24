@@ -37,7 +37,7 @@ use App\Modules\Classes\Infrastructure\RoutineClassRepository;
 use App\Services\DataService;
 use App\Modules\Exams\Application\ExamService;
 use App\Services\ReportService;
-use App\Services\ResultService;
+use App\Modules\Results\Application\ResultService;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;

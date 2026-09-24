@@ -11,7 +11,7 @@ use App\Shared\Database\RoutineGateway;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
 use App\Modules\Exams\Application\ExamService;
-use App\Services\ResultService;
+use App\Modules\Results\Application\ResultService;
 use App\Services\SeedService;
 use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Modules\Exams\Infrastructure\RoutineExamRepository;

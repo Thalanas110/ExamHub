@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Shared\Http\Request;
-use App\Services\ResultService;
+use App\Modules\Results\Application\ResultService;
 use App\Shared\Support\ApiException;
 
 final class ResultsController
