@@ -13,7 +13,7 @@ use App\Shared\Security\PasswordHasher;
 use App\Modules\Exams\Application\ExamService;
 use App\Services\ResultService;
 use App\Services\SeedService;
-use App\Services\StudentExamAccommodationService;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;
 use App\Services\Support\ValueNormalizer;

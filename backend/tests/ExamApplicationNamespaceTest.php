@@ -12,4 +12,8 @@ if (!class_exists(App\Modules\Exams\Application\ExamService::class)) {
     throw new RuntimeException('ExamService should be provided by the exams application module.');
 }
 
+if (!class_exists(App\Modules\Exams\Application\StudentExamAccommodationService::class)) {
+    throw new RuntimeException('StudentExamAccommodationService should be provided by the exams application module.');
+}
+
 fwrite(STDOUT, "Exams application namespace tests passed.\n");

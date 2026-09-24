@@ -11,7 +11,7 @@ use App\Shared\Database\RoutineGateway;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
 use App\Services\SeedService;
-use App\Services\StudentExamAccommodationService;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;

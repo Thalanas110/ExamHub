@@ -39,7 +39,7 @@ use App\Modules\Exams\Application\ExamService;
 use App\Services\ReportService;
 use App\Services\ResultService;
 use App\Services\SeedService;
-use App\Services\StudentExamAccommodationService;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
 use App\Services\ViolationCaseService;
 use App\Services\Support\ExamMapper;
 use App\Modules\Exams\Application\ExamPayloadValidator;

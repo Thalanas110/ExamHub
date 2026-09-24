@@ -10,6 +10,7 @@ use App\Services\Support\ExamMapper;
 use App\Services\Support\ValueNormalizer;
 use App\Shared\Support\ApiException;
 use App\Shared\Support\Helpers;
+use App\Modules\Exams\Application\StudentExamAccommodationService;
 
 final class ResultService
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Exams\Application;
 
 use App\Shared\Database\RoutineGateway;
 use App\Shared\Security\AesGcmCrypto;
