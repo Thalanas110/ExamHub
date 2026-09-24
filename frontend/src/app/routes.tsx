@@ -3,8 +3,8 @@ import { lazy, Suspense } from 'react';
 import { RouterErrorPage } from '@/widgets/layouts/RouterErrorPage';
 
 const Landing = lazy(() => import('./pages/public/Landing').then(m => ({ default: m.Landing })));
-const Login = lazy(() => import('./pages/auth/Login').then(m => ({ default: m.Login })));
-const Register = lazy(() => import('./pages/auth/Register').then(m => ({ default: m.Register })));
+const Login = lazy(() => import('@/features/auth/ui/Login').then(m => ({ default: m.Login })));
+const Register = lazy(() => import('@/features/auth/ui/Register').then(m => ({ default: m.Register })));
 const ExamTakingPreview = lazy(() => import('./pages/student/ExamTakingPreview').then(m => ({ default: m.ExamTakingPreview })));
 
 const StudentLayout = lazy(() => import('./pages/student/StudentLayout').then(m => ({ default: m.StudentLayout })));
