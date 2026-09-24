@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Modules\Violations\Presentation;
 
 use App\Shared\Http\Request;
-use App\Logging\ExamViolationService;
+use App\Shared\Observability\ExamViolationService;
 use App\Modules\Violations\Application\ViolationCaseService;
 use App\Shared\Support\ApiException;
 

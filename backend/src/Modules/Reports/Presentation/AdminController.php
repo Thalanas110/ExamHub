@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Reports\Presentation;
 
-use App\Logging\AdminLogReadService;
+use App\Shared\Observability\AdminLogReadService;
 use App\Modules\Reports\Application\ReportService;
 
 final class AdminController
