@@ -1,4 +1,4 @@
-import { request } from './http/request';
+import { request } from '@/shared/api/request';
 import type { ExamResponse } from './exam.service';
 import type { ResultResponse } from './result.service';
 import type { UserProfile } from './user.service';

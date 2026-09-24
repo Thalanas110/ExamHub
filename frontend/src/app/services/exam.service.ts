@@ -1,4 +1,4 @@
-import { request } from './http/request';
+import { request } from '@/shared/api/request';
 
 export interface ExamPayload {
   title: string;

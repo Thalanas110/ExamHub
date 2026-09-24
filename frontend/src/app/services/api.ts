@@ -1,5 +1,4 @@
-export { PHP_BASE_URL } from './http/base-url';
-export { request } from './http/request';
+export { PHP_BASE_URL, request } from '@/shared/api';
 
 export * from './auth.service';
 export * from './user.service';
