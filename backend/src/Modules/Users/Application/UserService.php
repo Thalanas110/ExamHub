@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Modules\Users\Application;
 
-use App\Shared\Database\RoutineGateway;
+use App\Modules\Users\Domain\UserRepository;
 use App\Shared\Security\AesGcmCrypto;
 use App\Shared\Security\PasswordHasher;
 use App\Services\Support\ExamMapper;
@@ -16,7 +16,7 @@ use PDOException;
 final class UserService
 {
     public function __construct(
-        private RoutineGateway $gateway,
+        private UserRepository $repository,
         private AesGcmCrypto $crypto,
         private PasswordHasher $passwordHasher,
         private ExamMapper $mapper,
@@ -29,7 +29,7 @@ final class UserService
      */
     public function getUsers(): array
     {
-        $rows = $this->gateway->call('sp_users_get_all');
+        $rows = $this->repository->findAll();
         return array_map(fn (array $row): array => $this->mapper->mapUserRow($row), $rows);
     }
 
@@ -63,7 +63,7 @@ final class UserService
         );
 
         try {
-            $rows = $this->gateway->call('sp_users_create', [
+            $rows = $this->repository->create([
                 Helpers::uuidV4(),
                 $name,
                 $email,
@@ -101,7 +101,7 @@ final class UserService
      */
     public function updateUser(string $userId, array $payload): array
     {
-        $existingRow = $this->gateway->call('sp_auth_get_user_by_id', [$userId])[0] ?? null;
+        $existingRow = $this->repository->findById($userId);
         if (!is_array($existingRow)) {
             throw new ApiException(404, 'User not found.');
         }
@@ -142,7 +142,7 @@ final class UserService
         [$bioCiphertext, $bioIv, $bioTag] = $this->crypto->encryptParams($bio);
 
         try {
-            $rows = $this->gateway->call('sp_users_update_admin', [
+            $rows = $this->repository->update([
                 $userId,
                 $name,
                 $email,
@@ -176,7 +176,7 @@ final class UserService
 
     public function deleteUser(string $userId): void
     {
-        $this->gateway->call('sp_users_delete', [$userId]);
+        $this->repository->delete($userId);
     }
 
     private function generateDefaultPassword(): string

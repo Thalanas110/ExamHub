@@ -29,6 +29,7 @@ use App\Shared\Security\JwtService;
 use App\Shared\Security\PasswordHasher;
 use App\Modules\Auth\Application\AuthService;
 use App\Modules\Auth\Infrastructure\RoutineAuthRepository;
+use App\Modules\Users\Infrastructure\RoutineUserRepository;
 use App\Services\ApiDocsVerificationService;
 use App\Services\ClassService;
 use App\Services\DataService;
@@ -88,7 +89,7 @@ final class ServiceContainer
         );
 
         $userService = new UserService(
-            gateway: $gateway,
+            repository: new RoutineUserRepository($gateway),
             crypto: $crypto,
             passwordHasher: $passwordHasher,
             mapper: $mapper,
