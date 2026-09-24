@@ -30,7 +30,7 @@ use App\Shared\Security\PasswordHasher;
 use App\Modules\Auth\Application\AuthService;
 use App\Modules\Auth\Infrastructure\RoutineAuthRepository;
 use App\Modules\Users\Infrastructure\RoutineUserRepository;
-use App\Services\ApiDocsVerificationService;
+use App\Modules\Docs\Application\ApiDocsVerificationService;
 use App\Modules\Classes\Application\ClassService;
 use App\Modules\Classes\Application\ClassMapper;
 use App\Modules\Classes\Infrastructure\RoutineClassRepository;

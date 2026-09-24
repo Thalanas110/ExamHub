@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Services\ApiDocsVerificationService;
+use App\Modules\Docs\Application\ApiDocsVerificationService;
 
 final class DocsController
 {

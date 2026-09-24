@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Services;
+namespace App\Modules\Docs\Application;
 
 final class ApiDocsVerificationService
 {
@@ -106,7 +106,7 @@ final class ApiDocsVerificationService
      */
     private function routeFiles(): array
     {
-        $directory = dirname(__DIR__) . '/Routing/Routes';
+        $directory = dirname(__DIR__, 3) . '/Routing/Routes';
         $files = glob($directory . '/*Routes.php');
         if (!is_array($files)) {
             return [];
