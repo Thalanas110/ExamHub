@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Logging;
+namespace App\Shared\Observability;
 
 use App\Shared\Database\RoutineGateway;
 use Throwable;
