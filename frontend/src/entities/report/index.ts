@@ -1,4 +1,3 @@
-export { reportApi } from '@/entities/report';
 export type {
   CommonWrongAnswerReport,
   ExamPerformanceReport,
@@ -7,4 +6,5 @@ export type {
   QuestionAnalyticsQuestion,
   QuestionAnalyticsReport,
   WeakTopicByClassReport,
-} from '@/entities/report';
+} from './model/types';
+export { reportApi } from './api/report-client';
