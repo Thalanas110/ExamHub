@@ -13,8 +13,8 @@ import { persistStoredUser, readStoredUser } from '@/app/providers/app-context.s
 import type { AppContextType } from '@/app/providers/app-context.types';
 import { createAuthDomain } from '@/app/providers/domains/auth-domain';
 import { createClassDomain } from '@/app/providers/domains/class-domain';
-import { createExamDomain } from './domains/exam-domain';
-import { createSubmissionDomain } from './domains/submission-domain';
+import { createExamDomain } from '@/app/providers/domains/exam-domain';
+import { createSubmissionDomain } from '@/app/providers/domains/submission-domain';
 import { createUserDomain } from '@/app/providers/domains/user-domain';
 
 const AppContext = createContext<AppContextType | null>(null);
